@@ -258,6 +258,7 @@ function MilestoneGallery({
   const galleryOffsetRef = useRef(0);
   const [previewIndex, setPreviewIndex] = useState<number | null>(null);
   const previewPhoto = previewIndex === null ? null : photos[previewIndex];
+  const previewNumber = previewIndex === null ? 0 : previewIndex + 1;
   const loopingPhotos = [...photos, ...photos];
 
   const pauseGalleryBriefly = () => {
@@ -527,7 +528,7 @@ function MilestoneGallery({
                   className="shrink-0 text-[12px] font-black tracking-[0.1em] text-white"
                   aria-live="polite"
                 >
-                  {String(previewIndex + 1).padStart(2, "0")} /{" "}
+                  {String(previewNumber).padStart(2, "0")} /{" "}
                   {String(photos.length).padStart(2, "0")}
                 </span>
               </div>
