@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Partners | Little Ark Foundation</title>
+    <style>
+      :root {
+        --primary-aqua: #1fa8f4;
+        --primary-aqua-strong: #008fe4;
+        --soft-aqua: #eaf9ff;
+        --soft-aqua-2: #c8f4ff;
+        --ink: #08233d;
+        --muted: #557086;
+        --yellow: #ffc83d;
+        --shadow: 0 28px 80px rgba(31, 168, 244, 0.18);
+        --radius: 28px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--ink);
+        background: #fff;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .nav {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 1px 0 rgba(31, 168, 244, 0.12);
+        backdrop-filter: blur(14px);
+      }
+
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: min(1220px, calc(100% - 40px));
+        min-height: 82px;
+        margin: 0 auto;
+        gap: 22px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--primary-aqua);
+        font-weight: 900;
+      }
+
+      .logo svg {
+        width: 62px;
+        height: 44px;
+      }
+
+      .logo strong {
+        display: block;
+        font-size: 22px;
+        line-height: 0.9;
+      }
+
+      .logo span span {
+        display: block;
+        color: var(--primary-aqua-strong);
+        font-size: 11px;
+        letter-spacing: 0.12em;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: clamp(16px, 2vw, 30px);
+        margin-left: auto;
+        font-size: 13px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary-aqua-strong);
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 28px;
+        border-radius: 999px;
+        color: #061d34;
+        background: var(--yellow);
+        font-weight: 900;
+        text-transform: uppercase;
+        box-shadow: 0 16px 38px rgba(255, 200, 61, 0.36);
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 22px 46px rgba(255, 200, 61, 0.46);
+      }
+
+      .hero {
+        position: relative;
+        display: grid;
+        align-items: center;
+        min-height: 100svh;
+        padding-top: 82px;
+        overflow: hidden;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(0, 143, 228, 0.94) 0%, rgba(31, 168, 244, 0.72) 48%, rgba(102, 211, 247, 0.18) 100%),
+          linear-gradient(135deg, var(--primary-aqua-strong), var(--primary-aqua));
+      }
+
+      .hero-video {
+        position: absolute;
+        inset: 82px 0 0;
+        width: 100%;
+        height: calc(100% - 82px);
+        object-fit: cover;
+        opacity: 0.78;
+      }
+
+      .hero-fallback {
+        position: absolute;
+        inset: 82px 0 0;
+        background:
+          radial-gradient(circle at 22% 42%, #e9aa84 0 22px, transparent 23px),
+          radial-gradient(circle at 38% 39%, #f5c39c 0 20px, transparent 21px),
+          radial-gradient(circle at 56% 43%, #d88e6e 0 22px, transparent 23px),
+          radial-gradient(circle at 74% 40%, #f2c59e 0 20px, transparent 21px),
+          linear-gradient(180deg, transparent 0 47%, rgba(255, 255, 255, 0.5) 48% 64%, rgba(31, 168, 244, 0.18) 65%),
+          linear-gradient(135deg, #dff7ff, var(--soft-aqua-2) 52%, #75d2bf);
+        animation: image-drift 15s ease-in-out infinite alternate;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 82px 0 0;
+        background:
+          linear-gradient(90deg, rgba(0, 143, 228, 0.9) 0%, rgba(31, 168, 244, 0.68) 50%, rgba(255, 255, 255, 0.12) 100%),
+          radial-gradient(circle at 76% 22%, rgba(255, 255, 255, 0.32), transparent 18rem);
+      }
+
+      .inner {
+        position: relative;
+        z-index: 2;
+        width: min(1220px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .hero-copy {
+        width: min(830px, 100%);
+        padding: 96px 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        letter-spacing: 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(66px, 11vw, 146px);
+        line-height: 0.86;
+        font-weight: 900;
+      }
+
+      .hero p {
+        max-width: 670px;
+        margin: 28px 0 0;
+        font-size: clamp(24px, 3vw, 40px);
+        line-height: 1.14;
+        font-weight: 900;
+      }
+
+      .section {
+        padding: clamp(86px, 11vw, 145px) 0;
+      }
+
+      .section-title {
+        max-width: 920px;
+        margin: 0 auto 62px;
+        text-align: center;
+      }
+
+      .section-title h2 {
+        color: var(--primary-aqua);
+        font-size: clamp(44px, 7vw, 98px);
+        line-height: 0.94;
+        font-weight: 900;
+      }
+
+      .support-community {
+        background:
+          radial-gradient(circle at 12% 8%, rgba(31, 168, 244, 0.1), transparent 24rem),
+          linear-gradient(180deg, #fff, var(--soft-aqua));
+      }
+
+      .logo-fields {
+        display: grid;
+        gap: clamp(40px, 7vw, 82px);
+      }
+
+      .logo-field {
+        display: grid;
+        grid-template-columns: minmax(230px, 0.36fr) 1fr;
+        gap: clamp(30px, 6vw, 80px);
+        align-items: center;
+      }
+
+      .logo-field h3 {
+        color: var(--primary-aqua);
+        font-size: clamp(34px, 5vw, 72px);
+        line-height: 0.94;
+        font-weight: 900;
+      }
+
+      .logo-row {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+        align-items: center;
+      }
+
+      .logo-mark {
+        display: grid;
+        place-items: center;
+        min-height: 130px;
+        color: var(--primary-aqua);
+        font-size: clamp(20px, 2vw, 30px);
+        font-weight: 900;
+        text-align: center;
+        letter-spacing: 0;
+      }
+
+      .logo-mark::before {
+        content: "";
+        display: block;
+        width: 82px;
+        height: 82px;
+        margin-bottom: 12px;
+        border-radius: 50%;
+        background:
+          radial-gradient(circle at 50% 50%, #fff 0 28%, transparent 30%),
+          linear-gradient(135deg, var(--soft-aqua-2), var(--primary-aqua));
+        box-shadow: 0 18px 44px rgba(31, 168, 244, 0.18);
+      }
+
+      .because {
+        color: #fff;
+        background:
+          radial-gradient(circle at 20% 28%, rgba(255, 255, 255, 0.24), transparent 19rem),
+          radial-gradient(circle at 80% 68%, rgba(200, 244, 255, 0.22), transparent 20rem),
+          linear-gradient(135deg, var(--primary-aqua-strong), var(--primary-aqua));
+      }
+
+      .because .section-title h2 {
+        color: #fff;
+      }
+
+      .numbers {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .number {
+        min-height: 190px;
+        padding: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.14);
+        backdrop-filter: blur(10px);
+      }
+
+      .number strong {
+        display: block;
+        font-size: clamp(44px, 5.8vw, 82px);
+        line-height: 0.84;
+        font-weight: 900;
+      }
+
+      .number span {
+        display: block;
+        margin-top: 18px;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: 15px;
+        line-height: 1.2;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .gratitude {
+        background:
+          radial-gradient(circle at 84% 28%, rgba(31, 168, 244, 0.12), transparent 24rem),
+          linear-gradient(180deg, #fff, var(--soft-aqua));
+      }
+
+      .quote-wrap {
+        max-width: 1050px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      blockquote {
+        margin: 0;
+        color: var(--primary-aqua);
+        font-size: clamp(48px, 7vw, 104px);
+        line-height: 0.98;
+        font-weight: 900;
+      }
+
+      .signature {
+        display: inline-grid;
+        gap: 8px;
+        margin-top: 42px;
+        color: var(--muted);
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      .signature::before {
+        content: "";
+        width: 230px;
+        height: 2px;
+        margin: 0 auto 12px;
+        background: var(--primary-aqua);
+      }
+
+      .logo-wall-section {
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .logo-wall {
+        display: flex;
+        gap: 32px;
+        width: max-content;
+        animation: logo-scroll 24s linear infinite;
+      }
+
+      .logo-wall + .logo-wall {
+        margin-top: 24px;
+        animation-direction: reverse;
+        animation-duration: 30s;
+      }
+
+      .wall-logo {
+        display: grid;
+        place-items: center;
+        width: 220px;
+        height: 120px;
+        color: var(--primary-aqua);
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--soft-aqua), #fff);
+        font-size: 20px;
+        font-weight: 900;
+        box-shadow: 0 14px 34px rgba(31, 168, 244, 0.12);
+      }
+
+      .final {
+        display: grid;
+        place-items: center;
+        min-height: 78svh;
+        padding: 100px 20px;
+        color: #fff;
+        text-align: center;
+        background:
+          radial-gradient(circle at 20% 32%, rgba(200, 244, 255, 0.28), transparent 18rem),
+          linear-gradient(135deg, var(--primary-aqua-strong), var(--primary-aqua));
+      }
+
+      .final h2 {
+        max-width: 1000px;
+        font-size: clamp(46px, 8vw, 112px);
+        line-height: 0.94;
+        font-weight: 900;
+      }
+
+      .final .button {
+        margin-top: 34px;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 640ms ease,
+          transform 640ms ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @keyframes image-drift {
+        from {
+          transform: scale(1.02) translate3d(-1%, -1%, 0);
+        }
+
+        to {
+          transform: scale(1.08) translate3d(1.4%, 1%, 0);
+        }
+      }
+
+      @keyframes logo-scroll {
+        from {
+          transform: translateX(0);
+        }
+
+        to {
+          transform: translateX(calc(-50% - 16px));
+        }
+      }
+
+      @media (max-width: 1080px) {
+        .numbers {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 900px) {
+        .nav-links {
+          display: none;
+        }
+
+        .logo-field {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .nav-inner,
+        .inner {
+          width: min(100% - 28px, 1220px);
+        }
+
+        .logo svg {
+          width: 52px;
+        }
+
+        .logo strong {
+          font-size: 18px;
+        }
+
+        .nav .button {
+          display: none;
+        }
+
+        .hero h1 {
+          font-size: clamp(58px, 18vw, 92px);
+        }
+
+        .logo-row,
+        .numbers {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 1ms !important;
+          scroll-behavior: auto !important;
+          transition-duration: 1ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="logo" href="./index.html" aria-label="Little Ark Foundation home">
+          <svg viewBox="0 0 100 70" aria-hidden="true">
+            <path d="M12 46c18 14 54 14 76 0-8 13-22 20-38 20S20 59 12 46Z" fill="currentColor" />
+            <path d="M18 39c12 8 50 8 64 0-9 8-21 12-33 12-13 0-23-4-31-12Z" fill="#c8f4ff" />
+            <path d="M26 30h48l-7 12H33l-7-12Z" fill="none" stroke="currentColor" stroke-width="4" />
+            <circle cx="33" cy="19" r="5" fill="currentColor" />
+            <circle cx="50" cy="13" r="5" fill="currentColor" />
+            <circle cx="67" cy="19" r="5" fill="currentColor" />
+            <path d="M29 27v-8m21 8V16m21 11v-8" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+          </svg>
+          <span><strong>LITTLE ARK</strong><span>FOUNDATION</span></span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="./the-ark.html">The Ark</a>
+          <a href="./our-voyage.html">Our Voyage</a>
+          <a href="./get-on-board.html">Get On Board</a>
+          <a href="./our-partners.html">Our Partners</a>
+          <a href="./media-hub.html">Media Hub</a>
+        </nav>
+        <a class="button" href="./index.html#give">Give Hope</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-fallback" aria-hidden="true"></div>
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="./little-ark-hero-15s.mp4" type="video/mp4" />
+        </video>
+        <div class="inner">
+          <div class="hero-copy reveal">
+            <h1>Together We Create Hope</h1>
+            <p>Every child we support.<br /><br />Every family we uplift.<br /><br />Every moment of hope.<br /><br />Made possible because of you.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section support-community">
+        <div class="inner">
+          <div class="section-title reveal">
+            <h2>Our Community of Support</h2>
+          </div>
+          <div class="logo-fields">
+            <div class="logo-field reveal">
+              <h3>Corporate Sponsors</h3>
+              <div class="logo-row"><div class="logo-mark">Sponsor</div><div class="logo-mark">Sponsor</div><div class="logo-mark">Sponsor</div></div>
+            </div>
+            <div class="logo-field reveal">
+              <h3>Hospital Partners</h3>
+              <div class="logo-row"><div class="logo-mark">Hospital</div><div class="logo-mark">Hospital</div><div class="logo-mark">Hospital</div></div>
+            </div>
+            <div class="logo-field reveal">
+              <h3>Church Partners</h3>
+              <div class="logo-row"><div class="logo-mark">Church</div><div class="logo-mark">Church</div><div class="logo-mark">Church</div></div>
+            </div>
+            <div class="logo-field reveal">
+              <h3>Community Partners</h3>
+              <div class="logo-row"><div class="logo-mark">Community</div><div class="logo-mark">Community</div><div class="logo-mark">Community</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section because">
+        <div class="inner">
+          <div class="section-title reveal">
+            <h2>Because of You</h2>
+          </div>
+          <div class="numbers">
+            <div class="number reveal"><strong data-count="2920">0</strong><span>Bed Nights</span></div>
+            <div class="number reveal"><strong data-count="2916">0</strong><span>Meals Served</span></div>
+            <div class="number reveal"><strong data-count="1766">0</strong><span>Families Transported</span></div>
+            <div class="number reveal"><strong data-count="726">0</strong><span>Activities</span></div>
+            <div class="number reveal"><strong data-count="6741">0</strong><span>Care Cart Meals</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gratitude">
+        <div class="inner quote-wrap reveal">
+          <blockquote>“Thank you for believing that no child should fight alone.”</blockquote>
+          <div class="signature">
+            <strong>Little Ark Foundation</strong>
+            <span>With gratitude</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section logo-wall-section">
+        <div class="section-title reveal">
+          <h2>Our Partners in Hope</h2>
+        </div>
+        <div class="logo-wall" aria-hidden="true">
+          <div class="wall-logo">Hope Partner</div><div class="wall-logo">Care Partner</div><div class="wall-logo">Faith Partner</div><div class="wall-logo">Hospital</div><div class="wall-logo">Community</div><div class="wall-logo">Sponsor</div>
+          <div class="wall-logo">Hope Partner</div><div class="wall-logo">Care Partner</div><div class="wall-logo">Faith Partner</div><div class="wall-logo">Hospital</div><div class="wall-logo">Community</div><div class="wall-logo">Sponsor</div>
+        </div>
+        <div class="logo-wall" aria-hidden="true">
+          <div class="wall-logo">Church</div><div class="wall-logo">Clinic</div><div class="wall-logo">Donor Group</div><div class="wall-logo">Volunteer Team</div><div class="wall-logo">Foundation</div><div class="wall-logo">Sponsor</div>
+          <div class="wall-logo">Church</div><div class="wall-logo">Clinic</div><div class="wall-logo">Donor Group</div><div class="wall-logo">Volunteer Team</div><div class="wall-logo">Foundation</div><div class="wall-logo">Sponsor</div>
+        </div>
+      </section>
+
+      <section class="final">
+        <div class="reveal">
+          <h2>Together, we are building brighter futures.</h2>
+          <a class="button" href="./index.html#give">Give Hope</a>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const revealItems = document.querySelectorAll(".reveal");
+      const countItems = document.querySelectorAll("[data-count]");
+
+      function animateCount(el) {
+        if (el.dataset.done === "true") return;
+        el.dataset.done = "true";
+        const target = Number(el.dataset.count);
+        const start = performance.now();
+        const duration = 1150;
+
+        function tick(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.round(target * eased).toLocaleString();
+          if (progress < 1) requestAnimationFrame(tick);
+          else el.textContent = target.toLocaleString();
+        }
+
+        requestAnimationFrame(tick);
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            if (entry.target.matches("[data-count]")) animateCount(entry.target);
+            entry.target.querySelectorAll?.("[data-count]").forEach(animateCount);
+          });
+        },
+        { threshold: 0.18 }
+      );
+
+      revealItems.forEach((item) => observer.observe(item));
+      countItems.forEach((item) => observer.observe(item));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+import { siteContent } from "@/data/siteContent";
+
+export const actions = [
+  {
+    title: "Give Hope",
+    body: "Provide meals, housing, transportation, and care for families in need.",
+    button: "Give Hope",
+    href: siteContent.links.giveHopePath,
+    imageSrc: "/images/get-on-board/give-hope-children.png",
+    imageAlt: "Three children supported by Little Ark Foundation",
+    imageFrame: "landscape",
+    imagePosition: "object-center",
+    soft: false,
+    external: false,
+  },
+  {
+    title: "Volunteer",
+    body: "Share your time, skills, and compassion.",
+    button: "Become a Volunteer",
+    href: "https://forms.gle/fbefUHpCwzdFAwEH6",
+    imageSrc: "/images/get-on-board/volunteer-child-support.png",
+    imageAlt: "Little Ark Foundation volunteer reading with a child",
+    imageFrame: "portrait",
+    imagePosition: "object-center",
+    soft: true,
+    external: true,
+  },
+  {
+    title: "Partner With Us",
+    body: "Build brighter futures through meaningful partnerships.",
+    button: "Become a Partner",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSeb83n4PzibnWmDOtcu0egwiX4q7S8Bk4N3a7S4gt9jyv8E1Q/viewform",
+    imageSrc: "/images/get-on-board/partner-team.png",
+    imageAlt: "Little Ark Foundation team members",
+    imageFrame: "landscape",
+    imagePosition: "object-center",
+    soft: true,
+    external: true,
+  },
+] as const;

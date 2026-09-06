@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Get On Board | Little Ark Foundation</title>
+    <style>
+      :root {
+        --primary-aqua: #1fa8f4;
+        --primary-aqua-strong: #008fe4;
+        --soft-aqua: #eaf9ff;
+        --soft-aqua-2: #c8f4ff;
+        --ink: #08233d;
+        --muted: #557086;
+        --yellow: #ffc83d;
+        --shadow: 0 28px 80px rgba(31, 168, 244, 0.18);
+        --radius: 28px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--ink);
+        background: #fff;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .nav {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 1px 0 rgba(31, 168, 244, 0.12);
+        backdrop-filter: blur(14px);
+      }
+
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: min(1220px, calc(100% - 40px));
+        min-height: 82px;
+        margin: 0 auto;
+        gap: 22px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--primary-aqua);
+        font-weight: 900;
+      }
+
+      .logo svg {
+        width: 62px;
+        height: 44px;
+      }
+
+      .logo strong {
+        display: block;
+        font-size: 22px;
+        line-height: 0.9;
+      }
+
+      .logo span span {
+        display: block;
+        color: var(--primary-aqua-strong);
+        font-size: 11px;
+        letter-spacing: 0.12em;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: clamp(16px, 2vw, 30px);
+        margin-left: auto;
+        font-size: 13px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary-aqua-strong);
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 28px;
+        border-radius: 999px;
+        color: #061d34;
+        background: var(--yellow);
+        font-weight: 900;
+        text-transform: uppercase;
+        box-shadow: 0 16px 38px rgba(255, 200, 61, 0.36);
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 22px 46px rgba(255, 200, 61, 0.46);
+      }
+
+      .soft-button {
+        background: var(--soft-aqua-2);
+        color: var(--primary-aqua-strong);
+        box-shadow: 0 16px 38px rgba(31, 168, 244, 0.16);
+      }
+
+      .hero {
+        position: relative;
+        display: grid;
+        align-items: center;
+        min-height: 100svh;
+        padding-top: 82px;
+        overflow: hidden;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(0, 143, 228, 0.94) 0%, rgba(31, 168, 244, 0.74) 48%, rgba(102, 211, 247, 0.18) 100%),
+          linear-gradient(135deg, var(--primary-aqua-strong), var(--primary-aqua));
+      }
+
+      .hero-visual {
+        position: absolute;
+        inset: 82px 0 0;
+        background:
+          radial-gradient(circle at 22% 42%, #e9aa84 0 22px, transparent 23px),
+          radial-gradient(circle at 38% 39%, #f5c39c 0 20px, transparent 21px),
+          radial-gradient(circle at 56% 43%, #d88e6e 0 22px, transparent 23px),
+          radial-gradient(circle at 74% 40%, #f2c59e 0 20px, transparent 21px),
+          linear-gradient(180deg, transparent 0 47%, rgba(255, 255, 255, 0.5) 48% 64%, rgba(31, 168, 244, 0.18) 65%),
+          linear-gradient(135deg, #dff7ff, var(--soft-aqua-2) 52%, #75d2bf);
+        animation: image-drift 15s ease-in-out infinite alternate;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 82px 0 0;
+        background:
+          linear-gradient(90deg, rgba(0, 143, 228, 0.9) 0%, rgba(31, 168, 244, 0.68) 50%, rgba(255, 255, 255, 0.12) 100%),
+          radial-gradient(circle at 76% 22%, rgba(255, 255, 255, 0.32), transparent 18rem);
+      }
+
+      .inner {
+        position: relative;
+        z-index: 2;
+        width: min(1220px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .hero-copy {
+        width: min(780px, 100%);
+        padding: 96px 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        letter-spacing: 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(70px, 12vw, 150px);
+        line-height: 0.86;
+        font-weight: 900;
+      }
+
+      .hero p {
+        max-width: 690px;
+        margin: 28px 0 0;
+        font-size: clamp(23px, 3vw, 40px);
+        line-height: 1.16;
+        font-weight: 900;
+      }
+
+      .action-section {
+        padding: clamp(86px, 11vw, 145px) 0;
+        background:
+          radial-gradient(circle at 12% 10%, rgba(31, 168, 244, 0.09), transparent 24rem),
+          linear-gradient(180deg, #fff, var(--soft-aqua) 50%, #fff);
+      }
+
+      .action-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+        gap: clamp(34px, 7vw, 92px);
+        align-items: center;
+        min-height: 620px;
+        margin-bottom: clamp(76px, 10vw, 125px);
+      }
+
+      .action-row:nth-child(even) {
+        grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+      }
+
+      .action-row:nth-child(even) .action-copy {
+        order: 2;
+      }
+
+      .action-row:nth-child(even) .photo {
+        order: 1;
+      }
+
+      .photo {
+        min-height: clamp(420px, 54vw, 720px);
+        overflow: hidden;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        background:
+          radial-gradient(circle at 25% 42%, #e9aa84 0 20px, transparent 21px),
+          radial-gradient(circle at 45% 40%, #f5c39c 0 19px, transparent 20px),
+          radial-gradient(circle at 64% 43%, #d88e6e 0 20px, transparent 21px),
+          linear-gradient(180deg, transparent 0 47%, rgba(255, 255, 255, 0.52) 48% 64%, rgba(31, 168, 244, 0.18) 65%),
+          linear-gradient(135deg, #dff7ff, var(--soft-aqua-2) 48%, #75d2bf);
+      }
+
+      .photo.volunteer {
+        background:
+          radial-gradient(circle at 22% 38%, #e9aa84 0 20px, transparent 21px),
+          radial-gradient(circle at 42% 36%, #f5c39c 0 19px, transparent 20px),
+          radial-gradient(circle at 62% 39%, #d88e6e 0 20px, transparent 21px),
+          radial-gradient(circle at 80% 37%, #f2c59e 0 19px, transparent 20px),
+          linear-gradient(180deg, transparent 0 47%, rgba(255, 255, 255, 0.5) 48% 64%, rgba(31, 168, 244, 0.18) 65%),
+          linear-gradient(135deg, #dff7ff, #fff 50%, var(--soft-aqua-2));
+      }
+
+      .photo.partner {
+        background:
+          linear-gradient(#fff, #fff) 55% 58% / 62% 34% no-repeat,
+          radial-gradient(circle at 30% 74%, #1a2d3d 0 17px, transparent 18px),
+          radial-gradient(circle at 76% 74%, #1a2d3d 0 17px, transparent 18px),
+          radial-gradient(circle at 18% 40%, #f2bd96 0 17px, transparent 18px),
+          radial-gradient(circle at 68% 40%, #d88e6e 0 17px, transparent 18px),
+          linear-gradient(135deg, #95dcc0, #dff8ff);
+      }
+
+      .action-copy h2 {
+        color: var(--primary-aqua);
+        font-size: clamp(48px, 8vw, 108px);
+        line-height: 0.9;
+        font-weight: 900;
+      }
+
+      .action-copy p {
+        max-width: 520px;
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: clamp(22px, 2.5vw, 34px);
+        line-height: 1.24;
+        font-weight: 800;
+      }
+
+      .action-copy .button {
+        margin-top: 34px;
+      }
+
+      .ways {
+        display: grid;
+        place-items: center;
+        min-height: 84svh;
+        padding: 100px 20px;
+        color: #fff;
+        text-align: center;
+        background:
+          radial-gradient(circle at 20% 28%, rgba(255, 255, 255, 0.24), transparent 19rem),
+          radial-gradient(circle at 80% 68%, rgba(200, 244, 255, 0.22), transparent 20rem),
+          linear-gradient(135deg, var(--primary-aqua-strong), var(--primary-aqua));
+      }
+
+      .ways h2 {
+        max-width: 900px;
+        font-size: clamp(48px, 8vw, 112px);
+        line-height: 0.94;
+        font-weight: 900;
+      }
+
+      .way-icons {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        width: min(920px, 100%);
+        margin-top: 54px;
+      }
+
+      .way {
+        display: grid;
+        place-items: center;
+        gap: 14px;
+        min-height: 160px;
+        padding: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.14);
+        font-size: 18px;
+        font-weight: 900;
+        backdrop-filter: blur(10px);
+      }
+
+      .way svg {
+        width: 48px;
+        height: 48px;
+      }
+
+      .final {
+        display: grid;
+        place-items: center;
+        min-height: 78svh;
+        padding: 100px 20px;
+        color: #fff;
+        text-align: center;
+        background:
+          radial-gradient(circle at 20% 32%, rgba(200, 244, 255, 0.28), transparent 18rem),
+          linear-gradient(135deg, var(--primary-aqua-strong), var(--primary-aqua));
+      }
+
+      .final h2 {
+        max-width: 1000px;
+        font-size: clamp(46px, 8vw, 112px);
+        line-height: 0.94;
+        font-weight: 900;
+      }
+
+      .final .button {
+        margin-top: 34px;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 640ms ease,
+          transform 640ms ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @keyframes image-drift {
+        from {
+          transform: scale(1.02) translate3d(-1%, -1%, 0);
+        }
+
+        to {
+          transform: scale(1.08) translate3d(1.4%, 1%, 0);
+        }
+      }
+
+      @media (max-width: 900px) {
+        .nav-links {
+          display: none;
+        }
+
+        .action-row,
+        .action-row:nth-child(even) {
+          grid-template-columns: 1fr;
+        }
+
+        .action-row:nth-child(even) .action-copy,
+        .action-row:nth-child(even) .photo {
+          order: initial;
+        }
+
+        .way-icons {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 620px) {
+        .nav-inner,
+        .inner {
+          width: min(100% - 28px, 1220px);
+        }
+
+        .logo svg {
+          width: 52px;
+        }
+
+        .logo strong {
+          font-size: 18px;
+        }
+
+        .nav .button {
+          display: none;
+        }
+
+        .hero h1 {
+          font-size: clamp(58px, 18vw, 92px);
+        }
+
+        .photo {
+          min-height: 360px;
+          border-radius: 24px;
+        }
+
+        .way-icons {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 1ms !important;
+          scroll-behavior: auto !important;
+          transition-duration: 1ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="logo" href="./index.html" aria-label="Little Ark Foundation home">
+          <svg viewBox="0 0 100 70" aria-hidden="true">
+            <path d="M12 46c18 14 54 14 76 0-8 13-22 20-38 20S20 59 12 46Z" fill="currentColor" />
+            <path d="M18 39c12 8 50 8 64 0-9 8-21 12-33 12-13 0-23-4-31-12Z" fill="#c8f4ff" />
+            <path d="M26 30h48l-7 12H33l-7-12Z" fill="none" stroke="currentColor" stroke-width="4" />
+            <circle cx="33" cy="19" r="5" fill="currentColor" />
+            <circle cx="50" cy="13" r="5" fill="currentColor" />
+            <circle cx="67" cy="19" r="5" fill="currentColor" />
+            <path d="M29 27v-8m21 8V16m21 11v-8" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+          </svg>
+          <span><strong>LITTLE ARK</strong><span>FOUNDATION</span></span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="./the-ark.html">The Ark</a>
+          <a href="./our-voyage.html">Our Voyage</a>
+          <a href="./get-on-board.html">Get On Board</a>
+          <a href="./our-partners.html">Our Partners</a>
+          <a href="./media-hub.html">Media Hub</a>
+        </nav>
+        <a class="button" href="./index.html#give">Give Hope</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-visual" aria-hidden="true"></div>
+        <div class="inner">
+          <div class="hero-copy reveal">
+            <h1>Be Part of the Journey</h1>
+            <p>Whether you give, volunteer, partner, or advocate—you help children and families keep moving forward.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="action-section">
+        <div class="inner">
+          <article class="action-row reveal">
+            <div class="action-copy">
+              <h2>Give Hope</h2>
+              <p>Provide meals, housing, transportation, and care for families in need.</p>
+              <a class="button" href="./index.html#give">Give Hope</a>
+            </div>
+            <div class="photo" aria-hidden="true"></div>
+          </article>
+
+          <article class="action-row reveal">
+            <div class="action-copy">
+              <h2>Volunteer</h2>
+              <p>Share your time, skills, and compassion.</p>
+              <a class="button soft-button" href="#">Become a Volunteer</a>
+            </div>
+            <div class="photo volunteer" aria-hidden="true"></div>
+          </article>
+
+          <article class="action-row reveal">
+            <div class="action-copy">
+              <h2>Partner With Us</h2>
+              <p>Build brighter futures through meaningful partnerships.</p>
+              <a class="button soft-button" href="#">Become a Partner</a>
+            </div>
+            <div class="photo partner" aria-hidden="true"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="ways">
+        <div class="reveal">
+          <h2>There are many ways to help.<br />But every path leads to hope.</h2>
+          <div class="way-icons">
+            <div class="way"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.2-4.4-9.5-9C.7 8.5 2.4 4.8 6 4.2c2-.3 3.8.6 5 2 1.2-1.4 3-2.3 5-2 3.6.6 5.3 4.3 3.5 7.8C19.2 16.6 12 21 12 21Z" fill="currentColor"/></svg>Give</div>
+            <div class="way"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 11a4 4 0 1 1 8 0v2h2a3 3 0 0 1 3 3v4H3v-4a3 3 0 0 1 3-3h2v-2Z" fill="currentColor"/><circle cx="12" cy="6" r="4" fill="currentColor"/></svg>Volunteer</div>
+            <div class="way"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12 3 7l5-5 5 5-5 5Zm8 10-5-5 5-5 5 5-5 5ZM8 22l-5-5 5-5 5 5-5 5Zm8-10-5-5 5-5 5 5-5 5Z" fill="currentColor"/></svg>Partner</div>
+            <div class="way"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h4l8 5V5l-8 5H4Zm14 1a3 3 0 0 1 0 2v-2Zm2-4a8 8 0 0 1 0 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Advocate</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="final">
+        <div class="reveal">
+          <h2>Together, we can build brighter futures for every child.</h2>
+          <a class="button" href="./index.html#give">Give Hope</a>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const revealItems = document.querySelectorAll(".reveal");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("is-visible");
+          });
+        },
+        { threshold: 0.18 }
+      );
+
+      revealItems.forEach((item) => observer.observe(item));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Ark story section review</title>
+  <style>
+    :root { font-family: Arial, Helvetica, sans-serif; color: #08233d; --blue: #005ba8; --sky: #1fa8f4; --muted: #557086; --line: #d9f1fb; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #eaf4fa; }
+    button, input { font: inherit; }
+    .shell { min-height: 100vh; display: grid; grid-template-columns: 240px 1fr; }
+    .controls { padding: 24px 18px; background: #fff; border-right: 1px solid var(--line); }
+    .eyebrow { margin: 0 0 8px; color: var(--sky); font-size: 11px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: 22px; line-height: 1.05; }
+    .intro { margin: 10px 0 24px; color: var(--muted); font-size: 13px; line-height: 1.45; }
+    label { display: block; margin: 18px 0 7px; font-size: 12px; font-weight: 800; }
+    output { float: right; color: var(--sky); font-variant-numeric: tabular-nums; }
+    input[type=range] { width: 100%; accent-color: var(--sky); }
+    button { width: 100%; margin-top: 10px; border: 0; border-radius: 999px; padding: 11px 13px; cursor: pointer; font-size: 12px; font-weight: 900; }
+    #comment { margin-top: 26px; background: var(--blue); color: #fff; }
+    #export { background: #ffc83d; color: #08233d; }
+    .hint { margin-top: 20px; color: #7890a3; font-size: 11px; line-height: 1.45; }
+    .workspace { min-width: 0; padding: 24px; }
+    .workspace-head { margin-bottom: 14px; }
+    .workspace-head p { margin: 0; color: var(--muted); font-size: 12px; }
+    .previews { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .frame { overflow: hidden; min-width: 0; border: 1px solid var(--line); background: #fff; box-shadow: 0 16px 40px rgba(0,72,140,.10); }
+    .frame-bar { display: flex; justify-content: space-between; padding: 10px 12px; color: var(--muted); background: #f8fcff; border-bottom: 1px solid #e4f1f8; font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+    .story { padding: clamp(48px, 7vw, 90px) 7%; background: linear-gradient(180deg,#f7fcff 0%,#fff 42%,#fff 100%); }
+    .story-inner { display: grid; grid-template-columns: minmax(0,1.02fr) minmax(280px,.98fr); align-items: center; gap: clamp(32px,7vw,86px); max-width: 920px; margin: auto; }
+    .copy h2 { max-width: 390px; margin: 0; color: var(--blue); font-size: clamp(36px,5vw,62px); line-height: .94; letter-spacing: -.03em; }
+    .copy p { max-width: 510px; margin: 18px 0 0; color: var(--muted); font-size: clamp(16px,1.55vw,20px); font-weight: 600; line-height: 1.52; }
+    .photo { position: relative; aspect-ratio: 1760 / 1258; overflow: hidden; border-radius: 28px; box-shadow: 0 24px 60px rgba(31,168,244,.16); }
+    .photo img { width: 100%; height: 100%; display: block; object-fit: contain; transition: transform .5s ease; }
+    .commenting [data-fd-id] { cursor: crosshair; outline: 2px dashed #ffc83d; outline-offset: 5px; }
+    [contenteditable=true]:focus { outline: 2px solid #ffc83d; outline-offset: 5px; }
+    @media (max-width: 820px) { .shell { grid-template-columns: 190px 1fr; } .previews { grid-template-columns: 1fr; } .story-inner { grid-template-columns: 1fr; gap: 32px; } .photo { max-width: 560px; margin: auto; } }
+    @media (max-width: 640px) { .shell { display: block; } .controls { border-right: 0; border-bottom: 1px solid var(--line); } .workspace { padding: 14px; } .story { padding: 48px 24px; } .story-inner { gap: 28px; } .copy h2 { font-size: clamp(32px,8vw,43px); } .copy p { margin-top: 14px; font-size: 15px; line-height: 1.5; } .photo { border-radius: 22px; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
+
+    .story { min-height: 610px; padding: clamp(34px, 5vw, 64px); background: linear-gradient(180deg,#e8f8ff 0%,#f8fdff 48%,#fff 100%); }
+    .story-inner { display: grid; grid-template-columns: minmax(0,1fr); gap: 26px; max-width: 760px; }
+    .copy h2 { max-width: 620px; color: var(--blue); font-size: clamp(38px,5.2vw,68px); line-height: .92; letter-spacing: -.04em; }
+    .copy p { max-width: 650px; margin-top: 18px; color: var(--muted); font-size: clamp(15px,1.5vw,18px); line-height: 1.5; }
+    .contact-rail { display: grid; grid-template-columns: 1.15fr .85fr .85fr; gap: 10px; margin-top: 10px; }
+    .contact-card { min-height: 112px; padding: 15px; border: 1px solid #c6edfb; border-radius: 16px; background: #fff; box-shadow: 0 10px 22px rgba(31,168,244,.08); }
+    .contact-card.featured { background: var(--blue); border-color: #8edcf8; color: #fff; }
+    .contact-card .icon { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 9px; background: #edf8ff; color: var(--sky); font-weight: 900; }
+    .contact-card.featured .icon { background: var(--sky); color: #fff; }
+    .contact-card .label { margin-top: 17px; color: var(--sky); font-size: 9px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+    .contact-card.featured .label { color: #9de8ff; }
+    .contact-card .value { margin-top: 5px; font-size: 13px; font-weight: 800; line-height: 1.35; }
+    .signal { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 14px; color: var(--sky); font-size: 10px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+    .signal i { width: 7px; height: 7px; border-radius: 50%; background: #ffc83d; animation: beacon 1.8s ease-out infinite; }
+    .direct-line { max-width: 330px; margin-top: 20px; padding: 16px; border-radius: 17px; background: var(--blue); color: #fff; box-shadow: 0 16px 30px rgba(0,91,168,.18); animation: panel-in .9s cubic-bezier(.22,1,.36,1) both; }
+    .direct-line strong { display: block; margin-top: 8px; font-size: 18px; line-height: 1; }
+    .direct-line a { display: block; margin-top: 13px; color: #ffc83d; font-size: 11px; font-weight: 800; }
+    @keyframes panel-in { from { opacity: 0; transform: translate3d(20px,10px,0) rotate(1deg); } to { opacity: 1; transform: none; } }
+    @keyframes beacon { 0%,100% { box-shadow: 0 0 0 0 rgba(255,200,61,0); } 40% { box-shadow: 0 0 0 7px rgba(255,200,61,.22); } }
+    @media (max-width: 640px) { .story { min-height: 560px; padding: 32px 20px; } .contact-rail { gap: 6px; } .contact-card { min-height: 104px; padding: 10px; } .contact-card .value { font-size: 10px; } .direct-line { max-width: none; } }
+    @media (prefers-reduced-motion: reduce) { .signal i, .direct-line { animation: none; } }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <aside class="controls" aria-label="Story section design controls">
+      <p class="eyebrow">Frontend design review</p>
+      <h1>Contact Us</h1>
+      <p class="intro">Existing-app preview for <code>/contact</code>. Tune the compact contact rail and hero rhythm while keeping the Little Ark palette.</p>
+      <label for="imageScale">Rail scale <output id="imageScaleValue">1.01</output></label>
+      <input id="imageScale" type="range" min="1" max="1.08" step=".01" value="1.01">
+      <label for="copyWidth">Headline width <output id="copyWidthValue">390px</output></label>
+      <input id="copyWidth" type="range" min="300" max="620" value="390">
+      <label for="sectionSpace">Panel spacing <output id="sectionSpaceValue">90px</output></label>
+      <input id="sectionSpace" type="range" min="34" max="90" value="64">
+      <button id="comment" type="button">Comment mode</button>
+      <button id="export" type="button">Export notes</button>
+      <p class="hint">Click the headline or contact copy to edit. Comment mode highlights the meaningful contact elements.</p>
+    </aside>
+    <section class="workspace">
+      <div class="workspace-head"><p class="eyebrow">Route / contact</p><p>Compact trust-first contact layout with a viewport-led direct line.</p></div>
+      <div class="previews">
+        <article class="frame"><div class="frame-bar"><span>Desktop direction</span><span>1440 × 900</span></div><section class="story"><div class="story-inner"><div class="copy"><span class="signal" data-fd-id="contact-eyebrow" data-fd-editable="text" contenteditable="true"><i></i> Contact Us</span><h2 data-fd-id="contact-heading" data-fd-editable="text" contenteditable="true">We would love to hear from you.</h2><p data-fd-id="contact-description" data-fd-editable="text" contenteditable="true">Have a question about volunteering, partnerships, donations, or family support? Send us a message and our team will get back to you soon.</p><div class="direct-line" data-fd-id="direct-contact"><span>Prefer email?</span><strong>Reach us directly at</strong><a href="mailto:info@littlearkfoundation.org">info@littlearkfoundation.org.</a></div><div class="contact-rail" data-fd-id="contact-rail"><div class="contact-card featured" data-fd-id="address-card"><span class="icon">⌖</span><div class="label">Address</div><div class="value">35 Tulip Street<br>Brgy. Roxas<br>Quezon City</div></div><div class="contact-card" data-fd-id="philippines-card"><span class="icon">⌕</span><div class="label">Philippines</div><div class="value">+63 906 404 9569</div></div><div class="contact-card" data-fd-id="united-states-card"><span class="icon">⌕</span><div class="label">United States</div><div class="value">+1 (732) 300-3902</div></div></div></div></div></section></article>
+        <article class="frame"><div class="frame-bar"><span>Mobile density</span><span>390 × 844</span></div><section class="story"><div class="story-inner"><div class="copy"><span class="signal"><i></i> Contact Us</span><h2 data-fd-id="contact-heading" data-fd-editable="text" contenteditable="true">We would love to hear from you.</h2><p data-fd-id="contact-description" data-fd-editable="text" contenteditable="true">Have a question about volunteering, partnerships, donations, or family support? Send us a message and our team will get back to you soon.</p><div class="direct-line" data-fd-id="direct-contact"><span>Prefer email?</span><strong>Reach us directly at</strong><a href="mailto:info@littlearkfoundation.org">info@littlearkfoundation.org.</a></div><div class="contact-rail" data-fd-id="contact-rail"><div class="contact-card featured"><span class="icon">⌖</span><div class="label">Address</div><div class="value">35 Tulip Street<br>Brgy. Roxas<br>Quezon City</div></div><div class="contact-card"><span class="icon">⌕</span><div class="label">Philippines</div><div class="value">+63 906 404 9569</div></div><div class="contact-card"><span class="icon">⌕</span><div class="label">United States</div><div class="value">+1 (732) 300-3902</div></div></div></div></div></section></article>
+      </div>
+    </section>
+  </main>
+  <script>
+    const imageScale = document.querySelector('#imageScale');
+    const copyWidth = document.querySelector('#copyWidth');
+    const sectionSpace = document.querySelector('#sectionSpace');
+    const sync = () => {
+      document.querySelectorAll('.photo img').forEach((image) => { image.style.transform = `scale(${imageScale.value})`; });
+      document.querySelectorAll('.copy h2').forEach((heading) => { heading.style.maxWidth = `${copyWidth.value}px`; });
+      document.querySelectorAll('.story').forEach((story) => { story.style.paddingTop = `${sectionSpace.value}px`; story.style.paddingBottom = `${sectionSpace.value}px`; });
+      document.querySelector('#imageScaleValue').textContent = imageScale.value;
+      document.querySelector('#copyWidthValue').textContent = `${copyWidth.value}px`;
+      document.querySelector('#sectionSpaceValue').textContent = `${sectionSpace.value}px`;
+    };
+    [imageScale, copyWidth, sectionSpace].forEach((input) => input.addEventListener('input', sync));
+    document.querySelector('#comment').addEventListener('click', (event) => { document.body.classList.toggle('commenting'); event.currentTarget.textContent = document.body.classList.contains('commenting') ? 'Exit comment mode' : 'Comment mode'; });
+    document.querySelector('#export').addEventListener('click', () => { navigator.clipboard?.writeText(`Frontend design round-trip\n\nSource: app/contact/_components/ContactHeroSection.tsx\nTopic: Contact Us hero and contact rail\n- Use the split hero with a direct email panel.\n- Keep the contact rail compact and horizontal on mobile.\n- Trigger the signal animation when the panel enters the viewport.`); window.alert('Contact review notes copied to clipboard.'); });
+    sync();
+  </script>
+</body>
+</html>

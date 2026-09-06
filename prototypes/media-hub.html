@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Media Hub | Little Ark Foundation</title>
+    <style>
+      :root {
+        --primary-aqua: #1fa8f4;
+        --primary-aqua-strong: #008fe4;
+        --soft-aqua: #eaf9ff;
+        --soft-aqua-2: #c8f4ff;
+        --ink: #08233d;
+        --muted: #557086;
+        --yellow: #ffc83d;
+        --shadow: 0 28px 80px rgba(31, 168, 244, 0.18);
+        --radius: 26px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--ink);
+        background: #fff;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .nav {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 1px 0 rgba(31, 168, 244, 0.12);
+        backdrop-filter: blur(14px);
+      }
+
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: min(1220px, calc(100% - 40px));
+        min-height: 82px;
+        margin: 0 auto;
+        gap: 22px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--primary-aqua);
+        font-weight: 900;
+      }
+
+      .logo svg {
+        width: 62px;
+        height: 44px;
+      }
+
+      .logo strong {
+        display: block;
+        font-size: 22px;
+        line-height: 0.9;
+      }
+
+      .logo span span {
+        display: block;
+        color: var(--primary-aqua-strong);
+        font-size: 11px;
+        letter-spacing: 0.12em;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: clamp(16px, 2vw, 30px);
+        margin-left: auto;
+        font-size: 13px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary-aqua-strong);
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 28px;
+        border-radius: 999px;
+        color: #061d34;
+        background: var(--yellow);
+        font-weight: 900;
+        text-transform: uppercase;
+        box-shadow: 0 16px 38px rgba(255, 200, 61, 0.36);
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 22px 46px rgba(255, 200, 61, 0.46);
+      }
+
+      .soft-button {
+        color: var(--primary-aqua-strong);
+        background: var(--soft-aqua-2);
+        box-shadow: 0 16px 38px rgba(31, 168, 244, 0.16);
+      }
+
+      .hero {
+        position: relative;
+        display: grid;
+        align-items: center;
+        min-height: 100svh;
+        padding-top: 82px;
+        overflow: hidden;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(0, 143, 228, 0.94) 0%, rgba(31, 168, 244, 0.72) 48%, rgba(102, 211, 247, 0.18) 100%),
+          linear-gradient(135deg, var(--primary-aqua-strong), var(--primary-aqua));
+      }
+
+      .hero-video {
+        position: absolute;
+        inset: 82px 0 0;
+        width: 100%;
+        height: calc(100% - 82px);
+        object-fit: cover;
+        opacity: 0.78;
+      }
+
+      .hero-fallback {
+        position: absolute;
+        inset: 82px 0 0;
+        background:
+          radial-gradient(circle at 22% 42%, #e9aa84 0 22px, transparent 23px),
+          radial-gradient(circle at 38% 39%, #f5c39c 0 20px, transparent 21px),
+          radial-gradient(circle at 56% 43%, #d88e6e 0 22px, transparent 23px),
+          radial-gradient(circle at 74% 40%, #f2c59e 0 20px, transparent 21px),
+          linear-gradient(180deg, transparent 0 47%, rgba(255, 255, 255, 0.5) 48% 64%, rgba(31, 168, 244, 0.18) 65%),
+          linear-gradient(135deg, #dff7ff, var(--soft-aqua-2) 52%, #75d2bf);
+        animation: image-drift 15s ease-in-out infinite alternate;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 82px 0 0;
+        background:
+          linear-gradient(90deg, rgba(0, 143, 228, 0.9) 0%, rgba(31, 168, 244, 0.68) 50%, rgba(255, 255, 255, 0.12) 100%),
+          radial-gradient(circle at 76% 22%, rgba(255, 255, 255, 0.32), transparent 18rem);
+      }
+
+      .inner {
+        position: relative;
+        z-index: 2;
+        width: min(1220px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .hero-copy {
+        width: min(780px, 100%);
+        padding: 96px 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        letter-spacing: 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(70px, 12vw, 150px);
+        line-height: 0.86;
+        font-weight: 900;
+      }
+
+      .hero p {
+        max-width: 620px;
+        margin: 28px 0 0;
+        font-size: clamp(24px, 3.1vw, 42px);
+        line-height: 1.12;
+        font-weight: 900;
+      }
+
+      .section {
+        padding: clamp(86px, 11vw, 145px) 0;
+      }
+
+      .section-title {
+        max-width: 920px;
+        margin: 0 auto 56px;
+        text-align: center;
+      }
+
+      .section-title h2 {
+        color: var(--primary-aqua);
+        font-size: clamp(44px, 7vw, 98px);
+        line-height: 0.94;
+        font-weight: 900;
+      }
+
+      .featured {
+        background:
+          radial-gradient(circle at 12% 8%, rgba(31, 168, 244, 0.1), transparent 24rem),
+          linear-gradient(180deg, #fff, var(--soft-aqua));
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+        gap: clamp(36px, 7vw, 92px);
+        align-items: center;
+      }
+
+      .feature-media,
+      .story-photo,
+      .gallery-photo {
+        min-height: clamp(380px, 52vw, 680px);
+        overflow: hidden;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        background:
+          radial-gradient(circle at 25% 42%, #e9aa84 0 20px, transparent 21px),
+          radial-gradient(circle at 45% 40%, #f5c39c 0 19px, transparent 20px),
+          radial-gradient(circle at 64% 43%, #d88e6e 0 20px, transparent 21px),
+          linear-gradient(180deg, transparent 0 47%, rgba(255, 255, 255, 0.52) 48% 64%, rgba(31, 168, 244, 0.18) 65%),
+          linear-gradient(135deg, #dff7ff, var(--soft-aqua-2) 48%, #75d2bf);
+      }
+
+      .feature-copy h2 {
+        color: var(--primary-aqua);
+        font-size: clamp(46px, 7vw, 104px);
+        line-height: 0.9;
+        font-weight: 900;
+      }
+
+      .feature-copy p {
+        margin: 26px 0 0;
+        color: var(--muted);
+        font-size: clamp(22px, 2.4vw, 32px);
+        line-height: 1.3;
+        font-weight: 800;
+      }
+
+      .feature-copy .button {
+        margin-top: 34px;
+      }
+
+      .stories-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .story-card {
+        overflow: hidden;
+        border: 1px solid rgba(31, 168, 244, 0.14);
+        border-radius: 24px;
+        background: #fff;
+        box-shadow: 0 18px 46px rgba(31, 168, 244, 0.11);
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .story-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 24px 58px rgba(31, 168, 244, 0.18);
+      }
+
+      .story-photo {
+        min-height: 260px;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .story-card:nth-child(2) .story-photo {
+        background:
+          linear-gradient(#fff, #fff) 55% 58% / 62% 34% no-repeat,
+          radial-gradient(circle at 30% 74%, #1a2d3d 0 17px, transparent 18px),
+          radial-gradient(circle at 76% 74%, #1a2d3d 0 17px, transparent 18px),
+          radial-gradient(circle at 18% 40%, #f2bd96 0 17px, transparent 18px),
+          linear-gradient(135deg, #95dcc0, #dff8ff);
+      }
+
+      .story-card:nth-child(3) .story-photo {
+        background:
+          radial-gradient(circle at 18% 42%, #efb98f 0 17px, transparent 18px),
+          radial-gradient(circle at 34% 42%, #d89070 0 17px, transparent 18px),
+          radial-gradient(circle at 50% 42%, #f2caa4 0 17px, transparent 18px),
+          radial-gradient(circle at 24% 76%, var(--soft-aqua-2) 0 25px, transparent 26px),
+          linear-gradient(180deg, #ddf5ff, #fff);
+      }
+
+      .story-body {
+        padding: 22px;
+      }
+
+      .story-body h3 {
+        color: var(--primary-aqua);
+        font-size: 24px;
+        line-height: 1;
+        font-weight: 900;
+      }
+
+      .story-body p {
+        margin: 10px 0 20px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.45;
+        font-weight: 700;
+      }
+
+      .text-link {
+        color: var(--primary-aqua-strong);
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .gallery-section {
+        background:
+          radial-gradient(circle at 12% 8%, rgba(31, 168, 244, 0.1), transparent 24rem),
+          linear-gradient(180deg, #fff, var(--soft-aqua) 54%, #fff);
+      }
+
+      .gallery {
+        columns: 3 260px;
+        column-gap: 18px;
+      }
+
+      .gallery-photo {
+        display: block;
+        min-height: 280px;
+        margin: 0 0 18px;
+        break-inside: avoid;
+        transition:
+          transform 180ms ease,
+          filter 180ms ease;
+      }
+
+      .gallery-photo.tall {
+        min-height: 460px;
+      }
+
+      .gallery-photo.wide {
+        min-height: 340px;
+      }
+
+      .gallery-photo:hover {
+        transform: translateY(-6px) scale(1.01);
+        filter: saturate(1.08);
+      }
+
+      .reports {
+        color: #fff;
+        background:
+          radial-gradient(circle at 20% 28%, rgba(255, 255, 255, 0.24), transparent 19rem),
+          radial-gradient(circle at 80% 68%, rgba(200, 244, 255, 0.22), transparent 20rem),
+          linear-gradient(135deg, var(--primary-aqua-strong), var(--primary-aqua));
+      }
+
+      .reports .section-title h2 {
+        color: #fff;
+      }
+
+      .report-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .report-card {
+        min-height: 260px;
+        padding: clamp(26px, 4vw, 44px);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.14);
+        backdrop-filter: blur(10px);
+      }
+
+      .report-card h3 {
+        font-size: clamp(34px, 5vw, 64px);
+        line-height: 0.94;
+        font-weight: 900;
+      }
+
+      .report-card .button {
+        margin-top: 34px;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 640ms ease,
+          transform 640ms ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @keyframes image-drift {
+        from {
+          transform: scale(1.02) translate3d(-1%, -1%, 0);
+        }
+
+        to {
+          transform: scale(1.08) translate3d(1.4%, 1%, 0);
+        }
+      }
+
+      @media (max-width: 900px) {
+        .nav-links {
+          display: none;
+        }
+
+        .feature-grid,
+        .stories-grid,
+        .report-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .nav-inner,
+        .inner {
+          width: min(100% - 28px, 1220px);
+        }
+
+        .logo svg {
+          width: 52px;
+        }
+
+        .logo strong {
+          font-size: 18px;
+        }
+
+        .nav .button {
+          display: none;
+        }
+
+        .hero h1 {
+          font-size: clamp(58px, 18vw, 92px);
+        }
+
+        .feature-media,
+        .gallery-photo {
+          min-height: 340px;
+          border-radius: 24px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 1ms !important;
+          scroll-behavior: auto !important;
+          transition-duration: 1ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="logo" href="./index.html" aria-label="Little Ark Foundation home">
+          <svg viewBox="0 0 100 70" aria-hidden="true">
+            <path d="M12 46c18 14 54 14 76 0-8 13-22 20-38 20S20 59 12 46Z" fill="currentColor" />
+            <path d="M18 39c12 8 50 8 64 0-9 8-21 12-33 12-13 0-23-4-31-12Z" fill="#c8f4ff" />
+            <path d="M26 30h48l-7 12H33l-7-12Z" fill="none" stroke="currentColor" stroke-width="4" />
+            <circle cx="33" cy="19" r="5" fill="currentColor" />
+            <circle cx="50" cy="13" r="5" fill="currentColor" />
+            <circle cx="67" cy="19" r="5" fill="currentColor" />
+            <path d="M29 27v-8m21 8V16m21 11v-8" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+          </svg>
+          <span><strong>LITTLE ARK</strong><span>FOUNDATION</span></span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="./the-ark.html">The Ark</a>
+          <a href="./our-voyage.html">Our Voyage</a>
+          <a href="./get-on-board.html">Get On Board</a>
+          <a href="./our-partners.html">Our Partners</a>
+          <a href="./media-hub.html">Media Hub</a>
+        </nav>
+        <a class="button" href="./index.html#give">Give Hope</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-fallback" aria-hidden="true"></div>
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="./little-ark-hero-15s.mp4" type="video/mp4" />
+        </video>
+        <div class="inner">
+          <div class="hero-copy reveal">
+            <h1>Stories of Hope</h1>
+            <p>Moments of courage,<br />acts of kindness,<br />and lives changed every day.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section featured">
+        <div class="inner feature-grid">
+          <div class="feature-media reveal" aria-hidden="true"></div>
+          <div class="feature-copy reveal">
+            <h2>Featured Story</h2>
+            <p>The story that inspired Little Ark Foundation.</p>
+            <a class="button" href="#">Watch Story</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner">
+          <div class="section-title reveal">
+            <h2>Stories of Hope</h2>
+          </div>
+          <div class="stories-grid">
+            <article class="story-card reveal">
+              <div class="story-photo" aria-hidden="true"></div>
+              <div class="story-body">
+                <h3>Noah’s Story</h3>
+                <p>A family’s journey became a mission of refuge and care.</p>
+                <a class="text-link" href="#">Read Story</a>
+              </div>
+            </article>
+            <article class="story-card reveal">
+              <div class="story-photo" aria-hidden="true"></div>
+              <div class="story-body">
+                <h3>A Ride to Treatment</h3>
+                <p>One simple ride helped a child keep moving forward.</p>
+                <a class="text-link" href="#">Read Story</a>
+              </div>
+            </article>
+            <article class="story-card reveal">
+              <div class="story-photo" aria-hidden="true"></div>
+              <div class="story-body">
+                <h3>A Meal Shared</h3>
+                <p>Warm food became comfort during a long hospital day.</p>
+                <a class="text-link" href="#">Read Story</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery-section">
+        <div class="inner">
+          <div class="section-title reveal">
+            <h2>Moments That Matter</h2>
+          </div>
+          <div class="gallery">
+            <div class="gallery-photo tall reveal" aria-hidden="true"></div>
+            <div class="gallery-photo reveal" aria-hidden="true"></div>
+            <div class="gallery-photo wide reveal" aria-hidden="true"></div>
+            <div class="gallery-photo reveal" aria-hidden="true"></div>
+            <div class="gallery-photo tall reveal" aria-hidden="true"></div>
+            <div class="gallery-photo reveal" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reports">
+        <div class="inner">
+          <div class="section-title reveal">
+            <h2>Annual Impact Reports</h2>
+          </div>
+          <div class="report-grid">
+            <article class="report-card reveal">
+              <h3>2025 Impact Report</h3>
+              <a class="button" href="#">View Report</a>
+            </article>
+            <article class="report-card reveal">
+              <h3>2024 Impact Report</h3>
+              <a class="button" href="#">View Report</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const revealItems = document.querySelectorAll(".reveal");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("is-visible");
+          });
+        },
+        { threshold: 0.18 }
+      );
+
+      revealItems.forEach((item) => observer.observe(item));
+    </script>
+  </body>
+</html>

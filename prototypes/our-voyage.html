@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Voyage | Little Ark Foundation</title>
+    <style>
+      :root {
+        --primary-aqua: #1fa8f4;
+        --primary-aqua-strong: #008fe4;
+        --soft-aqua: #eaf9ff;
+        --soft-aqua-2: #c8f4ff;
+        --ink: #08233d;
+        --muted: #557086;
+        --yellow: #ffc83d;
+        --white: #ffffff;
+        --shadow: 0 28px 80px rgba(31, 168, 244, 0.18);
+        --radius: 26px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--ink);
+        background: #fff;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .nav {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 1px 0 rgba(31, 168, 244, 0.12);
+        backdrop-filter: blur(14px);
+      }
+
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: min(1220px, calc(100% - 40px));
+        min-height: 82px;
+        margin: 0 auto;
+        gap: 22px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--primary-aqua);
+        font-weight: 900;
+      }
+
+      .logo svg {
+        width: 62px;
+        height: 44px;
+      }
+
+      .logo strong {
+        display: block;
+        font-size: 22px;
+        line-height: 0.9;
+      }
+
+      .logo span span {
+        display: block;
+        color: var(--primary-aqua-strong);
+        font-size: 11px;
+        letter-spacing: 0.12em;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: clamp(16px, 2vw, 30px);
+        margin-left: auto;
+        font-size: 13px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary-aqua-strong);
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 28px;
+        border-radius: 999px;
+        color: #061d34;
+        background: var(--yellow);
+        font-weight: 900;
+        text-transform: uppercase;
+        box-shadow: 0 16px 38px rgba(255, 200, 61, 0.36);
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 22px 46px rgba(255, 200, 61, 0.46);
+      }
+
+      .hero {
+        position: relative;
+        display: grid;
+        align-items: center;
+        min-height: 100svh;
+        padding-top: 82px;
+        overflow: hidden;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(0, 143, 228, 0.94) 0%, rgba(31, 168, 244, 0.74) 46%, rgba(102, 211, 247, 0.2) 100%),
+          linear-gradient(135deg, var(--primary-aqua-strong), var(--primary-aqua));
+      }
+
+      .hero-video {
+        position: absolute;
+        inset: 82px 0 0;
+        width: 100%;
+        height: calc(100% - 82px);
+        object-fit: cover;
+        opacity: 0.78;
+      }
+
+      .hero-fallback {
+        position: absolute;
+        inset: 82px 0 0;
+        background:
+          radial-gradient(circle at 21% 42%, #e9aa84 0 22px, transparent 23px),
+          radial-gradient(circle at 37% 39%, #f5c39c 0 20px, transparent 21px),
+          radial-gradient(circle at 54% 43%, #d88e6e 0 22px, transparent 23px),
+          radial-gradient(circle at 72% 40%, #f2c59e 0 20px, transparent 21px),
+          linear-gradient(180deg, transparent 0 47%, rgba(255, 255, 255, 0.5) 48% 64%, rgba(31, 168, 244, 0.18) 65%),
+          linear-gradient(135deg, #dff7ff, var(--soft-aqua-2) 52%, #75d2bf);
+        animation: image-drift 15s ease-in-out infinite alternate;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 82px 0 0;
+        background:
+          linear-gradient(90deg, rgba(0, 143, 228, 0.88) 0%, rgba(31, 168, 244, 0.68) 48%, rgba(255, 255, 255, 0.12) 100%),
+          radial-gradient(circle at 76% 22%, rgba(255, 255, 255, 0.32), transparent 18rem);
+      }
+
+      .inner {
+        position: relative;
+        z-index: 2;
+        width: min(1220px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .hero-copy {
+        width: min(790px, 100%);
+        padding: 96px 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        letter-spacing: 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(72px, 12vw, 154px);
+        line-height: 0.86;
+        font-weight: 900;
+      }
+
+      .hero p {
+        max-width: 650px;
+        margin: 28px 0 0;
+        font-size: clamp(24px, 3.1vw, 42px);
+        line-height: 1.12;
+        font-weight: 900;
+      }
+
+      .scroll-cue {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 34px;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 14px;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .scroll-cue span,
+      .arrow {
+        display: inline-block;
+        animation: arrow-rise 1.3s ease-in-out infinite alternate;
+      }
+
+      .section {
+        padding: clamp(86px, 11vw, 145px) 0;
+      }
+
+      .section-title {
+        max-width: 920px;
+        margin: 0 auto 56px;
+        text-align: center;
+      }
+
+      .section-title h2 {
+        color: var(--primary-aqua);
+        font-size: clamp(44px, 7vw, 102px);
+        line-height: 0.94;
+        font-weight: 900;
+      }
+
+      .section-title p {
+        margin: 20px auto 0;
+        color: var(--muted);
+        font-size: clamp(20px, 2.3vw, 30px);
+        line-height: 1.34;
+        font-weight: 800;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .stat-card {
+        display: grid;
+        align-content: space-between;
+        min-height: 330px;
+        padding: 24px;
+        border: 1px solid rgba(31, 168, 244, 0.14);
+        border-radius: 22px;
+        background:
+          radial-gradient(circle at 88% 10%, rgba(200, 244, 255, 0.9), transparent 9rem),
+          linear-gradient(180deg, #fff, var(--soft-aqua));
+        box-shadow: 0 18px 46px rgba(31, 168, 244, 0.11);
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .stat-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 24px 58px rgba(31, 168, 244, 0.18);
+      }
+
+      .stat-card h3 {
+        color: var(--primary-aqua);
+        font-size: 21px;
+        line-height: 1.04;
+        font-weight: 900;
+      }
+
+      .stat-number {
+        display: block;
+        margin-top: 30px;
+        color: var(--primary-aqua);
+        font-size: clamp(46px, 5.5vw, 78px);
+        line-height: 0.82;
+        font-weight: 900;
+      }
+
+      .stat-label {
+        display: block;
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.25;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+
+      .growth {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 28px;
+        color: var(--primary-aqua);
+        font-weight: 900;
+      }
+
+      .growth strong {
+        font-size: 34px;
+        line-height: 1;
+      }
+
+      .growth span:last-child {
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+
+      .support-area {
+        background:
+          radial-gradient(circle at 10% 12%, rgba(31, 168, 244, 0.09), transparent 24rem),
+          linear-gradient(180deg, #fff, var(--soft-aqua) 48%, #fff);
+      }
+
+      .impact-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1.14fr) minmax(0, 0.86fr);
+        gap: clamp(36px, 7vw, 92px);
+        align-items: center;
+        min-height: 620px;
+        margin-bottom: clamp(76px, 10vw, 125px);
+      }
+
+      .impact-row:nth-child(even) {
+        grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+      }
+
+      .impact-row:nth-child(even) .impact-copy {
+        order: 2;
+      }
+
+      .impact-row:nth-child(even) .photo {
+        order: 1;
+      }
+
+      .photo {
+        position: relative;
+        min-height: clamp(420px, 54vw, 720px);
+        overflow: hidden;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        background:
+          radial-gradient(circle at 25% 42%, #e9aa84 0 20px, transparent 21px),
+          radial-gradient(circle at 45% 40%, #f5c39c 0 19px, transparent 20px),
+          radial-gradient(circle at 64% 43%, #d88e6e 0 20px, transparent 21px),
+          linear-gradient(180deg, transparent 0 47%, rgba(255, 255, 255, 0.52) 48% 64%, rgba(31, 168, 244, 0.18) 65%),
+          linear-gradient(135deg, #dff7ff, var(--soft-aqua-2) 48%, #75d2bf);
+      }
+
+      .photo.transport {
+        background:
+          linear-gradient(#fff, #fff) 55% 58% / 62% 34% no-repeat,
+          linear-gradient(90deg, var(--primary-aqua-strong) 0 18%, transparent 19%) 52% 58% / 64% 42% no-repeat,
+          radial-gradient(circle at 30% 74%, #1a2d3d 0 17px, transparent 18px),
+          radial-gradient(circle at 76% 74%, #1a2d3d 0 17px, transparent 18px),
+          radial-gradient(circle at 18% 40%, #f2bd96 0 17px, transparent 18px),
+          linear-gradient(135deg, #95dcc0, #dff8ff);
+      }
+
+      .photo.meals,
+      .photo.cart {
+        background:
+          radial-gradient(circle at 18% 42%, #efb98f 0 17px, transparent 18px),
+          radial-gradient(circle at 34% 42%, #d89070 0 17px, transparent 18px),
+          radial-gradient(circle at 50% 42%, #f2caa4 0 17px, transparent 18px),
+          radial-gradient(circle at 66% 42%, #e09b78 0 17px, transparent 18px),
+          radial-gradient(circle at 24% 76%, var(--soft-aqua-2) 0 25px, transparent 26px),
+          radial-gradient(circle at 52% 76%, var(--soft-aqua-2) 0 25px, transparent 26px),
+          linear-gradient(180deg, #ddf5ff, #fff);
+      }
+
+      .photo.activity {
+        background:
+          radial-gradient(circle at 22% 38%, #e9aa84 0 20px, transparent 21px),
+          radial-gradient(circle at 42% 36%, #f5c39c 0 19px, transparent 20px),
+          radial-gradient(circle at 62% 39%, #d88e6e 0 20px, transparent 21px),
+          radial-gradient(circle at 80% 37%, #f2c59e 0 19px, transparent 20px),
+          linear-gradient(180deg, transparent 0 47%, rgba(255, 255, 255, 0.5) 48% 64%, rgba(31, 168, 244, 0.18) 65%),
+          linear-gradient(135deg, #dff7ff, #fff 50%, var(--soft-aqua-2));
+      }
+
+      .impact-copy h3 {
+        color: var(--primary-aqua);
+        font-size: clamp(42px, 7vw, 96px);
+        line-height: 0.92;
+        font-weight: 900;
+      }
+
+      .impact-copy p {
+        max-width: 560px;
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: clamp(21px, 2.3vw, 31px);
+        line-height: 1.34;
+        font-weight: 800;
+      }
+
+      .row-metric {
+        display: flex;
+        align-items: flex-end;
+        gap: 18px;
+        margin-top: 34px;
+        color: var(--primary-aqua);
+      }
+
+      .row-metric strong {
+        font-size: clamp(56px, 8vw, 112px);
+        line-height: 0.8;
+        font-weight: 900;
+      }
+
+      .row-metric span {
+        max-width: 190px;
+        font-size: 16px;
+        line-height: 1.1;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .charts {
+        color: #fff;
+        background:
+          radial-gradient(circle at 18% 20%, rgba(200, 244, 255, 0.24), transparent 22rem),
+          radial-gradient(circle at 84% 20%, rgba(255, 255, 255, 0.18), transparent 24rem),
+          linear-gradient(135deg, var(--primary-aqua-strong), var(--primary-aqua));
+      }
+
+      .charts .section-title h2,
+      .charts .section-title p {
+        color: #fff;
+      }
+
+      .chart-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(30px, 5vw, 70px);
+      }
+
+      .chart-panel {
+        padding: clamp(24px, 4vw, 42px);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.13);
+        box-shadow: 0 22px 60px rgba(0, 103, 170, 0.18);
+        backdrop-filter: blur(10px);
+      }
+
+      .chart-panel h3 {
+        margin-bottom: 28px;
+        color: #fff;
+        font-size: clamp(28px, 4vw, 46px);
+        line-height: 0.98;
+        font-weight: 900;
+      }
+
+      .pie-wrap {
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        gap: 28px;
+        align-items: center;
+      }
+
+      .pie {
+        width: min(240px, 64vw);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: conic-gradient(var(--soft-aqua-2) 0deg, rgba(255,255,255,.35) 0deg);
+        box-shadow: inset 0 0 0 18px rgba(255, 255, 255, 0.13), 0 18px 42px rgba(0, 73, 130, 0.18);
+        transition: background 900ms ease;
+      }
+
+      .legend {
+        display: grid;
+        gap: 12px;
+      }
+
+      .legend-row {
+        display: grid;
+        grid-template-columns: 14px 1fr auto;
+        gap: 10px;
+        align-items: center;
+        font-weight: 900;
+      }
+
+      .swatch {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--soft-aqua-2);
+      }
+
+      .swatch.two {
+        background: rgba(255, 255, 255, 0.42);
+      }
+
+      .swatch.three {
+        background: #94dcf6;
+      }
+
+      .swatch.four {
+        background: #66d3f7;
+      }
+
+      .swatch.five {
+        background: rgba(255, 255, 255, 0.68);
+      }
+
+      .swatch.six {
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      .final {
+        display: grid;
+        place-items: center;
+        min-height: 78svh;
+        padding: 100px 20px;
+        color: #fff;
+        text-align: center;
+        background:
+          radial-gradient(circle at 20% 32%, rgba(200, 244, 255, 0.28), transparent 18rem),
+          linear-gradient(135deg, var(--primary-aqua-strong), var(--primary-aqua));
+      }
+
+      .final h2 {
+        max-width: 980px;
+        font-size: clamp(46px, 8vw, 112px);
+        line-height: 0.94;
+        font-weight: 900;
+      }
+
+      .final p {
+        margin: 28px auto 0;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: clamp(24px, 3vw, 44px);
+        line-height: 1.1;
+        font-weight: 900;
+      }
+
+      .final .button {
+        margin-top: 34px;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 640ms ease,
+          transform 640ms ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @keyframes image-drift {
+        from {
+          transform: scale(1.02) translate3d(-1%, -1%, 0);
+        }
+
+        to {
+          transform: scale(1.08) translate3d(1.4%, 1%, 0);
+        }
+      }
+
+      @keyframes arrow-rise {
+        from {
+          transform: translateY(4px);
+        }
+
+        to {
+          transform: translateY(-8px);
+        }
+      }
+
+      @media (max-width: 1080px) {
+        .stats-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 900px) {
+        .nav-links {
+          display: none;
+        }
+
+        .impact-row,
+        .impact-row:nth-child(even),
+        .chart-grid,
+        .pie-wrap {
+          grid-template-columns: 1fr;
+        }
+
+        .impact-row:nth-child(even) .impact-copy,
+        .impact-row:nth-child(even) .photo {
+          order: initial;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .nav-inner,
+        .inner {
+          width: min(100% - 28px, 1220px);
+        }
+
+        .logo svg {
+          width: 52px;
+        }
+
+        .logo strong {
+          font-size: 18px;
+        }
+
+        .nav .button {
+          display: none;
+        }
+
+        .hero h1 {
+          font-size: clamp(58px, 18vw, 92px);
+        }
+
+        .stats-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .photo {
+          min-height: 360px;
+          border-radius: 24px;
+        }
+
+        .pie {
+          width: min(260px, 100%);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 1ms !important;
+          scroll-behavior: auto !important;
+          transition-duration: 1ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="logo" href="./index.html" aria-label="Little Ark Foundation home">
+          <svg viewBox="0 0 100 70" aria-hidden="true">
+            <path d="M12 46c18 14 54 14 76 0-8 13-22 20-38 20S20 59 12 46Z" fill="currentColor" />
+            <path d="M18 39c12 8 50 8 64 0-9 8-21 12-33 12-13 0-23-4-31-12Z" fill="#c8f4ff" />
+            <path d="M26 30h48l-7 12H33l-7-12Z" fill="none" stroke="currentColor" stroke-width="4" />
+            <circle cx="33" cy="19" r="5" fill="currentColor" />
+            <circle cx="50" cy="13" r="5" fill="currentColor" />
+            <circle cx="67" cy="19" r="5" fill="currentColor" />
+            <path d="M29 27v-8m21 8V16m21 11v-8" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+          </svg>
+          <span><strong>LITTLE ARK</strong><span>FOUNDATION</span></span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="./the-ark.html">The Ark</a>
+          <a href="./our-voyage.html">Our Voyage</a>
+          <a href="./get-on-board.html">Get On Board</a>
+          <a href="./our-partners.html">Our Partners</a>
+          <a href="./media-hub.html">Media Hub</a>
+        </nav>
+        <a class="button" href="./index.html#give">Give Hope</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-fallback" aria-hidden="true"></div>
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="./little-ark-hero-15s.mp4" type="video/mp4" />
+        </video>
+        <div class="inner">
+          <div class="hero-copy reveal">
+            <h1>Every Number Tells a Story</h1>
+            <p>Because behind every statistic is a child, a family, and a reason to hope.</p>
+            <a class="scroll-cue" href="#numbers">Scroll to explore <span>↓</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="numbers" class="section">
+        <div class="inner">
+          <div class="section-title reveal">
+            <h2>Impact By The Numbers</h2>
+            <p>Growth that reflects real families supported through treatment, travel, meals, and care.</p>
+          </div>
+          <div class="stats-grid">
+            <article class="stat-card reveal">
+              <div><h3>Housing Accommodation</h3><strong class="stat-number" data-count="2920">0</strong><span class="stat-label">Bed Nights Provided</span></div>
+              <div class="growth"><span class="arrow">↗</span><strong>200%</strong><span>from 2024 to 2025</span></div>
+            </article>
+            <article class="stat-card reveal">
+              <div><h3>Transportation Support</h3><strong class="stat-number" data-count="1766">0</strong><span class="stat-label">Families Transported</span></div>
+              <div class="growth"><span class="arrow">↗</span><strong>240%</strong><span>from 2024 to 2025</span></div>
+            </article>
+            <article class="stat-card reveal">
+              <div><h3>Meals Support</h3><strong class="stat-number" data-count="2916">0</strong><span class="stat-label">Hot Meals Served</span></div>
+              <div class="growth"><span class="arrow">↗</span><strong>412%</strong><span>from 2024 to 2025</span></div>
+            </article>
+            <article class="stat-card reveal">
+              <div><h3>LAF Activity Center</h3><strong class="stat-number" data-count="726">0</strong><span class="stat-label">Activities Held</span></div>
+              <div class="growth"><span class="arrow">↗</span><strong>1,445%</strong><span>from 2024 to 2025</span></div>
+            </article>
+            <article class="stat-card reveal">
+              <div><h3>Care Cart</h3><strong class="stat-number" data-count="6741">0</strong><span class="stat-label">Hot Meals Served</span></div>
+              <div class="growth"><span class="arrow">↗</span><strong>472%</strong><span>from 2024 to 2025</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section support-area">
+        <div class="inner">
+          <div class="section-title reveal">
+            <h2>Support Areas</h2>
+            <p>Large, practical acts of care that keep children and families moving forward.</p>
+          </div>
+
+          <article class="impact-row reveal">
+            <div class="impact-copy">
+              <h3>Housing Accommodation</h3>
+              <p>A safe place to rest near treatment can make continuing care possible.</p>
+              <div class="row-metric"><strong>2,920</strong><span>Bed Nights Provided<br />200% Growth</span></div>
+            </div>
+            <div class="photo" aria-hidden="true"></div>
+          </article>
+
+          <article class="impact-row reveal">
+            <div class="impact-copy">
+              <h3>Transportation Support</h3>
+              <p>Reliable rides help families reach appointments without losing momentum.</p>
+              <div class="row-metric"><strong>1,766</strong><span>Families Transported<br />240% Growth</span></div>
+            </div>
+            <div class="photo transport" aria-hidden="true"></div>
+          </article>
+
+          <article class="impact-row reveal">
+            <div class="impact-copy">
+              <h3>Meals Support</h3>
+              <p>A warm meal brings comfort and dignity during long treatment days.</p>
+              <div class="row-metric"><strong>2,916</strong><span>Hot Meals Served<br />412% Growth</span></div>
+            </div>
+            <div class="photo meals" aria-hidden="true"></div>
+          </article>
+
+          <article class="impact-row reveal">
+            <div class="impact-copy">
+              <h3>LAF Activity Center</h3>
+              <p>Joyful moments help children remember they are more than their diagnosis.</p>
+              <div class="row-metric"><strong>726</strong><span>Activities Held<br />1,445% Growth</span></div>
+            </div>
+            <div class="photo activity" aria-hidden="true"></div>
+          </article>
+
+          <article class="impact-row reveal">
+            <div class="impact-copy">
+              <h3>Care Cart</h3>
+              <p>Small deliveries of care become steady reminders that families are not alone.</p>
+              <div class="row-metric"><strong>6,741</strong><span>Hot Meals Served<br />472% Growth</span></div>
+            </div>
+            <div class="photo cart" aria-hidden="true"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section charts">
+        <div class="inner">
+          <div class="section-title reveal">
+            <h2>Where Your Support Goes</h2>
+            <p>Donor support is directed toward programs that meet families at the hardest parts of the journey.</p>
+          </div>
+          <div class="chart-grid">
+            <article class="chart-panel reveal">
+              <h3>Annual Operating Expenses</h3>
+              <div class="pie-wrap">
+                <div class="pie" data-pie="expenses" aria-hidden="true"></div>
+                <div class="legend">
+                  <div class="legend-row"><span class="swatch"></span><span>Programs</span><strong>88%</strong></div>
+                  <div class="legend-row"><span class="swatch two"></span><span>Administration</span><strong>12%</strong></div>
+                </div>
+              </div>
+            </article>
+            <article class="chart-panel reveal">
+              <h3>Total Program Services</h3>
+              <div class="pie-wrap">
+                <div class="pie" data-pie="services" aria-hidden="true"></div>
+                <div class="legend">
+                  <div class="legend-row"><span class="swatch"></span><span>Housing</span><strong>65%</strong></div>
+                  <div class="legend-row"><span class="swatch three"></span><span>Meals</span><strong>24%</strong></div>
+                  <div class="legend-row"><span class="swatch four"></span><span>LAF Center Activities</span><strong>5%</strong></div>
+                  <div class="legend-row"><span class="swatch five"></span><span>Care Cart</span><strong>4%</strong></div>
+                  <div class="legend-row"><span class="swatch six"></span><span>Transportation</span><strong>2%</strong></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="final">
+        <div class="reveal">
+          <h2>Help turn impact into hope.</h2>
+          <p>Your support keeps children and families moving forward.</p>
+          <a class="button" href="./index.html#give">Give Hope</a>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const revealItems = document.querySelectorAll(".reveal");
+      const countItems = document.querySelectorAll("[data-count]");
+      const pies = document.querySelectorAll(".pie");
+
+      function animateCount(el) {
+        if (el.dataset.done === "true") return;
+        el.dataset.done = "true";
+        const target = Number(el.dataset.count);
+        const start = performance.now();
+        const duration = 1150;
+
+        function tick(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.round(target * eased).toLocaleString();
+          if (progress < 1) requestAnimationFrame(tick);
+          else el.textContent = target.toLocaleString();
+        }
+
+        requestAnimationFrame(tick);
+      }
+
+      function animatePie(el) {
+        if (el.dataset.done === "true") return;
+        el.dataset.done = "true";
+        if (el.dataset.pie === "expenses") {
+          el.style.background = "conic-gradient(var(--soft-aqua-2) 0deg 316.8deg, rgba(255,255,255,.42) 316.8deg 360deg)";
+        } else {
+          el.style.background = "conic-gradient(var(--soft-aqua-2) 0deg 234deg, #94dcf6 234deg 320.4deg, #66d3f7 320.4deg 338.4deg, rgba(255,255,255,.68) 338.4deg 352.8deg, rgba(255,255,255,.3) 352.8deg 360deg)";
+        }
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            if (entry.target.matches("[data-count]")) animateCount(entry.target);
+            entry.target.querySelectorAll?.("[data-count]").forEach(animateCount);
+            if (entry.target.matches(".pie")) animatePie(entry.target);
+            entry.target.querySelectorAll?.(".pie").forEach(animatePie);
+          });
+        },
+        { threshold: 0.18 }
+      );
+
+      revealItems.forEach((item) => observer.observe(item));
+      countItems.forEach((item) => observer.observe(item));
+      pies.forEach((pie) => observer.observe(pie));
+    </script>
+  </body>
+</html>

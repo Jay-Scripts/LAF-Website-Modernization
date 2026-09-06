@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Ark | Little Ark Foundation</title>
+    <style>
+      :root {
+        --primary-aqua: #1fa8f4;
+        --primary-aqua-strong: #008fe4;
+        --soft-aqua: #eaf9ff;
+        --soft-aqua-2: #c8f4ff;
+        --aqua: var(--primary-aqua);
+        --blue: var(--primary-aqua);
+        --deep: var(--primary-aqua);
+        --ink: #08233d;
+        --muted: #557086;
+        --yellow: #ffc83d;
+        --soft: var(--soft-aqua);
+        --white: #ffffff;
+        --shadow: 0 28px 80px rgba(31, 168, 244, 0.18);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--ink);
+        background: var(--white);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .nav {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 1px 0 rgba(31, 168, 244, 0.12);
+        backdrop-filter: blur(14px);
+      }
+
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: min(1220px, calc(100% - 40px));
+        min-height: 82px;
+        margin: 0 auto;
+        gap: 22px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--aqua);
+        font-weight: 900;
+      }
+
+      .logo svg {
+        width: 62px;
+        height: 44px;
+      }
+
+      .logo strong {
+        display: block;
+        font-size: 22px;
+        line-height: 0.9;
+      }
+
+      .logo span {
+        display: block;
+        color: var(--primary-aqua-strong);
+        font-size: 11px;
+        letter-spacing: 0.12em;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: clamp(16px, 2vw, 30px);
+        margin-left: auto;
+        font-size: 13px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary-aqua-strong);
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 28px;
+        border-radius: 999px;
+        color: #061d34;
+        background: var(--yellow);
+        font-weight: 900;
+        text-transform: uppercase;
+        box-shadow: 0 16px 38px rgba(255, 200, 61, 0.36);
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 22px 46px rgba(255, 200, 61, 0.46);
+      }
+
+      .hero {
+        position: relative;
+        display: grid;
+        align-items: center;
+        min-height: 100svh;
+        padding-top: 82px;
+        overflow: hidden;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(0, 143, 228, 0.92) 0%, rgba(31, 168, 244, 0.78) 42%, rgba(102, 211, 247, 0.2) 100%),
+          linear-gradient(135deg, var(--blue), var(--aqua));
+      }
+
+      .hero-image {
+        position: absolute;
+        inset: 82px 0 0;
+        opacity: 0.86;
+      }
+
+      .photo,
+      .hero-image {
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 23% 42%, #e9aa84 0 20px, transparent 21px),
+          radial-gradient(circle at 39% 39%, #f5c39c 0 19px, transparent 20px),
+          radial-gradient(circle at 56% 43%, #d88e6e 0 20px, transparent 21px),
+          radial-gradient(circle at 73% 39%, #f2c59e 0 19px, transparent 20px),
+          linear-gradient(180deg, transparent 0 47%, rgba(255, 255, 255, 0.52) 48% 64%, rgba(31, 168, 244, 0.18) 65%),
+          linear-gradient(135deg, #dff7ff, var(--soft-aqua-2) 48%, #75d2bf);
+      }
+
+      .photo::before,
+      .hero-image::before {
+        content: "";
+        position: absolute;
+        inset: -5%;
+        background: inherit;
+        animation: image-drift 15s ease-in-out infinite alternate;
+      }
+
+      .hero-image::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(0, 143, 228, 0.88) 0%, rgba(31, 168, 244, 0.7) 46%, rgba(102, 211, 247, 0.36) 100%),
+          radial-gradient(circle at 74% 24%, rgba(255, 255, 255, 0.3), transparent 18rem);
+      }
+
+      .inner {
+        position: relative;
+        z-index: 2;
+        width: min(1220px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .hero-copy {
+        width: min(710px, 100%);
+        padding: 96px 0;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        letter-spacing: 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(64px, 11vw, 138px);
+        line-height: 0.86;
+        font-weight: 900;
+      }
+
+      .hero p {
+        max-width: 660px;
+        margin: 28px 0 0;
+        font-size: clamp(23px, 3vw, 38px);
+        line-height: 1.14;
+        font-weight: 900;
+      }
+
+      .scroll-cue {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 34px;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 14px;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .scroll-cue span {
+        display: inline-block;
+        animation: cue-bounce 1.4s ease-in-out infinite;
+      }
+
+      .story-section {
+        min-height: 100svh;
+        padding: clamp(82px, 10vw, 130px) 0;
+      }
+
+      .story-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+        gap: clamp(38px, 7vw, 92px);
+        align-items: center;
+      }
+
+      .story-grid.reverse {
+        grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+      }
+
+      .story-grid.reverse .story-copy {
+        order: 2;
+      }
+
+      .story-grid.reverse .photo {
+        order: 1;
+      }
+
+      .story-copy h2 {
+        color: var(--deep);
+        font-size: clamp(42px, 6vw, 86px);
+        line-height: 0.94;
+        font-weight: 900;
+      }
+
+      .story-copy p {
+        max-width: 560px;
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: clamp(20px, 2vw, 27px);
+        line-height: 1.38;
+        font-weight: 700;
+      }
+
+      .story-copy p + p {
+        margin-top: 18px;
+      }
+
+      .story-copy .fragment {
+        color: var(--deep);
+        font-size: clamp(25px, 3vw, 42px);
+        line-height: 1.08;
+        font-weight: 900;
+      }
+
+      .photo {
+        position: relative;
+        min-height: clamp(420px, 54vw, 720px);
+        border-radius: 34px;
+        box-shadow: var(--shadow);
+      }
+
+      .loss-photo {
+        background:
+          radial-gradient(circle at 36% 36%, #e9aa84 0 30px, transparent 31px),
+          radial-gradient(circle at 58% 40%, #f5c39c 0 23px, transparent 24px),
+          linear-gradient(180deg, transparent 0 45%, rgba(255, 255, 255, 0.48) 46% 66%, rgba(31, 168, 244, 0.18) 67%),
+          linear-gradient(135deg, #dff7ff, #f4fbff 48%, #c4edf8);
+      }
+
+      .loss-section {
+        background:
+          radial-gradient(circle at 82% 24%, rgba(31, 168, 244, 0.12), transparent 22rem),
+          linear-gradient(180deg, #ffffff, #eef9ff);
+      }
+
+      .loss-section .story-copy p {
+        color: #34566f;
+      }
+
+      .moment-section {
+        display: grid;
+        place-items: center;
+        min-height: 92svh;
+        padding: 110px 20px;
+        color: #fff;
+        text-align: center;
+        background:
+          radial-gradient(circle at 24% 24%, rgba(255, 255, 255, 0.22), transparent 18rem),
+          radial-gradient(circle at 78% 70%, rgba(200, 244, 255, 0.18), transparent 18rem),
+          linear-gradient(135deg, var(--primary-aqua-strong), var(--primary-aqua));
+      }
+
+      .moment-section h2 {
+        font-size: clamp(52px, 8vw, 118px);
+        line-height: 0.9;
+        font-weight: 900;
+      }
+
+      .moment-section p {
+        max-width: 850px;
+        margin: 28px auto 0;
+        font-size: clamp(23px, 3vw, 42px);
+        line-height: 1.18;
+        font-weight: 900;
+      }
+
+      .aqua-band {
+        display: grid;
+        place-items: center;
+        min-height: 88svh;
+        padding: 100px 20px;
+        color: #fff;
+        text-align: center;
+        background:
+          radial-gradient(circle at 22% 28%, rgba(255, 255, 255, 0.22), transparent 18rem),
+          linear-gradient(135deg, var(--blue), var(--aqua));
+      }
+
+      .aqua-band h2 {
+        font-size: clamp(52px, 9vw, 122px);
+        line-height: 0.9;
+        font-weight: 900;
+      }
+
+      .aqua-band p {
+        max-width: 790px;
+        margin: 28px auto 0;
+        font-size: clamp(21px, 2.4vw, 34px);
+        line-height: 1.22;
+        font-weight: 800;
+      }
+
+      .ark-section {
+        padding: clamp(82px, 10vw, 130px) 0;
+        background:
+          radial-gradient(circle at 14% 20%, rgba(31, 168, 244, 0.14), transparent 24rem),
+          linear-gradient(180deg, #fff, var(--soft));
+      }
+
+      .ark-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+        gap: clamp(38px, 7vw, 92px);
+        align-items: center;
+      }
+
+      .ark-illustration {
+        position: relative;
+        min-height: clamp(520px, 58vw, 760px);
+        border-radius: 36px;
+        overflow: hidden;
+        background:
+          linear-gradient(180deg, #dff7ff 0 58%, #86d5ef 59% 71%, #0b8fd3 72%),
+          linear-gradient(135deg, #fff, #dff7ff);
+        box-shadow: var(--shadow);
+      }
+
+      .ark-illustration::before {
+        content: "";
+        position: absolute;
+        left: 12%;
+        right: 12%;
+        bottom: 21%;
+        height: 28%;
+        border-radius: 0 0 48% 48%;
+        background: linear-gradient(135deg, var(--soft-aqua-2), #8ee2fb);
+        box-shadow: inset 0 -18px 0 rgba(31, 168, 244, 0.16);
+      }
+
+      .ark-illustration::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 46%;
+        width: 38%;
+        height: 28%;
+        background:
+          linear-gradient(135deg, transparent 0 49%, #fff 50%),
+          linear-gradient(45deg, #fff 0 50%, transparent 51%);
+        transform: translateX(-50%) rotate(45deg);
+        box-shadow: 0 18px 30px rgba(31, 168, 244, 0.12);
+      }
+
+      .ark-copy h2 {
+        color: var(--deep);
+        font-size: clamp(44px, 6vw, 92px);
+        line-height: 0.94;
+        font-weight: 900;
+      }
+
+      .ark-copy p {
+        margin: 26px 0 0;
+        color: var(--muted);
+        font-size: clamp(21px, 2.2vw, 31px);
+        line-height: 1.34;
+        font-weight: 800;
+      }
+
+      .ark-copy p + p {
+        margin-top: 18px;
+      }
+
+      .promise-section {
+        position: relative;
+        display: grid;
+        place-items: center;
+        min-height: 92svh;
+        padding: clamp(90px, 12vw, 150px) 20px;
+        overflow: hidden;
+        background:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(234, 249, 255, 0.84) 48%, rgba(255, 255, 255, 0.18) 100%),
+          radial-gradient(circle at 78% 34%, rgba(31, 168, 244, 0.16), transparent 25rem),
+          linear-gradient(135deg, #fff, var(--soft-aqua));
+      }
+
+      .promise-section::before {
+        content: "";
+        position: absolute;
+        inset: 9% 6% 9% auto;
+        width: min(48vw, 620px);
+        border-radius: 36px;
+        background:
+          radial-gradient(circle at 35% 38%, #e9aa84 0 28px, transparent 29px),
+          radial-gradient(circle at 52% 36%, #f5c39c 0 25px, transparent 26px),
+          radial-gradient(circle at 67% 39%, #d88e6e 0 27px, transparent 28px),
+          linear-gradient(180deg, transparent 0 45%, rgba(255, 255, 255, 0.52) 46% 66%, rgba(31, 168, 244, 0.18) 67%),
+          linear-gradient(135deg, #dff7ff, var(--soft-aqua-2) 52%, #75d2bf);
+        box-shadow: var(--shadow);
+      }
+
+      .promise-copy {
+        position: relative;
+        z-index: 1;
+        width: min(1220px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .promise-copy h2 {
+        max-width: 640px;
+        margin: 0;
+        color: var(--deep);
+        font-size: clamp(48px, 8vw, 108px);
+        line-height: 0.94;
+        font-weight: 900;
+      }
+
+      .promise-copy p {
+        max-width: 520px;
+        margin: 26px 0 0;
+        color: var(--muted);
+        font-size: clamp(24px, 3vw, 42px);
+        line-height: 1.18;
+        font-weight: 900;
+      }
+
+      .promise-copy .fragment {
+        display: block;
+        margin-top: 10px;
+        color: var(--deep);
+      }
+
+      .quote-section {
+        display: grid;
+        place-items: center;
+        min-height: 84svh;
+        padding: 100px 20px;
+        background:
+          radial-gradient(circle at 50% 45%, rgba(31, 168, 244, 0.2), transparent 26rem),
+          radial-gradient(circle at 50% 48%, rgba(255, 255, 255, 0.92), transparent 18rem),
+          #fff;
+      }
+
+      blockquote {
+        position: relative;
+        max-width: 1100px;
+        margin: 0;
+        color: var(--deep);
+        font-size: clamp(50px, 8vw, 118px);
+        line-height: 0.98;
+        text-align: center;
+        font-weight: 900;
+      }
+
+      blockquote::before,
+      blockquote::after {
+        position: absolute;
+        color: rgba(31, 168, 244, 0.28);
+        font-size: clamp(80px, 12vw, 170px);
+        line-height: 1;
+      }
+
+      blockquote::before {
+        content: "“";
+        left: -0.45em;
+        top: -0.35em;
+      }
+
+      blockquote::after {
+        content: "”";
+        right: -0.4em;
+        bottom: -0.72em;
+      }
+
+      .final {
+        display: grid;
+        place-items: center;
+        min-height: 80svh;
+        padding: 100px 20px;
+        color: #fff;
+        text-align: center;
+        background:
+          radial-gradient(circle at 20% 32%, rgba(200, 244, 255, 0.28), transparent 18rem),
+          linear-gradient(135deg, var(--deep), var(--aqua));
+      }
+
+      .final h2 {
+        max-width: 980px;
+        font-size: clamp(46px, 8vw, 112px);
+        line-height: 0.94;
+        font-weight: 900;
+      }
+
+      .final p {
+        margin: 28px auto 0;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: clamp(24px, 3vw, 44px);
+        line-height: 1.1;
+        font-weight: 900;
+      }
+
+      .final .button {
+        margin-top: 34px;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 640ms ease,
+          transform 640ms ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @keyframes image-drift {
+        from {
+          transform: scale(1.02) translate3d(0, 0, 0);
+        }
+
+        to {
+          transform: scale(1.08) translate3d(-2%, -1%, 0);
+        }
+      }
+
+      @keyframes cue-bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(6px);
+        }
+      }
+
+      @media (max-width: 900px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hero-image {
+          inset: 48% 0 0;
+          opacity: 0.54;
+        }
+
+        .story-grid,
+        .story-grid.reverse,
+        .ark-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .story-grid.reverse .story-copy,
+        .story-grid.reverse .photo {
+          order: initial;
+        }
+
+        .promise-section::before {
+          inset: 48% 20px 8%;
+          width: auto;
+          opacity: 0.58;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .nav-inner,
+        .inner {
+          width: min(100% - 28px, 1220px);
+        }
+
+        .logo svg {
+          width: 52px;
+        }
+
+        .logo strong {
+          font-size: 18px;
+        }
+
+        .nav .button {
+          display: none;
+        }
+
+        .hero h1 {
+          font-size: clamp(58px, 18vw, 92px);
+        }
+
+        .photo,
+        .ark-illustration {
+          min-height: 360px;
+          border-radius: 24px;
+        }
+
+        .promise-copy {
+          width: min(100% - 28px, 1220px);
+        }
+
+        .story-section,
+        .ark-section {
+          padding: 72px 0;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 1ms !important;
+          animation-iteration-count: 1 !important;
+          scroll-behavior: auto !important;
+          transition-duration: 1ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="logo" href="./index.html" aria-label="Little Ark Foundation home">
+          <svg viewBox="0 0 100 70" aria-hidden="true">
+            <path d="M12 46c18 14 54 14 76 0-8 13-22 20-38 20S20 59 12 46Z" fill="currentColor" />
+            <path d="M18 39c12 8 50 8 64 0-9 8-21 12-33 12-13 0-23-4-31-12Z" fill="#c8f4ff" />
+            <path d="M26 30h48l-7 12H33l-7-12Z" fill="none" stroke="currentColor" stroke-width="4" />
+            <circle cx="33" cy="19" r="5" fill="currentColor" />
+            <circle cx="50" cy="13" r="5" fill="currentColor" />
+            <circle cx="67" cy="19" r="5" fill="currentColor" />
+            <path d="M29 27v-8m21 8V16m21 11v-8" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+          </svg>
+          <span><strong>LITTLE ARK</strong><span>FOUNDATION</span></span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="./the-ark.html">The Ark</a>
+          <a href="./our-voyage.html">Our Voyage</a>
+          <a href="./get-on-board.html">Get On Board</a>
+          <a href="./our-partners.html">Our Partners</a>
+          <a href="./media-hub.html">Media Hub</a>
+        </nav>
+        <a class="button" href="./index.html#give">Give Hope</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-image" aria-hidden="true"></div>
+        <div class="inner">
+          <div class="hero-copy reveal">
+            <h1>Built From Hope</h1>
+            <p>One family’s journey through illness became a mission to support children and families facing the same fight.</p>
+            <a class="scroll-cue" href="#story">Scroll to begin <span>↓</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="story" class="story-section">
+        <div class="inner story-grid">
+          <div class="story-copy reveal">
+            <h2>One Family's Journey</h2>
+            <p>In 2019, Noah faced one of the biggest battles of his life: a bone marrow transplant.</p>
+            <p class="fragment">Long hospital days.<br />Uncertainty.<br />Fear.</p>
+            <p>Yet amid the hardship, his family experienced kindness, support, and hope from people who walked alongside them.</p>
+            <p>Those moments would later inspire something much bigger.</p>
+          </div>
+          <div class="photo reveal" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="story-section loss-section">
+        <div class="inner story-grid reverse">
+          <div class="story-copy reveal">
+            <h2>A Promise Born From Loss</h2>
+            <p>But not every family had the same support.</p>
+            <p>Two Filipino families lost their children while fighting cancer.</p>
+            <p>Their stories became a promise:</p>
+            <p class="fragment">No family should have to face illness alone.</p>
+          </div>
+          <div class="photo loss-photo reveal" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="moment-section">
+        <div class="reveal">
+          <h2>The Moment Everything Changed</h2>
+          <p>What if families didn't have to choose between continuing treatment and basic necessities?</p>
+          <p>What if support, shelter, meals, and care were available to every child fighting illness?</p>
+          <p>That question became Little Ark Foundation.</p>
+        </div>
+      </section>
+
+      <section class="aqua-band">
+        <div class="reveal">
+          <h2>Little Ark Was Born</h2>
+          <p>In 2021, Little Ark Foundation began as a place of refuge, hope, and holistic support for children and families facing critical illnesses.</p>
+        </div>
+      </section>
+
+      <section class="ark-section">
+        <div class="inner ark-grid">
+          <div class="ark-illustration reveal" aria-hidden="true"></div>
+          <div class="ark-copy reveal">
+            <h2>Why Little Ark?</h2>
+            <p>An ark is a place of refuge.</p>
+            <p>A place of safety.</p>
+            <p>A place where hope survives storms.</p>
+            <p>Little Ark was built on that same belief:</p>
+            <p>That no child and no family should face illness alone.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="promise-section">
+        <div class="promise-copy reveal">
+          <h2>The Promise</h2>
+          <p>We promise to walk alongside families.</p>
+          <p>
+            Through fear.<br />
+            Through uncertainty.<br />
+            Through treatment.<br />
+            <span class="fragment">Through hope.</span>
+          </p>
+        </div>
+      </section>
+
+      <section class="quote-section">
+        <blockquote class="reveal">“No child should have to stop treatment because their family lacks the resources to continue.”</blockquote>
+      </section>
+
+      <section class="final">
+        <div class="reveal">
+          <h2>What began as one family’s story became hope for many.</h2>
+          <p>And with your support,<br />the story continues.</p>
+          <a class="button" href="./index.html#give">Give Hope</a>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const revealItems = document.querySelectorAll(".reveal");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("is-visible");
+          });
+        },
+        { threshold: 0.18 }
+      );
+
+      revealItems.forEach((item) => observer.observe(item));
+    </script>
+  </body>
+</html>
