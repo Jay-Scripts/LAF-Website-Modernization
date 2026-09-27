@@ -1,93 +1,38 @@
-import { HeartPulseIcon, UsersRoundIcon } from "lucide-react";
-
-import { HeartDoodle } from "@/components/BrandHearts";
-import { Card, CardContent } from "@/components/ui/card";
-import Reveal from "@/components/Reveal";
-
 const statements = [
   {
     title: "Vision",
     body: "A world where every pediatric patient with cancer, thalassemia, and other critical illnesses, along with their families, feels supported by love and faith.",
-    icon: HeartPulseIcon,
   },
   {
     title: "Mission",
     body: "To provide compassionate, holistic support to pediatric patients and their families through housing, meals, transportation, activities, resources, and faith-centered care.",
-    icon: UsersRoundIcon,
   },
 ];
 
 export default function ValuesSection() {
   return (
-    <Reveal
-      as="section"
-      className="relative flex w-full items-center overflow-hidden bg-[linear-gradient(180deg,#ffffff_0%,#f2fbff_100%)] py-[clamp(64px,8vw,108px)] max-[760px]:py-14"
-      direction="none"
+    <section
+      aria-labelledby="values-heading"
+      className="border-y border-[#dceaf2] bg-white py-[clamp(68px,8vw,112px)] max-[760px]:py-14"
     >
-      <HeartDoodle
-        className="absolute -left-14 bottom-4 z-0 max-[760px]:hidden"
-        size={190}
-        rotate={-20}
-        opacity={0.16}
-        variant={2}
-      />
-      <HeartDoodle
-        className="absolute right-[9%] top-10 z-0 max-[900px]:hidden"
-        size={110}
-        rotate={17}
-        opacity={0.16}
-        variant={0}
-      />
-
-      <div className="relative z-[1] mx-auto w-[min(1180px,calc(100%_-_48px))] max-[760px]:w-[min(100%_-_28px,1180px)]">
-        <Reveal className="mx-auto max-w-[980px] text-center" direction="up">
-          <h2 className="m-0 text-balance text-[clamp(29px,3.7vw,46px)] font-medium leading-[1.08] text-[#1fa8f4] max-[767px]:text-[clamp(23px,6.8vw,31px)]">
-            <span className="whitespace-nowrap">
-              Lead with{" "}
-              <strong className="font-black text-[#0068c9]">Love.</strong>
-            </span>{" "}
-            <span className="whitespace-nowrap">
-              Respond with{" "}
-              <strong className="font-black text-[#008fe4]">Action.</strong>
-            </span>{" "}
-            <span className="whitespace-nowrap">
-              Serve with{" "}
-              <strong className="font-black text-[#d89b00]">Faith.</strong>
-            </span>
+      <div className="mx-auto grid w-[min(1180px,calc(100%_-_48px))] grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] items-center gap-[clamp(56px,8vw,132px)] max-[900px]:grid-cols-1 max-[900px]:gap-12 max-[760px]:w-[min(100%_-_32px,1180px)] max-[760px]:gap-9">
+        <div>
+          <h2 id="values-heading" className="m-0 text-[clamp(2.5rem,4.2vw,4.25rem)] font-black leading-[1.04] tracking-[-0.045em] text-[#082f59] max-[760px]:text-[clamp(2.2rem,9vw,3.4rem)]">
+            <span className="block">Lead with <span className="text-[#0068c9]">Love.</span></span>
+            <span className="mt-2 block">Respond with <span className="text-[#008fe4]">Action.</span></span>
+            <span className="mt-2 block">Serve with <span className="text-[#bd8115]">Faith.</span></span>
           </h2>
-        </Reveal>
+        </div>
 
-        <div className="mt-12 grid grid-cols-2 gap-4 max-[760px]:mt-8 max-[760px]:grid-cols-1 max-[760px]:gap-3">
-          {statements.map(({ title, body, icon: Icon }, index) => (
-            <Reveal
-              key={title}
-              as="article"
-              delay={index === 1 ? 220 : 100}
-              direction="up"
-            >
-              <Card className="group h-full rounded-lg border-[rgba(0,104,201,0.12)] bg-white/95 py-0 shadow-[0_14px_34px_rgba(0,72,140,0.08)] transition duration-300 ease-out hover:-translate-y-1 hover:border-[#9fe4ff] hover:shadow-[0_20px_44px_rgba(0,72,140,0.12)]">
-                <CardContent className="grid h-full grid-cols-[56px_1fr] items-start gap-5 p-6 max-[760px]:grid-cols-1 max-[760px]:gap-3 max-[760px]:p-4 max-[760px]:text-center">
-                  <span className="grid size-12 place-items-center text-[#008fe4] transition duration-300 group-hover:text-[#1fa8f4] max-[760px]:mx-auto max-[760px]:size-10">
-                    <Icon
-                      className="size-6 max-[760px]:size-5"
-                      strokeWidth={2.5}
-                      aria-hidden="true"
-                    />
-                  </span>
-                  <div>
-                    <h3 className="mb-2 mt-0 text-[20px] font-black leading-tight text-[#0068c9] max-[760px]:text-[16px]">
-                      {title}
-                    </h3>
-                    <p className="m-0 text-[14px] leading-[1.52] text-[#4b5f72] max-[760px]:text-[12px]">
-                      {body}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </Reveal>
+        <div className="border-l border-[#c7dce9] pl-[clamp(28px,4vw,56px)] max-[900px]:border-l-0 max-[900px]:pl-0">
+          {statements.map(({ title, body }) => (
+            <article key={title} className="border-t border-[#c7dce9] py-6 first:pt-5 last:border-b last:pb-5">
+              <h3 className="m-0 text-xs font-black uppercase tracking-[0.18em] text-[#0068c9]">{title}</h3>
+              <p className="mb-0 mt-3 max-w-[49ch] text-[clamp(1rem,1.25vw,1.125rem)] leading-[1.6] text-[#344c61]">{body}</p>
+            </article>
           ))}
         </div>
       </div>
-    </Reveal>
+    </section>
   );
 }
