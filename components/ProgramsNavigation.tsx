@@ -18,42 +18,49 @@ const programs = [
   {
     slug: "housing",
     label: "Housing",
+    description: "A place to stay close to treatment.",
     href: "/services/housing",
     icon: HouseIcon,
   },
   {
     slug: "everyday-meals",
     label: "Everyday Meals",
+    description: "Meals for children and their caregivers.",
     href: "/services/everyday-meals",
     icon: SoupIcon,
   },
   {
     slug: "activities",
     label: "Activities",
+    description: "Space to play, learn, and feel like a child.",
     href: "/services/activities",
     icon: PaletteIcon,
   },
   {
     slug: "resources-responsibility",
     label: "Resources & Responsibility",
+    description: "Practical support for families, with care for every gift.",
     href: "/services/resources-responsibility",
     icon: HandHeartIcon,
   },
   {
     slug: "transportation",
     label: "Transportation",
+    description: "Rides that help families get to treatment.",
     href: "/services/transportation",
     icon: BusIcon,
   },
   {
     slug: "spiritual-care",
     label: "Spiritual Care",
+    description: "Encouragement, prayer, and a listening ear.",
     href: "/services/spiritual-care",
     icon: CrossIcon,
   },
 ] as const satisfies readonly {
   slug: ProgramSlug;
   label: string;
+  description: string;
   href: string;
   icon: React.ComponentType<{ className?: string; strokeWidth?: number; "aria-hidden"?: boolean }>;
 }[];
@@ -138,6 +145,38 @@ export default function ProgramsNavigation({ activeProgram, fullViewport = false
       left: card.offsetLeft - (carousel.clientWidth - card.offsetWidth) / 2,
       behavior: "smooth",
     });
+  }
+
+  if (!isServicePage) {
+    return (
+      <section aria-labelledby="programs-heading" className={`bg-[#f2f9fd] ${fullViewport ? "py-[clamp(72px,9vw,136px)]" : "py-16"}`}>
+        <div className="mx-auto grid w-[min(1180px,calc(100%_-_48px))] grid-cols-[minmax(220px,0.8fr)_minmax(0,1.7fr)] gap-[clamp(48px,8vw,128px)] max-[900px]:grid-cols-1 max-[900px]:gap-10 max-[760px]:w-[min(100%_-_32px,1180px)]">
+          <div>
+            <h2 id="programs-heading" className="m-0 max-w-[10ch] text-[clamp(2.7rem,4.8vw,4.75rem)] font-black leading-[1.02] tracking-[-0.045em] text-[#082f59]">
+              How we help<span className="text-[#008fe4]">.</span>
+            </h2>
+            <p className="mb-0 mt-6 max-w-[27ch] text-[clamp(1rem,1.3vw,1.125rem)] leading-relaxed text-[#436077]">
+              Practical care for children and families, through treatment and beyond.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-x-10 max-[620px]:grid-cols-1" aria-label="Programs and services">
+            {programs.map((program) => (
+              <Link
+                key={program.slug}
+                href={`${program.href}#top`}
+                className="group flex min-h-[138px] flex-col justify-between border-t border-[#bbd5e6] py-5 text-[#082f59] transition-colors hover:border-[#008fe4] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#008fe4] max-[620px]:min-h-[116px]"
+              >
+                <span className="flex items-start justify-between gap-4 text-[clamp(1.15rem,1.7vw,1.45rem)] font-bold leading-tight tracking-[-0.025em]">
+                  {program.label}
+                  <span aria-hidden="true" className="shrink-0 text-[#008fe4] transition-transform group-hover:translate-x-1">↗</span>
+                </span>
+                <span className="mt-3 max-w-[34ch] text-sm leading-relaxed text-[#50687b]">{program.description}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
   }
 
   return (
