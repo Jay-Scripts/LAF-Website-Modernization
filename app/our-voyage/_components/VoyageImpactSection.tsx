@@ -4,7 +4,7 @@ import { Inner, SectionTitle } from "./voyage-layout";
 
 export default function VoyageImpactSection({ metrics }: { metrics: PublicImpactMetrics }) {
   return (
-    <section id="impact" className="overflow-hidden bg-[#052d5d] pb-[clamp(86px,11vw,145px)] pt-[clamp(72px,8vw,112px)] text-white">
+    <section id="impact" className="scroll-mt-[72px] overflow-hidden bg-[#052d5d] py-[clamp(48px,5vw,72px)] text-white max-[820px]:py-14">
       <Inner>
         <SectionTitle title="Growing Impact" light>
           See how Little Ark&apos;s programs are reaching more children and families as our mission continues to grow.
