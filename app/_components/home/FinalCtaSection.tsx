@@ -17,7 +17,6 @@ export default function FinalCtaSection() {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
       const frame = window.requestAnimationFrame(() => setIsVisible(true));
       return () => window.cancelAnimationFrame(frame);
-      return;
     }
 
     const observer = new IntersectionObserver(
@@ -37,8 +36,8 @@ export default function FinalCtaSection() {
     <section ref={sectionRef} className="relative grid min-h-[58dvh] w-full place-items-center overflow-hidden bg-[#073f89] py-[clamp(58px,6.5vw,86px)] text-white max-[767px]:min-h-[46dvh] max-[767px]:py-12">
       <style>{`
         @keyframes home-cta-image-in-view {
-          from { opacity: 0; transform: scale(1.08); }
-          to { opacity: 0.7; transform: scale(1); }
+          from { opacity: 0; }
+          to { opacity: 1; }
         }
         @keyframes home-cta-copy-in-view {
           from { opacity: 0; transform: translateY(24px); clip-path: inset(100% 0 0 0); }
@@ -47,12 +46,12 @@ export default function FinalCtaSection() {
         .home-cta-image-in-view { animation: home-cta-image-in-view 1400ms cubic-bezier(0.22, 1, 0.36, 1) both; }
         .home-cta-copy-in-view { animation: home-cta-copy-in-view 850ms cubic-bezier(0.22, 1, 0.36, 1) 180ms both; }
         @media (prefers-reduced-motion: reduce) {
-          .home-cta-image-in-view { animation: none !important; opacity: 0.7; }
+          .home-cta-image-in-view { animation: none !important; opacity: 1; }
           .home-cta-copy-in-view { animation: none !important; }
         }
       `}</style>
-      <Image src="/images/get-on-board/give-hope-children.png" alt="" fill sizes="100vw" className={`absolute inset-0 z-0 object-cover object-[58%_center] max-[767px]:object-[54%_center] ${isVisible ? "home-cta-image-in-view" : "opacity-0"}`} />
-      <div className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(4,20,42,0.82)_0%,rgba(7,63,137,0.70)_44%,rgba(0,143,228,0.24)_100%)] max-[767px]:bg-[linear-gradient(180deg,rgba(4,20,42,0.48)_0%,rgba(7,63,137,0.70)_54%,rgba(4,20,42,0.82)_100%)]" />
+      <Image src="/images/get-on-board/give-hope-children.png" alt="" fill sizes="100vw" unoptimized className={`absolute inset-0 z-0 object-cover object-[58%_center] max-[767px]:object-[54%_center] ${isVisible ? "home-cta-image-in-view" : "opacity-0"}`} />
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,rgba(4,20,42,0.52)_0%,rgba(4,20,42,0.28)_38%,transparent_75%)] max-[767px]:bg-[linear-gradient(180deg,rgba(4,20,42,0.12)_0%,rgba(4,20,42,0.42)_50%,rgba(4,20,42,0.18)_100%)]" />
       <HeartDoodle className="absolute -bottom-24 right-[8%] z-[1] max-[620px]:hidden" size={360} rotate={18} opacity={0.22} variant={2} />
       <HeartDoodle className="absolute left-[10%] top-6 z-[1] max-[620px]:hidden" size={120} rotate={-20} opacity={0.18} variant={1} />
       <div className={`relative z-[2] mx-auto w-[min(1120px,calc(100%_-_48px))] text-center max-[767px]:w-[min(100%_-_28px,920px)] ${isVisible ? "home-cta-copy-in-view" : "translate-y-5 opacity-0"}`}>
