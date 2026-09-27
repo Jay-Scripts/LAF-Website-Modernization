@@ -17,7 +17,6 @@ export default function FinalCtaSection() {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
       const frame = window.requestAnimationFrame(() => setIsVisible(true));
       return () => window.cancelAnimationFrame(frame);
-      return;
     }
 
     const observer = new IntersectionObserver(
@@ -37,8 +36,8 @@ export default function FinalCtaSection() {
     <section ref={sectionRef} className="relative grid min-h-[58dvh] place-items-center overflow-hidden border-t border-[#c8f4ff]/80 bg-[#073f89] py-[clamp(72px,8vw,104px)] text-center text-white max-[767px]:min-h-[62dvh] max-[767px]:py-14">
       <style>{`
         @keyframes ark-cta-image-in-view {
-          from { opacity: 0; transform: scale(1.08); }
-          to { opacity: 0.7; transform: scale(1); }
+          from { opacity: 0; }
+          to { opacity: 1; }
         }
         @keyframes ark-cta-copy-in-view {
           from { opacity: 0; transform: translateY(24px); clip-path: inset(100% 0 0 0); }
@@ -47,7 +46,7 @@ export default function FinalCtaSection() {
         .ark-cta-image-in-view { animation: ark-cta-image-in-view 1400ms cubic-bezier(0.22, 1, 0.36, 1) both; }
         .ark-cta-copy-in-view { animation: ark-cta-copy-in-view 850ms cubic-bezier(0.22, 1, 0.36, 1) 180ms both; }
         @media (prefers-reduced-motion: reduce) {
-          .ark-cta-image-in-view { animation: none !important; opacity: 0.7; }
+          .ark-cta-image-in-view { animation: none !important; opacity: 1; }
           .ark-cta-copy-in-view { animation: none !important; }
         }
       `}</style>
@@ -56,14 +55,11 @@ export default function FinalCtaSection() {
         alt=""
         fill
         sizes="100vw"
+        unoptimized
         className={`absolute inset-0 z-0 object-cover object-[center_58%] max-[767px]:object-[54%_58%] ${isVisible ? "ark-cta-image-in-view" : "opacity-0"}`}
       />
       <div
-        className="absolute inset-0 z-0 bg-[linear-gradient(90deg,rgba(4,20,42,0.84)_0%,rgba(7,63,137,0.7)_44%,rgba(0,143,228,0.24)_100%)] max-[767px]:bg-[linear-gradient(180deg,rgba(4,20,42,0.48)_0%,rgba(7,63,137,0.72)_54%,rgba(4,20,42,0.86)_100%)]"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute inset-x-0 bottom-0 z-0 h-28 bg-[linear-gradient(180deg,transparent,rgba(4,20,42,0.6))]"
+        className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,rgba(4,20,42,0.25)_0%,transparent_65%)] max-[767px]:bg-[linear-gradient(180deg,transparent_0%,rgba(4,20,42,0.28)_50%,transparent_100%)]"
         aria-hidden="true"
       />
       <HeartDoodle
@@ -81,10 +77,10 @@ export default function FinalCtaSection() {
         variant={2}
       />
       <div className={`relative z-[2] mx-auto w-[min(900px,calc(100%_-_32px))] ${isVisible ? "ark-cta-copy-in-view" : "translate-y-5 opacity-0"}`}>
-        <h2 className="mx-auto m-0 max-w-[820px] text-balance text-[clamp(36px,5.2vw,68px)] font-black leading-[0.98] tracking-[-0.035em] drop-shadow-[0_10px_28px_rgba(0,34,78,0.3)] max-[767px]:max-w-[340px] max-[767px]:text-[clamp(2rem,8vw,2.8rem)] max-[767px]:leading-[1.02]">
+        <h2 className="mx-auto m-0 max-w-[820px] text-balance text-[clamp(36px,5.2vw,68px)] font-black leading-[0.98] tracking-[-0.035em] drop-shadow-[0_3px_10px_rgba(0,20,45,0.85)] max-[767px]:max-w-[340px] max-[767px]:text-[clamp(2rem,8vw,2.8rem)] max-[767px]:leading-[1.02]">
           When families find hope, healing becomes possible.
         </h2>
-        <p className="mx-auto mt-5 max-w-[720px] text-[clamp(16px,1.7vw,21px)] font-semibold leading-[1.45] text-white/88 max-[767px]:mt-4 max-[767px]:max-w-[320px] max-[767px]:text-[15px] max-[767px]:leading-[1.48]">
+        <p className="mx-auto mt-5 max-w-[720px] text-[clamp(16px,1.7vw,21px)] font-semibold leading-[1.45] text-white drop-shadow-[0_2px_6px_rgba(0,20,45,0.9)] max-[767px]:mt-4 max-[767px]:max-w-[320px] max-[767px]:text-[15px] max-[767px]:leading-[1.48]">
           Together, we provide more than services&mdash;we provide the support
           that reminds every family they are not alone.
         </p>
