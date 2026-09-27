@@ -7,6 +7,7 @@ export default function ArkHeroSection() {
       imageUnoptimized
       imageLayerClassName="opacity-100"
       title="Built From Hope"
+      headlineDivider={<span className="mt-7 block h-1 w-16 bg-[#005ba8] max-[767px]:mt-5 max-[767px]:h-0.5 max-[767px]:w-12 max-[767px]:bg-white" aria-hidden="true" />}
       description="One family's journey through illness became a mission to support children and families facing the same fight."
       backgroundClassName="bg-[linear-gradient(90deg,rgba(0,143,228,0.92)_0%,rgba(31,168,244,0.78)_42%,rgba(102,211,247,0.2)_100%),linear-gradient(135deg,#1fa8f4,#1fa8f4)]"
       overlayClassName="after:bg-[linear-gradient(90deg,rgba(255,255,255,0.8)_0%,rgba(255,255,255,0.56)_38%,rgba(255,255,255,0.08)_72%,transparent_100%)] max-[767px]:after:bg-[linear-gradient(180deg,transparent_24%,rgba(0,53,115,0.08)_42%,rgba(0,53,115,0.82)_100%)]"

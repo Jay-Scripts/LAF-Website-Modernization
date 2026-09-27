@@ -5,6 +5,7 @@ import Reveal from "@/components/Reveal";
 export default function PageHero({
   imageSrc,
   title,
+  headlineDivider,
   description,
   children,
   decoration,
@@ -21,6 +22,7 @@ export default function PageHero({
 }: {
   imageSrc: string;
   title: ReactNode;
+  headlineDivider?: ReactNode;
   description: ReactNode;
   children?: ReactNode;
   decoration?: ReactNode;
@@ -61,6 +63,7 @@ export default function PageHero({
           <h1 className={`m-0 text-[clamp(52px,7vw,90px)] font-black leading-[0.9] tracking-normal max-[767px]:text-[clamp(3rem,13vw,4rem)] max-[767px]:leading-[0.92] ${headlineClassName}`}>
             {title}
           </h1>
+          {headlineDivider}
           <p className={`mt-7 max-w-[660px] text-[clamp(23px,3vw,38px)] font-black leading-[1.14] max-[767px]:mt-7 max-[767px]:max-w-[315px] max-[767px]:text-[clamp(17px,4.6vw,20px)] max-[767px]:font-bold max-[767px]:leading-[1.42] ${descriptionClassName}`}>
             {description}
           </p>

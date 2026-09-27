@@ -52,6 +52,7 @@ export default function VoyageHeroSection({
                 <span className="text-[#ffc83d]">{finalWord}</span>
               ) : null}
             </h1>
+            <div className="mt-7 h-1 w-16 bg-[#ffc83d] max-[767px]:mt-5 max-[767px]:h-0.5 max-[767px]:w-12" aria-hidden="true" />
             <p className="mb-0 mt-5 max-w-[520px] text-[clamp(16px,1.55vw,21px)] font-bold leading-[1.46] text-white/88 max-[767px]:mt-4 max-[767px]:max-w-[315px] max-[767px]:text-[14px] max-[767px]:leading-[1.5]">
               {report.hero.subtitle}
             </p>

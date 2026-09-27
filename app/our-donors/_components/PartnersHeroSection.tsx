@@ -14,7 +14,7 @@ const description = (
     <span className="block">Every child we support.</span>
     <span className="mt-1 block">Every family we uplift.</span>
     <span className="mt-1 block">Every moment we make brighter.</span>
-    <strong className="mt-5 block text-[clamp(28px,3.4vw,44px)] font-black leading-[1.05] text-white [font-weight:900]">
+    <strong className="mt-5 block text-[clamp(24px,2.4vw,30px)] font-black leading-[1.1] text-white [font-weight:900]">
       Made possible because of you.
     </strong>
   </>
@@ -25,6 +25,7 @@ export default function PartnersHeroSection() {
     <>
     <PageHero
       imageSrc="/images/partners/our-partners-hero-collage-2026-v2.jpg"
+      imageUnoptimized
       title={title}
       description={description}
       sectionClassName="lg:hidden"
@@ -36,12 +37,12 @@ export default function PartnersHeroSection() {
     <section className="relative hidden min-h-[100svh] overflow-hidden bg-[#078fdb] pt-[82px] text-white lg:grid lg:grid-cols-[minmax(430px,0.8fr)_minmax(0,1.2fr)]">
       <style>{`
         @keyframes partners-copy-load {
-          from { opacity: 0; transform: translate3d(-24px, 12px, 0); filter: blur(4px); }
-          to { opacity: 1; transform: translate3d(0, 0, 0); filter: blur(0); }
+          from { opacity: 0; transform: translate3d(-24px, 12px, 0); }
+          to { opacity: 1; transform: translate3d(0, 0, 0); }
         }
         @keyframes partners-image-load {
-          from { opacity: 0; clip-path: inset(0 100% 0 0); transform: scale(1.06); }
-          to { opacity: 1; clip-path: inset(0 0 0 0); transform: scale(1); }
+          from { opacity: 0; clip-path: inset(0 100% 0 0); }
+          to { opacity: 1; clip-path: inset(0 0 0 0); }
         }
         @keyframes partners-rule-load {
           from { opacity: 0; transform: scaleX(0); transform-origin: left; }
@@ -61,11 +62,11 @@ export default function PartnersHeroSection() {
         <HeartDoodle className="absolute right-8 top-24" size={132} rotate={18} opacity={0.2} variant={1} />
 
         <div className="partners-copy-load relative max-w-[620px]">
-          <h1 className="m-0 text-[clamp(64px,6.1vw,108px)] font-black leading-[0.88] tracking-[-0.065em] text-white">
+          <h1 className="m-0 text-[clamp(50px,4.1vw,72px)] font-black leading-[0.96] tracking-[-0.045em] text-white">
             {title}
           </h1>
           <div className="partners-rule-load mt-10 h-1 w-20 bg-[#ffc83d]" aria-hidden="true" />
-          <p className="m-0 mt-8 max-w-[560px] text-[clamp(21px,2vw,31px)] font-black leading-[1.12] text-white">
+          <p className="m-0 mt-8 max-w-[560px] text-[clamp(18px,1.35vw,23px)] font-black leading-[1.3] text-white">
             {description}
           </p>
         </div>
@@ -78,10 +79,11 @@ export default function PartnersHeroSection() {
           alt=""
           fill
           priority
+          unoptimized
           sizes="(min-width: 1024px) 60vw, 100vw"
           className="object-cover object-[center_15%]"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,143,219,0.38),transparent_28%),linear-gradient(0deg,rgba(8,35,61,0.28),transparent_32%)]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,143,219,0.2),transparent_28%),linear-gradient(0deg,rgba(8,35,61,0.12),transparent_32%)]" aria-hidden="true" />
         </div>
         <div className="absolute bottom-0 left-0 top-0 w-px bg-white/60" aria-hidden="true" />
         <div className="absolute bottom-8 right-8 h-28 w-28 border-b border-r border-white/75" aria-hidden="true" />

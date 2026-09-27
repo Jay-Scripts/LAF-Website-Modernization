@@ -25,6 +25,7 @@ export default function GetOnBoardHeroSection() {
             <h1 className="m-0 max-w-[580px] text-[clamp(48px,6.2vw,88px)] font-black leading-[0.88] tracking-[-0.045em] text-white max-[900px]:max-w-[700px] max-[767px]:max-w-[330px] max-[767px]:text-[clamp(2.65rem,11vw,3.8rem)] max-[767px]:leading-[0.94]">
               Be Part of the Journey
             </h1>
+            <div className="mt-7 h-1 w-16 bg-[#c8f4ff] max-[767px]:mt-5 max-[767px]:h-0.5 max-[767px]:w-12" aria-hidden="true" />
             <p className="mb-0 mt-6 max-w-[500px] text-[clamp(17px,1.7vw,23px)] font-bold leading-[1.48] text-white/90 max-[767px]:mt-4 max-[767px]:max-w-[315px] max-[767px]:text-[15px] max-[767px]:leading-[1.5]">
               Whether you give, volunteer, partner, or advocate, you help
               children and families keep moving forward.
