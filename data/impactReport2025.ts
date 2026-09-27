@@ -4,7 +4,7 @@ export const impactReport2025 = {
   source: "2024-2025 HEARTS Profile & Impact Snapshot PDF provided by Little Ark Foundation",
   hero: {
     title: "Changing the Childhood Cancer Journey",
-    subtitle: "Removing the everyday barriers that make it difficult for children to continue treatment — one family, one journey at a time.",
+    subtitle: "Removing the everyday barriers that make it difficult for children to continue treatment, one family, one journey at a time.",
     cta: "View Our Impact",
     imageSrc: "/images/our-voyage/hero-ov-2026.jpeg",
   },
