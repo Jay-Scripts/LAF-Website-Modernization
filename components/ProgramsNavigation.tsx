@@ -184,8 +184,8 @@ export default function ProgramsNavigation({ activeProgram, fullViewport = false
             const Icon = program.icon;
             const icon = (
               <span
-                className={`grid h-14 w-14 shrink-0 place-items-center rounded-lg transition duration-300 ease-out max-[767px]:h-11 max-[767px]:w-11 max-[430px]:h-10 max-[430px]:w-10 ${
-                  isActive ? "bg-white/18 text-white" : "bg-[#e8f8ff] text-[#008fe4] group-hover:bg-[#1fa8f4] group-hover:text-white"
+                className={`grid h-14 w-14 shrink-0 place-items-center transition duration-300 ease-out max-[767px]:h-11 max-[767px]:w-11 max-[430px]:h-10 max-[430px]:w-10 ${
+                  isActive ? "text-white" : "text-[#008fe4] group-hover:text-[#1fa8f4]"
                 }`}
               >
                 <Icon className="h-7 w-7 max-[767px]:h-6 max-[767px]:w-6 max-[430px]:h-5 max-[430px]:w-5" strokeWidth={2.7} aria-hidden="true" />

@@ -67,7 +67,7 @@ export default function ValuesSection() {
             >
               <Card className="group h-full rounded-lg border-[rgba(0,104,201,0.12)] bg-white/95 py-0 shadow-[0_14px_34px_rgba(0,72,140,0.08)] transition duration-300 ease-out hover:-translate-y-1 hover:border-[#9fe4ff] hover:shadow-[0_20px_44px_rgba(0,72,140,0.12)]">
                 <CardContent className="grid h-full grid-cols-[56px_1fr] items-start gap-5 p-6 max-[760px]:grid-cols-1 max-[760px]:gap-3 max-[760px]:p-4 max-[760px]:text-center">
-                  <span className="grid size-12 place-items-center rounded-lg bg-[#e8f8ff] text-[#008fe4] transition duration-300 group-hover:bg-[#1fa8f4] group-hover:text-white max-[760px]:mx-auto max-[760px]:size-10">
+                  <span className="grid size-12 place-items-center text-[#008fe4] transition duration-300 group-hover:text-[#1fa8f4] max-[760px]:mx-auto max-[760px]:size-10">
                     <Icon
                       className="size-6 max-[760px]:size-5"
                       strokeWidth={2.5}
