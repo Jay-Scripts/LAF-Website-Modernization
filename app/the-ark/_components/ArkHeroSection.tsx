@@ -4,6 +4,8 @@ export default function ArkHeroSection() {
   return (
     <PageHero
       imageSrc="/images/the-ark/hero-TA.png"
+      imageUnoptimized
+      imageLayerClassName="opacity-100"
       title="Built From Hope"
       description="One family's journey through illness became a mission to support children and families facing the same fight."
       backgroundClassName="bg-[linear-gradient(90deg,rgba(0,143,228,0.92)_0%,rgba(31,168,244,0.78)_42%,rgba(102,211,247,0.2)_100%),linear-gradient(135deg,#1fa8f4,#1fa8f4)]"

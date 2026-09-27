@@ -12,6 +12,8 @@ export default function PageHero({
   overlayClassName,
   imageClassName,
   imageWrapperClassName = "",
+  imageUnoptimized = false,
+  imageLayerClassName = "opacity-[0.86] max-[900px]:opacity-[0.62] max-[767px]:opacity-100",
   sectionClassName = "",
   contentClassName = "",
   headlineClassName = "",
@@ -26,6 +28,8 @@ export default function PageHero({
   overlayClassName: string;
   imageClassName: string;
   imageWrapperClassName?: string;
+  imageUnoptimized?: boolean;
+  imageLayerClassName?: string;
   sectionClassName?: string;
   contentClassName?: string;
   headlineClassName?: string;
@@ -34,7 +38,7 @@ export default function PageHero({
   return (
     <section className={`relative grid min-h-[100svh] items-center overflow-hidden pt-[82px] text-white max-[767px]:min-h-[88svh] max-[767px]:pt-[76px] ${backgroundClassName} ${sectionClassName}`}>
       <div
-        className={`absolute inset-x-0 bottom-0 top-[82px] opacity-[0.86] after:absolute after:inset-0 max-[900px]:top-[48%] max-[900px]:opacity-[0.62] max-[767px]:top-[76px] max-[767px]:opacity-100 ${overlayClassName}`}
+        className={`absolute inset-x-0 bottom-0 top-[82px] after:absolute after:inset-0 max-[900px]:top-[48%] max-[767px]:top-[76px] ${imageLayerClassName} ${overlayClassName}`}
         aria-hidden="true"
       >
         <div className={`absolute inset-0 ${imageWrapperClassName}`}>
@@ -43,6 +47,7 @@ export default function PageHero({
             alt=""
             fill
             priority
+            unoptimized={imageUnoptimized}
             sizes="100vw"
             className={`object-cover ${imageClassName}`}
           />

@@ -24,8 +24,8 @@ export default function TheArkPage() {
           50% { transform: translateY(6px); }
         }
         @keyframes ark-hero-load {
-          from { opacity: 0; transform: translate3d(0, 18px, 0) scale(0.985); filter: blur(5px); }
-          to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); filter: blur(0); }
+          from { opacity: 0; transform: translate3d(0, 18px, 0) scale(0.985); }
+          to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
         }
         .ark-hero-load {
           animation: ark-hero-load 900ms cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
