@@ -25,7 +25,8 @@ export default function Hero() {
           loop
           muted
           playsInline
-          preload="metadata"
+          preload="none"
+          poster="/images/our-voyage/hero-ov.jpeg"
         >
           <source src="/videos/homepage-hero-new.mp4" type="video/mp4" />
         </video>

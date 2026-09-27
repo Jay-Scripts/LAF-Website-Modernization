@@ -14,7 +14,8 @@ export default function OnBoardFinalCtaMotion() {
     if (!node) return;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
-      setIsVisible(true);
+      const frame = window.requestAnimationFrame(() => setIsVisible(true));
+      return () => window.cancelAnimationFrame(frame);
       return;
     }
 

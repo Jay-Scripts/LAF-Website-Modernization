@@ -1,6 +1,5 @@
 import { ClipboardCheckIcon, HandHeartIcon, ShieldCheckIcon } from "lucide-react";
 import { HeartDoodle } from "@/components/BrandHearts";
-import { Card, CardContent } from "@/components/ui/card";
 import Reveal from "@/components/Reveal";
 
 const allocation = [

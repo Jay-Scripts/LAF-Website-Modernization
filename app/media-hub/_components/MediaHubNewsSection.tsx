@@ -3,7 +3,6 @@ import { Card } from "@/components/ui/card";
 import { HeartDoodle } from "@/components/BrandHearts";
 import Reveal from "@/components/Reveal";
 import { featuredArticles } from "./media-hub-data";
-import MediaHubExternalButton from "./MediaHubExternalButton";
 import { ExternalLinkIcon } from "./MediaHubIcons";
 import MediaHubInner from "./MediaHubInner";
 import MediaHubSectionTitle from "./MediaHubSectionTitle";

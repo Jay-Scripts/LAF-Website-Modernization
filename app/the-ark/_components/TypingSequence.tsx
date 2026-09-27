@@ -55,17 +55,19 @@ export default function TypingSequence({ segments }: { segments: TypingSegment[]
     return () => globalThis.clearInterval(timer);
   }, [progress, started, totalCharacters]);
 
-  let charactersBefore = 0;
+  const characterStarts = segments.reduce<number[]>((starts, segment, index) => {
+    starts[index] = (starts[index - 1] ?? 0) + (index === 0 ? 0 : segments[index - 1].text.length);
+    return starts;
+  }, []);
 
   return (
     <div ref={rootRef}>
       <span className="sr-only">{segments.map((segment) => segment.text).join(" ")}</span>
-      {segments.map((segment) => {
-        const start = charactersBefore;
+      {segments.map((segment, index) => {
+        const start = characterStarts[index];
         const currentProgress = progress - start;
         const typed = visibleText(segment.text, currentProgress);
         const isTyping = started && progress < totalCharacters && currentProgress >= 0 && currentProgress < segment.text.length;
-        charactersBefore += segment.text.length;
 
         return createElement(
           segment.as,

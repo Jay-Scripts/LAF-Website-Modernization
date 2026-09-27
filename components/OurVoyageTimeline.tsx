@@ -296,26 +296,33 @@ function MilestoneGallery({
 
     let frame = 0;
     let previousTime = 0;
+    let loopDistance = 0;
+    let isActive = true;
+    const firstRepeatedPhoto = gallery.children.item(photos.length) as HTMLElement | null;
+    const firstPhoto = gallery.children.item(0) as HTMLElement | null;
+    const measure = () => {
+      loopDistance = firstRepeatedPhoto && firstPhoto
+        ? firstRepeatedPhoto.offsetLeft - firstPhoto.offsetLeft
+        : 0;
+    };
+    measure();
+    const resizeObserver = new ResizeObserver(measure);
+    resizeObserver.observe(gallery);
+    const visibilityObserver = new IntersectionObserver(([entry]) => {
+      isActive = Boolean(entry?.isIntersecting);
+    });
+    visibilityObserver.observe(gallery);
 
     const drift = (time: number) => {
       if (resumeGalleryAtRef.current === -1)
         resumeGalleryAtRef.current = time + 1500;
       const isFirstFrame = previousTime === 0;
       const elapsed = Math.min(time - previousTime, 48);
-      const firstRepeatedPhoto = gallery.children.item(
-        photos.length,
-      ) as HTMLElement | null;
-      const firstPhoto = gallery.children.item(0) as HTMLElement | null;
-      const loopDistance =
-        firstRepeatedPhoto && firstPhoto
-          ? firstRepeatedPhoto.offsetLeft - firstPhoto.offsetLeft
-          : 0;
-
       if (isFirstFrame && direction === "right")
         galleryOffsetRef.current = loopDistance;
       previousTime = time;
 
-      if (time >= resumeGalleryAtRef.current && loopDistance > 0) {
+      if (isActive && time >= resumeGalleryAtRef.current && loopDistance > 0) {
         galleryOffsetRef.current +=
           elapsed * 0.026 * (direction === "left" ? 1 : -1);
         if (galleryOffsetRef.current >= loopDistance)
@@ -329,7 +336,11 @@ function MilestoneGallery({
     };
 
     frame = window.requestAnimationFrame(drift);
-    return () => window.cancelAnimationFrame(frame);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      resizeObserver.disconnect();
+      visibilityObserver.disconnect();
+    };
   }, [direction, photos.length]);
 
   const movePreview = (direction: -1 | 1) => {

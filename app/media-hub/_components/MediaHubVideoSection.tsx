@@ -5,6 +5,7 @@ import { isPublicLink, mediaHubLinks, youtubeVideos } from "./media-hub-data";
 import MediaHubExternalButton from "./MediaHubExternalButton";
 import MediaHubInner from "./MediaHubInner";
 import MediaHubSectionTitle from "./MediaHubSectionTitle";
+import YouTubeEmbed from "./YouTubeEmbed";
 
 export default function MediaHubVideoSection() {
   return (
@@ -20,7 +21,7 @@ export default function MediaHubVideoSection() {
             <Reveal as="article" key={video.videoId} className="h-full">
               <Card className="h-full gap-0 overflow-hidden rounded-[26px] border border-[rgba(31,168,244,0.14)] bg-white p-0 shadow-[0_18px_46px_rgba(31,168,244,0.11)]">
                 <div className="aspect-video overflow-hidden bg-[#08233d]">
-                  <iframe className="h-full w-full" src={`https://www.youtube.com/embed/${video.videoId}`} title={`YouTube video: ${video.title}`} loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+                  <YouTubeEmbed videoId={video.videoId} title={`YouTube video: ${video.title}`} />
                 </div>
                 <div className="p-[18px]"><h3 className="m-0 text-lg font-black leading-[1.16] text-[#1fa8f4]">{video.title}</h3></div>
               </Card>

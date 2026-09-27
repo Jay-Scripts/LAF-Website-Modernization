@@ -8,6 +8,11 @@ type ContactPayload = {
   message?: unknown;
 };
 
+const MAX_BODY_BYTES = 16_384;
+const RATE_WINDOW_MS = 60_000;
+const RATE_LIMIT = 5;
+const requestsByIp = new Map<string, { count: number; resetAt: number }>();
+
 const fieldLimits = {
   fullName: 100,
   email: 160,
@@ -44,7 +49,38 @@ function emailRow(label: string, value: string) {
   `;
 }
 
+function clientKey(request: Request) {
+  return request.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
+    || request.headers.get("x-real-ip")?.trim()
+    || "unknown";
+}
+
+function isRateLimited(request: Request) {
+  const now = Date.now();
+  const key = clientKey(request);
+  const current = requestsByIp.get(key);
+  if (!current || current.resetAt <= now) {
+    requestsByIp.set(key, { count: 1, resetAt: now + RATE_WINDOW_MS });
+    if (requestsByIp.size > 10_000) {
+      for (const [storedKey, value] of requestsByIp) if (value.resetAt <= now) requestsByIp.delete(storedKey);
+    }
+    return false;
+  }
+  current.count += 1;
+  return current.count > RATE_LIMIT;
+}
+
 export async function POST(request: Request) {
+  if (request.headers.get("sec-fetch-site") === "cross-site") {
+    return Response.json({ message: "Cross-site requests are not allowed." }, { status: 403 });
+  }
+  const contentLength = Number(request.headers.get("content-length"));
+  if (Number.isFinite(contentLength) && contentLength > MAX_BODY_BYTES) {
+    return Response.json({ message: "Message is too large." }, { status: 413 });
+  }
+  if (isRateLimited(request)) {
+    return Response.json({ message: "Too many messages. Please try again later." }, { status: 429, headers: { "Retry-After": "60" } });
+  }
   let payload: ContactPayload;
 
   try {

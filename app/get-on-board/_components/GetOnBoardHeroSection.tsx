@@ -1,5 +1,4 @@
 import Image from "next/image";
-import CTAButton from "@/components/CTAButton";
 import Reveal from "@/components/Reveal";
 
 export default function GetOnBoardHeroSection() {

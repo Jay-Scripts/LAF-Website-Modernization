@@ -32,7 +32,7 @@ function FacebookPostCard({ post }: { post: FacebookPost }) {
           </span>
           {post.imageUrl ? (
             <span className="relative mx-5 block aspect-[1.02] overflow-hidden rounded-[8px] bg-[#eaf9ff] max-[680px]:aspect-[1.18]">
-              <img src={post.imageUrl} alt="Little Ark Foundation Facebook post" loading="lazy" className="h-full w-full object-cover" />
+              <span role="img" aria-label="Little Ark Foundation Facebook post" className="block h-full w-full bg-cover bg-center" style={{ backgroundImage: `url(${post.imageUrl})` }} />
               {isVideo ? <span className="absolute inset-0 grid place-items-center bg-black/10"><span className="grid h-16 w-16 place-items-center rounded-[18px] bg-black/55 text-white"><PlayIcon /></span></span> : null}
             </span>
           ) : (
