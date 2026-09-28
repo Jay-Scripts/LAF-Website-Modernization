@@ -57,8 +57,8 @@ export const servicePages = [
     title: "Transportation",
     description:
       "Providing free transportation to and from the hospital through the Hope in Transit shuttle service so families can reach treatment safely and on time.",
-    heroImage: "/images/hearts/transportation/transportation-home-arrival.jpeg",
-    heroAlt: "Hope in Transit shuttle waiting outside the Little Ark home",
+    heroImage: "/images/hearts/transportation/transportation-hope-in-transit.jpg",
+    heroAlt: "The Little Ark Hope in Transit shuttle vehicle",
     heroObjectPosition: "center center",
     storyEyebrow: "Transportation in Action",
     images: [
@@ -69,8 +69,8 @@ export const servicePages = [
         objectPosition: "center center",
       },
       {
-        src: "/images/hearts/transportation/transportation-partner-handoff.jpg",
-        alt: "Little Ark transportation partners gathered beside the Hope in Transit shuttle",
+        src: "/images/hearts/transportation/transportation-home-arrival.jpeg",
+        alt: "Hope in Transit shuttle waiting outside the Little Ark home",
         className: "md:col-span-5",
         objectPosition: "center center",
       },
@@ -87,8 +87,8 @@ export const servicePages = [
     title: "Everyday Meals",
     description:
       "Serving warm and nutritious meals so children and caregivers are nourished during treatment days.",
-    heroImage: "/images/hearts/everyday-meals/everyday-meals-hero.png",
-    heroAlt: "Little Ark volunteers gathered around a table prepared for everyday meals",
+    heroImage: "/images/hearts/everyday-meals/everyday-meals-caregiver.jpeg",
+    heroAlt: "Children and caregivers gathered around a meal table at Little Ark",
     heroObjectPosition: "center center",
     heroEyebrow: "HEARTS Support Model",
     storyEyebrow: "Meals in Action",
@@ -133,8 +133,8 @@ export const servicePages = [
     title: "Activities",
     description:
       "Creating meaningful play, learning, and psychosocial activities that bring comfort, joy, and emotional support to children.",
-    heroImage: "/images/hearts/activities/laf-activities.png",
-    heroAlt: "Children listening during a Little Ark story activity",
+    heroImage: "/images/hearts/activities/activities-group-play.png",
+    heroAlt: "Children and a Little Ark team member gathered for a group play activity",
     heroObjectPosition: "center center",
     storyEyebrow: "Activities in Action",
     images: [
@@ -223,8 +223,8 @@ export const servicePages = [
     title: "Spiritual Care",
     description:
       "Offering compassionate, faith-centered support that gives families strength, comfort, and hope.",
-    heroImage: "/images/hearts/spiritual-care/spiritual-care-hero.png",
-    heroAlt: "Little Ark families gathered for prayer and faith-centered encouragement",
+    heroImage: "/images/hearts/spiritual-care/spiritual-care-family-fellowship.jpeg",
+    heroAlt: "Little Ark families gathered around a table for faith-centered fellowship",
     heroObjectPosition: "center center",
     storyEyebrow: "Spiritual Care in Action",
     images: [

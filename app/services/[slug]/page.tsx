@@ -51,11 +51,8 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
     notFound();
   }
 
-  const heroObjectPosition = "heroObjectPosition" in service ? service.heroObjectPosition : undefined;
   const isHousing = service.slug === "housing";
-  const heroObjectFit = "heroObjectFit" in service ? service.heroObjectFit : "cover";
-  const heroImageClassName = "heroImageClassName" in service ? service.heroImageClassName : "";
-  const heroEyebrow = "heroEyebrow" in service ? service.heroEyebrow : "Support Across the Journey";
+  const isResources = service.slug === "resources-responsibility";
   const storyEyebrow = "storyEyebrow" in service ? service.storyEyebrow : "Photo Story";
   const ctaTitle = "ctaTitle" in service ? service.ctaTitle : "Every act of care brings hope.";
   const ctaDescription =
@@ -69,7 +66,6 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
       <Navbar variant="solid" />
 
       <main>
-        {isHousing ? (
           <div id="top">
             <PageHero
               imageSrc={service.heroImage}
@@ -78,44 +74,16 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
               title={service.title}
               description={service.description}
               headlineDivider={<span className="mt-5 block h-1 w-16 bg-white shadow-[0_2px_6px_rgba(0,0,0,0.9)]" aria-hidden="true" />}
-              backgroundClassName="bg-[#eaf9ff]"
+              backgroundClassName={isResources ? "bg-[#082f59]" : "bg-[#eaf9ff]"}
               overlayClassName="max-[900px]:!top-[82px] max-[767px]:!top-[76px]"
-              imageClassName="object-[center_40%] max-[767px]:object-[62%_center]"
+              imageClassName={isHousing ? "object-[center_40%] max-[767px]:object-[62%_center]" : isResources ? "!object-contain object-center" : "object-center"}
+              imageWrapperClassName={isResources ? "mx-auto max-w-[1368px]" : undefined}
               sectionClassName="!items-end pb-10 sm:pb-14"
               contentClassName="!w-[min(560px,100%)] !py-0 !filter-none"
               headlineClassName="!text-[clamp(36px,4.5vw,58px)] !text-white [text-shadow:0_2px_4px_rgba(0,0,0,0.95),0_4px_16px_rgba(0,0,0,0.9)]"
               descriptionClassName="!mt-5 !text-[clamp(16px,1.5vw,20px)] !leading-relaxed !text-white [text-shadow:0_1px_3px_rgba(0,0,0,1),0_3px_10px_rgba(0,0,0,0.95)]"
             />
           </div>
-        ) : (
-        <section id="top" className="relative grid min-h-[92svh] items-end overflow-hidden bg-[#1fa8f4] pt-[82px] text-white">
-          <Image
-            src={service.heroImage}
-            alt=""
-            fill
-            preload
-            unoptimized={isHousing}
-            sizes="100vw"
-            className={`${heroObjectFit === "contain" ? "object-contain object-center" : "object-cover object-center"} ${heroImageClassName}`}
-            style={{ objectPosition: heroObjectPosition ?? "center center" }}
-          />
-          <div aria-hidden="true" className={`absolute inset-0 ${isHousing ? "bg-[linear-gradient(180deg,transparent_20%,rgba(3,25,45,0.18)_45%,rgba(3,25,45,0.88)_100%)]" : "bg-[linear-gradient(90deg,rgba(0,68,120,0.78)_0%,rgba(0,110,170,0.46)_46%,rgba(0,0,0,0.18)_100%),radial-gradient(circle_at_72%_26%,rgba(255,255,255,0.2),transparent_20rem)]"}`} />
-          <HeartPhotoAccent className="bottom-[clamp(44px,8vw,96px)] right-[clamp(18px,6vw,84px)] top-auto rotate-[8deg] max-[620px]:bottom-8 max-[620px]:right-0" opacity={0.92} />
-          <Inner className="relative z-[1] pb-[clamp(70px,12vh,126px)]">
-            <Reveal className="max-w-[860px]" style={isHousing ? { filter: "none" } : undefined}>
-              <p className="mb-4 mt-0 text-[13px] font-black uppercase tracking-[0.14em] text-white/80">
-                {heroEyebrow}
-              </p>
-              <h1 className="m-0 text-[clamp(58px,10vw,132px)] font-black leading-[0.88] tracking-normal">
-                {service.title}
-              </h1>
-              <p className="mt-6 max-w-[760px] text-[clamp(23px,3vw,38px)] font-black leading-[1.18] text-white/92">
-                {service.description}
-              </p>
-            </Reveal>
-          </Inner>
-        </section>
-        )}
 
         <section className={`relative overflow-hidden py-[clamp(76px,10vw,132px)] ${isHousing ? "bg-white" : "bg-[radial-gradient(circle_at_12%_16%,rgba(200,244,255,0.48),transparent_22rem),linear-gradient(180deg,#ffffff,#eef9ff)]"}`}>
           {!isHousing && <HeartDoodle className="absolute -left-24 top-6 z-0 max-[620px]:hidden" size={340} rotate={-16} opacity={0.28} variant={1} />}
@@ -137,7 +105,7 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
               {service.images.map((image, index) => (
                 <Reveal
                   key={image.src}
-                  style={isHousing ? { filter: "none" } : undefined}
+                  style={{ filter: "none" }}
                   className={`relative overflow-visible ${
                     image.className ?? (index % 3 === 0 ? "md:col-span-7" : "md:col-span-5")
                   }`}
@@ -147,7 +115,7 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
                       src={image.src}
                       alt={image.alt}
                       fill
-                      unoptimized={isHousing}
+                      unoptimized
                       sizes="(max-width: 768px) calc(100vw - 40px), 50vw"
                       className="object-cover object-center"
                       style={{ objectPosition: ("objectPosition" in image ? image.objectPosition : undefined) ?? "center center" }}
@@ -182,7 +150,7 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
           </Reveal>
         </section>
 
-        <ProgramsNavigation activeProgram={service.slug} layout={isHousing ? "menu" : "default"} />
+        <ProgramsNavigation activeProgram={service.slug} layout="menu" />
       </main>
 
       <Footer />

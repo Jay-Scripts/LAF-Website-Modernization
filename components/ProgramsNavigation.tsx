@@ -170,7 +170,7 @@ export default function ProgramsNavigation({ activeProgram, fullViewport = false
                       <span className="flex min-w-0 flex-1 flex-col md:mt-6">
                         <span className="text-base font-black leading-snug group-hover:text-[#0068c9]">{program.label}</span>
                         <span className="mt-3 text-sm leading-relaxed text-[#436077]">{program.description}</span>
-                        <span className={`mt-auto pt-5 text-xs font-bold ${current ? "text-[#0068c9]" : "text-[#557086]"}`}>{current ? "You’re exploring Housing" : "Explore program →"}</span>
+                        <span className={`mt-auto pt-5 text-xs font-bold ${current ? "text-[#0068c9]" : "text-[#557086]"}`}>{current ? `You’re exploring ${program.label}` : "Explore program →"}</span>
                       </span>
                     </Link>
                   </li>
