@@ -16,7 +16,7 @@ export default function FollowUsPage() {
       <Navbar variant="solid" />
 
       <main>
-        <section className="relative overflow-hidden bg-[radial-gradient(circle_at_14%_12%,rgba(31,168,244,0.14),transparent_24rem),radial-gradient(circle_at_88%_18%,rgba(255,200,61,0.18),transparent_22rem),linear-gradient(180deg,#effaff,#fff_58%,#edf8ff)] pb-[clamp(72px,9vw,120px)] pt-[clamp(150px,16vw,190px)]">
+        <section className="mx-auto w-[min(1180px,calc(100%_-_48px))] pb-[clamp(64px,8vw,104px)] pt-[clamp(150px,16vw,190px)] max-[620px]:w-[calc(100%_-_32px)]">
           <FollowUsHeroSection />
           <FollowUsSocialSection />
         </section>

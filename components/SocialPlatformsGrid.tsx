@@ -76,7 +76,34 @@ function ExternalIcon() {
   );
 }
 
-export default function SocialPlatformsGrid() {
+export default function SocialPlatformsGrid({ layout = "cards" }: { layout?: "cards" | "compact" }) {
+  if (layout === "compact") {
+    return (
+      <ul aria-label="Little Ark social accounts" className="m-0 grid list-none gap-x-12 p-0 md:grid-cols-2">
+        {socialPlatforms.map((platform) => (
+          <li key={platform.name} className="min-w-0 border-t border-[#cbdfe9]">
+            <a
+              href={platform.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${platform.label}, opens in a new tab`}
+              className="group flex min-h-[120px] items-center gap-5 py-6 text-[#082f59] transition-colors hover:text-[#0068c9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068c9]"
+            >
+              <span className="h-8 w-8 shrink-0 text-[#0068c9]">{platform.icon}</span>
+              <span className="min-w-0 flex-1">
+                <span className="block text-2xl font-bold tracking-tight">{platform.name}</span>
+                <span className="mt-1 block break-words text-sm leading-relaxed text-[#557086]">{platform.account}</span>
+              </span>
+              <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden="true">
+                <path d="M6 18 18 6M6 6h12v12" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   return (
     <div className="grid grid-cols-5 items-stretch gap-4 max-[1180px]:grid-cols-2 max-[620px]:grid-cols-1">
       {socialPlatforms.map((platform, index) => (
