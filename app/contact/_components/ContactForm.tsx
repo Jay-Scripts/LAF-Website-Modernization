@@ -2,7 +2,6 @@
 
 import { FormEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -26,9 +25,9 @@ const initialFormState: FormState = {
 };
 
 const fieldClass =
-  "mt-2 w-full rounded-[14px] border border-[rgba(31,168,244,0.18)] bg-white px-4 py-3 text-base font-semibold text-[#08233d] outline-none transition duration-200 placeholder:text-[#8aa0b1] focus:border-[#1fa8f4] focus:shadow-[0_0_0_4px_rgba(31,168,244,0.12)]";
+  "mt-2 h-auto min-h-12 w-full rounded-md border border-[#cbdfe9] bg-[#f6fafc] px-3 py-3 text-base font-normal text-[#08233d] outline-none placeholder:text-[#6b8191] focus-visible:border-[#0068c9] focus-visible:ring-2 focus-visible:ring-[#0068c9]/20 md:text-base";
 
-const labelClass = "block text-sm font-black uppercase tracking-[0.1em] text-[#005ba8]";
+const labelClass = "block text-sm font-semibold text-[#082f59]";
 const errorClass = "mt-2 text-sm font-bold leading-[1.4] text-[#b42318]";
 
 const fieldLimits: Record<keyof FormState, number> = {
@@ -141,18 +140,16 @@ export default function ContactForm() {
   };
 
   return (
-    <Card className="rounded-[24px] border border-[rgba(31,168,244,0.14)] bg-white p-0 shadow-[0_18px_42px_rgba(31,168,244,0.10)]">
-      <form noValidate onSubmit={handleSubmit} className="p-[clamp(20px,4vw,40px)]">
-      <div className="mb-6 flex items-end justify-between gap-4 border-b border-[#dff4ff] pb-5 max-[460px]:items-start max-[460px]:flex-col">
+    <form noValidate onSubmit={handleSubmit}>
+      <div className="mb-8 flex items-baseline justify-between gap-4 max-[460px]:items-start max-[460px]:flex-col">
         <div>
-          <p className="m-0 text-xs font-black uppercase tracking-[0.14em] text-[#1fa8f4]">Send a message</p>
-          <h2 className="mt-2 text-xl font-black leading-none text-[#005ba8] sm:text-2xl">Tell us what&apos;s on your mind.</h2>
+          <h2 className="m-0 text-2xl font-bold tracking-tight text-[#082f59]">Send a message</h2>
         </div>
-        <p className="m-0 text-right text-xs font-bold text-[#7790a2] max-[460px]:text-left">Required fields are marked *</p>
+        <p className="m-0 text-sm text-[#557086]">* Required</p>
       </div>
       {status?.type === "success" ? (
         <div
-          className="mb-6 flex items-start gap-3 rounded-[16px] border border-[#bbf7d0] bg-[#f0fdf4] p-4 text-[#166534] shadow-[0_10px_24px_rgba(22,101,52,0.08)] animate-[contactStatusFade_220ms_ease-out]"
+          className="mb-6 flex items-start gap-3 rounded-md border border-[#bbf7d0] bg-[#f0fdf4] p-4 text-[#166534]"
           role="status"
           aria-live="polite"
         >
@@ -279,7 +276,7 @@ export default function ContactForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="min-h-[56px] min-w-[190px] rounded-full bg-[#ffc83d] px-10 text-base font-black uppercase text-[#08233d] shadow-[0_16px_38px_rgba(255,200,61,0.28)] transition duration-200 hover:scale-[1.02] hover:bg-[#f2b91f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1fa8f4] disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:scale-100 disabled:hover:bg-[#ffc83d]"
+          className="min-h-12 min-w-[170px] rounded-md bg-[#ffc83d] px-6 text-base font-bold text-[#08233d] hover:bg-[#f2b91f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068c9] disabled:cursor-not-allowed disabled:opacity-70"
         >
           {isSubmitting ? "Sending..." : "Send Message"}
         </Button>
@@ -295,19 +292,6 @@ export default function ContactForm() {
         ) : null}
       </div>
 
-      <style jsx>{`
-        @keyframes contactStatusFade {
-          from {
-            opacity: 0;
-            transform: translateY(6px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
-      </form>
-    </Card>
+    </form>
   );
 }

@@ -1,10 +1,9 @@
-import Reveal from "@/components/Reveal";
 import ContactForm from "./ContactForm";
 
 export default function ContactFormSection() {
   return (
-    <Reveal className="mt-8">
+    <section aria-label="Send a message" className="min-w-0">
       <ContactForm />
-    </Reveal>
+    </section>
   );
 }
