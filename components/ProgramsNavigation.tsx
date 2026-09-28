@@ -166,7 +166,7 @@ export default function ProgramsNavigation({ activeProgram, fullViewport = false
                 href={`${program.href}#top`}
                 className="group flex min-h-[138px] flex-col justify-between border-t border-[#bbd5e6] py-5 text-[#082f59] transition-colors hover:border-[#008fe4] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#008fe4] max-[620px]:min-h-[116px]"
               >
-                <span className="flex items-start justify-between gap-4 text-[clamp(1.15rem,1.7vw,1.45rem)] font-bold leading-tight tracking-[-0.025em]">
+                <span className="flex items-start justify-between gap-4 text-[clamp(1.15rem,1.7vw,1.45rem)] font-black leading-tight tracking-[-0.025em]">
                   {program.label}
                   <span aria-hidden="true" className="shrink-0 text-[#008fe4] transition-transform group-hover:translate-x-1">↗</span>
                 </span>

@@ -5,6 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  --font-brand: Arial, Helvetica, sans-serif;
   --laf-heart-coral: #ff8f93;
   --laf-heart-pink: #ff9da1;
   --laf-heart-soft: #ffb8ba;
@@ -60,9 +61,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: Arial, Helvetica, sans-serif;
-  --font-mono: "Courier New", Courier, monospace;
-  --font-heading: var(--font-sans);
+  --font-sans: var(--font-brand);
+  --font-mono: var(--font-brand);
+  --font-heading: var(--font-brand);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -104,7 +105,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-brand);
 }
 
 .contact-signal-panel {

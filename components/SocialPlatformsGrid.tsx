@@ -91,7 +91,7 @@ export default function SocialPlatformsGrid({ layout = "cards" }: { layout?: "ca
             >
               <span className="h-8 w-8 shrink-0 text-[#0068c9]">{platform.icon}</span>
               <span className="min-w-0 flex-1">
-                <span className="block text-2xl font-bold tracking-tight">{platform.name}</span>
+                <span className="block text-2xl font-black tracking-tight">{platform.name}</span>
                 <span className="mt-1 block break-words text-sm leading-relaxed text-[#557086]">{platform.account}</span>
               </span>
               <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden="true">

@@ -19,7 +19,7 @@ export default function ImpactCardsGrid({ metrics }: { metrics: PublicImpactMetr
         return (
           <article key={key} className="grid grid-cols-[minmax(0,1fr)_minmax(250px,0.9fr)] items-center gap-8 border-b border-[#d3e2eb] py-6 max-[620px]:grid-cols-1 max-[620px]:gap-4 max-[620px]:py-5">
             <div>
-              <h3 className="m-0 text-[clamp(1.35rem,2.1vw,1.9rem)] font-bold leading-tight tracking-[-0.025em] text-[#082f59]">{metric.program}</h3>
+              <h3 className="m-0 text-[clamp(1.35rem,2.1vw,1.9rem)] font-black leading-tight tracking-[-0.025em] text-[#082f59]">{metric.program}</h3>
               <p className="mb-0 mt-1 text-sm text-[#50687b]">{label}</p>
             </div>
             <div className="flex items-end justify-between gap-6 max-[620px]:items-start">

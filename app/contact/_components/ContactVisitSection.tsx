@@ -5,7 +5,7 @@ const linkClass = "inline-block max-w-full break-words py-2 text-lg font-semibol
 export default function ContactVisitSection() {
   return (
     <aside aria-labelledby="contact-details-heading" className="min-w-0">
-      <h2 id="contact-details-heading" className="m-0 text-2xl font-bold tracking-tight text-[#082f59]">Reach us directly</h2>
+      <h2 id="contact-details-heading" className="m-0 text-2xl font-black tracking-tight text-[#082f59]">Reach us directly</h2>
       <dl className="mt-6 space-y-6">
         <div>
           <dt className="text-sm text-[#557086]">Email</dt>

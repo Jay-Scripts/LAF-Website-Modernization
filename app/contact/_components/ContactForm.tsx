@@ -143,7 +143,7 @@ export default function ContactForm() {
     <form noValidate onSubmit={handleSubmit}>
       <div className="mb-8 flex items-baseline justify-between gap-4 max-[460px]:items-start max-[460px]:flex-col">
         <div>
-          <h2 className="m-0 text-2xl font-bold tracking-tight text-[#082f59]">Send a message</h2>
+          <h2 className="m-0 text-2xl font-black tracking-tight text-[#082f59]">Send a message</h2>
         </div>
         <p className="m-0 text-sm text-[#557086]">* Required</p>
       </div>
