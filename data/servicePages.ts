@@ -12,6 +12,8 @@ export type ServicePage = {
   ctaTitle?: string;
   ctaDescription?: string;
   ctaLabel?: string;
+  ctaImage: string;
+  ctaImageClassName?: string;
   images: {
     src: string;
     alt: string;
@@ -28,6 +30,7 @@ export const servicePages = [
       "Providing a safe and temporary home where pediatric patients and their caregivers can rest, recover, and stay close to treatment.",
     heroImage: "/images/hearts/housing/little-ark-house.png",
     heroAlt: "The Little Ark Foundation home exterior",
+    ctaImage: "/images/get-on-board/volunteer-child-support.png",
     heroImageClassName: "",
     heroObjectFit: "contain",
     heroObjectPosition: "center center",
@@ -59,6 +62,8 @@ export const servicePages = [
       "Providing free transportation to and from the hospital through the Hope in Transit shuttle service so families can reach treatment safely and on time.",
     heroImage: "/images/hearts/transportation/transportation-hope-in-transit.jpg",
     heroAlt: "The Little Ark Hope in Transit shuttle vehicle",
+    ctaImage: "/images/hearts/transportation/transportation-home-arrival.jpeg",
+    ctaImageClassName: "object-[38%_30%] max-[767px]:object-[38%_center]",
     heroObjectPosition: "center center",
     storyEyebrow: "Transportation in Action",
     images: [
@@ -89,6 +94,7 @@ export const servicePages = [
       "Serving warm and nutritious meals so children and caregivers are nourished during treatment days.",
     heroImage: "/images/hearts/everyday-meals/everyday-meals-caregiver.jpeg",
     heroAlt: "Children and caregivers gathered around a meal table at Little Ark",
+    ctaImage: "/images/hearts/everyday-meals/everyday-meals-prep.jpeg",
     heroObjectPosition: "center center",
     heroEyebrow: "HEARTS Support Model",
     storyEyebrow: "Meals in Action",
@@ -135,6 +141,8 @@ export const servicePages = [
       "Creating meaningful play, learning, and psychosocial activities that bring comfort, joy, and emotional support to children.",
     heroImage: "/images/hearts/activities/activities-group-play.png",
     heroAlt: "Children and a Little Ark team member gathered for a group play activity",
+    ctaImage: "/images/hearts/activities/activities-group-play.png",
+    ctaImageClassName: "object-[28%_65%] max-[767px]:object-[26%_65%]",
     heroObjectPosition: "center center",
     storyEyebrow: "Activities in Action",
     images: [
@@ -177,6 +185,8 @@ export const servicePages = [
       "Connecting families to the support they need while responsibly managing donor resources with transparency and accountability.",
     heroImage: "/images/hearts/resources/resources-hero.png",
     heroAlt: "Little Ark families and partners gathered with donated supplies",
+    ctaImage: "/images/hearts/resources/resources-workers-of-christ.png",
+    ctaImageClassName: "object-[center_35%]",
     heroObjectPosition: "center 0%",
     storyEyebrow: "Resources in Action",
     images: [
@@ -225,6 +235,8 @@ export const servicePages = [
       "Offering compassionate, faith-centered support that gives families strength, comfort, and hope.",
     heroImage: "/images/hearts/spiritual-care/spiritual-care-family-fellowship.jpeg",
     heroAlt: "Little Ark families gathered around a table for faith-centered fellowship",
+    ctaImage: "/images/hearts/spiritual-care/spiritual-care-family-fellowship.jpeg",
+    ctaImageClassName: "object-[center_55%] max-[767px]:object-[65%_center]",
     heroObjectPosition: "center center",
     storyEyebrow: "Spiritual Care in Action",
     images: [

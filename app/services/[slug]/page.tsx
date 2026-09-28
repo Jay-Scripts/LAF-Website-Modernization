@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { HeartDoodle, HeartPhotoAccent } from "@/components/BrandHearts";
-import CTAButton from "@/components/CTAButton";
+import HeartsCTA from "@/components/HeartsCTA";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
 import ProgramsNavigation from "@/components/ProgramsNavigation";
 import Reveal from "@/components/Reveal";
 import { getServicePage, servicePages } from "@/data/servicePages";
-import { siteContent } from "@/data/siteContent";
 import HousingPhotoStory from "./HousingPhotoStory";
 
 type ServiceRouteProps = {
@@ -160,25 +159,13 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
           </Inner>
         </section>
 
-        <section className={`relative overflow-hidden px-5 py-[clamp(70px,9vw,112px)] text-center text-white ${isHousing ? "grid min-h-[58svh] place-items-center bg-[#073f89]" : "bg-[radial-gradient(circle_at_18%_30%,rgba(200,244,255,0.3),transparent_19rem),linear-gradient(135deg,#008fe4,#1fa8f4)]"}`}>
-          {isHousing ? (
-            <>
-              <Reveal direction="none" threshold={0.12} style={{ filter: "none" }} className="absolute inset-0 !duration-[1400ms]">
-                <Image src="/images/get-on-board/volunteer-child-support.png" alt="" fill unoptimized sizes="100vw" className="object-cover object-[center_35%] max-[767px]:object-[65%_center]" />
-              </Reveal>
-              <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(4,20,42,0.4),transparent_75%)]" />
-            </>
-          ) : <HeartDoodle className="absolute -bottom-24 right-[6%] z-0 max-[620px]:hidden" size={380} rotate={16} opacity={0.28} variant={2} />}
-          <Reveal className="hearts-cta-copy relative z-[1] mx-auto max-w-[820px]" style={{ filter: "none" }}>
-            <h2 className={`m-0 font-black tracking-normal ${isHousing ? "text-[clamp(32px,4vw,54px)] leading-[1.06] [text-shadow:0_2px_4px_rgba(0,0,0,0.95),0_4px_16px_rgba(0,0,0,0.9)]" : "text-[clamp(38px,6vw,78px)] leading-[0.94]"}`}>
-              {ctaTitle}
-            </h2>
-            <p className={`mx-auto mt-5 max-w-[660px] ${isHousing ? "text-[clamp(16px,1.5vw,20px)] font-bold leading-relaxed text-white [text-shadow:0_1px_3px_rgba(0,0,0,1),0_3px_10px_rgba(0,0,0,0.95)]" : "text-[clamp(20px,2.5vw,30px)] font-black leading-[1.2] text-white/86"}`}>
-              {ctaDescription}
-            </p>
-            <CTAButton href={siteContent.links.giveHopePath} className={isHousing ? "mt-7 min-h-[48px]" : undefined}>{ctaLabel}</CTAButton>
-          </Reveal>
-        </section>
+        <HeartsCTA
+          imageSrc={service.ctaImage}
+          imageClassName={"ctaImageClassName" in service ? service.ctaImageClassName : isHousing ? "object-[center_35%] max-[767px]:object-[65%_center]" : service.slug === "everyday-meals" ? "object-[center_65%]" : isResources ? "object-[center_40%]" : "object-center"}
+          title={ctaTitle}
+          description={ctaDescription}
+          label={ctaLabel}
+        />
 
           <Reveal direction="none" threshold={0.08} style={{ filter: "none" }} className="hearts-programs">
             <ProgramsNavigation activeProgram={service.slug} layout="menu" />
