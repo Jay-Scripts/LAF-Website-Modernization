@@ -76,10 +76,49 @@ function ExternalIcon() {
   );
 }
 
-export default function SocialPlatformsGrid({ layout = "cards" }: { layout?: "cards" | "compact" }) {
-  if (layout === "compact") {
+export default function SocialPlatformsGrid({ layout = "cards" }: { layout?: "cards" | "compact" | "rows" | "icons" | "simple-cards" }) {
+  if (layout === "simple-cards") {
     return (
-      <ul aria-label="Little Ark social accounts" className="m-0 grid list-none gap-x-12 p-0 md:grid-cols-2">
+      <ul aria-label="Little Ark social accounts" className="m-0 grid list-none grid-cols-2 gap-3 p-0 sm:gap-4 lg:grid-cols-5">
+        {socialPlatforms.map((platform) => (
+          <li key={platform.name} className="min-w-0">
+            <a href={platform.href} target="_blank" rel="noopener noreferrer"
+              aria-label={`${platform.label}, opens in a new tab`}
+              className="group flex h-full min-h-[200px] flex-col rounded-lg border border-[#cbdfe9] bg-white p-4 text-[#082f59] transition-colors hover:border-[#0068c9] hover:bg-[#f5fbff] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068c9] motion-reduce:transition-none sm:p-5">
+              <span className="flex w-full items-start justify-between gap-3">
+                <span className="h-8 w-8 shrink-0 text-[#0068c9]">{platform.icon}</span>
+                <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0 text-[#557086] group-hover:text-[#0068c9]" aria-hidden="true">
+                  <path d="M6 18 18 6M6 6h12v12" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
+              <span className="mt-7 block text-xl font-black leading-tight group-hover:text-[#0068c9]">{platform.name}</span>
+              <span className="mt-2 block max-w-full [overflow-wrap:anywhere] text-sm leading-relaxed text-[#557086]">{platform.account}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    );
+  }
+  if (layout === "icons") {
+    return (
+      <ul aria-label="Little Ark social accounts" className="m-0 grid list-none grid-cols-2 gap-x-4 gap-y-7 p-0 sm:grid-cols-3 lg:grid-cols-5">
+        {socialPlatforms.map((platform) => (
+          <li key={platform.name} className="min-w-0">
+            <a href={platform.href} target="_blank" rel="noopener noreferrer"
+              aria-label={`${platform.label}, opens in a new tab`}
+              className="group flex h-full min-h-[140px] flex-col items-center px-2 py-4 text-center text-[#082f59] transition-colors hover:text-[#0068c9] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068c9] motion-reduce:transition-none">
+              <span className="mb-4 h-9 w-9 text-[#0068c9]">{platform.icon}</span>
+              <span className="text-xl font-black leading-tight group-hover:underline group-hover:underline-offset-4">{platform.name}</span>
+              <span className="mt-2 max-w-full break-words text-sm leading-relaxed text-[#557086]">{platform.account}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    );
+  }
+  if (layout !== "cards") {
+    return (
+      <ul aria-label="Little Ark social accounts" className={`m-0 grid list-none p-0 ${layout === "compact" ? "gap-x-12 md:grid-cols-2" : "border-b border-[#cbdfe9]"}`}>
         {socialPlatforms.map((platform) => (
           <li key={platform.name} className="min-w-0 border-t border-[#cbdfe9]">
             <a
@@ -87,11 +126,11 @@ export default function SocialPlatformsGrid({ layout = "cards" }: { layout?: "ca
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${platform.label}, opens in a new tab`}
-              className="group flex min-h-[120px] items-center gap-5 py-6 text-[#082f59] transition-colors hover:text-[#0068c9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068c9]"
+              className={`group flex items-center gap-5 text-[#082f59] transition-colors hover:text-[#0068c9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068c9] ${layout === "compact" ? "min-h-[120px] py-6" : "min-h-[84px] py-4"}`}
             >
               <span className="h-8 w-8 shrink-0 text-[#0068c9]">{platform.icon}</span>
               <span className="min-w-0 flex-1">
-                <span className="block text-2xl font-black tracking-tight">{platform.name}</span>
+                <span className={`block font-black tracking-tight ${layout === "compact" ? "text-2xl" : "text-xl"}`}>{platform.name}</span>
                 <span className="mt-1 block break-words text-sm leading-relaxed text-[#557086]">{platform.account}</span>
               </span>
               <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" aria-hidden="true">
