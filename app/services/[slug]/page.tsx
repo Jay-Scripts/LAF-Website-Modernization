@@ -63,7 +63,32 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
   const ctaLabel = "ctaLabel" in service ? service.ctaLabel : "Give Hope";
 
   return (
-    <div className="bg-white text-[#08233d]">
+    <div className="hearts-page bg-white text-[#08233d]">
+      <style>{`
+        @keyframes hearts-photo-left { from { opacity: 0; clip-path: inset(0 100% 0 0); } to { opacity: 1; clip-path: inset(0); } }
+        @keyframes hearts-photo-right { from { opacity: 0; clip-path: inset(0 0 0 100%); } to { opacity: 1; clip-path: inset(0); } }
+        @keyframes hearts-copy-enter { from { opacity: 0; transform: translate3d(-24px,12px,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
+        @keyframes hearts-cta-enter { from { opacity: 0; transform: translateY(24px); clip-path: inset(100% 0 0 0); } to { opacity: 1; transform: translateY(0); clip-path: inset(0); } }
+        .hearts-page .hearts-hero-photo { animation: hearts-photo-left 1100ms cubic-bezier(0.22,1,0.36,1) 80ms both; }
+        .hearts-page .hearts-hero-copy { animation: hearts-copy-enter 850ms cubic-bezier(0.22,1,0.36,1) 140ms both; }
+        .hearts-page [data-revealed="true"] .hearts-photo-left { animation: hearts-photo-left 950ms cubic-bezier(0.22,1,0.36,1) both; }
+        .hearts-page [data-revealed="true"] .hearts-photo-right { animation: hearts-photo-right 950ms cubic-bezier(0.22,1,0.36,1) both; }
+        .hearts-page .hearts-cta-copy[data-revealed="true"] { animation: hearts-cta-enter 850ms cubic-bezier(0.22,1,0.36,1) 180ms both; }
+        .hearts-page .hearts-programs[data-revealed="true"] h2,
+        .hearts-page .hearts-programs[data-revealed="true"] li { animation: hearts-copy-enter 850ms cubic-bezier(0.22,1,0.36,1) both; }
+        .hearts-page .hearts-programs li:nth-child(1) { animation-delay: 100ms; }
+        .hearts-page .hearts-programs li:nth-child(2) { animation-delay: 190ms; }
+        .hearts-page .hearts-programs li:nth-child(3) { animation-delay: 280ms; }
+        .hearts-page .hearts-programs li:nth-child(4) { animation-delay: 370ms; }
+        .hearts-page .hearts-programs li:nth-child(5) { animation-delay: 460ms; }
+        .hearts-page .hearts-programs li:nth-child(6) { animation-delay: 550ms; }
+        @media (prefers-reduced-motion: reduce) {
+          .hearts-page .hearts-hero-photo, .hearts-page .hearts-hero-copy,
+          .hearts-page [data-revealed] .hearts-photo-left, .hearts-page [data-revealed] .hearts-photo-right,
+          .hearts-page .hearts-cta-copy[data-revealed], .hearts-page .hearts-programs[data-revealed] h2,
+          .hearts-page .hearts-programs[data-revealed] li { animation: none !important; }
+        }
+      `}</style>
       <Navbar variant="solid" />
 
       <main>
@@ -78,9 +103,9 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
               backgroundClassName={isResources ? "bg-[#082f59]" : "bg-[#eaf9ff]"}
               overlayClassName="max-[900px]:!top-[82px] max-[767px]:!top-[76px]"
               imageClassName={isHousing ? "object-[center_40%] max-[767px]:object-[62%_center]" : isResources ? "!object-contain object-center" : "object-center"}
-              imageWrapperClassName={isResources ? "mx-auto max-w-[1368px]" : undefined}
+              imageWrapperClassName={`hearts-hero-photo ${isResources ? "mx-auto max-w-[1368px]" : ""}`}
               sectionClassName="!items-end pb-10 sm:pb-14"
-              contentClassName="!w-[min(560px,100%)] !py-0 !filter-none"
+              contentClassName="hearts-hero-copy !w-[min(560px,100%)] !py-0 !filter-none"
               headlineClassName="!text-[clamp(36px,4.5vw,58px)] !text-white [text-shadow:0_2px_4px_rgba(0,0,0,0.95),0_4px_16px_rgba(0,0,0,0.9)]"
               descriptionClassName="!mt-5 !text-[clamp(16px,1.5vw,20px)] !leading-relaxed !text-white [text-shadow:0_1px_3px_rgba(0,0,0,1),0_3px_10px_rgba(0,0,0,0.95)]"
             />
@@ -91,12 +116,12 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
           <Inner>
             {isHousing ? (
               <>
-                <h2 className="m-0 mb-9 text-[clamp(30px,4vw,46px)] font-black leading-tight text-[#082f59]">Inside the Little Ark home</h2>
+                <Reveal style={{ filter: "none" }} className="mb-9"><h2 className="m-0 text-[clamp(30px,4vw,46px)] font-black leading-tight text-[#082f59]">Inside the Little Ark home</h2></Reveal>
                 <HousingPhotoStory images={service.images} />
               </>
             ) : (
             <>
-            <Reveal className="mb-[clamp(34px,5vw,58px)] max-w-[760px]">
+            <Reveal style={{ filter: "none" }} className="mb-[clamp(34px,5vw,58px)] max-w-[760px]">
               <h2 className={isCollage ? "m-0 text-[clamp(30px,4vw,46px)] font-black leading-tight text-[#082f59]" : "mb-3 mt-0 text-[13px] font-black uppercase tracking-[0.14em] text-[#1fa8f4]"}>
                 {storyEyebrow}
               </h2>
@@ -106,8 +131,10 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
               {service.images.map((image, index) => (
                 <Reveal
                   key={image.src}
+                  direction={index % 2 === 1 ? "right" : "left"}
+                  delay={index * 140}
                   style={{ filter: "none" }}
-                  className={`relative overflow-visible ${isCollage ? (isResources ? (index === 2 ? "aspect-[4/5] md:aspect-auto" : "aspect-[4/3] md:aspect-auto") : index === 0 ? "aspect-[4/3] md:aspect-auto" : "aspect-square md:aspect-auto") : ""} ${
+                  className={`relative overflow-visible !duration-[950ms] ${isCollage ? (isResources ? (index === 2 ? "aspect-[4/5] md:aspect-auto" : "aspect-[4/3] md:aspect-auto") : index === 0 ? "aspect-[4/3] md:aspect-auto" : "aspect-square md:aspect-auto") : ""} ${
                     image.className ?? (index % 3 === 0 ? "md:col-span-7" : "md:col-span-5")
                   }`}
                 >
@@ -118,7 +145,7 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
                       fill
                       unoptimized
                       sizes="(max-width: 768px) calc(100vw - 40px), 50vw"
-                      className="object-cover object-center"
+                      className={`object-cover object-center ${index % 2 === 1 ? "hearts-photo-right" : "hearts-photo-left"}`}
                       style={{ objectPosition: ("objectPosition" in image ? image.objectPosition : undefined) ?? "center center" }}
                     />
                   </div>
@@ -136,11 +163,13 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
         <section className={`relative overflow-hidden px-5 py-[clamp(70px,9vw,112px)] text-center text-white ${isHousing ? "grid min-h-[58svh] place-items-center bg-[#073f89]" : "bg-[radial-gradient(circle_at_18%_30%,rgba(200,244,255,0.3),transparent_19rem),linear-gradient(135deg,#008fe4,#1fa8f4)]"}`}>
           {isHousing ? (
             <>
-              <Image src="/images/get-on-board/volunteer-child-support.png" alt="" fill unoptimized sizes="100vw" className="object-cover object-[center_35%] max-[767px]:object-[65%_center]" />
+              <Reveal direction="none" threshold={0.12} style={{ filter: "none" }} className="absolute inset-0 !duration-[1400ms]">
+                <Image src="/images/get-on-board/volunteer-child-support.png" alt="" fill unoptimized sizes="100vw" className="object-cover object-[center_35%] max-[767px]:object-[65%_center]" />
+              </Reveal>
               <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(4,20,42,0.4),transparent_75%)]" />
             </>
           ) : <HeartDoodle className="absolute -bottom-24 right-[6%] z-0 max-[620px]:hidden" size={380} rotate={16} opacity={0.28} variant={2} />}
-          <Reveal className="relative z-[1] mx-auto max-w-[820px]" style={isHousing ? { filter: "none" } : undefined}>
+          <Reveal className="hearts-cta-copy relative z-[1] mx-auto max-w-[820px]" style={{ filter: "none" }}>
             <h2 className={`m-0 font-black tracking-normal ${isHousing ? "text-[clamp(32px,4vw,54px)] leading-[1.06] [text-shadow:0_2px_4px_rgba(0,0,0,0.95),0_4px_16px_rgba(0,0,0,0.9)]" : "text-[clamp(38px,6vw,78px)] leading-[0.94]"}`}>
               {ctaTitle}
             </h2>
@@ -151,7 +180,9 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
           </Reveal>
         </section>
 
-        <ProgramsNavigation activeProgram={service.slug} layout="menu" />
+          <Reveal direction="none" threshold={0.08} style={{ filter: "none" }} className="hearts-programs">
+            <ProgramsNavigation activeProgram={service.slug} layout="menu" />
+          </Reveal>
       </main>
 
       <Footer />
