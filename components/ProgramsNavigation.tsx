@@ -68,6 +68,7 @@ const programs = [
 type ProgramsNavigationProps = {
   activeProgram?: ProgramSlug;
   fullViewport?: boolean;
+  layout?: "default" | "menu";
 };
 
 const programCardBaseClass =
@@ -79,7 +80,7 @@ const servicePageMobileCardClass =
 const homeMobileCardClass =
   "max-[767px]:min-h-[130px] max-[767px]:p-3 max-[430px]:min-h-[122px] max-[430px]:px-2.5 max-[430px]:py-3";
 
-export default function ProgramsNavigation({ activeProgram, fullViewport = false }: ProgramsNavigationProps) {
+export default function ProgramsNavigation({ activeProgram, fullViewport = false, layout = "default" }: ProgramsNavigationProps) {
   const isServicePage = Boolean(activeProgram);
   const carouselRef = useRef<HTMLDivElement>(null);
   const scrollFrameRef = useRef<number | null>(null);
@@ -87,17 +88,17 @@ export default function ProgramsNavigation({ activeProgram, fullViewport = false
   const [activeIndex, setActiveIndex] = useState(initialProgramIndex);
 
   useEffect(() => {
-    if (!activeProgram) return;
+    if (!activeProgram || layout === "menu") return;
 
     const frame = window.requestAnimationFrame(() => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
     return () => window.cancelAnimationFrame(frame);
-  }, [activeProgram]);
+  }, [activeProgram, layout]);
 
   useEffect(() => {
-    if (!activeProgram || window.matchMedia("(min-width: 768px)").matches) return;
+    if (!activeProgram || layout === "menu" || window.matchMedia("(min-width: 768px)").matches) return;
 
     const frame = window.requestAnimationFrame(() => {
       const carousel = carouselRef.current;
@@ -109,7 +110,7 @@ export default function ProgramsNavigation({ activeProgram, fullViewport = false
     });
 
     return () => window.cancelAnimationFrame(frame);
-  }, [activeProgram, initialProgramIndex]);
+  }, [activeProgram, initialProgramIndex, layout]);
 
   function updateActiveDot() {
     if (scrollFrameRef.current !== null) window.cancelAnimationFrame(scrollFrameRef.current);
@@ -145,6 +146,41 @@ export default function ProgramsNavigation({ activeProgram, fullViewport = false
       left: card.offsetLeft - (carousel.clientWidth - card.offsetWidth) / 2,
       behavior: "smooth",
     });
+  }
+
+  if (layout === "menu") {
+    return (
+      <section aria-labelledby="programs-heading" className="border-t border-[#cbdfe9] bg-[#f2f9fd] py-14 sm:py-20">
+        <div className="mx-auto w-[min(1220px,calc(100%_-_40px))]">
+          <div className="grid gap-6 lg:grid-cols-[0.8fr_1.5fr] lg:gap-16">
+            <h2 id="programs-heading" className="m-0 text-[clamp(34px,4.5vw,56px)] font-black leading-tight text-[#082f59]">Why HEARTS?</h2>
+            <div className="max-w-[720px]">
+              <p className="m-0 text-[clamp(21px,2.5vw,30px)] font-black leading-tight text-[#082f59]">Treatment is only part of the journey.</p>
+              <p className="mb-0 mt-4 text-base leading-relaxed text-[#436077]">Families also need somewhere to stay, food on the table, a way to reach the hospital, and space for play, practical support, and faith. HEARTS brings these everyday needs together.</p>
+            </div>
+          </div>
+          <nav aria-label="The six HEARTS programs" className="mt-10 sm:mt-14">
+            <ul className="m-0 grid list-none grid-cols-1 gap-x-6 p-0 md:grid-cols-3 lg:grid-cols-6">
+              {programs.map((program, index) => {
+                const current = program.slug === activeProgram;
+                return (
+                  <li key={program.slug} className="min-w-0">
+                    <Link href={`${program.href}#top`} aria-current={current ? "page" : undefined} className="group grid h-full grid-cols-[54px_minmax(0,1fr)] gap-4 border-t border-[#bbd5e6] py-6 text-[#082f59] hover:border-[#0068c9] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068c9] md:flex md:flex-col md:gap-0">
+                      <span aria-hidden="true" className={`text-[54px] font-black leading-none md:text-[clamp(64px,7vw,100px)] ${current ? "text-[#0068c9]" : "text-[#082f59]"}`}>{"HEARTS"[index]}</span>
+                      <span className="flex min-w-0 flex-1 flex-col md:mt-6">
+                        <span className="text-base font-black leading-snug group-hover:text-[#0068c9]">{program.label}</span>
+                        <span className="mt-3 text-sm leading-relaxed text-[#436077]">{program.description}</span>
+                        <span className={`mt-auto pt-5 text-xs font-bold ${current ? "text-[#0068c9]" : "text-[#557086]"}`}>{current ? "You’re exploring Housing" : "Explore program →"}</span>
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        </div>
+      </section>
+    );
   }
 
   if (!isServicePage) {

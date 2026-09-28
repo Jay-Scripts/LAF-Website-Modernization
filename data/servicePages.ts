@@ -28,7 +28,7 @@ export const servicePages = [
       "Providing a safe and temporary home where pediatric patients and their caregivers can rest, recover, and stay close to treatment.",
     heroImage: "/images/hearts/housing/little-ark-house.png",
     heroAlt: "The Little Ark Foundation home exterior",
-    heroImageClassName: "scale-[1.08] translate-y-[8%]",
+    heroImageClassName: "",
     heroObjectFit: "contain",
     heroObjectPosition: "center center",
     images: [
