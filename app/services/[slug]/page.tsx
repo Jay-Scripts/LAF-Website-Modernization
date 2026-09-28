@@ -53,6 +53,7 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
 
   const isHousing = service.slug === "housing";
   const isResources = service.slug === "resources-responsibility";
+  const isCollage = service.slug === "everyday-meals" || service.slug === "activities" || isResources;
   const storyEyebrow = "storyEyebrow" in service ? service.storyEyebrow : "Photo Story";
   const ctaTitle = "ctaTitle" in service ? service.ctaTitle : "Every act of care brings hope.";
   const ctaDescription =
@@ -85,8 +86,8 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
             />
           </div>
 
-        <section className={`relative overflow-hidden py-[clamp(76px,10vw,132px)] ${isHousing ? "bg-white" : "bg-[radial-gradient(circle_at_12%_16%,rgba(200,244,255,0.48),transparent_22rem),linear-gradient(180deg,#ffffff,#eef9ff)]"}`}>
-          {!isHousing && <HeartDoodle className="absolute -left-24 top-6 z-0 max-[620px]:hidden" size={340} rotate={-16} opacity={0.28} variant={1} />}
+        <section className={`relative overflow-hidden py-[clamp(76px,10vw,132px)] ${isHousing || isCollage ? "bg-white" : "bg-[radial-gradient(circle_at_12%_16%,rgba(200,244,255,0.48),transparent_22rem),linear-gradient(180deg,#ffffff,#eef9ff)]"}`}>
+          {!isHousing && !isCollage && <HeartDoodle className="absolute -left-24 top-6 z-0 max-[620px]:hidden" size={340} rotate={-16} opacity={0.28} variant={1} />}
           <Inner>
             {isHousing ? (
               <>
@@ -96,21 +97,21 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
             ) : (
             <>
             <Reveal className="mb-[clamp(34px,5vw,58px)] max-w-[760px]">
-              <p className="mb-3 mt-0 text-[13px] font-black uppercase tracking-[0.14em] text-[#1fa8f4]">
+              <h2 className={isCollage ? "m-0 text-[clamp(30px,4vw,46px)] font-black leading-tight text-[#082f59]" : "mb-3 mt-0 text-[13px] font-black uppercase tracking-[0.14em] text-[#1fa8f4]"}>
                 {storyEyebrow}
-              </p>
+              </h2>
             </Reveal>
 
-            <div className="grid auto-rows-[clamp(260px,34vw,430px)] grid-cols-1 gap-5 md:grid-cols-12">
+            <div className={isCollage ? "grid grid-cols-2 gap-3 sm:gap-4 md:auto-rows-[clamp(180px,18vw,250px)] md:grid-cols-12" : "grid auto-rows-[clamp(260px,34vw,430px)] grid-cols-1 gap-5 md:grid-cols-12"}>
               {service.images.map((image, index) => (
                 <Reveal
                   key={image.src}
                   style={{ filter: "none" }}
-                  className={`relative overflow-visible ${
+                  className={`relative overflow-visible ${isCollage ? (isResources ? (index === 2 ? "aspect-[4/5] md:aspect-auto" : "aspect-[4/3] md:aspect-auto") : index === 0 ? "aspect-[4/3] md:aspect-auto" : "aspect-square md:aspect-auto") : ""} ${
                     image.className ?? (index % 3 === 0 ? "md:col-span-7" : "md:col-span-5")
                   }`}
                 >
-                  <div className="absolute inset-0 overflow-hidden rounded-[28px] shadow-[0_24px_70px_rgba(31,168,244,0.16)]">
+                  <div className={isCollage ? "absolute inset-0 overflow-hidden rounded-xl bg-[#eef9ff]" : "absolute inset-0 overflow-hidden rounded-[28px] shadow-[0_24px_70px_rgba(31,168,244,0.16)]"}>
                     <Image
                       src={image.src}
                       alt={image.alt}
@@ -121,7 +122,7 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
                       style={{ objectPosition: ("objectPosition" in image ? image.objectPosition : undefined) ?? "center center" }}
                     />
                   </div>
-                  {index === 0 ? (
+                  {index === 0 && !isCollage ? (
                     <HeartPhotoAccent className="-right-16 -top-14 rotate-[-9deg] max-[620px]:-right-14 max-[620px]:-top-12" opacity={0.96} />
                   ) : null}
                 </Reveal>
