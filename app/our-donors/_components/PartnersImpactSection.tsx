@@ -1,25 +1,73 @@
-import { HeartDoodle } from "@/components/BrandHearts";
-import ImpactStatsGrid from "@/components/ImpactStatsGrid";
-import Reveal from "@/components/Reveal";
-import type { PublicImpactMetrics } from "@/lib/google-sheets";
+import PartnersImpactPhotos from "./PartnersImpactPhotos";
+import { readdirSync } from "node:fs";
+import path from "node:path";
+import type { ImpactMetricKey, PublicImpactMetrics } from "@/lib/google-sheets";
 import PartnersInner from "./PartnersInner";
 
 type PartnersImpactSectionProps = {
   metrics: PublicImpactMetrics;
 };
 
+// Temporary display samples, not verified cumulative totals. API totals take precedence.
+const sampleTotals: Record<ImpactMetricKey, number> = {
+  housing: 2953,
+  transport: 803,
+  meals: 8654,
+  activities: 241,
+  "care-cart": 2846,
+};
+
+const impactItems: { key: ImpactMetricKey; label: string }[] = [
+  { key: "housing", label: "Bed nights provided" },
+  { key: "transport", label: "Families transported" },
+  { key: "meals", label: "Hot meals served" },
+  { key: "activities", label: "Children served" },
+  { key: "care-cart", label: "Meals distributed" },
+];
+
 export default function PartnersImpactSection({ metrics }: PartnersImpactSectionProps) {
+  const photos = readdirSync(path.join(process.cwd(), "public/images/hearts"), { recursive: true, encoding: "utf8" })
+    .filter((file) => /\.(png|jpe?g|webp|avif|gif)$/i.test(file))
+    .sort()
+    .map((file) => {
+      const relativePath = file.replaceAll("\\", "/");
+      const name = path.basename(file, path.extname(file)).replaceAll("-", " ");
+      return { src: `/images/hearts/${relativePath}`, alt: `Little Ark: ${name}` };
+    });
+  const displayMetrics = Object.fromEntries(
+    Object.entries(metrics).map(([key, metric]) => [key, {
+      ...metric,
+      total: metric.total ?? sampleTotals[key as ImpactMetricKey],
+    }]),
+  ) as PublicImpactMetrics;
+
   return (
-    <section className="relative scroll-mt-24 overflow-hidden bg-[radial-gradient(circle_at_20%_28%,rgba(255,255,255,0.24),transparent_19rem),radial-gradient(circle_at_80%_68%,rgba(200,244,255,0.22),transparent_20rem),linear-gradient(135deg,#008fe4,#1fa8f4)] py-[clamp(68px,8vw,104px)] text-white max-[767px]:py-14">
-      <HeartDoodle className="absolute -bottom-24 right-[8%] z-0 max-[620px]:hidden" size={380} rotate={16} opacity={0.28} variant={0} />
-      <HeartDoodle className="absolute left-[6%] top-12 z-0 max-[900px]:hidden" size={130} rotate={-22} opacity={0.22} variant={2} />
-      <PartnersInner>
-        <Reveal className="mx-auto mb-10 max-w-[920px] text-center max-[767px]:mb-7">
-          <h2 className="m-0 scroll-mt-24 text-[clamp(44px,7vw,98px)] font-black leading-[0.94] tracking-normal text-white max-[767px]:text-[clamp(36px,10vw,46px)] max-[767px]:leading-none">
+    <section aria-labelledby="partners-impact-title" className="scroll-mt-24 bg-white py-14 text-[#082f59] sm:py-20">
+      <PartnersInner className="grid items-center gap-9 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
+        <div className="min-w-0">
+          <h2 id="partners-impact-title" className="m-0 mb-7 text-[clamp(34px,4vw,54px)] font-black leading-[1.05] text-[#082f59]">
             Because of You
           </h2>
-        </Reveal>
-        <ImpactStatsGrid metrics={metrics} centerMobileRemainder />
+          <figure className="m-0">
+            <PartnersImpactPhotos photos={photos} />
+            <figcaption className="mt-5 border-l-[3px] border-[#ffc83d] pl-4 text-base leading-relaxed text-[#557086]">
+              A place to stay. A meal to share. Support for the journey ahead.
+            </figcaption>
+          </figure>
+        </div>
+        <dl className="m-0 min-w-0 border-t border-[#cbdfe9]">
+          {impactItems.map(({ key, label }) => (
+            <div key={key} className="grid grid-cols-[minmax(0,0.9fr)_minmax(0,1fr)] items-center gap-5 border-b border-[#cbdfe9] py-5 sm:gap-8 sm:py-6">
+              <dt className="col-start-2 row-start-1 min-w-0">
+                <span className="block text-base font-black leading-tight text-[#082f59]">{displayMetrics[key].program}</span>
+                <span className="mt-1.5 block text-sm leading-relaxed text-[#557086]">{label}</span>
+              </dt>
+              <dd className="col-start-1 row-start-1 m-0 text-[clamp(32px,3.5vw,48px)] font-black leading-none text-[#0068b5] tabular-nums">
+                {displayMetrics[key].total?.toLocaleString("en-US")}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </PartnersInner>
     </section>
   );
