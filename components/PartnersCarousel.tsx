@@ -2,33 +2,14 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState, type CSSProperties, type PointerEvent } from "react";
+import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { partnerProfiles, type PartnerProfile } from "@/data/partnerProfiles";
 
-const partnerLogos = [
-  { src: "/images/partners/national-childrens-hospital.png", alt: "National Children's Hospital logo" },
-  { src: "/images/partners/blood-and-cancer-care-center.png", alt: "Blood and Cancer Care Center logo" },
-  { src: "/images/partners/gma.png", alt: "GMA logo" },
-  { src: "/images/partners/breadcom-quezon-city.png", alt: "Breadcom Quezon City logo" },
-  { src: "/images/partners/union-church-of-manila.png", alt: "Union Church of Manila logo" },
-  { src: "/images/partners/pfizer.png", alt: "Pfizer logo" },
-  { src: "/images/partners/roche.png", alt: "Roche logo" },
-  { src: "/images/partners/art-for-love.png", alt: "Art for Love logo" },
-  { src: "/images/partners/alternatives-food-corp.png", alt: "Alternatives Food Corp. logo" },
-  { src: "/images/partners/gerrys-grill.png", alt: "Gerry's Grill logo" },
-  { src: "/images/partners/celebrate-every-breath.png", alt: "Celebrate Every Breath logo" },
-  { src: "/images/partners/ilustrador-ng-kabataan-ink.png", alt: "Ilustrador ng Kabataan Ink logo" },
-  { src: "/images/partners/chummy-chum-charity-of-love.png", alt: "Chummy Chum Charity of Love logo" },
-  { src: "/images/partners/abenson.png", alt: "Abenson logo" },
-  { src: "/images/partners/revelation-community-church.png", alt: "Revelation Community Church logo" },
-  { src: "/images/partners/mundo-design-build.png", alt: "Mundo Design + Build logo" },
-  { src: "/images/partners/prolife-uk.png", alt: "Pru Life U.K. logo" },
-  { src: "/images/partners/f1-hotel-manila.png", alt: "F1 Hotel Manila logo" },
-  { src: "/images/partners/lamoyan-corporation.png", alt: "Lamoyan Corporation logo" },
-  { src: "/images/partners/speed.png", alt: "SPEED logo" },
-  { src: "/images/partners/city-of-mandaluyong.png", alt: "City of Mandaluyong logo" },
-  { src: "/images/partners/thalassemia-kids-club.png", alt: "Thalassemia Kids Club logo" },
-  { src: "/images/partners/the-pickle-yard.png", alt: "The Pickle Yard PH logo" },
-  { src: "/images/partners/mamou-human-resources.png", alt: "Mamou Human Resources Department logo" },
-] as const;
+const partnerLogos = partnerProfiles.map((partner) => ({
+  ...partner,
+  src: `/images/partners/${partner.id}.png`,
+  alt: `${partner.name} logo`,
+}));
 
 const partnerLogoRows = [
   partnerLogos.filter((_, index) => index % 3 === 0),
@@ -36,8 +17,12 @@ const partnerLogoRows = [
   partnerLogos.filter((_, index) => index % 3 === 2),
 ] as const;
 
-function PartnerLogoCard({ partner }: { partner: (typeof partnerLogos)[number] }) {
-  const cardRef = useRef<HTMLElement | null>(null);
+function PartnerLogoCard({ partner, isDuplicate, onSelect }: {
+  partner: (typeof partnerLogos)[number];
+  isDuplicate: boolean;
+  onSelect: (partner: PartnerProfile) => void;
+}) {
+  const cardRef = useRef<HTMLButtonElement | null>(null);
 
   const handlePointerMove = (event: PointerEvent<HTMLElement>) => {
     if (event.pointerType === "touch") return;
@@ -63,7 +48,11 @@ function PartnerLogoCard({ partner }: { partner: (typeof partnerLogos)[number] }
   };
 
   return (
-    <article ref={cardRef} onPointerMove={handlePointerMove} onPointerLeave={resetTilt} className="partner-logo-card grid h-[150px] w-[276px] shrink-0 place-items-center rounded-[22px] border border-[rgba(31,168,244,0.12)] bg-white p-5 shadow-[0_14px_34px_rgba(31,168,244,0.10)] max-[1024px]:h-[128px] max-[1024px]:w-[230px] max-[1024px]:p-[18px] max-[620px]:h-[92px] max-[620px]:w-[156px] max-[620px]:rounded-[17px] max-[620px]:p-3.5">
+    <DialogTrigger ref={cardRef} id={`partner-preview-${partner.id}${isDuplicate ? "-copy" : ""}`} onClick={() => onSelect(partner)} onFocus={() => {
+      if (cardRef.current?.matches(":focus-visible")) {
+        cardRef.current.scrollIntoView({ block: "nearest", inline: "nearest" });
+      }
+    }} aria-label={`About ${partner.name}`} aria-hidden={isDuplicate || undefined} tabIndex={isDuplicate ? -1 : 0} onPointerMove={handlePointerMove} onPointerLeave={resetTilt} className="partner-logo-card grid h-[150px] w-[276px] shrink-0 cursor-pointer place-items-center rounded-[22px] border border-[rgba(31,168,244,0.12)] bg-white p-5 shadow-[0_14px_34px_rgba(31,168,244,0.10)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-[#0068c9] max-[1024px]:h-[128px] max-[1024px]:w-[230px] max-[1024px]:p-[18px] max-[620px]:h-[92px] max-[620px]:w-[156px] max-[620px]:rounded-[17px] max-[620px]:p-3.5">
       <div className="partner-logo-mark relative h-full w-full">
         <Image
           src={partner.src}
@@ -73,13 +62,15 @@ function PartnerLogoCard({ partner }: { partner: (typeof partnerLogos)[number] }
           className="object-contain"
         />
       </div>
-    </article>
+    </DialogTrigger>
   );
 }
 
 export default function PartnersCarousel() {
   const carouselRef = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null);
 
   useEffect(() => {
     const node = carouselRef.current;
@@ -104,19 +95,27 @@ export default function PartnersCarousel() {
   }, []);
 
   return (
-    <div ref={carouselRef} className="grid gap-[var(--logo-gap)] [--logo-gap:18px] max-[1024px]:[--logo-gap:14px] max-[620px]:[--logo-gap:12px]">
+    <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+    <div ref={carouselRef} data-paused={isDialogOpen} className="partner-carousel grid gap-[var(--logo-gap)] [--logo-gap:18px] max-[1024px]:[--logo-gap:14px] max-[620px]:[--logo-gap:12px]">
       <style>{`
         @keyframes logo-scroll {
           from { transform: translateX(0); }
           to { transform: translateX(calc(-50% - (var(--logo-gap) / 2))); }
         }
         @keyframes partner-row-arrive {
-          from { opacity: 0; transform: perspective(960px) translate3d(0, 28px, -72px) rotateX(9deg); }
-          to { opacity: 1; transform: perspective(960px) translate3d(0, 0, 0) rotateX(0); }
+          from { opacity: 0; }
+          to { opacity: 1; }
         }
-        .partner-logo-row-stage { opacity: 0; transform: perspective(960px) translate3d(0, 28px, -72px) rotateX(9deg); }
-        .partner-logo-row-stage[data-visible="true"] { animation: partner-row-arrive 900ms cubic-bezier(0.22, 1, 0.36, 1) var(--partner-row-delay) both; }
+        .partner-logo-row-stage { opacity: 0; }
+        .partner-logo-row-stage[data-visible="true"] { animation: partner-row-arrive 450ms ease-out var(--partner-row-delay) both; }
+        .partner-logo-row-stage[data-visible="false"] .partner-logo-row { animation-play-state: paused !important; }
+        .partner-logo-row-stage[data-visible="true"] .partner-logo-row { animation-delay: calc(450ms + var(--partner-row-delay)) !important; }
         .partner-logo-row { perspective: 960px; }
+        .partner-carousel[data-paused="true"] .partner-logo-row,
+        .partner-carousel:hover .partner-logo-row,
+        .partner-carousel:focus-within .partner-logo-row { animation-play-state: paused !important; }
+        .partner-logo-row-stage:has(.partner-logo-card:focus-visible) { overflow-x: auto; }
+        .partner-logo-row-stage:has(.partner-logo-card:focus-visible) .partner-logo-row { animation: none !important; }
         .partner-logo-card {
           --partner-tilt-x: 0deg;
           --partner-tilt-y: 0deg;
@@ -158,7 +157,7 @@ export default function PartnersCarousel() {
             key={`partner-row-${rowIndex}`}
             data-visible={isVisible ? "true" : "false"}
             className="partner-logo-row-stage"
-            style={{ "--partner-row-delay": `${rowIndex * 140}ms` } as CSSProperties}
+            style={{ "--partner-row-delay": `${rowIndex * 70}ms` } as CSSProperties}
           >
             <div
               className="partner-logo-row flex w-max gap-[var(--logo-gap)]"
@@ -173,12 +172,24 @@ export default function PartnersCarousel() {
               aria-label={row.map((partner) => partner.alt).join(", ")}
             >
               {repeated.map((partner, index) => (
-                <PartnerLogoCard key={`${partner.src}-${index}`} partner={partner} />
+                <PartnerLogoCard key={`${partner.src}-${index}`} partner={partner} isDuplicate={index >= row.length} onSelect={setSelectedPartner} />
               ))}
             </div>
           </div>
         );
       })}
     </div>
+    {selectedPartner && (
+      <DialogContent finalFocus={() => document.getElementById(`partner-preview-${selectedPartner.id}`)} className="max-h-[85dvh] overflow-y-auto bg-white p-6 text-[#082f59] motion-reduce:animate-none sm:max-w-[540px] sm:p-8 [&_[data-slot=dialog-close]]:min-h-11 [&_[data-slot=dialog-close]]:min-w-11">
+        <div className="relative mx-auto h-[140px] w-full max-w-[260px]">
+          <Image src={`/images/partners/${selectedPartner.id}.png`} alt={`${selectedPartner.name} logo`} fill sizes="260px" className="object-contain" />
+        </div>
+        <DialogTitle className="break-words pr-5 text-2xl font-black leading-tight text-[#082f59]">{selectedPartner.name}</DialogTitle>
+        <DialogDescription className="text-base leading-relaxed text-[#557086]">
+          {selectedPartner.summary ?? "This organization is one of Little Ark's partners in hope. Its history is awaiting confirmation so we can share an accurate introduction."}
+        </DialogDescription>
+      </DialogContent>
+    )}
+    </Dialog>
   );
 }
