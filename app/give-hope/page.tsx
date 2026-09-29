@@ -155,22 +155,20 @@ export async function GiveHopeContent() {
           </Reveal>
         </section>
 
-        <section className="bg-[radial-gradient(circle_at_84%_28%,rgba(31,168,244,0.12),transparent_24rem),linear-gradient(180deg,#fff,#eaf9ff)] py-[clamp(86px,11vw,145px)]">
+        <section className="bg-[#f6fbfe] py-[clamp(76px,9vw,116px)]">
           <Inner>
-            <Reveal className="mx-auto mb-14 max-w-[920px] text-center">
-              <h2 className="m-0 text-[clamp(44px,7vw,98px)] font-black leading-[0.94] text-[#1fa8f4]">FAQ</h2>
-            </Reveal>
-            <div className="grid gap-4">
-              {faqs.map((faq) => (
-                <Reveal
-                  as="article"
-                  key={faq.question}
-                  className="rounded-[24px] border border-[rgba(31,168,244,0.14)] bg-white p-[clamp(22px,3vw,34px)] shadow-[0_14px_34px_rgba(31,168,244,0.10)]"
-                >
-                  <h3 className="m-0 text-[clamp(22px,3vw,34px)] font-black text-[#1fa8f4]">{faq.question}</h3>
-                  <p className="mt-3 max-w-[880px] text-lg font-bold leading-[1.45] text-[#557086]">{faq.answer}</p>
-                </Reveal>
-              ))}
+            <div className="grid grid-cols-[minmax(180px,0.32fr)_minmax(0,1fr)] gap-[clamp(40px,8vw,124px)] max-[760px]:grid-cols-1 max-[760px]:gap-9">
+              <Reveal>
+                <h2 className="m-0 text-[clamp(48px,6vw,76px)] font-black leading-none text-[#082f59]">FAQ</h2>
+              </Reveal>
+              <div className="border-t border-[#9ebfd2]">
+                {faqs.map((faq, index) => (
+                  <Reveal as="article" key={faq.question} delay={index * 70} className="grid grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] gap-x-8 gap-y-3 border-b border-[#c4dbe7] py-7 max-[760px]:grid-cols-1 max-[760px]:py-6">
+                    <h3 className="m-0 text-[clamp(19px,2vw,24px)] font-black leading-[1.2] text-[#082f59]">{faq.question}</h3>
+                    <p className="m-0 max-w-[52ch] text-[16px] font-medium leading-[1.6] text-[#436077]">{faq.answer}</p>
+                  </Reveal>
+                ))}
+              </div>
             </div>
           </Inner>
         </section>
