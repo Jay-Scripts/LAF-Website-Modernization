@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, type CSSProperties, type HTMLAttributes, type ReactNode } from "react";
 
 type RevealProps = Omit<HTMLAttributes<HTMLElement>, "children" | "className" | "style"> & {
-  as?: "div" | "article" | "blockquote" | "section" | "footer";
+  as?: "div" | "article" | "blockquote" | "section" | "footer" | "li";
   children?: ReactNode;
   className?: string;
   delay?: number;

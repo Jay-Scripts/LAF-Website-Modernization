@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { getServicePage } from "@/data/servicePages";
 import { BusIcon, CrossIcon, HandHeartIcon, HouseIcon, PaletteIcon, SoupIcon } from "lucide-react";
 import { HeartDoodle } from "./BrandHearts";
 import Reveal from "./Reveal";
@@ -148,68 +150,64 @@ export default function ProgramsNavigation({ activeProgram, fullViewport = false
     });
   }
 
-  if (layout === "menu") {
+  if (layout === "menu" || !isServicePage) {
     return (
       <section aria-labelledby="programs-heading" className="border-t border-[#cbdfe9] bg-[#f2f9fd] py-14 sm:py-20">
+        <style>{`
+          @keyframes hearts-letter-arrive {
+            from { transform: translateY(18px) rotate(-8deg) scale(0.88); }
+            65% { transform: translateY(-4px) rotate(2deg) scale(1.03); }
+            to { transform: translateY(0) rotate(0) scale(1); }
+          }
+          .hearts-program[data-revealed="true"] .hearts-program-letter {
+            animation: hearts-letter-arrive 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .hearts-program .hearts-program-letter { animation: none !important; }
+          }
+        `}</style>
         <div className="mx-auto w-[min(1220px,calc(100%_-_40px))]">
           <div className="grid gap-6 lg:grid-cols-[0.8fr_1.5fr] lg:gap-16">
-            <h2 id="programs-heading" className="m-0 text-[clamp(34px,4.5vw,56px)] font-black leading-tight text-[#082f59]">Why HEARTS?</h2>
+            <h2 id="programs-heading" className="m-0 text-[clamp(34px,4.5vw,56px)] font-black leading-tight text-[#082f59]">{isServicePage ? "Why HEARTS?" : "How we help."}</h2>
             <div className="max-w-[720px]">
-              <p className="m-0 text-[clamp(21px,2.5vw,30px)] font-black leading-tight text-[#082f59]">Treatment is only part of the journey.</p>
-              <p className="mb-0 mt-4 text-base leading-relaxed text-[#436077]">Families also need somewhere to stay, food on the table, a way to reach the hospital, and space for play, practical support, and faith. HEARTS brings these everyday needs together.</p>
+              {isServicePage ? (
+                <>
+                  <p className="m-0 text-[clamp(21px,2.5vw,30px)] font-black leading-tight text-[#082f59]">Treatment is only part of the journey.</p>
+                  <p className="mb-0 mt-4 text-base leading-relaxed text-[#436077]">Families also need somewhere to stay, food on the table, a way to reach the hospital, and space for play, practical support, and faith. HEARTS brings these everyday needs together.</p>
+                </>
+              ) : (
+                <p className="m-0 text-[clamp(18px,1.5vw,22px)] leading-relaxed text-[#436077]">Practical care for children and families, through treatment and beyond.</p>
+              )}
+              <p className="mb-0 mt-4 text-sm font-bold text-[#0068c9]"><span className="hidden md:inline">Hover to preview. </span>Choose a program to explore.</p>
             </div>
           </div>
           <nav aria-label="The six HEARTS programs" className="mt-10 sm:mt-14">
             <ul className="m-0 grid list-none grid-cols-1 gap-x-6 p-0 md:grid-cols-3 lg:grid-cols-6">
               {programs.map((program, index) => {
                 const current = program.slug === activeProgram;
+                const service = getServicePage(program.slug);
                 return (
-                  <li key={program.slug} className="min-w-0">
-                    <Link href={`${program.href}#top`} aria-current={current ? "page" : undefined} className="group grid h-full grid-cols-[54px_minmax(0,1fr)] gap-4 border-t border-[#bbd5e6] py-6 text-[#082f59] hover:border-[#0068c9] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068c9] md:flex md:flex-col md:gap-0">
-                      <span aria-hidden="true" className={`text-[54px] font-black leading-none md:text-[clamp(64px,7vw,100px)] ${current ? "text-[#0068c9]" : "text-[#082f59]"}`}>{"HEARTS"[index]}</span>
+                  <Reveal as="li" key={program.slug} delay={index * 200} className="hearts-program min-w-0 md:pt-[124px]">
+                    <Link href={`${program.href}#top`} aria-current={current ? "page" : undefined} className="group relative grid h-full grid-cols-[54px_minmax(0,1fr)] gap-4 border-t border-[#bbd5e6] py-6 text-[#082f59] hover:border-[#0068c9] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068c9] md:flex md:flex-col md:gap-0">
+                      {service ? (
+                        <span aria-hidden="true" className="pointer-events-none absolute bottom-full left-0 hidden h-[124px] w-full overflow-hidden group-hover:pointer-events-auto group-focus-visible:pointer-events-auto md:block">
+                          <span className="absolute inset-x-0 top-0 h-[110px] translate-y-[124px] overflow-hidden rounded-lg bg-white shadow-[0_8px_24px_rgba(8,47,89,0.12)] transition-transform duration-[650ms] ease-in-out group-hover:translate-y-0 group-focus-visible:translate-y-0 motion-reduce:transition-none">
+                            <Image src={service.heroImage} alt="" fill sizes="(min-width: 1024px) 184px, 30vw" className="object-contain" />
+                          </span>
+                        </span>
+                      ) : null}
+                      <span aria-hidden="true" style={{ animationDelay: `${index * 200}ms` }} className={`hearts-program-letter text-[54px] font-black leading-none md:text-[clamp(64px,7vw,100px)] ${current ? "text-[#0068c9]" : "text-[#082f59]"}`}>{"HEARTS"[index]}</span>
                       <span className="flex min-w-0 flex-1 flex-col md:mt-6">
                         <span className="text-base font-black leading-snug group-hover:text-[#0068c9]">{program.label}</span>
                         <span className="mt-3 text-sm leading-relaxed text-[#436077]">{program.description}</span>
                         <span className={`mt-auto pt-5 text-xs font-bold ${current ? "text-[#0068c9]" : "text-[#557086]"}`}>{current ? `You’re exploring ${program.label}` : "Explore program →"}</span>
                       </span>
                     </Link>
-                  </li>
+                  </Reveal>
                 );
               })}
             </ul>
           </nav>
-        </div>
-      </section>
-    );
-  }
-
-  if (!isServicePage) {
-    return (
-      <section aria-labelledby="programs-heading" className={`bg-[#f2f9fd] ${fullViewport ? "py-[clamp(72px,9vw,136px)]" : "py-16"}`}>
-        <div className="mx-auto grid w-[min(1180px,calc(100%_-_48px))] grid-cols-[minmax(220px,0.8fr)_minmax(0,1.7fr)] gap-[clamp(48px,8vw,128px)] max-[900px]:grid-cols-1 max-[900px]:gap-10 max-[760px]:w-[min(100%_-_32px,1180px)]">
-          <div>
-            <h2 id="programs-heading" className="m-0 max-w-[10ch] text-[clamp(2.7rem,4.8vw,4.75rem)] font-black leading-[1.02] tracking-[-0.045em] text-[#082f59]">
-              How we help<span className="text-[#008fe4]">.</span>
-            </h2>
-            <p className="mb-0 mt-6 max-w-[27ch] text-[clamp(1rem,1.3vw,1.125rem)] leading-relaxed text-[#436077]">
-              Practical care for children and families, through treatment and beyond.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-x-10 max-[620px]:grid-cols-1" aria-label="Programs and services">
-            {programs.map((program) => (
-              <Link
-                key={program.slug}
-                href={`${program.href}#top`}
-                className="group flex min-h-[138px] flex-col justify-between border-t border-[#bbd5e6] py-5 text-[#082f59] transition-colors hover:border-[#008fe4] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#008fe4] max-[620px]:min-h-[116px]"
-              >
-                <span className="flex items-start justify-between gap-4 text-[clamp(1.15rem,1.7vw,1.45rem)] font-black leading-tight tracking-[-0.025em]">
-                  {program.label}
-                  <span aria-hidden="true" className="shrink-0 text-[#008fe4] transition-transform group-hover:translate-x-1">↗</span>
-                </span>
-                <span className="mt-3 max-w-[34ch] text-sm leading-relaxed text-[#50687b]">{program.description}</span>
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
     );

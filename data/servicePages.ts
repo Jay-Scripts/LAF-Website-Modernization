@@ -60,8 +60,8 @@ export const servicePages = [
     title: "Transportation",
     description:
       "Providing free transportation to and from the hospital through the Hope in Transit shuttle service so families can reach treatment safely and on time.",
-    heroImage: "/images/hearts/transportation/transportation-hope-in-transit.jpg",
-    heroAlt: "The Little Ark Hope in Transit shuttle vehicle",
+    heroImage: "/images/hearts/transportation/transportation-home-arrival.jpeg",
+    heroAlt: "Children and caregivers in the Hope in Transit shuttle outside the Little Ark Foundation home",
     ctaImage: "/images/hearts/transportation/transportation-home-arrival.jpeg",
     ctaImageClassName: "object-[38%_30%] max-[767px]:object-[38%_center]",
     heroObjectPosition: "center center",
