@@ -110,12 +110,12 @@ export default async function ServicePage({ params }: ServiceRouteProps) {
             />
           </div>
 
-        <section className={`relative overflow-hidden py-[clamp(76px,10vw,132px)] ${isHousing || isCollage ? "bg-white" : "bg-[radial-gradient(circle_at_12%_16%,rgba(200,244,255,0.48),transparent_22rem),linear-gradient(180deg,#ffffff,#eef9ff)]"}`}>
+        <section className={`relative overflow-hidden ${isHousing ? "bg-white pt-[clamp(76px,10vw,132px)]" : `py-[clamp(76px,10vw,132px)] ${isCollage ? "bg-white" : "bg-[radial-gradient(circle_at_12%_16%,rgba(200,244,255,0.48),transparent_22rem),linear-gradient(180deg,#ffffff,#eef9ff)]"}`}`}>
           {!isHousing && !isCollage && <HeartDoodle className="absolute -left-24 top-6 z-0 max-[620px]:hidden" size={340} rotate={-16} opacity={0.28} variant={1} />}
           <Inner>
             {isHousing ? (
               <>
-                <Reveal style={{ filter: "none" }} className="mb-9"><h2 className="m-0 text-[clamp(30px,4vw,46px)] font-black leading-tight text-[#082f59]">Inside the Little Ark home</h2></Reveal>
+                <Reveal style={{ filter: "none" }} className="mb-[clamp(52px,7vw,88px)] max-w-[800px]"><p className="mb-4 text-xs font-black uppercase tracking-[0.2em] text-[#1685bd]">Inside the Little Ark home</p><h2 className="m-0 text-[clamp(36px,5.5vw,72px)] font-black leading-[1.04] tracking-[-0.04em] text-[#082f59]">A place to rest.<br /><span className="text-[#1685bd]">Room to be a child.</span></h2></Reveal>
                 <HousingPhotoStory images={service.images} />
               </>
             ) : (

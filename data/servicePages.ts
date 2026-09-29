@@ -53,6 +53,17 @@ export const servicePages = [
         className: "md:col-span-12",
         objectPosition: "center center",
       },
+      ...[
+        "IMG_1048", "IMG_1049", "IMG_1051", "IMG_1055", "IMG_1061",
+        "IMG_1816", "IMG_1821", "IMG_1826", "IMG_1946", "IMG_1947",
+        "IMG_1949", "IMG_3322", "IMG_8927", "IMG_8933", "IMG_8944",
+        "IMG_9075", "IMG_9083",
+      ].map((name) => ({
+        src: `/images/hearts/housing/${name}.webp`,
+        alt: "Photo of life at the Little Ark home",
+        className: "md:col-span-4",
+        objectPosition: "center center",
+      })),
     ],
   },
   {
