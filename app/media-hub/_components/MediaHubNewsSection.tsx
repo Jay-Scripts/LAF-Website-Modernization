@@ -15,7 +15,7 @@ export default function MediaHubNewsSection() {
             <article key={article.title} className={index === 0 ? "min-w-0 lg:row-span-2 lg:border-r lg:border-[#cbdfe9] lg:pr-10" : "min-w-0 border-t border-[#cbdfe9] pt-7 lg:first-of-type:border-t-0 lg:[&:nth-child(2)]:border-t-0 lg:[&:nth-child(2)]:pb-7 lg:[&:nth-child(2)]:pt-0"}>
                 <a href={article.url} target="_blank" rel="noopener noreferrer" aria-label={`Read ${article.title} from ${article.publication} (opens in a new tab)`} className={`group grid h-full gap-5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068b5] ${index === 0 ? "content-start" : "sm:grid-cols-[minmax(0,0.75fr)_minmax(0,1fr)] sm:gap-6"}`}>
                   <span className={`relative block overflow-hidden bg-[#edf6fa] ${index === 0 ? "aspect-[3/2]" : "aspect-[3/2] sm:aspect-[4/5]"}`}>
-                    <Image src={article.imagePath} alt={`${article.title} article thumbnail`} fill sizes={index === 0 ? "(min-width: 1024px) 600px, 100vw" : "(min-width: 1024px) 230px, (min-width: 640px) 40vw, 100vw"} className="object-cover" />
+                    <Image src={article.imagePath} alt={`${article.title} article thumbnail`} fill sizes={index === 0 ? "(min-width: 1024px) 600px, 100vw" : "(min-width: 1024px) 230px, (min-width: 640px) 40vw, 100vw"} className={index > 0 ? "object-contain" : "object-cover"} />
                   </span>
                   <span className="flex min-w-0 flex-col items-start">
                     <span className="text-xs font-bold leading-relaxed text-[#557086]">{article.publication} <span aria-hidden="true">·</span> {article.publicationDate}</span>

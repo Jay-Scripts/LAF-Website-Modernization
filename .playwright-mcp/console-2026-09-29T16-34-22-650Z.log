@@ -1,0 +1,38 @@
+[    3432ms] [WARNING] A parser-blocking, cross site (i.e. different eTLD+1) script, https://anymind360.com/js/14585/ats.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details. @ https://www.philstar.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js:0
+[    3438ms] [WARNING] A parser-blocking, cross site (i.e. different eTLD+1) script, https://anymind360.com/js/14585/ats.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details. @ https://www.philstar.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js:0
+[    3671ms] [WARNING] A parser-blocking, cross site (i.e. different eTLD+1) script, https://cdn.izooto.com/scripts/7f8f6a05a790574bc692d74661b9d1a3e286bca4.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details. @ https://www.philstar.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js:0
+[    3671ms] [WARNING] A parser-blocking, cross site (i.e. different eTLD+1) script, https://cdn.izooto.com/scripts/7f8f6a05a790574bc692d74661b9d1a3e286bca4.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details. @ https://www.philstar.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js:0
+[    4231ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://www.philstar.com/entertainment/2025/02/19/2422467/gma-networks-art-gap-creativity-heart:0
+[    4577ms] Uncaught (in promise) NotSupportedError: Failed to execute 'browsingTopics' on 'Document': document.browsingTopics() is deprecated and has been removed.
+    at <anonymous> (https://anymind360.com/js/14585/prebid_2026_9_7_23_42_34.js:63:961)
+    at 51285 (https://anymind360.com/js/14585/prebid_2026_9_7_23_42_34.js:63:1074)
+    at n (https://anymind360.com/js/14585/prebid_2026_9_7_23_42_34.js:10:3940)
+    at <anonymous> (https://anymind360.com/js/14585/prebid_2026_9_7_23_42_34.js:63:3242)
+    at n.O (https://anymind360.com/js/14585/prebid_2026_9_7_23_42_34.js:10:4208)
+    at <anonymous> (https://anymind360.com/js/14585/prebid_2026_9_7_23_42_34.js:63:3261)
+    at r (https://anymind360.com/js/14585/prebid_2026_9_7_23_42_34.js:10:5018)
+    at <anonymous> (https://anymind360.com/js/14585/prebid_2026_9_7_23_42_34.js:63:42)
+    at <anonymous> (https://anymind360.com/js/14585/prebid_2026_9_7_23_42_34.js:65:2)
+[    4691ms] [LOG] Hook Succeeded to load before GPT @ https://scripts.jixie.media/onescript/Ph831gCVPL/jx-Ph410831gmQjx.min.js:38
+[    4691ms] [LOG] Succeeded to load before GPT @ https://scripts.jixie.media/onescript/Ph831gCVPL/jx-Ph410831gmQjx.min.js:38
+[    5974ms] [WARNING] [GPT] PubAdsService.collapseEmptyDivs is deprecated, use googletag.setConfig({collapseDiv: ...}) instead.
+https://goo.gle/gpt-message#170 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202609110101/pubads_impl.js?cb=122881154:22
+[    7422ms] [WARNING] [GPT] Slot.getTargetingKeys is deprecated, use Slot.getConfig('targeting') instead.
+https://goo.gle/gpt-message#201 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202609110101/pubads_impl.js?cb=122881154:22
+[    7655ms] [WARNING] Google Deploy of the SharedId library has been deprecated. Please select another option in the GAM UI. If you use Prebid, we suggest the Prebid.js UserId option. If you do not, you may configure GAM to allow Google to share a first party user identifier with OB and AB participants, which is either the publisherProvidedId or the __gads value when that is missing. @ https://cdn.jsdelivr.net/gh/prebid/shared-id/pubcid.js/docs/pubcid.min.js:0
+[    7707ms] [WARNING] [GPT] Using deprecated googletag.encryptedSignalProviders. Please use googletag.secureSignalProviders instead.
+https://goo.gle/gpt-message#155 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202609110101/pubads_impl.js?cb=122881154:22
+[    7853ms] [WARNING] [GPT] Using deprecated googletag.encryptedSignalProviders. Please use googletag.secureSignalProviders instead.
+https://goo.gle/gpt-message#155 @ https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202609110101/pubads_impl.js?cb=122881154:22
+[    8482ms] [INFO] Powered by AMP ⚡ HTML – Version 2607210106000 https://www.philstar.com/entertainment/2025/02/19/2422467/gma-networks-art-gap-creativity-heart @ https://cdn.ampproject.org/rtv/012607210106000/amp4ads-v0.mjs:1
+[   10229ms] [INFO] Powered by AMP ⚡ HTML – Version 2607210106000 https://www.philstar.com/entertainment/2025/02/19/2422467/gma-networks-art-gap-creativity-heart @ https://cdn.ampproject.org/rtv/012607210106000/amp4ads-v0.mjs:1
+[   13116ms] [ERROR] Failed to load resource: the server responded with a status of 451 () @ https://pippio.com/api/sync?pid=710914&_=5&it=4&it=4&it=4&iv=570ac2bdad5119921b0eb9125af46b510bf3cee8038568f2790846e2f4599415&gdpr=0:0
+[   16865ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://dps.jp.cinarra.com/pxd?PLATFORM_ID=1&USER_ID=9b54f8a3-1904-8802-f72b-4162b3706726:0
+[   16866ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://match.rundsp.com/redirect?ex=openx:0
+[   16865ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://dps.jp.cinarra.com/pxd?PLATFORM_ID=1&USER_ID=9b54f8a3-1904-8802-f72b-4162b3706726:0
+[   16866ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://match.rundsp.com/redirect?ex=openx:0
+[   17861ms] [ERROR] Failed to load resource: the server responded with a status of 451 () @ https://pippio.com/api/sync?pid=710914&_=3&it=4&it=4&it=4&iv=570ac2bdad5119921b0eb9125af46b510bf3cee8038568f2790846e2f4599415&gdpr=0:0
+[   18095ms] [ERROR] Failed to load resource: the server responded with a status of 424 (Failed Dependency) @ https://t.adx.opera.com/pub/sync?pubid=pub10101531197440&gdpr=1&gdpr_consent=:0
+[   18147ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://dsp.360yield.com/dsp_match/275?ssp=45&r=https%3A%2F%2Frtb-csync.smartadserver.com%2Fredir%2F%3Fissi%3D1%26partnerid%3D85%26partneruserid%3D$%7BDSP_USER_ID%7D:0
+[   20452ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://match.360yield.com/match?dsp_callback=1&publisher_dsp_id=440&external_user_id=6abbe8a2681f6c0001abebf3&r=https%3A%2F%2Fmap.go.affec.tv%2Fmap%2Fim%2F%7BPUB_USER_ID%7D%3Fch%3D6abbe8a2681f6c0001abebf4%26chc%3Dst%26redirect_url%3D%26gdpr%3D0%26gdpr_consent%3D&gdpr=0&gdpr_consent=:0
+[   20807ms] [WARNING] [Smartlook] Smartlook not recording. Reason: Monthly recording limit reached. @ https://rec.smartlook.com/es6/init.9207427f95fa799d6604.js:1

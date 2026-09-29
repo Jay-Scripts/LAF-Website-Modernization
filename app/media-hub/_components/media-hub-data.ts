@@ -8,7 +8,7 @@ export const featuredArticles = [
     publication: "Philippine Daily Inquirer",
     author: "Raoul Chee Kee",
     publicationDate: "2024",
-    imagePath: "/images/the-ark/family-kindness-TA.png",
+    imagePath: "/images/media-hub/inquirer-little-ark-group.jpeg",
     url: "https://plus.inquirer.net/lifestyle/personal-struggle-moves-one-father-to-help-those-in-same-boat/",
   },
   {
@@ -16,7 +16,7 @@ export const featuredArticles = [
     publication: "The Philippine Star",
     author: "Angel Javier Cruz",
     publicationDate: "February 19, 2025",
-    imagePath: "/images/our-voyage/moments_of_joy1.jpg",
+    imagePath: "/images/media-hub/philstar-art-gap-group.jpg",
     url: "https://www.philstar.com/entertainment/2025/02/19/2422467/gma-networks-art-gap-creativity-heart",
   },
   {
@@ -24,7 +24,7 @@ export const featuredArticles = [
     publication: "Manila Standard",
     author: "Jasper Valdez",
     publicationDate: "2025",
-    imagePath: "/images/the-ark/activities-TA.jpeg",
+    imagePath: "/images/media-hub/manila-standard-butch-bustamante.jpg",
     url: "https://manilastandard.net/lifestyle/314616214/art-and-music-come-together-to-support-children-in-care.html",
   },
 ] as const;

@@ -1,0 +1,592 @@
+- generic [ref=e2]:
+  - text:    
+  - list [ref=e6]:
+    - listitem [ref=e7]:
+      - link "My Account" [ref=e8] [cursor=pointer]:
+        - /url: /profile
+    - listitem [ref=e9]:
+      - link "Subscribe" [ref=e10] [cursor=pointer]:
+        - /url: /options
+    - listitem [ref=e11]:
+      - link "Download App" [ref=e12] [cursor=pointer]:
+        - /url: https://plus.inquirer.net/app-download
+    - listitem [ref=e13]:
+      - link "INQUIRER.net" [ref=e14] [cursor=pointer]:
+        - /url: https://www.inquirer.net
+  - banner [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e20] [cursor=pointer]
+      - link [ref=e27] [cursor=pointer]:
+        - /url: https://plus.inquirer.net/
+        - img "Inquirer Plus" [ref=e28]
+      - generic [ref=e31] [cursor=pointer]
+  - text:   
+  - main [ref=e34]:
+    - generic [ref=e35]:
+      - generic [ref=e44]:
+        - generic [ref=e46]:
+          - generic [ref=e48]:
+            - figure [ref=e49]:
+              - link [ref=e50] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/news/125th-balangiga-anniversary-honors-courage-resilience/
+            - generic [ref=e51]:
+              - heading [level=6] [ref=e53]:
+                - link "125th Balangiga anniversary honors courage, resilience" [ref=e54] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/news/125th-balangiga-anniversary-honors-courage-resilience/
+              - complementary [ref=e55]:
+                - list [ref=e56]:
+                  - listitem [ref=e57]: September 30, 2026
+                  - listitem [ref=e58]: ·2 mins Read
+          - generic [ref=e60]:
+            - figure [ref=e61]:
+              - link [ref=e62] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/news/provinces-brace-for-drought-farm-losses/
+            - generic [ref=e63]:
+              - heading [level=6] [ref=e65]:
+                - link "Provinces brace for drought, farm losses" [ref=e66] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/news/provinces-brace-for-drought-farm-losses/
+              - complementary [ref=e67]:
+                - list [ref=e68]:
+                  - listitem [ref=e69]: September 30, 2026
+                  - listitem [ref=e70]: ·2 mins Read
+          - generic [ref=e72]:
+            - figure [ref=e73]:
+              - link [ref=e74] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/news/online-threats-surge-in-s-cotabato-sultan-kudarat-after-banga-shooting/
+            - generic [ref=e75]:
+              - heading [level=6] [ref=e77]:
+                - link "Online threats surge in S. Cotabato, Sultan Kudarat after Banga shooting" [ref=e78] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/news/online-threats-surge-in-s-cotabato-sultan-kudarat-after-banga-shooting/
+              - complementary [ref=e79]:
+                - list [ref=e80]:
+                  - listitem [ref=e81]: September 30, 2026
+                  - listitem [ref=e82]: ·3 mins Read
+          - generic [ref=e84]:
+            - figure [ref=e85]:
+              - link [ref=e86] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/business/how-to-tell-if-a-bank-stock-is-worth-buying/
+            - generic [ref=e87]:
+              - heading [level=6] [ref=e89]:
+                - link [ref=e90] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/business/how-to-tell-if-a-bank-stock-is-worth-buying/
+                  - text: How to tell if a bank stock is worth buying
+              - complementary [ref=e91]:
+                - list [ref=e92]:
+                  - listitem [ref=e93]: September 30, 2026
+                  - listitem [ref=e94]: ·3 mins Read
+          - generic [ref=e96]:
+            - figure [ref=e97]:
+              - link [ref=e98] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/business/sec-sets-p400-m-capital-floor-for-warrant-issuers/
+            - generic [ref=e99]:
+              - heading [level=6] [ref=e101]:
+                - link [ref=e102] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/business/sec-sets-p400-m-capital-floor-for-warrant-issuers/
+                  - text: SEC sets P400-M capital floor for warrant issuers
+              - complementary [ref=e103]:
+                - list [ref=e104]:
+                  - listitem [ref=e105]: September 30, 2026
+                  - listitem [ref=e106]: ·1 min Read
+          - generic [ref=e108]:
+            - figure [ref=e109]:
+              - link [ref=e110] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/business/jti-pushes-for-asean-body-vs-tobacco-smuggling/
+            - generic [ref=e111]:
+              - heading [level=6] [ref=e113]:
+                - link [ref=e114] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/business/jti-pushes-for-asean-body-vs-tobacco-smuggling/
+                  - text: JTI pushes for Asean body vs tobacco smuggling
+              - complementary [ref=e115]:
+                - list [ref=e116]:
+                  - listitem [ref=e117]: September 30, 2026
+                  - listitem [ref=e118]: ·2 mins Read
+          - generic [ref=e120]:
+            - figure [ref=e121]:
+              - link [ref=e122] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/business/telco-service-monitored-nationwide-ntc/
+            - generic [ref=e123]:
+              - heading [level=6] [ref=e125]:
+                - link [ref=e126] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/business/telco-service-monitored-nationwide-ntc/
+                  - text: Telco service monitored nationwide–NTC
+              - complementary [ref=e127]:
+                - list [ref=e128]:
+                  - listitem [ref=e129]: September 30, 2026
+                  - listitem [ref=e130]: ·2 mins Read
+          - generic [ref=e132]:
+            - figure [ref=e133]:
+              - link [ref=e134] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/business/meralco-to-bid-out-900-mw-baseload-supply-deal/
+            - generic [ref=e135]:
+              - heading [level=6] [ref=e137]:
+                - link [ref=e138] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/business/meralco-to-bid-out-900-mw-baseload-supply-deal/
+                  - text: Meralco to bid out 900-MW baseload supply deal
+              - complementary [ref=e139]:
+                - list [ref=e140]:
+                  - listitem [ref=e141]: September 30, 2026
+                  - listitem [ref=e142]: ·2 mins Read
+          - generic [ref=e144]:
+            - figure [ref=e145]:
+              - link [ref=e146] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/business/luxury-car-dealers-brace-for-steep-tax-hike/
+            - generic [ref=e147]:
+              - heading [level=6] [ref=e149]:
+                - link [ref=e150] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/business/luxury-car-dealers-brace-for-steep-tax-hike/
+                  - text: Luxury car dealers brace for steep tax hike
+              - complementary [ref=e151]:
+                - list [ref=e152]:
+                  - listitem [ref=e153]: September 30, 2026
+                  - listitem [ref=e154]: ·2 mins Read
+          - generic [ref=e156]:
+            - figure [ref=e157]:
+              - link [ref=e158] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/business/biz-buzz/biz-buzz-shopsm-leads-ph-brands-in-asia-retail-ranking/
+            - generic [ref=e159]:
+              - heading [level=6] [ref=e161]:
+                - link [ref=e162] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/business/biz-buzz/biz-buzz-shopsm-leads-ph-brands-in-asia-retail-ranking/
+                  - text: "BIZ BUZZ: ShopSM leads PH brands in Asia retail ranking"
+              - complementary [ref=e163]:
+                - list [ref=e164]:
+                  - listitem [ref=e165]: September 30, 2026
+                  - listitem [ref=e166]: ·1 min Read
+          - generic [ref=e168]:
+            - figure [ref=e169]:
+              - link [ref=e170] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/business/biz-buzz-new-seats-at-security-banks-executive-table/
+            - generic [ref=e171]:
+              - heading [level=6] [ref=e173]:
+                - link [ref=e174] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/business/biz-buzz-new-seats-at-security-banks-executive-table/
+                  - text: "BIZ BUZZ: New seats at Security Bank’s executive table"
+              - complementary [ref=e175]:
+                - list [ref=e176]:
+                  - listitem [ref=e177]: September 30, 2026
+                  - listitem [ref=e178]: ·1 min Read
+          - generic [ref=e180]:
+            - figure [ref=e181]:
+              - link [ref=e182] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/business/biz-buzz-a-seasoned-hand-for-rcbc-securities/
+            - generic [ref=e183]:
+              - heading [level=6] [ref=e185]:
+                - link [ref=e186] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/business/biz-buzz-a-seasoned-hand-for-rcbc-securities/
+                  - text: "BIZ BUZZ: A seasoned hand for RCBC Securities"
+              - complementary [ref=e187]:
+                - list [ref=e188]:
+                  - listitem [ref=e189]: September 30, 2026
+                  - listitem [ref=e190]: ·1 min Read
+        - button [ref=e191] [cursor=pointer]
+      - generic [ref=e198]:
+        - generic [ref=e199]:
+          - article [ref=e201]:
+            - generic [ref=e202]:
+              - complementary [ref=e203]:
+                - link "Lifestyle" [ref=e204] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/category/lifestyle/
+              - heading "Personal struggle moves one father to help those in same boat" [level=1] [ref=e206]
+              - generic [ref=e208]:
+                - img "Raoul Chee Kee" [ref=e209]
+                - generic [ref=e210]:
+                  - generic [ref=e211]:
+                    - emphasis [ref=e212]: by
+                    - link "Raoul Chee Kee" [ref=e213] [cursor=pointer]:
+                      - /url: https://plus.inquirer.net/author/raoulc/
+                  - generic [ref=e214]: January 12, 2025
+            - generic [ref=e215]: Bustamante (center) with some of the pediatric cancer patients at Little Ark. —CONTRIBUTED
+            - generic [ref=e217]:
+              - generic [ref=e223]:
+                - link "" [ref=e225] [cursor=pointer]:
+                  - /url: https://www.facebook.com/sharer.php?u=https://plus.inquirer.net/lifestyle/personal-struggle-moves-one-father-to-help-those-in-same-boat/
+                - link "" [ref=e229] [cursor=pointer]:
+                  - /url: https://twitter.com/intent/tweet?text=Personal%20struggle%20moves%20one%20father%20to%20help%20those%20in%20same%20boat&via=phildailyinquirer&url=https://plus.inquirer.net/lifestyle/personal-struggle-moves-one-father-to-help-those-in-same-boat/
+                - link "" [ref=e233] [cursor=pointer]:
+                  - /url: mailto:?subject=Personal%20struggle%20moves%20one%20father%20to%20help%20those%20in%20same%20boat&body=Personal%20struggle%20moves%20one%20father%20to%20help%20those%20in%20same%20boat%20https://plus.inquirer.net/lifestyle/personal-struggle-moves-one-father-to-help-those-in-same-boat/
+                - link "" [ref=e237] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/cws/share?url=https://plus.inquirer.net/lifestyle/personal-struggle-moves-one-father-to-help-those-in-same-boat/
+              - generic [ref=e240]:
+                - generic [ref=e241]:
+                  - paragraph [ref=e242]: Butch Bustamante describes the sequence of events leading to his setting up of a foundation to help pediatric cancer patients—one that started in 2013 when his toddler was discovered to have a low platelet count.
+                  - paragraph [ref=e243]: The family was still based in New Jersey in the United States, where Bustamante held a job in supply chain management. His son Noah was only 2 at the time and was asymptomatic, so the family hoped and prayed he would eventually outgrow it. But six years later, the boy was diagnosed with aplastic anemia that his dad described as bone marrow failure.
+                  - paragraph [ref=e244]: Aplastic anemia is a severe hematologic condition in which the body fails to make enough blood cells, resulting in a deficiency of all blood cell types (red blood cells, white blood cells, and platelets).
+                  - figure "Butch Bustamante with son Noah. —CONTRIBUTED PHOTOS" [ref=e245]
+                  - paragraph [ref=e247]: “In the Philippines, getting a diagnosis of aplastic anemia is like getting a death sentence. The only cure is a bone marrow transplant that costs P2.5 million, and you still have to find a donor that matches,” Bustamante told Lifestyle.
+                  - paragraph [ref=e248]: “Fortunately we were living in the US; Noah was born there. When our doctors suggested we go for the transplant, we signed up at the bone marrow registry. They were able to locate two matching donors, and the doctors chose the 27-year-old male donor.”
+                  - paragraph [ref=e249]: On May 7, 2019, Noah was admitted to the Philadelphia Children’s Hospital and underwent the transplant 10 days later. They stayed in the hospital for a month before transferring to a nearby facility, just a few minutes’ drive away.
+                  - paragraph [ref=e250]
+                  - heading "Full-service facility" [level=2] [ref=e251]
+                  - paragraph [ref=e252]: The facility, an entire building complete with one-bedroom suites and a cafeteria open 24/7, was run by the Ronald McDonald House Charities, a nonprofit dedicated to supporting families with sick children.
+                  - paragraph [ref=e253]: The Bustamantes ended up staying there for three months because it was located near the hospital. “We had to be close enough in case the transplant failed or was rejected by Noah’s system. Staying at the facility was free, but you can make a donation. It was like a five-star hotel. Shuttles departed for the hospital every 30 minutes,” Bustamante recounted.
+                  - paragraph [ref=e254]: Last May, Noah marked his fifth year since the surgery—a milestone for cancer survivors. It means they’re out of the woods and only need to focus on the survivorship program. Now 13 years old and in seventh grade, Noah lives in the US with his mother, where he is exploring the thrills of teen dating.
+                  - paragraph [ref=e255]: But back then, when his son was in the fight of his life, Bustamante would update family and friends about Noah’s condition on social media. Two readers with children who had the same diagnosis reached out to him. That was when he considered putting up something similar in the Philippines.
+                  - paragraph [ref=e256]
+                  - paragraph [ref=e257]: Bustamante decided to name it Little Ark—after his son Noah, who was named after the biblical character. He first registered Little Ark in California, and later at the Securities and Exchange Commission (SEC), as a charitable nonprofit organization when they moved back to the Philippines in 2021.
+                  - paragraph [ref=e258]: “When I decided to put up the Little Ark foundation, I did so expecting things would be easy, that people would immediately flock to it and provide support. I didn’t realize it would be complex, hard, and difficult, especially here in the Philippines. Add to that the fact that we were setting it up during the pandemic.”
+                  - figure "Little Ark pantry" [ref=e259]
+                  - heading "Scheduled stays" [level=2] [ref=e261]
+                  - paragraph [ref=e262]: He partnered with the Philippine Children’s Hospital (PCH) on E. Rodriguez in Quezon City. The hospital provides him a list of patients who can stay at Little Ark while the patient is undergoing treatment at PCH. Pediatric patients with scheduled treatments are given top priority. At the moment, there are 60 patients—most of them male—aged between 2 and 18 years old enrolled in the program. They have one of three diagnoses and are undergoing one of five treatments.
+                  - paragraph [ref=e263]: Before Bustamante set up Little Ark, indigent patients from outside Metro Manila resorted to sleeping on benches in the hospital lobby or setting up makeshift cots outdoors next to a drugstore because of lack of funds for accommodations.
+                  - paragraph [ref=e264]: “When people ask me how it was when Noah was sick, I tell them it was very painful for me as his father. I saw how his little body shook when he was injected with the chemo meds, and then later when his hair fell out. It was like hell, but at the time, I felt like we were surrounded by angels. That was our experience in Philadelphia,” he said.
+                  - paragraph [ref=e265]: That overflow of blessings, resources, and prayers served as the impetus for the Little Ark foundation.
+                  - generic [ref=e266]:
+                    - generic [ref=e267]: See Also
+                    - figure [ref=e268]:
+                      - link [ref=e269] [cursor=pointer]:
+                        - /url: https://plus.inquirer.net/lifestyle/the-pleasures-of-a-tangled-life/
+                    - generic [ref=e270]:
+                      - complementary [ref=e271]:
+                        - link "Arts & Culture" [ref=e272] [cursor=pointer]:
+                          - /url: https://plus.inquirer.net/category/lifestyle/arts-culture/
+                        - text: ","
+                        - link "Lifestyle" [ref=e273] [cursor=pointer]:
+                          - /url: https://plus.inquirer.net/category/lifestyle/
+                      - heading [level=6] [ref=e275]:
+                        - link "The pleasures of a tangled life" [ref=e276] [cursor=pointer]:
+                          - /url: https://plus.inquirer.net/lifestyle/the-pleasures-of-a-tangled-life/
+                  - paragraph
+                  - paragraph [ref=e277]: “There was so much support from everyone, from the doctors, nurses, and social workers to the community and the staff at the Ronald McDonald facility. It was a constant struggle, but we never felt we were alone in this journey.”
+                  - figure "One of two bedrooms at Little Ark" [ref=e278]
+                  - heading "Four beds" [level=2] [ref=e280]
+                  - paragraph [ref=e281]: The first Little Ark that opened in March 2024 was a small facility with four beds that could accommodate four patients and their parent or guardian, or a total of eight at a time. Last month, it opened a bigger facility in Sta. Mesa, Manila, with two rooms that can accommodate five patients and five parents or guardians per room. It’s equipped with a kitchen and pantry as well as a shared space where the children can do a few art-related activities led by a volunteer teacher before bedtime. There’s a bathroom where they can freshen up and a vehicle with a driver to take them to and from the PCH for treatments.
+                  - paragraph [ref=e282]: “When Noah was undergoing treatment, it felt like we were given a problem, a challenge. But at the same time, God gave us the resources to go through it. That’s why I put up the foundation. I wanted to do exactly the same thing for those undergoing the same challenge we went through five years ago,” he said.
+                  - paragraph [ref=e283]: Bustamante recounted that when when people would go up to him and slip their donations into his hand, they would downplay the act, describing the amount as “just a small thing.” He would always tell them that while it might seem that way for them, it was a big thing for him “because we don’t even know each other and yet you’re giving me this love and support.”
+                  - paragraph [ref=e284]: While there have been groups and individuals willing to help out his fledgling foundation, sometimes supplies dwindle until they’re almost depleted.
+                  - paragraph [ref=e285]:
+                    - text: “One day, a parent of one of the patients came to me to say we had only one
+                    - emphasis [ref=e286]: tabo
+                    - text: (dipper) of uncooked rice left in the pantry. That same day, a donor dropped off five sacks of rice.”
+                  - paragraph [ref=e287]: It’s things like these that make him believe in what he’s doing. “I want people whose children are sick to know that the world is not a cruel place, that there are so many good people in the world,” he said. INQ
+                  - paragraph [ref=e288]:
+                    - emphasis [ref=e289]: Follow @littlearkfoundation on Facebook, Instagram, and X (formerly Twitter); visit littlearkfoundation.org
+                - complementary [ref=e290]:
+                  - heading "Sign up for our newsletter" [level=4] [ref=e291]
+                  - paragraph [ref=e292]: Get notified about exclusive offers every week!
+                  - generic [ref=e293]:
+                    - textbox "Your E-Mail" [ref=e294]
+                    - button "SIGN UP" [ref=e295] [cursor=pointer]
+                  - generic [ref=e296]:  I would like to receive news and special offers.
+                - generic [ref=e298]:
+                  - img "Raoul Chee Kee" [ref=e299]
+                  - generic [ref=e300]:
+                    - link "Raoul Chee Kee" [ref=e301] [cursor=pointer]:
+                      - /url: https://plus.inquirer.net/author/raoulc/
+                    - link "" [ref=e302] [cursor=pointer]:
+                      - /url: https://www.linkedin.com/in/raoul-chee-kee-86541818/?originalSubdomain=ph
+                    - paragraph [ref=e304]: Writing editor, Lifestyle at Philippine Daily Inquirer
+                - text:    
+                - generic [ref=e306]:
+                  - link " Share" [ref=e308] [cursor=pointer]:
+                    - /url: https://www.facebook.com/sharer.php?u=https://plus.inquirer.net/lifestyle/personal-struggle-moves-one-father-to-help-those-in-same-boat/
+                    - generic [ref=e309]:
+                      - generic [ref=e310]: 
+                      - generic [ref=e311]: Share
+                  - link " Tweet" [ref=e313] [cursor=pointer]:
+                    - /url: https://twitter.com/intent/tweet?text=Personal%20struggle%20moves%20one%20father%20to%20help%20those%20in%20same%20boat&via=phildailyinquirer&url=https://plus.inquirer.net/lifestyle/personal-struggle-moves-one-father-to-help-those-in-same-boat/
+                    - generic [ref=e314]:
+                      - generic [ref=e315]: 
+                      - generic [ref=e316]: Tweet
+                  - link " Share" [ref=e318] [cursor=pointer]:
+                    - /url: mailto:?subject=Personal%20struggle%20moves%20one%20father%20to%20help%20those%20in%20same%20boat&body=Personal%20struggle%20moves%20one%20father%20to%20help%20those%20in%20same%20boat%20https://plus.inquirer.net/lifestyle/personal-struggle-moves-one-father-to-help-those-in-same-boat/
+                    - generic [ref=e319]:
+                      - generic [ref=e320]: 
+                      - generic [ref=e321]: Share
+                  - link " Share" [ref=e323] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/cws/share?url=https://plus.inquirer.net/lifestyle/personal-struggle-moves-one-father-to-help-those-in-same-boat/
+                    - generic [ref=e324]:
+                      - generic [ref=e325]: 
+                      - generic [ref=e326]: Share
+          - complementary [ref=e327]:
+            - link [ref=e329] [cursor=pointer]:
+              - /url: https://inq.news/download
+            - generic [ref=e331]:
+              - generic [ref=e332]: Popular Posts
+              - generic [ref=e334]:
+                - figure [ref=e335]:
+                  - link [ref=e336] [cursor=pointer]:
+                    - /url: https://plus.inquirer.net/news/125th-balangiga-anniversary-honors-courage-resilience/
+                - generic [ref=e337]:
+                  - heading [level=6] [ref=e339]:
+                    - link "125th Balangiga anniversary honors courage, resilience" [ref=e340] [cursor=pointer]:
+                      - /url: https://plus.inquirer.net/news/125th-balangiga-anniversary-honors-courage-resilience/
+                  - complementary [ref=e341]:
+                    - list [ref=e342]:
+                      - listitem [ref=e343]: September 30, 2026
+                      - listitem [ref=e344]: ·2 mins Read
+              - generic [ref=e345]:
+                - figure [ref=e346]:
+                  - link [ref=e347] [cursor=pointer]:
+                    - /url: https://plus.inquirer.net/news/provinces-brace-for-drought-farm-losses/
+                - generic [ref=e348]:
+                  - heading [level=6] [ref=e350]:
+                    - link "Provinces brace for drought, farm losses" [ref=e351] [cursor=pointer]:
+                      - /url: https://plus.inquirer.net/news/provinces-brace-for-drought-farm-losses/
+                  - complementary [ref=e352]:
+                    - list [ref=e353]:
+                      - listitem [ref=e354]: September 30, 2026
+                      - listitem [ref=e355]: ·2 mins Read
+              - generic [ref=e356]:
+                - figure [ref=e357]:
+                  - link [ref=e358] [cursor=pointer]:
+                    - /url: https://plus.inquirer.net/news/online-threats-surge-in-s-cotabato-sultan-kudarat-after-banga-shooting/
+                - generic [ref=e359]:
+                  - heading [level=6] [ref=e361]:
+                    - link "Online threats surge in S. Cotabato, Sultan Kudarat after Banga shooting" [ref=e362] [cursor=pointer]:
+                      - /url: https://plus.inquirer.net/news/online-threats-surge-in-s-cotabato-sultan-kudarat-after-banga-shooting/
+                  - complementary [ref=e363]:
+                    - list [ref=e364]:
+                      - listitem [ref=e365]: September 30, 2026
+                      - listitem [ref=e366]: ·3 mins Read
+        - generic [ref=e367]:
+          - generic [ref=e368]:
+            - figure
+            - generic [ref=e369]:
+              - complementary [ref=e370]:
+                - link "Arts & Culture" [ref=e371] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/category/lifestyle/arts-culture/
+                - text: ","
+                - link "Lifestyle" [ref=e372] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/category/lifestyle/
+                - text: ","
+                - link "Travel" [ref=e373] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/category/lifestyle/travel/
+              - heading [level=6] [ref=e375]:
+                - link "Morong Church is Rizal’s gem, nation’s treasure" [ref=e376] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/lifestyle/morong-church-is-rizals-gem-nations-treasure/
+          - generic [ref=e377]: Previous Article
+        - generic [ref=e378]:
+          - generic [ref=e379]:
+            - figure
+            - generic [ref=e380]:
+              - complementary [ref=e381]:
+                - link "Lifestyle" [ref=e382] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/category/lifestyle/
+              - heading [level=6] [ref=e384]:
+                - link "Who’s afraid of Hilda Koronel?" [ref=e385] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/lifestyle/whos-afraid-of-hilda-koronel/
+          - generic [ref=e386]: Next Article
+        - generic [ref=e387]: View Comments (0)
+  - contentinfo [ref=e391]:
+    - generic [ref=e392]:
+      - generic [ref=e395]:
+        - paragraph [ref=e399]: Choose from our print and digital options and treat yourself or someone special. Print subscribers enjoy free delivery within Metro Manila and free access to our premium site and app.
+        - button "Subscribe Now" [ref=e400] [cursor=pointer]
+      - img "INQ Plus" [ref=e406]
+    - generic [ref=e414]:
+      - generic [ref=e416]:
+        - generic [ref=e417]: Featured Posts
+        - generic [ref=e419]:
+          - figure [ref=e420]:
+            - link [ref=e421] [cursor=pointer]:
+              - /url: https://plus.inquirer.net/news/125th-balangiga-anniversary-honors-courage-resilience/
+          - generic [ref=e422]:
+            - heading [level=6] [ref=e424]:
+              - link "125th Balangiga anniversary honors courage, resilience" [ref=e425] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/news/125th-balangiga-anniversary-honors-courage-resilience/
+            - complementary [ref=e426]:
+              - list [ref=e427]:
+                - listitem [ref=e428]: September 30, 2026
+                - listitem [ref=e429]: ·2 mins Read
+        - generic [ref=e430]:
+          - figure [ref=e431]:
+            - link [ref=e432] [cursor=pointer]:
+              - /url: https://plus.inquirer.net/news/provinces-brace-for-drought-farm-losses/
+          - generic [ref=e433]:
+            - heading [level=6] [ref=e435]:
+              - link "Provinces brace for drought, farm losses" [ref=e436] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/news/provinces-brace-for-drought-farm-losses/
+            - complementary [ref=e437]:
+              - list [ref=e438]:
+                - listitem [ref=e439]: September 30, 2026
+                - listitem [ref=e440]: ·2 mins Read
+        - generic [ref=e441]:
+          - figure [ref=e442]:
+            - link [ref=e443] [cursor=pointer]:
+              - /url: https://plus.inquirer.net/news/online-threats-surge-in-s-cotabato-sultan-kudarat-after-banga-shooting/
+          - generic [ref=e444]:
+            - heading [level=6] [ref=e446]:
+              - link "Online threats surge in S. Cotabato, Sultan Kudarat after Banga shooting" [ref=e447] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/news/online-threats-surge-in-s-cotabato-sultan-kudarat-after-banga-shooting/
+            - complementary [ref=e448]:
+              - list [ref=e449]:
+                - listitem [ref=e450]: September 30, 2026
+                - listitem [ref=e451]: ·3 mins Read
+      - generic [ref=e453]:
+        - generic [ref=e454]: Featured Video
+        - generic [ref=e456]:
+          - iframe [ref=e458]:
+            - generic [ref=f1e4]:
+              - generic:
+                - generic [aria-hidden]:
+                  - generic: Playing in picture-in-picture
+              - generic:
+                - link [ref=f1e12] [cursor=pointer]:
+                  - /url: https://vimeo.com/user215697855?fl=pl&fe=po
+                  - img "Link to video owner's profile" [ref=f1e13]
+                - generic [ref=f1e14]:
+                  - generic [ref=f1e15]:
+                    - link "The New Inquirer App" [ref=f1e16] [cursor=pointer]:
+                      - /url: https://vimeo.com/929191167?fl=pl&fe=ti
+                    - generic [ref=f1e17]: The New Inquirer App
+                  - link "The Philippine Daily Inquirer" [ref=f1e18] [cursor=pointer]:
+                    - /url: https://vimeo.com/user215697855?fl=pl&fe=by
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic [aria-hidden]:
+                        - generic: More options
+                      - button "More options" [ref=f1e20] [cursor=pointer]
+                - generic:
+                  - button "Play" [ref=f1e22] [cursor=pointer]:
+                    - generic:
+                      - generic [aria-hidden]: Play
+                  - generic [ref=f1e26]:
+                    - generic [ref=f1e27]:
+                      - slider "Progress Bar" [ref=f1e28] [cursor=pointer]
+                      - generic [ref=f1e29] [cursor=pointer]
+                      - generic [aria-hidden]:
+                        - generic: 00:00
+                      - generic [ref=f1e33]: 00:25
+                    - generic [ref=f1e34]:
+                      - generic [ref=f1e35]:
+                        - generic [ref=f1e36]:
+                          - button [aria-hidden]
+                        - slider [aria-hidden]
+                      - generic:
+                        - button [aria-hidden]:
+                          - generic [aria-hidden]: Settings
+                      - generic:
+                        - button [aria-hidden]:
+                          - generic [aria-hidden]: Speed
+                      - generic:
+                        - button [aria-hidden]:
+                          - generic [aria-hidden]: Picture-in-Picture
+                      - generic:
+                        - button [aria-hidden]:
+                          - generic [aria-hidden]: Fullscreen
+                      - button "Show controls" [ref=f1e38] [cursor=pointer]:
+                        - generic:
+                          - generic [aria-hidden]: Show controls
+                      - link "Watch on Vimeo" [ref=f1e41] [cursor=pointer]:
+                        - /url: https://vimeo.com/929191167?fl=pl&fe=vl
+          - paragraph
+      - generic [ref=e460]:
+        - generic [ref=e461]: Most Shared
+        - generic [ref=e463]:
+          - figure [ref=e464]:
+            - link [ref=e465] [cursor=pointer]:
+              - /url: https://plus.inquirer.net/news/125th-balangiga-anniversary-honors-courage-resilience/
+          - generic [ref=e466]:
+            - heading [level=6] [ref=e468]:
+              - link "125th Balangiga anniversary honors courage, resilience" [ref=e469] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/news/125th-balangiga-anniversary-honors-courage-resilience/
+            - complementary [ref=e470]:
+              - list [ref=e471]:
+                - listitem [ref=e472]: September 30, 2026
+                - listitem [ref=e473]: ·2 mins Read
+        - generic [ref=e474]:
+          - figure [ref=e475]:
+            - link [ref=e476] [cursor=pointer]:
+              - /url: https://plus.inquirer.net/news/provinces-brace-for-drought-farm-losses/
+          - generic [ref=e477]:
+            - heading [level=6] [ref=e479]:
+              - link "Provinces brace for drought, farm losses" [ref=e480] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/news/provinces-brace-for-drought-farm-losses/
+            - complementary [ref=e481]:
+              - list [ref=e482]:
+                - listitem [ref=e483]: September 30, 2026
+                - listitem [ref=e484]: ·2 mins Read
+        - generic [ref=e485]:
+          - figure [ref=e486]:
+            - link [ref=e487] [cursor=pointer]:
+              - /url: https://plus.inquirer.net/news/online-threats-surge-in-s-cotabato-sultan-kudarat-after-banga-shooting/
+          - generic [ref=e488]:
+            - heading [level=6] [ref=e490]:
+              - link "Online threats surge in S. Cotabato, Sultan Kudarat after Banga shooting" [ref=e491] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/news/online-threats-surge-in-s-cotabato-sultan-kudarat-after-banga-shooting/
+            - complementary [ref=e492]:
+              - list [ref=e493]:
+                - listitem [ref=e494]: September 30, 2026
+                - listitem [ref=e495]: ·3 mins Read
+  - generic [ref=e498]:
+    - generic [ref=e499]:
+      - link "Inquirer Plus":
+        - /url: https://plus.inquirer.net/
+        - img "Inquirer Plus"
+    - paragraph [ref=e500]: "Have problems with your subscription? Contact us viaEmail: plus@inquirer.net, subscription@inquirer.netLandline: (02) 8896-6000SMS/Viber: 0908-8966000, 0919-0838000"
+    - paragraph [ref=e501]: © 2025 Inquirer Interactive, Inc.All Rights Reserved.
+    - generic [ref=e502]:
+      - link "" [ref=e504] [cursor=pointer]:
+        - /url: https://facebook.com/philippinedailyinquirer
+      - link "" [ref=e509] [cursor=pointer]:
+        - /url: https://twitter.com/phildailyinquirer
+      - link "" [ref=e514] [cursor=pointer]:
+        - /url: https://instagram.com/phildailyinquirer
+  - navigation [ref=e518]:
+    - link [ref=e520] [cursor=pointer]:
+      - /url: https://plus.inquirer.net/
+      - img "Inquirer Plus" [ref=e521]
+    - generic [ref=e522]:
+      - generic [ref=e523]:
+        - list [ref=e524]
+        - list [ref=e525]
+      - generic [ref=e526]:
+        - generic [ref=e527]:
+          - generic [ref=e528]: Trending Posts
+          - generic [ref=e530]:
+            - figure [ref=e531]:
+              - link [ref=e532] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/news/125th-balangiga-anniversary-honors-courage-resilience/
+            - generic [ref=e533]:
+              - heading [level=6] [ref=e535]:
+                - link "125th Balangiga anniversary honors courage, resilience" [ref=e536] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/news/125th-balangiga-anniversary-honors-courage-resilience/
+              - complementary [ref=e537]:
+                - list [ref=e538]:
+                  - listitem [ref=e539]: September 30, 2026
+                  - listitem [ref=e540]: ·2 mins Read
+          - generic [ref=e541]:
+            - figure [ref=e542]:
+              - link [ref=e543] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/news/provinces-brace-for-drought-farm-losses/
+            - generic [ref=e544]:
+              - heading [level=6] [ref=e546]:
+                - link "Provinces brace for drought, farm losses" [ref=e547] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/news/provinces-brace-for-drought-farm-losses/
+              - complementary [ref=e548]:
+                - list [ref=e549]:
+                  - listitem [ref=e550]: September 30, 2026
+                  - listitem [ref=e551]: ·2 mins Read
+          - generic [ref=e552]:
+            - figure [ref=e553]:
+              - link [ref=e554] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/news/online-threats-surge-in-s-cotabato-sultan-kudarat-after-banga-shooting/
+            - generic [ref=e555]:
+              - heading [level=6] [ref=e557]:
+                - link "Online threats surge in S. Cotabato, Sultan Kudarat after Banga shooting" [ref=e558] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/news/online-threats-surge-in-s-cotabato-sultan-kudarat-after-banga-shooting/
+              - complementary [ref=e559]:
+                - list [ref=e560]:
+                  - listitem [ref=e561]: September 30, 2026
+                  - listitem [ref=e562]: ·3 mins Read
+          - generic [ref=e563]:
+            - figure [ref=e564]:
+              - link [ref=e565] [cursor=pointer]:
+                - /url: https://plus.inquirer.net/business/how-to-tell-if-a-bank-stock-is-worth-buying/
+            - generic [ref=e566]:
+              - heading [level=6] [ref=e568]:
+                - link "How to tell if a bank stock is worth buying" [ref=e569] [cursor=pointer]:
+                  - /url: https://plus.inquirer.net/business/how-to-tell-if-a-bank-stock-is-worth-buying/
+              - complementary [ref=e570]:
+                - list [ref=e571]:
+                  - listitem [ref=e572]: September 30, 2026
+                  - listitem [ref=e573]: ·3 mins Read
+        - generic [ref=e574]:
+          - link "" [ref=e576] [cursor=pointer]:
+            - /url: https://facebook.com/philippinedailyinquirer
+          - link "" [ref=e581] [cursor=pointer]:
+            - /url: https://twitter.com/phildailyinquirer
+          - link "" [ref=e586] [cursor=pointer]:
+            - /url: https://instagram.com/phildailyinquirer
+        - generic [ref=e590]: Light

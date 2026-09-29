@@ -1,0 +1,1015 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - generic: 
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - search:
+                            - textbox "Type here...":
+                              - /placeholder: " "
+                            - generic: Type here...
+                            - button "Search"
+                    - generic:
+                      - generic:
+                        - generic:
+                          - list:
+                            - listitem:
+                              - link "News ":
+                                - /url: https://manilastandard.net/category/news
+                                - generic: News
+                                - generic: 
+                            - listitem:
+                              - link "Opinion ":
+                                - /url: https://manilastandard.net/category/opinion
+                                - generic: Opinion
+                                - generic: 
+                            - listitem:
+                              - link "Business ":
+                                - /url: https://manilastandard.net/category/business
+                                - generic: Business
+                                - generic: 
+                            - listitem:
+                              - link "Sports ":
+                                - /url: https://manilastandard.net/category/sports
+                                - generic: Sports
+                                - generic: 
+                            - listitem:
+                              - link "Showbiz ":
+                                - /url: https://manilastandard.net/category/showbiz
+                                - generic: Showbiz
+                                - generic: 
+                            - listitem:
+                              - link "Lifestyle ":
+                                - /url: https://manilastandard.net/category/lifestyle
+                                - generic: Lifestyle
+                                - generic: 
+                            - listitem:
+                              - link "Spotlight":
+                                - /url: https://manilastandard.net/category/spotlight
+                            - listitem:
+                              - link "Special Pages ":
+                                - /url: "#"
+                                - generic: Special Pages
+                                - generic: 
+                              - text:   
+  - generic:
+    - generic:
+      - generic: 
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - search:
+                            - textbox "Type here...":
+                              - /placeholder: " "
+                            - generic: Type here...
+                            - button "Search"
+                    - generic:
+                      - generic:
+                        - generic:
+                          - list:
+                            - listitem:
+                              - link "News ":
+                                - /url: https://manilastandard.net/category/news
+                                - generic: News
+                                - generic: 
+                            - listitem:
+                              - link "Opinion ":
+                                - /url: https://manilastandard.net/category/opinion
+                                - generic: Opinion
+                                - generic: 
+                            - listitem:
+                              - link "Business ":
+                                - /url: https://manilastandard.net/category/business
+                                - generic: Business
+                                - generic: 
+                            - listitem:
+                              - link "Sports ":
+                                - /url: https://manilastandard.net/category/sports
+                                - generic: Sports
+                                - generic: 
+                            - listitem:
+                              - link "Showbiz ":
+                                - /url: https://manilastandard.net/category/showbiz
+                                - generic: Showbiz
+                                - generic: 
+                            - listitem:
+                              - link "Lifestyle ":
+                                - /url: https://manilastandard.net/category/lifestyle
+                                - generic: Lifestyle
+                                - generic: 
+                            - listitem:
+                              - link "Spotlight":
+                                - /url: https://manilastandard.net/category/spotlight
+                            - listitem:
+                              - link "Special Pages ":
+                                - /url: "#"
+                                - generic: Special Pages
+                                - generic: 
+                              - text:   
+  - generic:
+    - generic:
+      - generic: 
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - search:
+                            - textbox "Type here...":
+                              - /placeholder: " "
+                            - generic: Type here...
+                            - button "Search"
+                    - generic:
+                      - generic:
+                        - generic:
+                          - list:
+                            - listitem:
+                              - link "News ":
+                                - /url: https://manilastandard.net/category/news
+                                - generic: News
+                                - generic: 
+                            - listitem:
+                              - link "Opinion ":
+                                - /url: https://manilastandard.net/category/opinion
+                                - generic: Opinion
+                                - generic: 
+                            - listitem:
+                              - link "Business ":
+                                - /url: https://manilastandard.net/category/business
+                                - generic: Business
+                                - generic: 
+                            - listitem:
+                              - link "Sports ":
+                                - /url: https://manilastandard.net/category/sports
+                                - generic: Sports
+                                - generic: 
+                            - listitem:
+                              - link "Showbiz ":
+                                - /url: https://manilastandard.net/category/showbiz
+                                - generic: Showbiz
+                                - generic: 
+                            - listitem:
+                              - link "Lifestyle ":
+                                - /url: https://manilastandard.net/category/lifestyle
+                                - generic: Lifestyle
+                                - generic: 
+                            - listitem:
+                              - link "Spotlight":
+                                - /url: https://manilastandard.net/category/spotlight
+                            - listitem:
+                              - link "Special Pages ":
+                                - /url: "#"
+                                - generic: Special Pages
+                                - generic: 
+                              - text:   
+  - iframe [ref=e4]:
+    - generic [ref=f5e1]:
+      - link [ref=f5e2] [cursor=pointer]:
+        - /url: https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjstIjZ6onlgHwR0Lpbu4CPq-XlByXbWjxompCNn9fn2YJsArw0kum75_QPWq0aeUz3oR7Wk4PzS3aGwsPoR8XfW2W_kisJsqn7oIMpSNPWMhFhlUlobQu7zAYSTf9gvaawUIePE7niWtjXeCJJ0squw8GQaPLcV3lGv8_M-ElT1xcUdsrLXlaNkmpOeJjKppTn9R66Xcl1mLk-FVajRgIKibGaT0PayaKqDc05ajD3tm1zEmjw2gIJJtkgZ-HnlRnTc9QhXi2vww-4AedujkowY2cbQtFaEfZAtgXwGRmFNRwszLrO5BEG2PHFRLhnQ3uQt2grK59O4DBsSzKfik8v8zGVKzaWsvTcQMdlYy4nnI33YvHm13iLFGLEe82ihnol-NGX-lLdSdxrZ7_iWZtsUvg2FDll4jxUKVUsQ5AgHs_ak&sai=AMfl-YSQc_GyESdSKc6UcOqMcdnEVQn59zOwevUVHTnrqu3c4F9xIvQfpVJQFe_R-Y3hNffQb9V0sVWUyldmdXh1aO_iczdj6v1cJ2oVjG-Rw1dRJz7iXUG8CsMcvoStl7vAFxDMjldEn37uEqX3PDhP8sBXLpymvVFT5u0nivJz6RM3zRw36JJi9ameNfAfoLwb_TYUV5tKb3XeV6a5Mx4n5CqGW_Z-wyHvSlpn1MMQOsv_HMUzu_Rf8ByFKxnoFTpdrgAt1BTGkwxwxx0RR9sgn7LnV9Iza53Ei_snSsv_xSBjthzXyfGkVNh2J0elwAlqONAnfpDeFS7mikJWryRvP5aUvTSEbl3d3YoTEhtbosQfJZy-p8il1A&sig=Cg0ArKJSzCh_Te6kLUzm&fbs_aeid=%5Bgw_fbsaeid%5D&adurl=https://manilastandard.net/category/tech/tech-mobility-trends-on-the-road-10th-anniversary-tech-in-drive-drive-in-tech
+      - generic [ref=f5e3] [cursor=pointer]
+      - button [ref=f5e8] [cursor=pointer]
+  - generic [ref=e5] [cursor=pointer]: 
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]: 
+      - generic [ref=e15]: Sign in
+      - list [ref=e20]:
+        - listitem [ref=e21]:
+          - link "News " [ref=e22] [cursor=pointer]:
+            - /url: https://manilastandard.net/category/news
+            - text: News
+            - generic [ref=e23]: 
+          - list:
+            - listitem [ref=e24]:
+              - link "Politics" [ref=e25] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/news/politics
+            - listitem [ref=e26]:
+              - link "Crime/Courts" [ref=e27] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/news/crime-courts
+            - listitem [ref=e28]:
+              - link "Public Health" [ref=e29] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/news/public-health
+            - listitem [ref=e30]:
+              - link "Weather" [ref=e31] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/news/weather
+            - listitem [ref=e32]:
+              - link "World" [ref=e33] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/news/world
+            - listitem [ref=e34]:
+              - link "Features" [ref=e35] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/news/special-feature
+        - listitem [ref=e36]:
+          - link "Opinion " [ref=e37] [cursor=pointer]:
+            - /url: https://manilastandard.net/category/opinion
+            - text: Opinion
+            - generic [ref=e38]: 
+          - list:
+            - listitem [ref=e39]:
+              - link "Editorial" [ref=e40] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/opinion/editorial
+            - listitem [ref=e41]:
+              - link "Columns" [ref=e42] [cursor=pointer]:
+                - /url: /category/opinion/columns
+        - listitem [ref=e43]:
+          - link "Business " [ref=e44] [cursor=pointer]:
+            - /url: https://manilastandard.net/category/business
+            - text: Business
+            - generic [ref=e45]: 
+          - list:
+            - listitem [ref=e46]:
+              - link "Corporate" [ref=e47] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/business/corporate
+            - listitem [ref=e48]:
+              - link "Economy & Trade" [ref=e49] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/business/economy-trade
+            - listitem [ref=e50]:
+              - link "Stocks" [ref=e51] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/business/business-stocks
+            - listitem [ref=e52]:
+              - link "Banking & Finance" [ref=e53] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/business/banking-report
+            - listitem [ref=e54]:
+              - link "Energy" [ref=e55] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/business/energy
+            - listitem [ref=e56]:
+              - link "Agri & Mining" [ref=e57] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/business/agriculture-mining
+            - listitem [ref=e58]:
+              - link "IT & Telecom" [ref=e59] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/business/it-telecom
+            - listitem [ref=e60]:
+              - link "Transport & Tourism" [ref=e61] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/business/transport-tourism
+            - listitem [ref=e62]:
+              - link "Columns" [ref=e63] [cursor=pointer]:
+                - /url: /category/business/business-columns
+            - listitem [ref=e64]:
+              - link "ECONOMY REPORT 2025" [ref=e65] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/business/economy-report-2025
+        - listitem [ref=e66]:
+          - link "Sports " [ref=e67] [cursor=pointer]:
+            - /url: https://manilastandard.net/category/sports
+            - text: Sports
+            - generic [ref=e68]: 
+          - list:
+            - listitem [ref=e69]:
+              - link "Basketball" [ref=e70] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/sports/basketball
+            - listitem [ref=e71]:
+              - link "Volleyball" [ref=e72] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/sports/volleyball
+            - listitem [ref=e73]:
+              - link "Fightsports" [ref=e74] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/sports/fightsports
+            - listitem [ref=e75]:
+              - link "Active" [ref=e76] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/sports/active
+            - listitem [ref=e77]:
+              - link "Sports Plus" [ref=e78] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/sports/sports-plus
+            - listitem [ref=e79]:
+              - link "Esports" [ref=e80] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/sports/esports
+            - listitem [ref=e81]:
+              - link "Columns" [ref=e82] [cursor=pointer]:
+                - /url: /category/sports/sports-headlines/sports-columns
+        - listitem [ref=e83]:
+          - link "Showbiz " [ref=e84] [cursor=pointer]:
+            - /url: https://manilastandard.net/category/showbiz
+            - text: Showbiz
+            - generic [ref=e85]: 
+          - list:
+            - listitem [ref=e86]:
+              - link "TV & Movies" [ref=e87] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/showbiz/tv-movies
+            - listitem [ref=e88]:
+              - link "Celebrity Profiles" [ref=e89] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/showbiz/celebrity-profiles
+            - listitem [ref=e90]:
+              - link "Music & Concerts" [ref=e91] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/showbiz/music-concerts
+            - listitem [ref=e92]:
+              - link "Digital Media" [ref=e93] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/showbiz/digital-media
+            - listitem [ref=e94]:
+              - link "Columns" [ref=e95] [cursor=pointer]:
+                - /url: /category/showbiz/showbiz-columns
+        - listitem [ref=e96]:
+          - link "Lifestyle " [ref=e97] [cursor=pointer]:
+            - /url: https://manilastandard.net/category/lifestyle
+            - text: Lifestyle
+            - generic [ref=e98]: 
+          - list:
+            - listitem [ref=e99]:
+              - link "Cravings" [ref=e100] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/lifestyle/cravings
+            - listitem [ref=e101]:
+              - link "Culture & Media" [ref=e102] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/lifestyle/culture-media
+            - listitem [ref=e103]:
+              - link "Beauty & Fashion" [ref=e104] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/lifestyle/beauty-fashion
+            - listitem [ref=e105]:
+              - link "Travel and Leisure" [ref=e106] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/lifestyle/travel-and-leisure
+            - listitem [ref=e107]:
+              - link "Shopping" [ref=e108] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/lifestyle/shopping
+            - listitem [ref=e109]:
+              - link "Columns" [ref=e110] [cursor=pointer]:
+                - /url: /category/lifestyle/lifestyle-columns
+            - listitem [ref=e111]:
+              - link "Young Life" [ref=e112] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/lifestyle/young-life
+            - listitem [ref=e113]:
+              - link "Hospitality" [ref=e114] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/lifestyle/hospitality
+        - listitem [ref=e115]:
+          - link "Spotlight" [ref=e116] [cursor=pointer]:
+            - /url: https://manilastandard.net/category/spotlight
+        - listitem [ref=e117]:
+          - link "Special Pages " [ref=e118] [cursor=pointer]:
+            - /url: "#"
+            - text: Special Pages
+            - generic [ref=e119]: 
+          - list:
+            - listitem [ref=e120]:
+              - link "Technology " [ref=e121] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/tech
+                - text: Technology
+                - generic [ref=e122]: 
+              - list:
+                - listitem [ref=e123]:
+                  - link "Gadgets" [ref=e124] [cursor=pointer]:
+                    - /url: https://manilastandard.net/category/tech/gadgets
+                - listitem [ref=e125]:
+                  - link "Computers" [ref=e126] [cursor=pointer]:
+                    - /url: https://manilastandard.net/category/tech/computers
+                - listitem [ref=e127]:
+                  - link "Business" [ref=e128] [cursor=pointer]:
+                    - /url: https://manilastandard.net/category/tech/business0
+                - listitem [ref=e129]:
+                  - link "Tech Plus" [ref=e130] [cursor=pointer]:
+                    - /url: https://manilastandard.net/category/tech/tech-news
+                - listitem [ref=e131]:
+                  - link "Games" [ref=e132] [cursor=pointer]:
+                    - /url: https://manilastandard.net/category/tech/games
+            - listitem [ref=e133]:
+              - link "On the Road " [ref=e134] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/on-the-road
+                - text: On the Road
+                - generic [ref=e135]: 
+              - list:
+                - listitem [ref=e136]:
+                  - link "Sedan" [ref=e137] [cursor=pointer]:
+                    - /url: https://manilastandard.net/category/on-the-road/sedans
+                - listitem [ref=e138]:
+                  - link "SUV" [ref=e139] [cursor=pointer]:
+                    - /url: https://manilastandard.net/category/on-the-road/suvs
+                - listitem [ref=e140]:
+                  - link "Truck" [ref=e141] [cursor=pointer]:
+                    - /url: https://manilastandard.net/category/on-the-road/trucks
+                - listitem [ref=e142]:
+                  - link "Bike" [ref=e143] [cursor=pointer]:
+                    - /url: https://manilastandard.net/category/on-the-road/bikes
+                - listitem [ref=e144]:
+                  - link "Accessories" [ref=e145] [cursor=pointer]:
+                    - /url: https://manilastandard.net/category/on-the-road/accessories
+                - listitem [ref=e146]:
+                  - link "Motoring Plus" [ref=e147] [cursor=pointer]:
+                    - /url: https://manilastandard.net/category/on-the-road/motoring-plus
+            - listitem [ref=e148]:
+              - link "Real Estate" [ref=e149] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/real-estate
+            - listitem [ref=e150]:
+              - link "Environment and Sustainability" [ref=e151] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/environmental-and-sustainability
+            - listitem [ref=e152]:
+              - link "Binondo" [ref=e153] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/binondo
+            - listitem [ref=e154]:
+              - link "Transport" [ref=e155] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/transport
+            - listitem [ref=e156]:
+              - link "Gallery " [ref=e157] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/gallery
+                - text: Gallery
+                - generic [ref=e158]: 
+              - list:
+                - listitem [ref=e159]:
+                  - link "Photos" [ref=e160] [cursor=pointer]:
+                    - /url: https://manilastandard.net/category/gallery/news-in-photos
+                - listitem [ref=e161]:
+                  - link "Videos" [ref=e162] [cursor=pointer]:
+                    - /url: https://manilastandard.net/category/videos
+            - listitem [ref=e163]:
+              - link "Pets" [ref=e164] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/pets
+            - listitem [ref=e165]:
+              - link "Pop.Life" [ref=e166] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/pop-life
+            - listitem [ref=e167]:
+              - link "GOOD LIFE" [ref=e168] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/good-life
+            - listitem [ref=e169]:
+              - link "OHAYO PINAS" [ref=e170] [cursor=pointer]:
+                - /url: https://manilastandard.net/category/ohayo-pinas
+    - generic:
+      - generic:
+        - generic:
+          - generic: 
+          - generic: Sign in
+          - generic: 
+        - generic:
+          - generic:
+            - generic: Welcome!
+            - text: Log into your account
+          - generic:
+            - textbox "your username"
+            - generic: your username
+          - generic: your password
+          - button "LOG IN"
+          - generic:
+            - link "Forgot your password?":
+              - /url: "#"
+      - generic:
+        - generic:
+          - link "Back":
+            - /url: "#"
+            - generic: 
+          - generic: Password recovery
+        - generic:
+          - generic: Recover your password
+          - generic:
+            - textbox "your email"
+            - generic: your email
+          - button "Send My Pass"
+  - generic [ref=e171]:
+    - generic [ref=e172]:
+      - text: 
+      - generic [ref=e177]:
+        - generic [ref=e179]:
+          - generic [ref=e180]:
+            - generic [ref=e183]:
+              - generic [ref=e184]: Saturday, September 26, 2026
+              - generic [ref=e188]:
+                - link "" [ref=e190] [cursor=pointer]:
+                  - /url: https://www.facebook.com/ManilaStandardPH/
+                - link "" [ref=e193] [cursor=pointer]:
+                  - /url: https://www.instagram.com/manilastandard/
+                - link "" [ref=e196] [cursor=pointer]:
+                  - /url: https://twitter.com/MlaStandard
+                - link "" [ref=e199] [cursor=pointer]:
+                  - /url: https://www.youtube.com/channel/UCI3NcakVB4-2VSNrXJpkA-A
+                - link "" [ref=e202] [cursor=pointer]:
+                  - /url: https://www.tiktok.com/@manilastandardph
+            - link [ref=e209] [cursor=pointer]:
+              - /url: https://manilastandard.net/
+              - img "Logo" [ref=e211]
+            - generic [ref=e214]:
+              - button "Search" [ref=e217] [cursor=pointer]:
+                - generic [ref=e218]: 
+              - link "" [ref=e221] [cursor=pointer]:
+                - /url: "#"
+          - generic [ref=e227]:
+            - text:  
+            - list [ref=e228]:
+              - listitem [ref=e229]:
+                - link "News " [ref=e230] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/news
+                  - generic [ref=e231]: News
+                  - generic [ref=e232]: 
+              - listitem [ref=e233]:
+                - link "Opinion " [ref=e234] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/opinion
+                  - generic [ref=e235]: Opinion
+                  - generic [ref=e236]: 
+              - listitem [ref=e237]:
+                - link "Business " [ref=e238] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/business
+                  - generic [ref=e239]: Business
+                  - generic [ref=e240]: 
+              - listitem [ref=e241]:
+                - link "Sports " [ref=e242] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/sports
+                  - generic [ref=e243]: Sports
+                  - generic [ref=e244]: 
+              - listitem [ref=e245]:
+                - link "Showbiz " [ref=e246] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/showbiz
+                  - generic [ref=e247]: Showbiz
+                  - generic [ref=e248]: 
+              - listitem [ref=e249]:
+                - link "Lifestyle " [ref=e250] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/lifestyle
+                  - generic [ref=e251]: Lifestyle
+                  - generic [ref=e252]: 
+              - listitem [ref=e253]:
+                - link "Spotlight" [ref=e254] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/spotlight
+              - listitem [ref=e256]:
+                - link "Special Pages " [ref=e257] [cursor=pointer]:
+                  - /url: "#"
+                  - generic [ref=e258]: Special Pages
+                  - generic [ref=e259]: 
+                - text:   
+          - link "View 20th Asian Games Aichi-Nagoya 2026 coverage" [ref=e269] [cursor=pointer]:
+            - /url: https://manilastandard.net/20th-asian-games-aichi-nagoya-2026
+            - generic [ref=e271]:
+              - img "20th Asian Games Aichi-Nagoya 2026 Logo" [ref=e273]
+              - generic [ref=e274]:
+                - generic [ref=e275]: 20TH ASIAN GAMES
+                - generic [ref=e276]:
+                  - text: AICHI-NAGOYA
+                  - generic [ref=e277]: "2026"
+                - generic [ref=e278]:
+                  - generic [ref=e279]: JAPAN
+                  - generic [ref=e281]: SEPTEMBER 19 – OCTOBER 4, 2026
+          - text:  
+        - link "Today's Print Today's Print" [ref=e286] [cursor=pointer]:
+          - /url: https://manilastandard.net/dailypdf
+          - generic [ref=e287]:
+            - img "Today's Print" [ref=e289]
+            - generic [ref=e290]: Today's Print
+    - article [ref=e294]:
+      - generic [ref=e296]:
+        - generic [ref=e298]:
+          - generic [ref=e300]:
+            - generic [ref=e304]:
+              - generic [ref=e306]:
+                - link "Lifestyle" [ref=e307] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/lifestyle
+                - text: 
+              - generic [ref=e310]:
+                - generic [ref=e311]: 
+                - text: Last updated
+                - time [ref=e312]: July 15, 2025, 5:59 PM
+            - heading "Art and music come together to support children in care" [level=1] [ref=e315]
+            - generic [ref=e321]:
+              - link [ref=e322] [cursor=pointer]:
+                - /url: https://manilastandard.net/author/jasper-valdez
+                - img "Jasper Valdez" [ref=e323]
+              - generic [ref=e324]:
+                - text: By
+                - link "Jasper Valdez" [ref=e325] [cursor=pointer]:
+                  - /url: https://manilastandard.net/author/jasper-valdez
+            - generic [ref=e329]:
+              - generic [ref=e331]:
+                - generic [ref=e332]: 
+                - time [ref=e333]: July 15, 2025, 6:15 PM
+              - generic [ref=e335]:
+                - generic [ref=e336]:
+                  - generic [ref=e337]:
+                    - text: 
+                    - generic [ref=e338]: Share
+                  - link "" [ref=e339] [cursor=pointer]:
+                    - /url: https://www.facebook.com/sharer.php?u=https%3A%2F%2Fmanilastandard.net%2F%3Fp%3D314616214
+                  - link "" [ref=e342] [cursor=pointer]:
+                    - /url: https://twitter.com/intent/tweet?text=Art+and+music+come+together+to+support+children+in+care&url=https%3A%2F%2Fmanilastandard.net%2F%3Fp%3D314616214&via=Manila+Standard
+                  - text: 
+                  - link "" [ref=e345] [cursor=pointer]:
+                    - /url: https://api.whatsapp.com/send?text=Art+and+music+come+together+to+support+children+in+care %0A%0A https://manilastandard.net/?p=314616214
+                  - link "" [ref=e348] [cursor=pointer]:
+                    - /url: https://www.addtoany.com/share#url=https%3A%2F%2Fmanilastandard.net%2Flifestyle%2F314616214%2Fart-and-music-come-together-to-support-children-in-care.html&title=Art%20and%20music%20come%20together%20to%20support%20children%20in%20care%20-%20Manila%20Standard
+                - text: 
+            - figure "Little Ark Foundation founder Butch Bustamante shares his personal journey of supporting children battling cancer" [ref=e352]:
+              - img "butch-Bustamante" [ref=e353]
+            - generic [ref=e356]:
+              - generic [ref=e357]:
+                - text: "Resize Text:"
+                - slider [ref=e358]: "16"
+                - text: 16px
+              - button "Play" [ref=e360] [cursor=pointer]
+              - generic [ref=e372]: "Estimated reading time: 3 minutes and 27 seconds"
+            - generic [ref=e374]:
+              - paragraph [ref=e375]: In a rooftop gathering that mixed soulful choral music with stirring works of art, the Little Ark Foundation raised funds in support of children undergoing treatment at the National Children’s Hospital.
+              - paragraph [ref=e376]: The June 29 fundraiser, held at the VCP Building along Kalayaan Avenue, brought together donors, artists, and advocates for an afternoon of compassion. With a limited raffle featuring original and limited-edition works by celebrated Filipino artists and a performance by award-winning choir Novo Concertante Manila, the event spotlighted the healing power of art and music.
+              - generic [ref=e377]:
+                - generic [ref=e378]: "- Advertisement -"
+                - insertion [ref=e379]:
+                  - iframe [ref=e381]:
+                    - iframe [ref=f8e1]:
+                      - generic [ref=f10e2]:
+                        - iframe [ref=f10e3] [cursor=pointer]
+                        - link [ref=f10e4] [cursor=pointer]:
+                          - /url: https://insight.adsrvr.org/track/clk?imp=185007a1-05ab-4f12-bcbf-3ac4edf8b0ec&ag=oijse4u&sfe=1cf36921&sig=ZjU29hj-yjxUSOdz3t86ol1IGgFDtUoQPe2AlamZDW4.&crid=a6lnqixp&cf=11060873&fq=0&t=1&td_s=manilastandard.net&rcats=&mste=&mfld=3&mssi=&mfsi=&sv=google&uhow=72&agsa=&wp=arvpIQADIcAAeFE-AAoyOvsEOn2mZO6n14eSTQ&rgz=1011&dt=PC&osf=Windows&os=Windows11&br=Chrome&svpid=pub-7821547671837563&rlangs=en&mlang=&did=&rcxt=Other&tmpc=27.850000000000023&vrtd=&osi=&osv=&daid=&dnr=0&vpb=&crrelr=&npt=&cc=3~KLUv_WPYfRZoSQLtDQAkEaEHUBirBRJPEby_OsTt-LDsQgdvaWpzZTR1SJKaoA5QiY2jBVoIYTZsbnFpeHBgqt3xGmFuaWxhSVE1Y2xCMUE0dzNiUHhINHk2eE5ZSARQYWNvNDM3NcWT4vTJJGYzMTIxM2_AApWGKzBzOTBi0AKN65UDMy1eQC1DUk02LZif7sS8lM8_CjU2NjM3pN-tobetmu8LEOuk4bJ0YXRRTVhZMGlueWs1aWRVenREZWszMTQ2MTYyMTRtZXRv7Vpua1HpsVcECb0Ts7f-MV-lrUARgn_WjEY3ga3o7Kbv33zbwm8YEHQEqBM8yBM80BMA_RMQWJk_gBQBoBQAsBSAAbgU7APIFADqFPAUkQGyFQDYFQAx_ApCxguU1t32bPjIEIdzZ27hpzTKvdJvhOQKNExNrxlLQYxM7uG-OpE8TADIKVL54g0jUP7M8FQcv8PHPRTrQyO3Mmi_HUHVm4UydZNRkOxeJawPGv8p-apF6-OIQZz9jO_Ns0wjsHgOhkfoDtOHF-I4GqfvvQW-YlwoyWKgnpuFr1onGpkj_zi5M1j2iSpwFEDUi_s6iTIHx6nPAG6fw29ugLFIEeqw&dur=2~KLUv_SMNLtZUXWUAACA_i10-AQD2yjZpIA..&durs=rAxVNP&bdc=14&testid=-CRM6-&fpa=692&pcm=3&ict=Unknown&said=8tatQMXY0inyk5idUztDeg&auct=1&tail=1&r=https://adclick.g.doubleclick.net/aclk%3Fsa%3DL%26ai%3DCd59fIem7asDDDL6i4bMPuuSosAS-p-f2dPb-j45XwI23ARABIKDAjQNg4aS6hZAayAEJqAMByAMCqgTOAk_Q2L5KWL4YeBVHMnq-l6bHn8qJVfg4i4WiTzwoCpM0ZQaJ1MgkDhjEli5HEk6swnwYjUYjqqiaB08YglCcNcafdAWdQdH0IxBrLm7POEJoBX2EqgKLPaO6pSlpGDtU26T-aqFFg36OFs8I3udkonjMk7vTgxcga8-jdpUE-aV46H16jODldZAD0Ch8TgvOaNxK2LQAhrNsFuKcYL8dafSBbu60HjZbhVcabdngcRiwJ2V8tZowEpIglpELtftgrEBdsVIp24ISEHTtfLNlIIyKbOaPERLYl7npbkFywpgkgmVk07xQh_xZ__2oNOe5t3-KU-kW-W_Xec8_L6oG11F3nlp5z_Q9Cvoz7-OpE3QRfXlXuiIA5yqkrYfZVw5srBSTyvb9FEt6klE1bdjJ9jFfOOFZzNxdUVY9hdKutGvSsNFpSmGlILFQRnW7LdmABteOgdOt7K-IW6AGIagHk9ixAqgHlNixAqgHldixAqgHpr4bqAeW2BuoB6qbsQKoB_-esQKoB9-fsQKoB_7osQKoB62-sQKoB7_TsQLYBwDSCDAIgGEQATIIioKAgICAgAg6D4BAgMCAgICAqIACqIOAEEi9_cE6WOO0m9CclJcDYAD6CwIIAYAMAaoNAlBI6g0TCOfbm9CclJcDFT5ReAAdOjIKRogOCdAVAYAXAbIXEBgMKgoxNTczMTY3MDg0UAGqGBcJYxBYOQQwwUASCjE1NzMxNjcwODQYAQ%26num%3D1%26sig%3DAOD64_3MEnkp5W0qhEVC9ix-mfk9atrgWA%26client%3Dca-pub-7821547671837563%26adurl%3Dhttps://flickreelsapp.onelink.me/9hSQ?pid=thetradedesk_int&af_siteid=manilastandard.net&c=%%TTDCAMPAIGNID%%&af_c_id=3a0s90b&af_adset_id=oijse4u&af_ad_id=a6lnqixp&af_adset=%7Bzshi_0_2911_205166_TDD%E7%9B%B4%E6%8A%95%7D&af_click_lookback=7d&af_os_version=2&af_model=&clickid=185007a1-05ab-4f12-bcbf-3ac4edf8b0ec&idfa=&af_sig=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0aGV0cmFkZWRlc2tfaW50IiwiYXVkIjpbImNsaWNrIl0sInZlciI6InYxIiwiaWF0IjoxNzkwNjk5ODA5LCJleHAiOjE3OTA3MDM0MDksImp0aSI6IjE4NTAwN2ExLTA1YWItNGYxMi1iY2JmLTNhYzRlZGY4YjBlYyIsInN1YiI6IjloU1EiLCJwYXJhbXMiOnsicGlkIjoidGhldHJhZGVkZXNrX2ludCIsImMiOiIlJVRURENBTVBBSUdOSUQlJSIsImFmX3NpdGVpZCI6Im1hbmlsYXN0YW5kYXJkLm5ldCJ9fQ.kTG1EKwpIsCnODdSlW0ZXFHNQdCecV67l0uDRx5ptQ4
+              - paragraph [ref=e382]: At the center of it all was Little Ark Foundation founder Butch Bustamante, whose personal experience inspired the organization.
+              - paragraph [ref=e383]: “Years ago, my own son went through this journey,” he said. “I know what it feels like to rely on the kindness of others just to get through each day.”
+              - insertion [ref=e385]:
+                - iframe [ref=e387]:
+                  - iframe [ref=f9e1]:
+                    - generic [ref=f11e2]:
+                      - iframe [ref=f11e3] [cursor=pointer]
+                      - link [ref=f11e4] [cursor=pointer]:
+                        - /url: https://insight.adsrvr.org/track/clk?imp=2b7a779b-d90b-4374-9107-4501ae13ab1c&ag=oijse4u&sfe=1cf36921&sig=QNBI5xVoVtN4vDm6ZVBjqutz5oWXG_diA_GHRJckRNM.&crid=vh3qme1b&cf=11060873&fq=0&t=1&td_s=manilastandard.net&rcats=&mste=&mfld=3&mssi=&mfsi=&sv=google&uhow=72&agsa=&wp=arvpIQAECrQFOHpLABS7ZS_PTQjj9vJMZbAVMg&rgz=1011&dt=PC&osf=Windows&os=Windows11&br=Chrome&svpid=pub-7821547671837563&rlangs=en&mlang=&did=&rcxt=Other&tmpc=27.850000000000023&vrtd=&osi=&osv=&daid=&dnr=0&vpb=&crrelr=&npt=&cc=3~KLUv_WPYfRZoSQK1DQAj0UJQA-CBGmBK1AwBIAmgCEqANBQYCZAlaoQAUaAECBIlwAgPdBg5VHWCqsraoCrNBlVJZBw8SMfsIeHPoyOMEDmx_UjZnzMhvHDlsOBqTww6-KDKywWpopREP2cU2Uh69aF0LNuxTcezE1ZFcnuYq8TGgMms9Nk3sU3llEBFFnHI8GiHEyxCnPwpcs-2XWPwAI6NLmammGjz2jtg7BUhwjtTuLHoRStrh3MrbEGKG60w0jmW4_kHoYaSoBpm6numpbzuk7IdeVubS9u2vn3W0q8Y9uTr301_MqM6AjKuiLHaYx9KnZdZKmQFIi9W-AAIsoOGDUv71iZTOgVLgEnVk6jZ1AxX7JongwVdLY8x_ApCxgKlpfwYUBMyxEHKe9bFiJgsGfqN3yqBhulw4Ch5jMwS5L7KaIhMAPQUqXziDSMA_czwhAa_w7c9FOtJI7cyTL8dPerNQm91P-kB7F4lSb9iehn3tGjoOGJQkv_PvXnGawTW18Hw4N5hetMKcVzM6XtvUVXMRCVZDNJzs5Cr1glC5si_YO4MdjpRBRTFdPXivj1R5mB-1GdAKubwmxsALDqKOiw.&dur=2~KLUv_SMNLtZUXWUAACA_i10-AQD2yjZpIA..&durs=rAxVNP&bdc=13&testid=-CRM6-&fpa=692&pcm=3&ict=Unknown&said=4gjujdlov_RCugy0dyZrBg&auct=1&tail=1&r=https://adclick.g.doubleclick.net/aclk%3Fsa%3DL%26ai%3DC8IjJIem7arSVEMv04dkP5fbS2Au-p-f2dPb-j45XwI23ARABIKDAjQNg4aS6hZAayAEJqAMByAMCqgTOAk_Ql1GPUS7JWeceDGFqYr4YNeyGtcB-Mk_IX1OrAtTAJCTD2tB-ApcZOHI3WEHUBR2g11AmB2fr9SIjXzxDT82gBaMDJYHz2F1rEOQ6hK1mukuzC1MyrdoLSPkPcemX7zNXoIV_176DM26wGjN7v0YIPmKwPaBwWUD0RoWwwzEmOBfq1QmYEeZqnBMAx0HjIyVH8wpb1dshTI4fmiqU4g1XynKWY5Xyw3vZ8_85ZCUaLBLOjgPIXkUEb0_dH16be6OjgAlrmVTYjBqD70PPiDNj9Pa1xbsG1s6oLGPCn1ZE70fu6LW_-iIre_A74bJxuH_IsNepileySGGAFZSLKmh5q2tSCjQMaE4OCs8Zk51ScpvZ3LVsqRC92Rcm__-vmri6eNfy2ltT_Thixn3QJpqYgPQfdL5DwLtSS3hYEyFH-9XDG8lWojrpppw1e7aABsbrlJS21eLfEKAGIagHk9ixAqgHlNixAqgHldixAqgHpr4bqAeW2BuoB6qbsQKoB_-esQKoB9-fsQKoB_7osQKoB62-sQKoB7_TsQLYBwDSCDAIgGEQATIIioKAgICAgAg6D4BAgMCAgICAqIACqIOAEEi9_cE6WP6Sn9CclJcDYAD6CwIIAYAMAaoNAlBI6g0TCNutn9CclJcDFUt6OAUdZbsUu4gOCdAVAYAXAbIXEBgMKgoxNTczMTY3MDg0UAGqGBcJYxBYOQQwwUASCjE1NzMxNjcwODQYAQ%26num%3D1%26sig%3DAOD64_1Bm8wHlGDiNtJBGQm99kmd7yIXhw%26client%3Dca-pub-7821547671837563%26adurl%3Dhttps://flickreelsapp.onelink.me/9hSQ?pid=thetradedesk_int&af_siteid=manilastandard.net&c=%%TTDCAMPAIGNID%%&af_c_id=3a0s90b&af_adset_id=oijse4u&af_ad_id=vh3qme1b&af_adset=%7Bzshi_0_2911_205166_TDD%E7%9B%B4%E6%8A%95%7D&af_click_lookback=7d&af_os_version=2&af_model=&clickid=2b7a779b-d90b-4374-9107-4501ae13ab1c&idfa=&af_sig=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0aGV0cmFkZWRlc2tfaW50IiwiYXVkIjpbImNsaWNrIl0sInZlciI6InYxIiwiaWF0IjoxNzkwNjk5ODA5LCJleHAiOjE3OTA3MDM0MDksImp0aSI6IjJiN2E3NzliLWQ5MGItNDM3NC05MTA3LTQ1MDFhZTEzYWIxYyIsInN1YiI6IjloU1EiLCJwYXJhbXMiOnsicGlkIjoidGhldHJhZGVkZXNrX2ludCIsImMiOiIlJVRURENBTVBBSUdOSUQlJSIsImFmX3NpdGVpZCI6Im1hbmlsYXN0YW5kYXJkLm5ldCJ9fQ.K2ScLurqDpuMcilvSbHyeY5pDzDyAFJm44wHyacRFiI
+              - figure "Anton del Castillo’s Adam and Eve becomes one of the featured raffle prizes supporting pediatric patients through the Little Ark Foundation" [ref=e388]
+              - figure "Jose Santos III’s ‘Untitled (Construction)’ piece is raffled off to raise funds for children undergoing treatment at the National Children’s Hospital" [ref=e390]
+              - figure "Guests view Pete Jimenez’s steel piece Kurot sa Puso, one of the artworks raffled during the Little Ark Foundation’s fundraising event" [ref=e392]
+              - paragraph [ref=e394]: That journey led to the creation of Little Ark, which supports families of pediatric patients, many of whom travel from the provinces for treatment and have no place to stay. The foundation provides non-medical, holistic support services to help children with blood diseases and cancer complete their treatment plans.
+              - paragraph [ref=e395]: “One of the highlights of the day is our art raffle,” Bustamante said, acknowledging the artists and donors who contributed works by Joven Alcala, Benjie Cabangis, Pete Jimenez, Juvenal Sansó, Toym Imao, and Rodel Tapaya, among others. The initiative helps raise awareness and sustain support for children undergoing intensive care.
+              - figure "The Novo Concertante Manila choir performs moving choral pieces during the fundraiser" [ref=e396]
+              - paragraph [ref=e398]: All proceeds from the raffle went toward the foundation’s programs, including a halfway house currently under renovation near the hospital.
+              - paragraph [ref=e399]: "Among the major winners were Christine Valencia-Batara, who took home Blue Bloom by Joven Alcala; Mico Manalo, who won Pete Jimenez’s steel piece Kurot sa Puso; and Joe Tsui, who claimed Mangrove Series #9 by Benjie Cabangis. Artist Pete Jimenez also won a piece himself, Summer Rain #1 by Cabangis, while Emma Dizon received Rodel Tapaya’s Daydreaming."
+              - paragraph [ref=e400]: Also raffled off were works by Juvenal Sansó, including A Universe of Things won by Luisa Schwartz, and Of Impalpable Beauty claimed by Manny Chan. Notably, Ricky Francisco won Adam and Eve by Anton del Castillo, and Jimenez also took home Jose Santos III’s untitled construction piece.
+              - paragraph [ref=e401]: Hema-Onco division chief Dr. Ana Marie Espaldon of the National Children’s Hospital described how the halfway house will meet a vital need.
+              - paragraph [ref=e402]: “Before, we saw families sleeping in hospital corridors, waiting for the next round of treatment,” she said. “This house is not just a building. It’s a bridge between healing and hardship.”
+              - paragraph [ref=e403]: Quezon City administrator Michael Victor Alimurung, who attended the event, praised the foundation’s work.
+              - paragraph [ref=e404]: “Government can only do so much,” he said. “That’s why we’re grateful for groups like the Little Ark Foundation who go beyond and really work to help others.”
+              - paragraph [ref=e405]: As the event wrapped up, Bustamante reminded the crowd of the cause at the heart of it all.
+              - paragraph [ref=e406]: “A warm meal, a safe place to sleep, a ride to the hospital—these small things become everything,” he said. “You don’t need to have all the answers. Just show up.”
+              - paragraph [ref=e407]: Meanwhile, the 8th Entertainment Editors’ Choice (The Eddys) has named the Little Ark Foundation as its official beneficiary.
+              - paragraph [ref=e408]: Organized by the Society of Philippine Entertainment Editors (SPEEd), The Eddys honors achievements in Philippine cinema. Part of the event’s proceeds will go to the foundation’s programs.
+              - paragraph [ref=e409]: “This year, The EDDYS goes beyond recognizing cinematic excellence by standing with children who are bravely fighting for their lives,” said SPEEd president Salve Asis.
+              - paragraph [ref=e410]: The awards night is set for July 20 at the Marriott Ballroom in Newport World Resorts, Pasay City. It will air via delayed telecast on the Kapamilya Channel and Jeepney TV and stream on iWantTFC on July 27.
+              - generic [ref=e411]:
+                - generic [ref=e412]: "- Advertisement -"
+                - insertion [ref=e413]
+            - list [ref=e417]:
+              - listitem [ref=e418]: Tags
+              - listitem [ref=e419]:
+                - link "Butch Bustamante" [ref=e420] [cursor=pointer]:
+                  - /url: https://manilastandard.net/tag/butch-bustamante
+              - listitem [ref=e421]:
+                - link "Little ark foundation" [ref=e422] [cursor=pointer]:
+                  - /url: https://manilastandard.net/tag/little-ark-foundation
+              - listitem [ref=e423]:
+                - link "National Children’s Hospital" [ref=e424] [cursor=pointer]:
+                  - /url: https://manilastandard.net/tag/national-childrens-hospital-2
+              - listitem [ref=e425]:
+                - link "VCP" [ref=e426] [cursor=pointer]:
+                  - /url: https://manilastandard.net/tag/vcp
+          - generic [ref=e428]:
+            - generic [ref=e429]:
+              - heading "RECENT STORIES" [level=4] [ref=e431]
+              - generic [ref=e433]:
+                - generic [ref=e435]:
+                  - link "Books and matcha come together in Cubao" [ref=e438] [cursor=pointer]:
+                    - /url: https://manilastandard.net/lifestyle/314797297/books-and-matcha-come-together-in-cubao.html
+                  - generic [ref=e440]:
+                    - heading [level=3] [ref=e441]:
+                      - link "Books and matcha come together in Cubao" [ref=e442] [cursor=pointer]:
+                        - /url: https://manilastandard.net/lifestyle/314797297/books-and-matcha-come-together-in-cubao.html
+                    - generic [ref=e443]:
+                      - link "Lifestyle" [ref=e444] [cursor=pointer]:
+                        - /url: https://manilastandard.net/category/lifestyle
+                      - time [ref=e447]: September 25, 2026, 3:59 PM
+                - generic [ref=e448]:
+                  - generic [ref=e451]:
+                    - heading [level=3] [ref=e452]:
+                      - 'link "Gym lover come rescue me: Staying active may lead you to your next date" [ref=e453] [cursor=pointer]':
+                        - /url: https://manilastandard.net/lifestyle/314796927/gym-lover-come-rescue-me-staying-active-may-lead-you-to-your-next-date.html
+                    - generic [ref=e454]:
+                      - link "Lifestyle" [ref=e455] [cursor=pointer]:
+                        - /url: https://manilastandard.net/category/lifestyle
+                      - time [ref=e458]: September 24, 2026, 6:40 PM
+                  - generic [ref=e461]:
+                    - heading [level=3] [ref=e462]:
+                      - link "Korean skincare finds fresh ground on local beauty scene" [ref=e463] [cursor=pointer]:
+                        - /url: https://manilastandard.net/lifestyle/314796483/korean-skincare-finds-fresh-ground-on-local-beauty-scene.html
+                    - generic [ref=e464]:
+                      - link "Lifestyle" [ref=e465] [cursor=pointer]:
+                        - /url: https://manilastandard.net/category/lifestyle
+                      - time [ref=e468]: September 23, 2026, 6:18 PM
+                  - generic [ref=e471]:
+                    - heading [level=3] [ref=e472]:
+                      - link "Not every child learns the same way" [ref=e473] [cursor=pointer]:
+                        - /url: https://manilastandard.net/lifestyle/314796506/not-every-child-learns-the-same-way.html
+                    - generic [ref=e474]:
+                      - link "Lifestyle" [ref=e475] [cursor=pointer]:
+                        - /url: https://manilastandard.net/category/lifestyle
+                      - time [ref=e478]: September 23, 2026, 6:17 PM
+                  - generic [ref=e481]:
+                    - heading [level=3] [ref=e482]:
+                      - link "Getting to the root of scalp concerns" [ref=e483] [cursor=pointer]:
+                        - /url: https://manilastandard.net/lifestyle/314796472/getting-to-the-root-of-scalp-concerns.html
+                    - generic [ref=e484]:
+                      - link "Lifestyle" [ref=e485] [cursor=pointer]:
+                        - /url: https://manilastandard.net/category/lifestyle
+                      - time [ref=e488]: September 23, 2026, 6:15 PM
+            - link [ref=e491] [cursor=pointer]:
+              - /url: ""
+              - img "spot_img" [ref=e492]
+            - generic [ref=e496]:
+              - generic: Scroll to play
+              - button "🔇 Tap for Sound" [ref=e499] [cursor=pointer]
+        - generic [ref=e509]:
+          - generic [ref=e510]: Popular Categories
+          - generic [ref=e512]:
+            - link "News" [ref=e513] [cursor=pointer]:
+              - /url: https://manilastandard.net/category/news
+            - generic [ref=e514]: 
+            - link "Business" [ref=e515] [cursor=pointer]:
+              - /url: https://manilastandard.net/category/business
+            - generic [ref=e516]: 
+            - link "Spotlight" [ref=e517] [cursor=pointer]:
+              - /url: https://manilastandard.net/category/spotlight
+            - generic [ref=e518]: 
+            - link "Sports" [ref=e519] [cursor=pointer]:
+              - /url: https://manilastandard.net/category/sports
+            - generic [ref=e520]: 
+            - link "World" [ref=e521] [cursor=pointer]:
+              - /url: https://manilastandard.net/category/news/world
+            - generic [ref=e522]: 
+            - link "Photos" [ref=e523] [cursor=pointer]:
+              - /url: https://manilastandard.net/category/gallery/news-in-photos
+            - generic [ref=e524]: 
+            - link "Showbiz" [ref=e525] [cursor=pointer]:
+              - /url: https://manilastandard.net/category/showbiz
+            - text: 
+        - generic [ref=e529]:
+          - generic [ref=e535]:
+            - generic [ref=e536]: "- Advertisement -"
+            - link [ref=e537] [cursor=pointer]:
+              - /url: ""
+              - img "spot_img" [ref=e538]
+          - generic [ref=e539]:
+            - generic:
+              - generic [ref=e540]:
+                - generic [ref=e541]: Previous article
+                - generic [ref=e542]:
+                  - link [ref=e544] [cursor=pointer]:
+                    - /url: https://manilastandard.net/tech/314615414/top-reasons-internet-outages-happen-and-what-you-should-do.html
+                    - img "Top reasons internet outages happen and what you should do" [ref=e545]
+                  - link "Top reasons internet outages happen and what you should do" [ref=e547] [cursor=pointer]:
+                    - /url: https://manilastandard.net/tech/314615414/top-reasons-internet-outages-happen-and-what-you-should-do.html
+              - generic [ref=e548]:
+                - generic [ref=e549]: Next article
+                - generic [ref=e550]:
+                  - link [ref=e552] [cursor=pointer]:
+                    - /url: https://manilastandard.net/transport/314617176/cebu-pacific-showcases-filipino-culture-at-australias-bondi-festival.html
+                    - img "Cebu Pacific showcases Filipino culture at Australia’s Bondi Festival" [ref=e553]
+                  - link "Cebu Pacific showcases Filipino culture at Australia’s Bondi Festival" [ref=e555] [cursor=pointer]:
+                    - /url: https://manilastandard.net/transport/314617176/cebu-pacific-showcases-filipino-culture-at-australias-bondi-festival.html
+    - generic [ref=e559]:
+      - link [ref=e566] [cursor=pointer]:
+        - /url: https://manilastandard.net/
+        - img "Logo" [ref=e568]
+      - generic [ref=e570]:
+        - generic [ref=e573]:
+          - generic [ref=e576]:
+            - heading [level=3] [ref=e577]:
+              - link "News" [ref=e579] [cursor=pointer]:
+                - /url: /category/news
+            - list [ref=e583]:
+              - listitem [ref=e584]:
+                - link "Politics" [ref=e585] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/news/politics
+              - listitem [ref=e587]:
+                - link "Crime/Courts" [ref=e588] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/news/crime-courts
+              - listitem [ref=e590]:
+                - link "Public Health" [ref=e591] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/news/public-health
+              - listitem [ref=e593]:
+                - link "Weather" [ref=e594] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/news/weather
+              - listitem [ref=e596]:
+                - link "World" [ref=e597] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/news/world
+              - listitem [ref=e599]:
+                - link "Features" [ref=e600] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/news/special-feature
+          - generic [ref=e604]:
+            - heading [level=3] [ref=e605]:
+              - link "Opinion" [ref=e607] [cursor=pointer]:
+                - /url: /category/opinion
+            - list [ref=e611]:
+              - listitem [ref=e612]:
+                - link "Editorial" [ref=e613] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/opinion/editorial
+              - listitem [ref=e615]:
+                - link "Columns" [ref=e616] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/opinion/columns
+          - generic [ref=e620]:
+            - heading [level=3] [ref=e621]:
+              - link "Business" [ref=e623] [cursor=pointer]:
+                - /url: /category/business
+            - list [ref=e627]:
+              - listitem [ref=e628]:
+                - link "Corporate" [ref=e629] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/business/corporate
+              - listitem [ref=e631]:
+                - link "Economy & Trade" [ref=e632] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/business/economy-trade
+              - listitem [ref=e634]:
+                - link "Stocks" [ref=e635] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/business/business-stocks
+              - listitem [ref=e637]:
+                - link "Banking & Finance" [ref=e638] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/business/banking-report
+              - listitem [ref=e640]:
+                - link "Energy" [ref=e641] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/business/energy
+              - listitem [ref=e643]:
+                - link "Agri & Mining" [ref=e644] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/business/agriculture-mining
+              - listitem [ref=e646]:
+                - link "IT & Telecom" [ref=e647] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/business/it-telecom
+              - listitem [ref=e649]:
+                - link "Transport & Tourism" [ref=e650] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/business/transport-tourism
+              - listitem [ref=e652]:
+                - link "Columns" [ref=e653] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/business/business-columns
+              - listitem [ref=e655]:
+                - link "ECONOMY REPORT 2025" [ref=e656] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/business/economy-report-2025
+        - generic [ref=e660]:
+          - generic [ref=e663]:
+            - heading [level=3] [ref=e664]:
+              - link "Sports" [ref=e666] [cursor=pointer]:
+                - /url: /category/sports
+            - list [ref=e670]:
+              - listitem [ref=e671]:
+                - link "Basketball" [ref=e672] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/sports/basketball
+              - listitem [ref=e674]:
+                - link "Volleyball" [ref=e675] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/sports/volleyball
+              - listitem [ref=e677]:
+                - link "Fightsports" [ref=e678] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/sports/fightsports
+              - listitem [ref=e680]:
+                - link "Active" [ref=e681] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/sports/active
+              - listitem [ref=e683]:
+                - link "Sports Plus" [ref=e684] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/sports/sports-plus
+              - listitem [ref=e686]:
+                - link "Columns" [ref=e687] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/sports/sports-columns
+              - listitem [ref=e689]:
+                - link "Esports" [ref=e690] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/sports/esports
+          - generic [ref=e694]:
+            - heading [level=3] [ref=e695]:
+              - link "Showbiz" [ref=e697] [cursor=pointer]:
+                - /url: /category/showbitz
+            - list [ref=e701]:
+              - listitem [ref=e702]:
+                - link "TV & Movies" [ref=e703] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/showbiz/tv-movies
+              - listitem [ref=e705]:
+                - link "Celebrity Profiles" [ref=e706] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/showbiz/celebrity-profiles
+              - listitem [ref=e708]:
+                - link "Music & Concerts" [ref=e709] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/showbiz/music-concerts
+              - listitem [ref=e711]:
+                - link "Digital Media" [ref=e712] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/showbiz/digital-media
+              - listitem [ref=e714]:
+                - link "Columns" [ref=e715] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/showbiz/showbiz-columns
+          - generic [ref=e719]:
+            - heading [level=3] [ref=e720]:
+              - link "Lifestyle" [ref=e722] [cursor=pointer]:
+                - /url: /category/lifestyle
+            - list [ref=e726]:
+              - listitem [ref=e727]:
+                - link "Cravings" [ref=e728] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/lifestyle/cravings
+              - listitem [ref=e730]:
+                - link "Culture & Media" [ref=e731] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/lifestyle/culture-media
+              - listitem [ref=e733]:
+                - link "Beauty & Fashion" [ref=e734] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/lifestyle/beauty-fashion
+              - listitem [ref=e736]:
+                - link "Travel and Leisure" [ref=e737] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/lifestyle/travel-and-leisure
+              - listitem [ref=e739]:
+                - link "Shopping" [ref=e740] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/lifestyle/shopping
+              - listitem [ref=e742]:
+                - link "Columns" [ref=e743] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/lifestyle/lifestyle-columns
+              - listitem [ref=e745]:
+                - link "Young Life" [ref=e746] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/lifestyle/young-life
+              - listitem [ref=e748]:
+                - link "Hospitality" [ref=e749] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/lifestyle/hospitality
+      - generic [ref=e752]:
+        - generic [ref=e755]:
+          - generic [ref=e758]:
+            - heading [level=3] [ref=e759]:
+              - link "Tech" [ref=e761] [cursor=pointer]:
+                - /url: /category/tech
+            - list [ref=e765]:
+              - listitem [ref=e766]:
+                - link "Gadgets" [ref=e767] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/tech/gadgets
+              - listitem [ref=e769]:
+                - link "Computers" [ref=e770] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/tech/computers
+              - listitem [ref=e772]:
+                - link "Business" [ref=e773] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/tech/business0
+              - listitem [ref=e775]:
+                - link "Tech Plus" [ref=e776] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/tech/tech-news
+              - listitem [ref=e778]:
+                - link "Games" [ref=e779] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/tech/games
+          - generic [ref=e783]:
+            - heading [level=3] [ref=e784]:
+              - link "On the Road" [ref=e786] [cursor=pointer]:
+                - /url: /category/ms-on-the-road
+            - list [ref=e790]:
+              - listitem [ref=e791]:
+                - link "Sedan" [ref=e792] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/on-the-road/sedans
+              - listitem [ref=e794]:
+                - link "SUV" [ref=e795] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/on-the-road/suvs
+              - listitem [ref=e797]:
+                - link "Truck" [ref=e798] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/on-the-road/trucks
+              - listitem [ref=e800]:
+                - link "Bike" [ref=e801] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/on-the-road/bikes
+              - listitem [ref=e803]:
+                - link "Accessories" [ref=e804] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/on-the-road/accessories
+              - listitem [ref=e806]:
+                - link "Motoring Plus" [ref=e807] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/on-the-road/motoring-plus
+          - generic [ref=e811]:
+            - heading [level=3] [ref=e812]:
+              - link "Gallery" [ref=e814] [cursor=pointer]:
+                - /url: /category/gallery
+            - list [ref=e818]:
+              - listitem [ref=e819]:
+                - link "Photos" [ref=e820] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/gallery/news-in-photos
+              - listitem [ref=e822]:
+                - link "Videos" [ref=e823] [cursor=pointer]:
+                  - /url: https://manilastandard.net/category/videos
+        - generic [ref=e826]:
+          - generic [ref=e827]:
+            - heading [level=3] [ref=e831]:
+              - link "Spotlight" [ref=e833] [cursor=pointer]:
+                - /url: /category/spotlight
+            - heading [level=3] [ref=e837]:
+              - link "Real Estate" [ref=e839] [cursor=pointer]:
+                - /url: /category/real-estate
+          - generic [ref=e840]:
+            - heading [level=3] [ref=e844]:
+              - link "Binondo" [ref=e846] [cursor=pointer]:
+                - /url: /category/binondo
+            - heading [level=3] [ref=e850]:
+              - link "Transport" [ref=e852] [cursor=pointer]:
+                - /url: /category/transport
+          - generic [ref=e853]:
+            - heading [level=3] [ref=e857]:
+              - link "Pets" [ref=e859] [cursor=pointer]:
+                - /url: /category/pets
+            - heading [level=3] [ref=e863]:
+              - link "Pop.Life" [ref=e865] [cursor=pointer]:
+                - /url: /category/pop-life
+          - heading [level=3] [ref=e870]:
+            - link "Environment and Sustainability" [ref=e872] [cursor=pointer]:
+              - /url: /category/environmental-and-sustainability
+      - heading [level=3] [ref=e877]:
+        - generic [ref=e878]:
+          - link "Advertise with us" [ref=e879] [cursor=pointer]:
+            - /url: /advertise
+          - text: "|"
+          - link "Privacy Policy" [ref=e880] [cursor=pointer]:
+            - /url: /privacy-policy
+      - generic [ref=e882]:
+        - generic [ref=e883]: © 2026 Philippine Manila Standard Publishing, Inc. All Rights Reserved.
+        - generic [ref=e889]:
+          - link "" [ref=e891] [cursor=pointer]:
+            - /url: https://www.facebook.com/ManilaStandardPH/
+          - link "" [ref=e894] [cursor=pointer]:
+            - /url: https://www.instagram.com/manilastandard/
+          - link "" [ref=e897] [cursor=pointer]:
+            - /url: https://twitter.com/MlaStandard
+          - link "" [ref=e900] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCI3NcakVB4-2VSNrXJpkA-A
+          - link "" [ref=e903] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@manilastandardph
+  - text: 

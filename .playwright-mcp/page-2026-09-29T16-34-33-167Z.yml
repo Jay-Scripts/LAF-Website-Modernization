@@ -1,0 +1,483 @@
+- generic [active] [ref=f6e1]:
+  - generic [ref=f6e2]:
+    - generic [ref=f6e3]:
+      - link [ref=f6e7] [cursor=pointer]:
+        - /url: https://www.philstar.com/
+        - img "philstar" [ref=f6e8]
+      - generic [ref=f6e11]:
+        - generic [ref=f6e12] [cursor=pointer]
+        - img "|" [ref=f6e18]
+        - generic [ref=f6e19] [cursor=pointer]
+        - img "|" [ref=f6e26]
+        - link "Subscribe" [ref=f6e27] [cursor=pointer]:
+          - /url: https://www.philstar.com/newsletter
+    - img "^" [ref=f6e29] [cursor=pointer]
+    - generic [ref=f6e33]:
+      - generic [ref=f6e34]:
+        - generic [ref=f6e35]:
+          - heading [level=2] [ref=f6e37]:
+            - link "Entertainment" [ref=f6e38] [cursor=pointer]:
+              - /url: https://www.philstar.com/entertainment
+          - heading "GMA Network’s Art Gap is ‘creativity from the heart’" [level=1] [ref=f6e40]
+          - generic [ref=f6e42]:
+            - generic [ref=f6e43]:
+              - link "KAPUSO DAY" [ref=f6e44] [cursor=pointer]:
+                - /url: https://www.philstar.com/columns/134543
+              - text: "-"
+              - link "Angel Javier Cruz" [ref=f6e45] [cursor=pointer]:
+                - /url: https://www.philstar.com/authors/1804597/angel-javier-cruz
+              - text: "- The Philippine Star"
+            - generic [ref=f6e46]: February 19, 2025 | 12:00am
+          - link [ref=f6e48] [cursor=pointer]:
+            - /url: "#comments"
+          - generic [ref=f6e51]:
+            - img "GMA Networkâ��s Art Gap is â��creativity from the heartâ��" [ref=f6e53]
+            - generic [ref=f6e54]: GMA partners with the National Children's Hospital and The Little Ark Foundation, focusing efforts on supporting pediatric patients battling leukemia and thalassemia.
+          - generic [ref=f6e56]:
+            - generic [ref=f6e58]:
+              - paragraph [ref=f6e59]: ADVERTISEMENT
+              - iframe [ref=f6e62]:
+                - generic [ref=f24e1]:
+                  - generic [ref=f24e4]:
+                    - link [ref=f24e5] [cursor=pointer]:
+                      - /url: https://adclick.g.doubleclick.net/aclk?sa=l&ai=CKTz3lui7ar-yD_ng-dIPzpzW0A3FpveniQHpnKqYsBba2R4QASCQt6ZPYOGkuoWQGqABrcj72ALIAQngAgCoAwHIAwqqBIoDT9BxNjmlis8VS8k5pS7IV1bT3PvgyRW9yk_13A1llmTb5H_UbaNu5K2p3vAzrVC_kVdyMCbcuHQYx9cKZ9NS_z7UkA2P6W_xFqO_hgsvQAtWJ6VNzdclCDzzNaDnOiwoGgYliRFfXQQE7AmZJY5MrbOUhJQCxA8lsahrXa6WdpPtnUUV0m1FZi_TlPO_pW8apfZ_cWrr0q5Q0KxPUO1oI173ImpNsUQJzpuYLQVNGiIHWTDryS6dJMZU97ngwCh89ZLeq4HdtxFnGx4j-R5DoD0xIvTkeV0FJzsIVZ8tJ4JohHOX_3ra7pukepla0dlAuMM0yaqc4l1iXpuVBOgVUWRZl2qvQsZ8AJBGsMJpgfnoixI5FRwKYLLYeeK2AzDQxRn_fV3cq2Za0ODSeg3icIxSqfJUyv_E_PTNDcAYpVK53rT6vVuu4-_g5mGUSFi6lEGBa0L5NQfCaEWp04s68CPUh7VUQ-gK84LbpdLsOKY_Ss5hr2gLUzdSR9icpEGryIy_QjiDP95W9sAE-tLe1NMF4AQBiAWtprfoWaAGLoAH5Z3hmhioB6fMsQKoB-LYsQKoB6a-G6gHzM6xAqgH89EbqAeW2BuoB6qbsQKoB_7osQKoB47OG6gHk9gbqAfw4BuoB-6WsQKoB_6esQKoB6--sQKoB5_hsQKoB6brsQKoB9XJG6gH2baxAqgHmgaoB_-esQKoB9-fsQKoB_jCsQKoB_vCsQLYBwDSCDMIgGEQARidATIIioKAgICAgAg6D4BAgMCAgICAqIACqIOAEEi9_cE6WNXl-I2clJcDYAGxCd79Pvc1vaN_gAoDmAsByAsBgAwBogw5YhQKEmNvbS5nbG9iZXRlbC5nY2FzaGoZChdjb20uZ2xvYmUuZ2Nhc2guYW5kcm9pZHgBiAEBkAEBqg0CUEjIDQHiDRMIgK35jZyUlwMVeXBeBB1OjhXa6g0TCLCR-o2clJcDFXlwXgQdTo4V2vANAogO____________AdgTA4gUA9AVAZgWAcoWAgoA-BYBgBcBshcQGAEqCjk4NDMzNDczODVQBqoYFwkAAAAAoPELQRIKOTg0MzM0NzM4NRgBshgJEgLraBguIgEA6BgBwhkCCAE&ae=1&gclid=EAIaIQobChMIv9X6jZyUlwMVeXBeBB1OjhXaEAEYASAAEgKkRvD_BwE&num=1&cid=CAQS8wEAQM4h3Pyt1P3iJv821QvPco1tqszyB2rr5j0maAmct4m7sM-cqZsTP9WG8ciyXl4-fuQMkhtChCHSreDzhD13hwqdHKuglLXtYsXWDqkXtfuT5yik077VDde5Z5huyCYSgc5NnNrnZEeEDOOlrlFETnjKdRgzQJrdGGhU3Xs29n6H02OyJyft7X8hH6UJv42Xnpw3N1H6_e4Zn41_EiA6HIVrqY2p19BJ4qJ9O1dgKSU-1q93eDTxhsNb1KKPQQExu6PPuukSbPF4OGDn8xHGQwe5E6-qr6THsosADDxDfPqdAK-LEPPqXjrSXNPXF8l6zRwYAQ&sig=AOD64_3s_qnvK9MPMONTKkRiS51PlTdK4Q&client=ca-pub-9058291854443881&rf=4&nb=9&adurl=https://new.gcash.com/services/load%3Fredirect%3Dgcash://com.mynt.gcash/app/006300110700%26gad_campaignid%3D24109765421%26gclid%3DEAIaIQobChMIv9X6jZyUlwMVeXBeBB1OjhXaEAEYASAAEgKkRvD_BwE
+                    - generic [ref=f24e8]:
+                      - link "Be the next Lucky Load Winner!" [ref=f24e13] [cursor=pointer]:
+                        - /url: https://adclick.g.doubleclick.net/aclk?sa=l&ai=CKTz3lui7ar-yD_ng-dIPzpzW0A3FpveniQHpnKqYsBba2R4QASCQt6ZPYOGkuoWQGqABrcj72ALIAQngAgCoAwHIAwqqBIoDT9BxNjmlis8VS8k5pS7IV1bT3PvgyRW9yk_13A1llmTb5H_UbaNu5K2p3vAzrVC_kVdyMCbcuHQYx9cKZ9NS_z7UkA2P6W_xFqO_hgsvQAtWJ6VNzdclCDzzNaDnOiwoGgYliRFfXQQE7AmZJY5MrbOUhJQCxA8lsahrXa6WdpPtnUUV0m1FZi_TlPO_pW8apfZ_cWrr0q5Q0KxPUO1oI173ImpNsUQJzpuYLQVNGiIHWTDryS6dJMZU97ngwCh89ZLeq4HdtxFnGx4j-R5DoD0xIvTkeV0FJzsIVZ8tJ4JohHOX_3ra7pukepla0dlAuMM0yaqc4l1iXpuVBOgVUWRZl2qvQsZ8AJBGsMJpgfnoixI5FRwKYLLYeeK2AzDQxRn_fV3cq2Za0ODSeg3icIxSqfJUyv_E_PTNDcAYpVK53rT6vVuu4-_g5mGUSFi6lEGBa0L5NQfCaEWp04s68CPUh7VUQ-gK84LbpdLsOKY_Ss5hr2gLUzdSR9icpEGryIy_QjiDP95W9sAE-tLe1NMF4AQBiAWtprfoWaAGLoAH5Z3hmhioB6fMsQKoB-LYsQKoB6a-G6gHzM6xAqgH89EbqAeW2BuoB6qbsQKoB_7osQKoB47OG6gHk9gbqAfw4BuoB-6WsQKoB_6esQKoB6--sQKoB5_hsQKoB6brsQKoB9XJG6gH2baxAqgHmgaoB_-esQKoB9-fsQKoB_jCsQKoB_vCsQLYBwDSCDMIgGEQARidATIIioKAgICAgAg6D4BAgMCAgICAqIACqIOAEEi9_cE6WNXl-I2clJcDYAGxCd79Pvc1vaN_gAoDmAsByAsBgAwBogw5YhQKEmNvbS5nbG9iZXRlbC5nY2FzaGoZChdjb20uZ2xvYmUuZ2Nhc2guYW5kcm9pZHgBiAEBkAEBqg0CUEjIDQHiDRMIgK35jZyUlwMVeXBeBB1OjhXa6g0TCLCR-o2clJcDFXlwXgQdTo4V2vANAogO____________AdgTA4gUA9AVAZgWAcoWAgoA-BYBgBcBshcQGAEqCjk4NDMzNDczODVQBqoYFwkAAAAAoPELQRIKOTg0MzM0NzM4NRgBshgJEgLraBguIgEA6BgBwhkCCAE&ae=1&gclid=EAIaIQobChMIv9X6jZyUlwMVeXBeBB1OjhXaEAEYASAAEgKkRvD_BwE&num=1&cid=CAQS8wEAQM4h3Pyt1P3iJv821QvPco1tqszyB2rr5j0maAmct4m7sM-cqZsTP9WG8ciyXl4-fuQMkhtChCHSreDzhD13hwqdHKuglLXtYsXWDqkXtfuT5yik077VDde5Z5huyCYSgc5NnNrnZEeEDOOlrlFETnjKdRgzQJrdGGhU3Xs29n6H02OyJyft7X8hH6UJv42Xnpw3N1H6_e4Zn41_EiA6HIVrqY2p19BJ4qJ9O1dgKSU-1q93eDTxhsNb1KKPQQExu6PPuukSbPF4OGDn8xHGQwe5E6-qr6THsosADDxDfPqdAK-LEPPqXjrSXNPXF8l6zRwYAQ&sig=AOD64_3s_qnvK9MPMONTKkRiS51PlTdK4Q&client=ca-pub-9058291854443881&rf=4&nb=0&adurl=https://new.gcash.com/services/load%3Fredirect%3Dgcash://com.mynt.gcash/app/006300110700%26gad_campaignid%3D24109765421%26gclid%3DEAIaIQobChMIv9X6jZyUlwMVeXBeBB1OjhXaEAEYASAAEgKkRvD_BwE
+                      - generic [ref=f24e16]:
+                        - link "Gcash" [ref=f24e18] [cursor=pointer]:
+                          - /url: https://adclick.g.doubleclick.net/aclk?sa=l&ai=CKTz3lui7ar-yD_ng-dIPzpzW0A3FpveniQHpnKqYsBba2R4QASCQt6ZPYOGkuoWQGqABrcj72ALIAQngAgCoAwHIAwqqBIoDT9BxNjmlis8VS8k5pS7IV1bT3PvgyRW9yk_13A1llmTb5H_UbaNu5K2p3vAzrVC_kVdyMCbcuHQYx9cKZ9NS_z7UkA2P6W_xFqO_hgsvQAtWJ6VNzdclCDzzNaDnOiwoGgYliRFfXQQE7AmZJY5MrbOUhJQCxA8lsahrXa6WdpPtnUUV0m1FZi_TlPO_pW8apfZ_cWrr0q5Q0KxPUO1oI173ImpNsUQJzpuYLQVNGiIHWTDryS6dJMZU97ngwCh89ZLeq4HdtxFnGx4j-R5DoD0xIvTkeV0FJzsIVZ8tJ4JohHOX_3ra7pukepla0dlAuMM0yaqc4l1iXpuVBOgVUWRZl2qvQsZ8AJBGsMJpgfnoixI5FRwKYLLYeeK2AzDQxRn_fV3cq2Za0ODSeg3icIxSqfJUyv_E_PTNDcAYpVK53rT6vVuu4-_g5mGUSFi6lEGBa0L5NQfCaEWp04s68CPUh7VUQ-gK84LbpdLsOKY_Ss5hr2gLUzdSR9icpEGryIy_QjiDP95W9sAE-tLe1NMF4AQBiAWtprfoWaAGLoAH5Z3hmhioB6fMsQKoB-LYsQKoB6a-G6gHzM6xAqgH89EbqAeW2BuoB6qbsQKoB_7osQKoB47OG6gHk9gbqAfw4BuoB-6WsQKoB_6esQKoB6--sQKoB5_hsQKoB6brsQKoB9XJG6gH2baxAqgHmgaoB_-esQKoB9-fsQKoB_jCsQKoB_vCsQLYBwDSCDMIgGEQARidATIIioKAgICAgAg6D4BAgMCAgICAqIACqIOAEEi9_cE6WNXl-I2clJcDYAGxCd79Pvc1vaN_gAoDmAsByAsBgAwBogw5YhQKEmNvbS5nbG9iZXRlbC5nY2FzaGoZChdjb20uZ2xvYmUuZ2Nhc2guYW5kcm9pZHgBiAEBkAEBqg0CUEjIDQHiDRMIgK35jZyUlwMVeXBeBB1OjhXa6g0TCLCR-o2clJcDFXlwXgQdTo4V2vANAogO____________AdgTA4gUA9AVAZgWAcoWAgoA-BYBgBcBshcQGAEqCjk4NDMzNDczODVQBqoYFwkAAAAAoPELQRIKOTg0MzM0NzM4NRgBshgJEgLraBguIgEA6BgBwhkCCAE&ae=1&gclid=EAIaIQobChMIv9X6jZyUlwMVeXBeBB1OjhXaEAEYASAAEgKkRvD_BwE&num=1&cid=CAQS8wEAQM4h3Pyt1P3iJv821QvPco1tqszyB2rr5j0maAmct4m7sM-cqZsTP9WG8ciyXl4-fuQMkhtChCHSreDzhD13hwqdHKuglLXtYsXWDqkXtfuT5yik077VDde5Z5huyCYSgc5NnNrnZEeEDOOlrlFETnjKdRgzQJrdGGhU3Xs29n6H02OyJyft7X8hH6UJv42Xnpw3N1H6_e4Zn41_EiA6HIVrqY2p19BJ4qJ9O1dgKSU-1q93eDTxhsNb1KKPQQExu6PPuukSbPF4OGDn8xHGQwe5E6-qr6THsosADDxDfPqdAK-LEPPqXjrSXNPXF8l6zRwYAQ&sig=AOD64_3s_qnvK9MPMONTKkRiS51PlTdK4Q&client=ca-pub-9058291854443881&rf=4&nb=1&adurl=https://new.gcash.com/services/load%3Fredirect%3Dgcash://com.mynt.gcash/app/006300110700%26gad_campaignid%3D24109765421%26gclid%3DEAIaIQobChMIv9X6jZyUlwMVeXBeBB1OjhXaEAEYASAAEgKkRvD_BwE
+                        - link "Open" [ref=f24e20] [cursor=pointer]:
+                          - /url: https://adclick.g.doubleclick.net/aclk?sa=l&ai=CKTz3lui7ar-yD_ng-dIPzpzW0A3FpveniQHpnKqYsBba2R4QASCQt6ZPYOGkuoWQGqABrcj72ALIAQngAgCoAwHIAwqqBIoDT9BxNjmlis8VS8k5pS7IV1bT3PvgyRW9yk_13A1llmTb5H_UbaNu5K2p3vAzrVC_kVdyMCbcuHQYx9cKZ9NS_z7UkA2P6W_xFqO_hgsvQAtWJ6VNzdclCDzzNaDnOiwoGgYliRFfXQQE7AmZJY5MrbOUhJQCxA8lsahrXa6WdpPtnUUV0m1FZi_TlPO_pW8apfZ_cWrr0q5Q0KxPUO1oI173ImpNsUQJzpuYLQVNGiIHWTDryS6dJMZU97ngwCh89ZLeq4HdtxFnGx4j-R5DoD0xIvTkeV0FJzsIVZ8tJ4JohHOX_3ra7pukepla0dlAuMM0yaqc4l1iXpuVBOgVUWRZl2qvQsZ8AJBGsMJpgfnoixI5FRwKYLLYeeK2AzDQxRn_fV3cq2Za0ODSeg3icIxSqfJUyv_E_PTNDcAYpVK53rT6vVuu4-_g5mGUSFi6lEGBa0L5NQfCaEWp04s68CPUh7VUQ-gK84LbpdLsOKY_Ss5hr2gLUzdSR9icpEGryIy_QjiDP95W9sAE-tLe1NMF4AQBiAWtprfoWaAGLoAH5Z3hmhioB6fMsQKoB-LYsQKoB6a-G6gHzM6xAqgH89EbqAeW2BuoB6qbsQKoB_7osQKoB47OG6gHk9gbqAfw4BuoB-6WsQKoB_6esQKoB6--sQKoB5_hsQKoB6brsQKoB9XJG6gH2baxAqgHmgaoB_-esQKoB9-fsQKoB_jCsQKoB_vCsQLYBwDSCDMIgGEQARidATIIioKAgICAgAg6D4BAgMCAgICAqIACqIOAEEi9_cE6WNXl-I2clJcDYAGxCd79Pvc1vaN_gAoDmAsByAsBgAwBogw5YhQKEmNvbS5nbG9iZXRlbC5nY2FzaGoZChdjb20uZ2xvYmUuZ2Nhc2guYW5kcm9pZHgBiAEBkAEBqg0CUEjIDQHiDRMIgK35jZyUlwMVeXBeBB1OjhXa6g0TCLCR-o2clJcDFXlwXgQdTo4V2vANAogO____________AdgTA4gUA9AVAZgWAcoWAgoA-BYBgBcBshcQGAEqCjk4NDMzNDczODVQBqoYFwkAAAAAoPELQRIKOTg0MzM0NzM4NRgBshgJEgLraBguIgEA6BgBwhkCCAE&ae=1&gclid=EAIaIQobChMIv9X6jZyUlwMVeXBeBB1OjhXaEAEYASAAEgKkRvD_BwE&num=1&cid=CAQS8wEAQM4h3Pyt1P3iJv821QvPco1tqszyB2rr5j0maAmct4m7sM-cqZsTP9WG8ciyXl4-fuQMkhtChCHSreDzhD13hwqdHKuglLXtYsXWDqkXtfuT5yik077VDde5Z5huyCYSgc5NnNrnZEeEDOOlrlFETnjKdRgzQJrdGGhU3Xs29n6H02OyJyft7X8hH6UJv42Xnpw3N1H6_e4Zn41_EiA6HIVrqY2p19BJ4qJ9O1dgKSU-1q93eDTxhsNb1KKPQQExu6PPuukSbPF4OGDn8xHGQwe5E6-qr6THsosADDxDfPqdAK-LEPPqXjrSXNPXF8l6zRwYAQ&sig=AOD64_3s_qnvK9MPMONTKkRiS51PlTdK4Q&client=ca-pub-9058291854443881&rf=4&nb=8&adurl=https://new.gcash.com/services/load%3Fredirect%3Dgcash://com.mynt.gcash/app/006300110700%26gad_campaignid%3D24109765421%26gclid%3DEAIaIQobChMIv9X6jZyUlwMVeXBeBB1OjhXaEAEYASAAEgKkRvD_BwE
+                        - link [ref=f24e21] [cursor=pointer]:
+                          - /url: https://adclick.g.doubleclick.net/aclk?sa=l&ai=CKTz3lui7ar-yD_ng-dIPzpzW0A3FpveniQHpnKqYsBba2R4QASCQt6ZPYOGkuoWQGqABrcj72ALIAQngAgCoAwHIAwqqBIoDT9BxNjmlis8VS8k5pS7IV1bT3PvgyRW9yk_13A1llmTb5H_UbaNu5K2p3vAzrVC_kVdyMCbcuHQYx9cKZ9NS_z7UkA2P6W_xFqO_hgsvQAtWJ6VNzdclCDzzNaDnOiwoGgYliRFfXQQE7AmZJY5MrbOUhJQCxA8lsahrXa6WdpPtnUUV0m1FZi_TlPO_pW8apfZ_cWrr0q5Q0KxPUO1oI173ImpNsUQJzpuYLQVNGiIHWTDryS6dJMZU97ngwCh89ZLeq4HdtxFnGx4j-R5DoD0xIvTkeV0FJzsIVZ8tJ4JohHOX_3ra7pukepla0dlAuMM0yaqc4l1iXpuVBOgVUWRZl2qvQsZ8AJBGsMJpgfnoixI5FRwKYLLYeeK2AzDQxRn_fV3cq2Za0ODSeg3icIxSqfJUyv_E_PTNDcAYpVK53rT6vVuu4-_g5mGUSFi6lEGBa0L5NQfCaEWp04s68CPUh7VUQ-gK84LbpdLsOKY_Ss5hr2gLUzdSR9icpEGryIy_QjiDP95W9sAE-tLe1NMF4AQBiAWtprfoWaAGLoAH5Z3hmhioB6fMsQKoB-LYsQKoB6a-G6gHzM6xAqgH89EbqAeW2BuoB6qbsQKoB_7osQKoB47OG6gHk9gbqAfw4BuoB-6WsQKoB_6esQKoB6--sQKoB5_hsQKoB6brsQKoB9XJG6gH2baxAqgHmgaoB_-esQKoB9-fsQKoB_jCsQKoB_vCsQLYBwDSCDMIgGEQARidATIIioKAgICAgAg6D4BAgMCAgICAqIACqIOAEEi9_cE6WNXl-I2clJcDYAGxCd79Pvc1vaN_gAoDmAsByAsBgAwBogw5YhQKEmNvbS5nbG9iZXRlbC5nY2FzaGoZChdjb20uZ2xvYmUuZ2Nhc2guYW5kcm9pZHgBiAEBkAEBqg0CUEjIDQHiDRMIgK35jZyUlwMVeXBeBB1OjhXa6g0TCLCR-o2clJcDFXlwXgQdTo4V2vANAogO____________AdgTA4gUA9AVAZgWAcoWAgoA-BYBgBcBshcQGAEqCjk4NDMzNDczODVQBqoYFwkAAAAAoPELQRIKOTg0MzM0NzM4NRgBshgJEgLraBguIgEA6BgBwhkCCAE&ae=1&gclid=EAIaIQobChMIv9X6jZyUlwMVeXBeBB1OjhXaEAEYASAAEgKkRvD_BwE&num=1&cid=CAQS8wEAQM4h3Pyt1P3iJv821QvPco1tqszyB2rr5j0maAmct4m7sM-cqZsTP9WG8ciyXl4-fuQMkhtChCHSreDzhD13hwqdHKuglLXtYsXWDqkXtfuT5yik077VDde5Z5huyCYSgc5NnNrnZEeEDOOlrlFETnjKdRgzQJrdGGhU3Xs29n6H02OyJyft7X8hH6UJv42Xnpw3N1H6_e4Zn41_EiA6HIVrqY2p19BJ4qJ9O1dgKSU-1q93eDTxhsNb1KKPQQExu6PPuukSbPF4OGDn8xHGQwe5E6-qr6THsosADDxDfPqdAK-LEPPqXjrSXNPXF8l6zRwYAQ&sig=AOD64_3s_qnvK9MPMONTKkRiS51PlTdK4Q&client=ca-pub-9058291854443881&rf=4&nb=8&adurl=https://new.gcash.com/services/load%3Fredirect%3Dgcash://com.mynt.gcash/app/006300110700%26gad_campaignid%3D24109765421%26gclid%3DEAIaIQobChMIv9X6jZyUlwMVeXBeBB1OjhXaEAEYASAAEgKkRvD_BwE
+                  - generic [ref=f24e27]:
+                    - link [ref=f24e29] [cursor=pointer]:
+                      - /url: https://adssettings.google.com/whythisad?source=display&reasons=ARXetypBReOFDrt4tBPB-9sRbjSTSHLZpNogRUoahKhoHl6jYw_pABxIDM2MyQu09dueK-NVr5Yb3jph8knrf_jjkAgmtu-yd1wYQa7nEwx6e6MZ5bo4SWHdphWQIFr_gbntW0WJAwumgVnfeLKxbRQ3KYzb4Q01IzElNlhz2KztH8mmFZcpvtGB55pNTwel2K0m7cKGlHEf134fZMw4sw2GGCQmmp5fOHnkYe2hj26Dr9GCBHnxOb9I-QrMmnKSjSXVW8w9TRbJheEN1rzygvmhtckTDzKV3QJXMCTQOy-Zu0yi7-sCKOWZhKJuKK5N9Gb3HhdXwfAnMCeoO52sdAISHtGTtCQAdGkWTA1rvI9GcZIr6jHoSQ16Wnub28MT4pYuIa7wEyuHW5fZhgMVNZ5v3b7V6xQnSkx32GvZ5PUDr5kzOg_bmy5oHRFdXNU5gcFL0IlCo94E6cZ1-1ExgRbjSM8lSTfMGiIhwp6ollEbyhtcdEW7ZcqAUdEkr7dpJnbKVgAV2fKjfouZTgSxj9geiDJw4Jty9myvY8ZpdlRsbCauiHtJqKNsZzc0GX5Q3DGw1Hk6HBUYGKlLsccygbRGglydYIvUBlmr185QC_biT6KYZ2cv6xbT8nQzqy9RdbgfLtkb9zQfTcPsj_R1fIhaN-gecoAgMw3ALpzhO6cA2KSpXpzcCPcoKS4jltk_FraDwmiFR_80KfGhSvEuAza2DrU7lIBK1WE9Hta_MJbcwz1JJAcaxabmhk5ZzXEukBjOtYkls_GQT5V7j_G8TTHOspascY2U9mZ1GF9QmOb3GMXo8JCPa8RjbHQmVx_l4PuO-Oz4hacll1Lsc3eSHRWXNtAYZIyVsrYLLQL0RXy9XfA1-t685DIUC_j6zEI8mHRohrw2f8IirgPR1eUNzAZjUhGZygKpm-8rPEKoyNM3g8bWuHmeyxSoPRoDl0_tOnQZrDy_tkKWfWbXTTuk34s5ku4q53URDSCOaS0P8nqN3Wh24sR_qywG2Yi0ioMm2XIffREdyHEWIXUANQiVPG4tyfoxFIL66jaxZnQyrAwBSKwDUigyYcGvK6cy0746cCbqlPp1lCOwTNbNkVwcRmZOHV4koWYLakoPm-TnjD-8B_4-WuA1m3P_VYnI0ZU3bJGnJZEKaqroeqj5vnUd38kPTjq0KUOUk6ngyHo8fOy-ssJrhAwT5XtNBIV3Bwt7rOyfLuQFREOh6VZTxZUZPLZB9Ug5B3yyMLuyEKtZI3VdQ8DWbo6zbiWJrFTXyqon25X8nwVjGwJRMsiVCGZY4-g4G1V53J0nr9d456hC4KMN3YYJdiTcEfyl9dSpqAqwsjr2y5QGUhKDS19u-IERLlrR2sHXjNUML5mT5q8s0DV6FNTC8EROjbNNpPypJ1-oJq1H5IUfSPBsMZvwKozI1rpKEayhojB2qEIu63f40AbL_GvOQOyQWPsBY4Iea0qh290VOgEOxNXfj2gGnuUPp8YIqqVVZOebeM23PcffmpvYHoghPJFgyfBA4AQMZg1KjUe9ia21MxFNkLwnICyFg_TPRIZqmDmosTz6vmDJoWh-g3_OWUNw6v5oa0S23GPhVf_Zegb9X0J0dChdi-UIeJq9-7St08Me7rgSYE6JbF-tTo-hZ4B0Jxc8Itqss__d5vnc1olbTexk7EvmxX6zQtqixRESqvhUii9g8Lw5wOQT9-lclOAggpVmmHTwiErA9IVb3N8t_IuSjH8V51S0LYCudRzE3FDGm3_QxddXuuM8kx3dPi_KibhaRgLi2rp9DZVRHEFgqtyh9FdDLKzX4YoP--iL8HqOUcLvH4ZfmD46ok4gVuMfuqhTKpcJFl-r_ijxIfP0Yc_U3gKaWz_6YTG1-NJP9LeOwLy38tbWNVZ4UAsIhFP_uTnr06kC4VseUTjhjgdZjgNuRz_avYXZzNyQKxHfrVpoBKY8agCcbX_TUtw7bFmM7RBXd9t_PxI1QDHjcr4YBKyoYqQWe7fw-ekGfzYmp1ILvA2kHFuojSb4atycxIcUfykgamrAd0uYJF78RbjVxGamm__NwDMTue9ApaMI2NnrJxmTe1P-iwCPSjKLnABvvsMMdbfV_LLPoXM8fdfmMAgqFAk-zSvKuuLe4kbrj-7fA_uYwLrrogA5yptqU1AXefyUBKS9gaFT1pUgIZXAKBoiPaecCTO8Wzgk_gcGBRWCJ9m3oGR-Zc9A_LiYGOyuDfy4qk_5khxvRmo_yw0AvNYGGSKjNNSErzcAsunHJtdu4D3myGwMlvof2pzZ7lMusz91FU5gIvBb-nVz7NMlH-1hjRy-5cE5BN-v8HK9kVKKUm53FOAe6pm8ctRk0kn19PjO8v-c3HugdK9VdV7RPDbuDPz7HGZ4bQXw6wOZmdk-8Ztv4-2Er0kx9a4y32cWaFCKmiOw79tIteTONickcQg97Ms6G0HUMzxqXcw5667T58imbECLU18eojUBRN_vd4x-XMXIn4RYDQJzjdyJck9i7NRgkQ8WLzfXU-6KwnA2iCpIOsdCbh56LMsSSiSF_oHjeP_xgRVwpav9CKfdiOdQoNsIaMxRs9wXLig3KyPo7dhXM2QuLj2UTPDrVQTGR1meTy6Z9hom-QZujAAE20HhfZmfqlCxLZ4aNwl-mtTaXf41m-pHjA4kkTOIt6ak8a1oWVNfSewpmXlgsmFdqc3w6fq4cDDYEVZCjI9HzGQKblnClXnmdzTFypypFaM0quFqS6Q65CUrd0gYN0aDRvaNFXQwMFh4v0SlzOrHjxoFh1DieU0nczAdwVZ0q2q5v_BiOP0hrTMhu_lOGXc_s_zROPZcdDVhdRtCRHxCC2hY2zqfONzguw49Iiao3TjWpYs5MsQVptARROQa4Uh8ukH5xx7BNWrMTRtbXo-b5tXRKtzMnD5PNT0pVtw4R3JqvPM2ZNO6VqUQ8Mw920GJ62FWfmPSncVlaUBa5RB33LF_K-kcP7iRz15Ig9CrzYp0porfiuV_&opi=122715837
+                    - link [ref=f24e33] [cursor=pointer]:
+                      - /url: https://adssettings.google.com/whythisad?source=display&reasons=ARXetypBReOFDrt4tBPB-9sRbjSTSHLZpNogRUoahKhoHl6jYw_pABxIDM2MyQu09dueK-NVr5Yb3jph8knrf_jjkAgmtu-yd1wYQa7nEwx6e6MZ5bo4SWHdphWQIFr_gbntW0WJAwumgVnfeLKxbRQ3KYzb4Q01IzElNlhz2KztH8mmFZcpvtGB55pNTwel2K0m7cKGlHEf134fZMw4sw2GGCQmmp5fOHnkYe2hj26Dr9GCBHnxOb9I-QrMmnKSjSXVW8w9TRbJheEN1rzygvmhtckTDzKV3QJXMCTQOy-Zu0yi7-sCKOWZhKJuKK5N9Gb3HhdXwfAnMCeoO52sdAISHtGTtCQAdGkWTA1rvI9GcZIr6jHoSQ16Wnub28MT4pYuIa7wEyuHW5fZhgMVNZ5v3b7V6xQnSkx32GvZ5PUDr5kzOg_bmy5oHRFdXNU5gcFL0IlCo94E6cZ1-1ExgRbjSM8lSTfMGiIhwp6ollEbyhtcdEW7ZcqAUdEkr7dpJnbKVgAV2fKjfouZTgSxj9geiDJw4Jty9myvY8ZpdlRsbCauiHtJqKNsZzc0GX5Q3DGw1Hk6HBUYGKlLsccygbRGglydYIvUBlmr185QC_biT6KYZ2cv6xbT8nQzqy9RdbgfLtkb9zQfTcPsj_R1fIhaN-gecoAgMw3ALpzhO6cA2KSpXpzcCPcoKS4jltk_FraDwmiFR_80KfGhSvEuAza2DrU7lIBK1WE9Hta_MJbcwz1JJAcaxabmhk5ZzXEukBjOtYkls_GQT5V7j_G8TTHOspascY2U9mZ1GF9QmOb3GMXo8JCPa8RjbHQmVx_l4PuO-Oz4hacll1Lsc3eSHRWXNtAYZIyVsrYLLQL0RXy9XfA1-t685DIUC_j6zEI8mHRohrw2f8IirgPR1eUNzAZjUhGZygKpm-8rPEKoyNM3g8bWuHmeyxSoPRoDl0_tOnQZrDy_tkKWfWbXTTuk34s5ku4q53URDSCOaS0P8nqN3Wh24sR_qywG2Yi0ioMm2XIffREdyHEWIXUANQiVPG4tyfoxFIL66jaxZnQyrAwBSKwDUigyYcGvK6cy0746cCbqlPp1lCOwTNbNkVwcRmZOHV4koWYLakoPm-TnjD-8B_4-WuA1m3P_VYnI0ZU3bJGnJZEKaqroeqj5vnUd38kPTjq0KUOUk6ngyHo8fOy-ssJrhAwT5XtNBIV3Bwt7rOyfLuQFREOh6VZTxZUZPLZB9Ug5B3yyMLuyEKtZI3VdQ8DWbo6zbiWJrFTXyqon25X8nwVjGwJRMsiVCGZY4-g4G1V53J0nr9d456hC4KMN3YYJdiTcEfyl9dSpqAqwsjr2y5QGUhKDS19u-IERLlrR2sHXjNUML5mT5q8s0DV6FNTC8EROjbNNpPypJ1-oJq1H5IUfSPBsMZvwKozI1rpKEayhojB2qEIu63f40AbL_GvOQOyQWPsBY4Iea0qh290VOgEOxNXfj2gGnuUPp8YIqqVVZOebeM23PcffmpvYHoghPJFgyfBA4AQMZg1KjUe9ia21MxFNkLwnICyFg_TPRIZqmDmosTz6vmDJoWh-g3_OWUNw6v5oa0S23GPhVf_Zegb9X0J0dChdi-UIeJq9-7St08Me7rgSYE6JbF-tTo-hZ4B0Jxc8Itqss__d5vnc1olbTexk7EvmxX6zQtqixRESqvhUii9g8Lw5wOQT9-lclOAggpVmmHTwiErA9IVb3N8t_IuSjH8V51S0LYCudRzE3FDGm3_QxddXuuM8kx3dPi_KibhaRgLi2rp9DZVRHEFgqtyh9FdDLKzX4YoP--iL8HqOUcLvH4ZfmD46ok4gVuMfuqhTKpcJFl-r_ijxIfP0Yc_U3gKaWz_6YTG1-NJP9LeOwLy38tbWNVZ4UAsIhFP_uTnr06kC4VseUTjhjgdZjgNuRz_avYXZzNyQKxHfrVpoBKY8agCcbX_TUtw7bFmM7RBXd9t_PxI1QDHjcr4YBKyoYqQWe7fw-ekGfzYmp1ILvA2kHFuojSb4atycxIcUfykgamrAd0uYJF78RbjVxGamm__NwDMTue9ApaMI2NnrJxmTe1P-iwCPSjKLnABvvsMMdbfV_LLPoXM8fdfmMAgqFAk-zSvKuuLe4kbrj-7fA_uYwLrrogA5yptqU1AXefyUBKS9gaFT1pUgIZXAKBoiPaecCTO8Wzgk_gcGBRWCJ9m3oGR-Zc9A_LiYGOyuDfy4qk_5khxvRmo_yw0AvNYGGSKjNNSErzcAsunHJtdu4D3myGwMlvof2pzZ7lMusz91FU5gIvBb-nVz7NMlH-1hjRy-5cE5BN-v8HK9kVKKUm53FOAe6pm8ctRk0kn19PjO8v-c3HugdK9VdV7RPDbuDPz7HGZ4bQXw6wOZmdk-8Ztv4-2Er0kx9a4y32cWaFCKmiOw79tIteTONickcQg97Ms6G0HUMzxqXcw5667T58imbECLU18eojUBRN_vd4x-XMXIn4RYDQJzjdyJck9i7NRgkQ8WLzfXU-6KwnA2iCpIOsdCbh56LMsSSiSF_oHjeP_xgRVwpav9CKfdiOdQoNsIaMxRs9wXLig3KyPo7dhXM2QuLj2UTPDrVQTGR1meTy6Z9hom-QZujAAE20HhfZmfqlCxLZ4aNwl-mtTaXf41m-pHjA4kkTOIt6ak8a1oWVNfSewpmXlgsmFdqc3w6fq4cDDYEVZCjI9HzGQKblnClXnmdzTFypypFaM0quFqS6Q65CUrd0gYN0aDRvaNFXQwMFh4v0SlzOrHjxoFh1DieU0nczAdwVZ0q2q5v_BiOP0hrTMhu_lOGXc_s_zROPZcdDVhdRtCRHxCC2hY2zqfONzguw49Iiao3TjWpYs5MsQVptARROQa4Uh8ukH5xx7BNWrMTRtbXo-b5tXRKtzMnD5PNT0pVtw4R3JqvPM2ZNO6VqUQ8Mw920GJ62FWfmPSncVlaUBa5RB33LF_K-kcP7iRz15Ig9CrzYp0porfiuV_&opi=122715837
+                  - generic [aria-hidden] [ref=f24e36] [cursor=pointer]
+                  - generic [ref=f24e49]:
+                    - generic [ref=f24e50] [cursor=pointer]
+                    - generic [ref=f24e54]: Ads by
+                    - generic [ref=f24e59]:
+                      - generic [ref=f24e60]: Send feedback
+                      - link [ref=f24e64] [cursor=pointer]:
+                        - /url: https://adssettings.google.com/whythisad?source=display&reasons=ARXetypBReOFDrt4tBPB-9sRbjSTSHLZpNogRUoahKhoHl6jYw_pABxIDM2MyQu09dueK-NVr5Yb3jph8knrf_jjkAgmtu-yd1wYQa7nEwx6e6MZ5bo4SWHdphWQIFr_gbntW0WJAwumgVnfeLKxbRQ3KYzb4Q01IzElNlhz2KztH8mmFZcpvtGB55pNTwel2K0m7cKGlHEf134fZMw4sw2GGCQmmp5fOHnkYe2hj26Dr9GCBHnxOb9I-QrMmnKSjSXVW8w9TRbJheEN1rzygvmhtckTDzKV3QJXMCTQOy-Zu0yi7-sCKOWZhKJuKK5N9Gb3HhdXwfAnMCeoO52sdAISHtGTtCQAdGkWTA1rvI9GcZIr6jHoSQ16Wnub28MT4pYuIa7wEyuHW5fZhgMVNZ5v3b7V6xQnSkx32GvZ5PUDr5kzOg_bmy5oHRFdXNU5gcFL0IlCo94E6cZ1-1ExgRbjSM8lSTfMGiIhwp6ollEbyhtcdEW7ZcqAUdEkr7dpJnbKVgAV2fKjfouZTgSxj9geiDJw4Jty9myvY8ZpdlRsbCauiHtJqKNsZzc0GX5Q3DGw1Hk6HBUYGKlLsccygbRGglydYIvUBlmr185QC_biT6KYZ2cv6xbT8nQzqy9RdbgfLtkb9zQfTcPsj_R1fIhaN-gecoAgMw3ALpzhO6cA2KSpXpzcCPcoKS4jltk_FraDwmiFR_80KfGhSvEuAza2DrU7lIBK1WE9Hta_MJbcwz1JJAcaxabmhk5ZzXEukBjOtYkls_GQT5V7j_G8TTHOspascY2U9mZ1GF9QmOb3GMXo8JCPa8RjbHQmVx_l4PuO-Oz4hacll1Lsc3eSHRWXNtAYZIyVsrYLLQL0RXy9XfA1-t685DIUC_j6zEI8mHRohrw2f8IirgPR1eUNzAZjUhGZygKpm-8rPEKoyNM3g8bWuHmeyxSoPRoDl0_tOnQZrDy_tkKWfWbXTTuk34s5ku4q53URDSCOaS0P8nqN3Wh24sR_qywG2Yi0ioMm2XIffREdyHEWIXUANQiVPG4tyfoxFIL66jaxZnQyrAwBSKwDUigyYcGvK6cy0746cCbqlPp1lCOwTNbNkVwcRmZOHV4koWYLakoPm-TnjD-8B_4-WuA1m3P_VYnI0ZU3bJGnJZEKaqroeqj5vnUd38kPTjq0KUOUk6ngyHo8fOy-ssJrhAwT5XtNBIV3Bwt7rOyfLuQFREOh6VZTxZUZPLZB9Ug5B3yyMLuyEKtZI3VdQ8DWbo6zbiWJrFTXyqon25X8nwVjGwJRMsiVCGZY4-g4G1V53J0nr9d456hC4KMN3YYJdiTcEfyl9dSpqAqwsjr2y5QGUhKDS19u-IERLlrR2sHXjNUML5mT5q8s0DV6FNTC8EROjbNNpPypJ1-oJq1H5IUfSPBsMZvwKozI1rpKEayhojB2qEIu63f40AbL_GvOQOyQWPsBY4Iea0qh290VOgEOxNXfj2gGnuUPp8YIqqVVZOebeM23PcffmpvYHoghPJFgyfBA4AQMZg1KjUe9ia21MxFNkLwnICyFg_TPRIZqmDmosTz6vmDJoWh-g3_OWUNw6v5oa0S23GPhVf_Zegb9X0J0dChdi-UIeJq9-7St08Me7rgSYE6JbF-tTo-hZ4B0Jxc8Itqss__d5vnc1olbTexk7EvmxX6zQtqixRESqvhUii9g8Lw5wOQT9-lclOAggpVmmHTwiErA9IVb3N8t_IuSjH8V51S0LYCudRzE3FDGm3_QxddXuuM8kx3dPi_KibhaRgLi2rp9DZVRHEFgqtyh9FdDLKzX4YoP--iL8HqOUcLvH4ZfmD46ok4gVuMfuqhTKpcJFl-r_ijxIfP0Yc_U3gKaWz_6YTG1-NJP9LeOwLy38tbWNVZ4UAsIhFP_uTnr06kC4VseUTjhjgdZjgNuRz_avYXZzNyQKxHfrVpoBKY8agCcbX_TUtw7bFmM7RBXd9t_PxI1QDHjcr4YBKyoYqQWe7fw-ekGfzYmp1ILvA2kHFuojSb4atycxIcUfykgamrAd0uYJF78RbjVxGamm__NwDMTue9ApaMI2NnrJxmTe1P-iwCPSjKLnABvvsMMdbfV_LLPoXM8fdfmMAgqFAk-zSvKuuLe4kbrj-7fA_uYwLrrogA5yptqU1AXefyUBKS9gaFT1pUgIZXAKBoiPaecCTO8Wzgk_gcGBRWCJ9m3oGR-Zc9A_LiYGOyuDfy4qk_5khxvRmo_yw0AvNYGGSKjNNSErzcAsunHJtdu4D3myGwMlvof2pzZ7lMusz91FU5gIvBb-nVz7NMlH-1hjRy-5cE5BN-v8HK9kVKKUm53FOAe6pm8ctRk0kn19PjO8v-c3HugdK9VdV7RPDbuDPz7HGZ4bQXw6wOZmdk-8Ztv4-2Er0kx9a4y32cWaFCKmiOw79tIteTONickcQg97Ms6G0HUMzxqXcw5667T58imbECLU18eojUBRN_vd4x-XMXIn4RYDQJzjdyJck9i7NRgkQ8WLzfXU-6KwnA2iCpIOsdCbh56LMsSSiSF_oHjeP_xgRVwpav9CKfdiOdQoNsIaMxRs9wXLig3KyPo7dhXM2QuLj2UTPDrVQTGR1meTy6Z9hom-QZujAAE20HhfZmfqlCxLZ4aNwl-mtTaXf41m-pHjA4kkTOIt6ak8a1oWVNfSewpmXlgsmFdqc3w6fq4cDDYEVZCjI9HzGQKblnClXnmdzTFypypFaM0quFqS6Q65CUrd0gYN0aDRvaNFXQwMFh4v0SlzOrHjxoFh1DieU0nczAdwVZ0q2q5v_BiOP0hrTMhu_lOGXc_s_zROPZcdDVhdRtCRHxCC2hY2zqfONzguw49Iiao3TjWpYs5MsQVptARROQa4Uh8ukH5xx7BNWrMTRtbXo-b5tXRKtzMnD5PNT0pVtw4R3JqvPM2ZNO6VqUQ8Mw920GJ62FWfmPSncVlaUBa5RB33LF_K-kcP7iRz15Ig9CrzYp0porfiuV_&opi=122715837
+                        - generic [ref=f24e65]: Why this ad?
+                  - generic [ref=f24e68]:
+                    - generic [ref=f24e69] [cursor=pointer]: Ad covered content
+                    - generic [ref=f24e72] [cursor=pointer]: Not interested in this ad
+                    - generic [ref=f24e75] [cursor=pointer]: Seen this ad multiple times
+                    - generic [ref=f24e78] [cursor=pointer]: Ad was inappropriate
+                  - generic [ref=f24e81]: Thanks. Feedback improves Google ads
+                  - generic [ref=f24e87]: Ad closed by
+            - paragraph [ref=f6e63]: GMA Network deeply values creativity and regards employees as its greatest assets. We continuously encourage our fellow Kapuso to explore and discover their unique gifts, understanding that by doing so, they not only enrich their own lives but also elevate the lives of those around them.
+            - paragraph [ref=f6e64]: For nearly a quarter of a century, GMA Network’s Art Gap has served as a platform showcasing the creativity of our Kapuso employees and artists. What began as a modest painting exhibit in 2001 has blossomed into an annual event that embraces a wide range of artistic media, including painting, photography, songwriting, video production, fashion, and sustainable design.
+            - generic [ref=f6e65]: The GMA Network initiative 'Art Gap Gives Back' brings together 30 pediatric patients for an afternoon of art therapy, a practice highly regarded by pediatric oncologists.
+            - paragraph [ref=f6e68]: As we approach GMA Network’s 75th anniversary, we launched “Art Gap Gives Back,” an initiative born of our desire to integrate artistic expression with social responsibility. We partnered with the National Children’s Hospital and The Little Ark Foundation, focusing our efforts on supporting pediatric patients battling leukemia and thalassemia. Little Ark, which was initiated by a former GMA employee whose son bravely overcame leukemia following a bone marrow transplant, provides crucial support including housing, transportation, meals, and therapeutic activities to children under the age of 19.
+            - generic [ref=f6e69]: Art therapy is a psychological tool that allows young patients to process and express their emotions in a healing environment.
+            - paragraph [ref=f6e72]: The initiative brought together 30 pediatric patients for an afternoon of art therapy — a practice highly regarded by pediatric oncologists as a psychological tool that allows young patients to process and express their emotions in a healing environment.
+            - generic [ref=f6e73]: Beauty queen and host Shuvee Etrata helps one of the kids with her artwork.
+            - paragraph [ref=f6e76]: “This is the first time GMA has partnered with the National Children’s Hospital and the Little Ark Foundation. We’re very happy and fortunate to be part of it,” said Butch Bustamante, the founder of Little Ark.
+            - generic [ref=f6e77]: "'Art Gap Gives Back' is launched as GMA approaches its 75th anniversary."
+            - paragraph [ref=f6e80]: The event was powered by the incredible generosity of our Sparkle artists, who found unique ways to contribute. Beauty queen and host Shuvee Etrata said, “As artists, mayroon kaming platform to help other people, hindi lang naman financial din ‘yung tulong, bigyan natin sila ng kasiyahan. Now is the time to help.”
+            - generic [ref=f6e81]: Little Ark foundation founder Butch Bustamante.
+            - paragraph [ref=f6e84]: The spirit of giving was vibrantly alive as Kapuso actor and singer Kim Perez got the kids dancing with his songs. Another generous donor was Kapuso actress Zonia Mejia.
+            - generic [ref=f6e85]: The event is powered by the incredible generosity of Sparkle artists Kim Perez and Shuvee Entrata. Kapuso actress Zonia Mejia is another generous donor.
+            - paragraph [ref=f6e88]: Yet another thread that made it special was that our own employees volunteered. At GMA, we believe that our people possess a deep reservoir of creativity. We are dedicated to their holistic growth — professionally, personally, and as pillars of the community. From engineers to researchers, these individuals shared their expertise, led by Agatha Guidaben from GMA Integrated News Research, who taught the children valuable drawing techniques. Speaking with these devoted volunteers, it was clear how deeply Art Gap has influenced their lives.
+            - generic [ref=f6e89]: "Raizen, a young boy battling acute lymphoblastic leukemia, paints a gavel, symbolizing his dreams to defend the weak, an aspiration insipired by 'Lilet Matias: Attorney-At-Law' star Jo Berry."
+            - paragraph [ref=f6e92]: "The kids’ artworks were displayed at GMA Network, with proceeds going directly to the young artists. Among the masterpieces was a painting by Raizen, a young boy battling acute lymphoblastic leukemia. He painted a gavel, symbolizing his dream to defend the weak — an aspiration inspired by Kapuso actress Jo Berry and her role in the highly acclaimed series, “Lilet Matias: Attorney-At-Law.”"
+            - generic [ref=f6e93]: Little Ark's Donasco with Agatha Guidaben from GMA Integrated News Research.
+            - paragraph [ref=f6e96]: “Gusto ko po ipagtanggol po ‘yung hindi po nila kayang ipagtanggol, ‘yung sarili nila, doon po ako na-inspire sa kanya. Sabi ko kailangan talagang maging matapang kapag may pinaglalaban tayo,” Raizen shared.
+            - paragraph [ref=f6e97]: Jo Berry responded with heartfelt gratitude, saying, “Ako rin, nadagdagan yung inspiration ko. Thank you na ganyan ‘yung willpower mo na ituloy ‘yung pangarap mo.”
+            - generic [ref=f6e98]: "The cast of 'Lilet Matias: Attorney-At-Law' organizes a surprise birthday party for Raizen, creating a memory that will last a lifetime."
+            - paragraph [ref=f6e101]: Adding a touch of joy to the event, the cast organized a surprise birthday party for Raizen, creating a memory that will last a lifetime.
+            - paragraph [ref=f6e102]: What a blessing it was to spend time with these brave young warriors and their families. I came away deeply moved. It was an emotional rollercoaster — heartwarming and soul-enriching. In the face of uncertainty and tough challenges, there’s so much hope in that space.
+            - paragraph
+          - link [ref=f6e104] [cursor=pointer]:
+            - /url: "#comments"
+          - link [ref=f6e108] [cursor=pointer]:
+            - /url: https://www.philstar.com/tags/gma-network
+            - heading "GMA NETWORK" [level=4] [ref=f6e109]
+          - generic [ref=f6e110]:
+            - generic [ref=f6e111]: BrandSpace Articles
+            - generic [ref=f6e112]:
+              - generic [ref=f6e113] [cursor=pointer]: <
+              - generic [ref=f6e114] [cursor=pointer]: ">"
+        - generic [ref=f6e116]:
+          - generic [ref=f6e117]:
+            - generic [ref=f6e118]: Trending
+            - generic [ref=f6e119]:
+              - link [ref=f6e122] [cursor=pointer]:
+                - /url: https://www.philstar.com/entertainment/2026/09/29/2559766/bayani-agbayani-recalls-spain-trip-bea-alonzo-vincent-cos-canceled-wedding
+                - img "Bayani Agbayani recalls Spain trip for Bea Alonzo, Vincent Co&rsquo;s canceled wedding" [ref=f6e123]
+              - generic [ref=f6e124]:
+                - heading [level=2] [ref=f6e126]:
+                  - link "Bayani Agbayani recalls Spain trip for Bea Alonzo, Vincent Co’s canceled wedding" [ref=f6e127] [cursor=pointer]:
+                    - /url: https://www.philstar.com/entertainment/2026/09/29/2559766/bayani-agbayani-recalls-spain-trip-bea-alonzo-vincent-cos-canceled-wedding
+                - generic [ref=f6e128]:
+                  - text: By
+                  - link "Jan Milo Severo" [ref=f6e129] [cursor=pointer]:
+                    - /url: https://www.philstar.com/authors/1805251/jan-milo-severo
+                  - text: "| 12 hours ago"
+                - generic [ref=f6e130]:
+                  - link "Veteran comedian Bayani Agbayani recalled traveling to Spain with his wife, Lenlen, in May 2026 to attend the wedding of Bea...":
+                    - /url: https://www.philstar.com/entertainment/2026/09/29/2559766/bayani-agbayani-recalls-spain-trip-bea-alonzo-vincent-cos-canceled-wedding
+              - generic [ref=f6e132]:
+                - link "Entertainment" [ref=f6e134] [cursor=pointer]:
+                  - /url: https://www.philstar.com/entertainment
+                - generic [ref=f6e135]:
+                  - link [ref=f6e136] [cursor=pointer]:
+                    - /url: https://www.facebook.com/dialog/feed?app_id=1492927611003506&display=popup&name=Bayani+Agbayani+recalls+Spain+trip+for+Bea+Alonzo%2C+Vincent+Co%26rsquo%3Bs+canceled+wedding&link=https://www.philstar.com/entertainment/2026/09/29/2559766/bayani-agbayani-recalls-spain-trip-bea-alonzo-vincent-cos-canceled-wedding&redirect_uri=https://www.philstar.com/entertainment/2026/09/29/2559766/bayani-agbayani-recalls-spain-trip-bea-alonzo-vincent-cos-canceled-wedding&picture=https://media.philstar.com/photos/2026/09/29/bayani_2026-09-29_11-01-53801_thumbnail.jpg
+                    - img "fb" [ref=f6e137]
+                  - link [ref=f6e138] [cursor=pointer]:
+                    - /url: https://twitter.com/intent/tweet?original_referrer=https://www.philstar.com/entertainment/2026/09/29/2559766/bayani-agbayani-recalls-spain-trip-bea-alonzo-vincent-cos-canceled-wedding&text=Bayani+Agbayani+recalls+Spain+trip+for+Bea+Alonzo%2C+Vincent+Co%26rsquo%3Bs+canceled+wedding%20https://www.philstar.com/entertainment/2026/09/29/2559766/bayani-agbayani-recalls-spain-trip-bea-alonzo-vincent-cos-canceled-wedding
+                    - img "tw" [ref=f6e139]
+            - generic [ref=f6e140]:
+              - generic [ref=f6e141]:
+                - link [ref=f6e143] [cursor=pointer]:
+                  - /url: https://www.philstar.com/entertainment/2026/09/29/2559767/anne-curtis-passion-project-dream-machine-grants-dreams-puerto-princesa-children
+                  - img "Anne Curtis&rsquo; passion project Dream Machine grants dreams of Puerto Princesa children" [ref=f6e144]
+                - link [ref=f6e146] [cursor=pointer]:
+                  - /url: https://www.philstar.com/brandspace
+                  - img "brandSpace" [ref=f6e147]
+              - generic [ref=f6e148]:
+                - heading [level=2] [ref=f6e150]:
+                  - link "Anne Curtis’ passion project Dream Machine grants dreams of Puerto Princesa children" [ref=f6e151] [cursor=pointer]:
+                    - /url: https://www.philstar.com/entertainment/2026/09/29/2559767/anne-curtis-passion-project-dream-machine-grants-dreams-puerto-princesa-children
+                - generic [ref=f6e152]: 8 hours ago
+                - generic [ref=f6e153]:
+                  - link "Dream Machine continues to grind, granting small dreams and creating ripples of joy, hope and inspiration amongst different...":
+                    - /url: https://www.philstar.com/entertainment/2026/09/29/2559767/anne-curtis-passion-project-dream-machine-grants-dreams-puerto-princesa-children
+              - generic [ref=f6e155]:
+                - link "Entertainment" [ref=f6e157] [cursor=pointer]:
+                  - /url: https://www.philstar.com/entertainment
+                - generic [ref=f6e158]:
+                  - link [ref=f6e159] [cursor=pointer]:
+                    - /url: https://www.facebook.com/dialog/feed?app_id=1492927611003506&display=popup&name=Anne+Curtis%26rsquo%3B+passion+project+Dream+Machine+grants+dreams+of+Puerto+Princesa+children&link=https://www.philstar.com/entertainment/2026/09/29/2559767/anne-curtis-passion-project-dream-machine-grants-dreams-puerto-princesa-children&redirect_uri=https://www.philstar.com/entertainment/2026/09/29/2559767/anne-curtis-passion-project-dream-machine-grants-dreams-puerto-princesa-children&picture=https://media.philstar.com/photos/2026/09/29/dma_2026-09-29_11-11-01785_thumbnail.jpg
+                    - img "fb" [ref=f6e160]
+                  - link [ref=f6e161] [cursor=pointer]:
+                    - /url: https://twitter.com/intent/tweet?original_referrer=https://www.philstar.com/entertainment/2026/09/29/2559767/anne-curtis-passion-project-dream-machine-grants-dreams-puerto-princesa-children&text=Anne+Curtis%26rsquo%3B+passion+project+Dream+Machine+grants+dreams+of+Puerto+Princesa+children%20https://www.philstar.com/entertainment/2026/09/29/2559767/anne-curtis-passion-project-dream-machine-grants-dreams-puerto-princesa-children
+                    - img "tw" [ref=f6e162]
+            - generic [ref=f6e163]:
+              - link [ref=f6e166] [cursor=pointer]:
+                - /url: https://www.philstar.com/entertainment/2026/09/28/2559428/bongga-trip-colorful-sequined-world-70s-manila
+                - img "A &lsquo;bongga&rsquo; trip to the colorful, sequined world of 70s Manila" [ref=f6e167]
+              - generic [ref=f6e168]:
+                - heading [level=2] [ref=f6e170]:
+                  - link "A ‘bongga’ trip to the colorful, sequined world of 70s Manila" [ref=f6e171] [cursor=pointer]:
+                    - /url: https://www.philstar.com/entertainment/2026/09/28/2559428/bongga-trip-colorful-sequined-world-70s-manila
+                - generic [ref=f6e172]:
+                  - text: By
+                  - link "Pat-P Daza" [ref=f6e173] [cursor=pointer]:
+                    - /url: https://www.philstar.com/authors/1806530/pat-p-daza
+                  - text: "| 2 days ago"
+                - generic [ref=f6e174]:
+                  - 'link "Friday, Sept. 25, was gala night for “Bongga Ka ‘Day!: The Annie Batungbakal Musical,” starring Atasha Muhlach..."':
+                    - /url: https://www.philstar.com/entertainment/2026/09/28/2559428/bongga-trip-colorful-sequined-world-70s-manila
+              - generic [ref=f6e176]:
+                - link "Entertainment" [ref=f6e178] [cursor=pointer]:
+                  - /url: https://www.philstar.com/entertainment
+                - generic [ref=f6e179]:
+                  - link [ref=f6e180] [cursor=pointer]:
+                    - /url: https://www.facebook.com/dialog/feed?app_id=1492927611003506&display=popup&name=A+%26lsquo%3Bbongga%26rsquo%3B+trip+to+the+colorful%2C+sequined+world+of+70s+Manila&link=https://www.philstar.com/entertainment/2026/09/28/2559428/bongga-trip-colorful-sequined-world-70s-manila&redirect_uri=https://www.philstar.com/entertainment/2026/09/28/2559428/bongga-trip-colorful-sequined-world-70s-manila&picture=https://media.philstar.com/photos/2026/09/27/e2a_2026-09-27_23-32-11567_thumbnail.jpg
+                    - img "fb" [ref=f6e181]
+                  - link [ref=f6e182] [cursor=pointer]:
+                    - /url: https://twitter.com/intent/tweet?original_referrer=https://www.philstar.com/entertainment/2026/09/28/2559428/bongga-trip-colorful-sequined-world-70s-manila&text=A+%26lsquo%3Bbongga%26rsquo%3B+trip+to+the+colorful%2C+sequined+world+of+70s+Manila%20https://www.philstar.com/entertainment/2026/09/28/2559428/bongga-trip-colorful-sequined-world-70s-manila
+                    - img "tw" [ref=f6e183]
+            - generic [ref=f6e184]:
+              - link [ref=f6e187] [cursor=pointer]:
+                - /url: https://www.philstar.com/entertainment/2026/09/23/2558151/nina-remembers-late-fathers-bittersweet-role-her-music-journey
+                - img "Nina remembers late father&rsquo;s &lsquo;bittersweet&rsquo; role in her music journey" [ref=f6e188]
+              - generic [ref=f6e189]:
+                - heading [level=2] [ref=f6e191]:
+                  - link "Nina remembers late father’s ‘bittersweet’ role in her music journey" [ref=f6e192] [cursor=pointer]:
+                    - /url: https://www.philstar.com/entertainment/2026/09/23/2558151/nina-remembers-late-fathers-bittersweet-role-her-music-journey
+                - generic [ref=f6e193]:
+                  - text: By
+                  - link "Nathalie Tomada" [ref=f6e194] [cursor=pointer]:
+                    - /url: https://www.philstar.com/authors/1536606/nathalie-tomada
+                  - text: "| 7 days ago"
+                - generic [ref=f6e195]:
+                  - link "Nina became one of Original Pilipino Music’s most recognizable voices, thanks in large part to her father, Filbert...":
+                    - /url: https://www.philstar.com/entertainment/2026/09/23/2558151/nina-remembers-late-fathers-bittersweet-role-her-music-journey
+              - generic [ref=f6e197]:
+                - link "Entertainment" [ref=f6e199] [cursor=pointer]:
+                  - /url: https://www.philstar.com/entertainment
+                - generic [ref=f6e200]:
+                  - link [ref=f6e201] [cursor=pointer]:
+                    - /url: https://www.facebook.com/dialog/feed?app_id=1492927611003506&display=popup&name=Nina+remembers+late+father%26rsquo%3Bs+%26lsquo%3Bbittersweet%26rsquo%3B+role+in+her+music+journey&link=https://www.philstar.com/entertainment/2026/09/23/2558151/nina-remembers-late-fathers-bittersweet-role-her-music-journey&redirect_uri=https://www.philstar.com/entertainment/2026/09/23/2558151/nina-remembers-late-fathers-bittersweet-role-her-music-journey&picture=https://media.philstar.com/photos/2026/09/22/1-1_2026-09-22_20-22-11255_thumbnail.jpg
+                    - img "fb" [ref=f6e202]
+                  - link [ref=f6e203] [cursor=pointer]:
+                    - /url: https://twitter.com/intent/tweet?original_referrer=https://www.philstar.com/entertainment/2026/09/23/2558151/nina-remembers-late-fathers-bittersweet-role-her-music-journey&text=Nina+remembers+late+father%26rsquo%3Bs+%26lsquo%3Bbittersweet%26rsquo%3B+role+in+her+music+journey%20https://www.philstar.com/entertainment/2026/09/23/2558151/nina-remembers-late-fathers-bittersweet-role-her-music-journey
+                    - img "tw" [ref=f6e204]
+            - generic [ref=f6e205]:
+              - generic [ref=f6e206]:
+                - link [ref=f6e208] [cursor=pointer]:
+                  - /url: https://www.philstar.com/entertainment/2026/09/25/2558852/bini-sb19-forgotten-island-score-seen-open-doors-filipino-music-films
+                  - img "BINI, SB19, 'Forgotten Island' score seen to open doors for Filipino music, films" [ref=f6e209]
+                - generic [ref=f6e210]: Exclusive
+              - generic [ref=f6e212]:
+                - heading [level=2] [ref=f6e214]:
+                  - link "BINI, SB19, 'Forgotten Island' score seen to open doors for Filipino music, films" [ref=f6e215] [cursor=pointer]:
+                    - /url: https://www.philstar.com/entertainment/2026/09/25/2558852/bini-sb19-forgotten-island-score-seen-open-doors-filipino-music-films
+                - generic [ref=f6e216]:
+                  - text: By
+                  - link "Kristofer Purnell" [ref=f6e217] [cursor=pointer]:
+                    - /url: https://www.philstar.com/authors/1806731/kristofer-purnell
+                  - text: "| 4 days ago"
+                - generic [ref=f6e218]:
+                  - link "'Forgotten Island' composer wants Filipino stories to keep coming. \"Come have more,\" he says.":
+                    - /url: https://www.philstar.com/entertainment/2026/09/25/2558852/bini-sb19-forgotten-island-score-seen-open-doors-filipino-music-films
+              - generic [ref=f6e220]:
+                - link "Entertainment" [ref=f6e222] [cursor=pointer]:
+                  - /url: https://www.philstar.com/entertainment
+                - generic [ref=f6e223]:
+                  - link [ref=f6e224] [cursor=pointer]:
+                    - /url: https://www.facebook.com/dialog/feed?app_id=1492927611003506&display=popup&name=BINI%2C+SB19%2C+%27Forgotten+Island%27+score+seen+to+open+doors+for+Filipino+music%2C+films&link=https://www.philstar.com/entertainment/2026/09/25/2558852/bini-sb19-forgotten-island-score-seen-open-doors-filipino-music-films&redirect_uri=https://www.philstar.com/entertainment/2026/09/25/2558852/bini-sb19-forgotten-island-score-seen-open-doors-filipino-music-films&picture=https://media.philstar.com/photos/2026/06/20/forgotten-island-bini-sb19_2026-06-20_09-29-15672_thumbnail.jpg
+                    - img "fb" [ref=f6e225]
+                  - link [ref=f6e226] [cursor=pointer]:
+                    - /url: https://twitter.com/intent/tweet?original_referrer=https://www.philstar.com/entertainment/2026/09/25/2558852/bini-sb19-forgotten-island-score-seen-open-doors-filipino-music-films&text=BINI%2C+SB19%2C+%27Forgotten+Island%27+score+seen+to+open+doors+for+Filipino+music%2C+films%20https://www.philstar.com/entertainment/2026/09/25/2558852/bini-sb19-forgotten-island-score-seen-open-doors-filipino-music-films
+                    - img "tw" [ref=f6e227]
+          - generic [ref=f6e228]:
+            - generic [ref=f6e229]: Latest
+            - generic [ref=f6e230]:
+              - link [ref=f6e233] [cursor=pointer]:
+                - /url: https://www.philstar.com/entertainment/2026/09/29/2559751/kundiman-takes-center-stage-zanjoe-marudos-cinepanalo-film
+                - img "Kundiman takes center stage in Zanjoe Marudo's CinePanalo film" [ref=f6e234]
+              - generic [ref=f6e235]:
+                - heading [level=2] [ref=f6e237]:
+                  - link "Kundiman takes center stage in Zanjoe Marudo's CinePanalo film" [ref=f6e238] [cursor=pointer]:
+                    - /url: https://www.philstar.com/entertainment/2026/09/29/2559751/kundiman-takes-center-stage-zanjoe-marudos-cinepanalo-film
+                - generic [ref=f6e239]:
+                  - text: By
+                  - link "Jan Milo Severo" [ref=f6e240] [cursor=pointer]:
+                    - /url: https://www.philstar.com/authors/1805251/jan-milo-severo
+                  - text: "| 9 hours ago"
+                - generic [ref=f6e241]:
+                  - link "Beneath the coming-of-age story is another love story — one that connects a young Filipino boy to a musical tradition...":
+                    - /url: https://www.philstar.com/entertainment/2026/09/29/2559751/kundiman-takes-center-stage-zanjoe-marudos-cinepanalo-film
+              - generic [ref=f6e243]:
+                - link "Entertainment" [ref=f6e245] [cursor=pointer]:
+                  - /url: https://www.philstar.com/entertainment
+                - generic [ref=f6e246]:
+                  - link [ref=f6e247] [cursor=pointer]:
+                    - /url: https://www.facebook.com/dialog/feed?app_id=1492927611003506&display=popup&name=Kundiman+takes+center+stage+in+Zanjoe+Marudo%27s+CinePanalo+film&link=https://www.philstar.com/entertainment/2026/09/29/2559751/kundiman-takes-center-stage-zanjoe-marudos-cinepanalo-film&redirect_uri=https://www.philstar.com/entertainment/2026/09/29/2559751/kundiman-takes-center-stage-zanjoe-marudos-cinepanalo-film&picture=https://media.philstar.com/photos/2026/09/01/zajoe_2026-09-01_11-05-39203_thumbnail.jpg
+                    - img "fb" [ref=f6e248]
+                  - link [ref=f6e249] [cursor=pointer]:
+                    - /url: https://twitter.com/intent/tweet?original_referrer=https://www.philstar.com/entertainment/2026/09/29/2559751/kundiman-takes-center-stage-zanjoe-marudos-cinepanalo-film&text=Kundiman+takes+center+stage+in+Zanjoe+Marudo%27s+CinePanalo+film%20https://www.philstar.com/entertainment/2026/09/29/2559751/kundiman-takes-center-stage-zanjoe-marudos-cinepanalo-film
+                    - img "tw" [ref=f6e250]
+            - generic [ref=f6e251]:
+              - link [ref=f6e254] [cursor=pointer]:
+                - /url: https://www.philstar.com/entertainment/2026/09/29/2559776/alden-richards-calls-ggv-guesting-his-rawest-unfiltered-interview
+                - img "Alden Richards calls &lsquo;GGV&rsquo; guesting his &lsquo;rawest, unfiltered&rsquo; interview" [ref=f6e255]
+              - generic [ref=f6e256]:
+                - heading [level=2] [ref=f6e258]:
+                  - link "Alden Richards calls ‘GGV’ guesting his ‘rawest, unfiltered’ interview" [ref=f6e259] [cursor=pointer]:
+                    - /url: https://www.philstar.com/entertainment/2026/09/29/2559776/alden-richards-calls-ggv-guesting-his-rawest-unfiltered-interview
+                - generic [ref=f6e260]:
+                  - text: By
+                  - link "Jan Milo Severo" [ref=f6e261] [cursor=pointer]:
+                    - /url: https://www.philstar.com/authors/1805251/jan-milo-severo
+                  - text: "| 11 hours ago"
+                - generic [ref=f6e262]:
+                  - link "Alden Richards opened up about his much-talked-about guest appearance on the return of “Gandang Gabi, Vice,” saying...":
+                    - /url: https://www.philstar.com/entertainment/2026/09/29/2559776/alden-richards-calls-ggv-guesting-his-rawest-unfiltered-interview
+              - generic [ref=f6e264]:
+                - link "Entertainment" [ref=f6e266] [cursor=pointer]:
+                  - /url: https://www.philstar.com/entertainment
+                - generic [ref=f6e267]:
+                  - link [ref=f6e268] [cursor=pointer]:
+                    - /url: https://www.facebook.com/dialog/feed?app_id=1492927611003506&display=popup&name=Alden+Richards+calls+%26lsquo%3BGGV%26rsquo%3B+guesting+his+%26lsquo%3Brawest%2C+unfiltered%26rsquo%3B+interview&link=https://www.philstar.com/entertainment/2026/09/29/2559776/alden-richards-calls-ggv-guesting-his-rawest-unfiltered-interview&redirect_uri=https://www.philstar.com/entertainment/2026/09/29/2559776/alden-richards-calls-ggv-guesting-his-rawest-unfiltered-interview&picture=https://media.philstar.com/photos/2026/09/14/8_2026-09-14_21-21-37917_thumbnail.jpg
+                    - img "fb" [ref=f6e269]
+                  - link [ref=f6e270] [cursor=pointer]:
+                    - /url: https://twitter.com/intent/tweet?original_referrer=https://www.philstar.com/entertainment/2026/09/29/2559776/alden-richards-calls-ggv-guesting-his-rawest-unfiltered-interview&text=Alden+Richards+calls+%26lsquo%3BGGV%26rsquo%3B+guesting+his+%26lsquo%3Brawest%2C+unfiltered%26rsquo%3B+interview%20https://www.philstar.com/entertainment/2026/09/29/2559776/alden-richards-calls-ggv-guesting-his-rawest-unfiltered-interview
+                    - img "tw" [ref=f6e271]
+            - generic [ref=f6e272]:
+              - link [ref=f6e275] [cursor=pointer]:
+                - /url: https://www.philstar.com/entertainment/2026/09/29/2559770/hi-principessa-dylan-sprouse-barbara-palvin-welcome-first-child
+                - 'img "''Hi principessa'': Dylan Sprouse, Barbara Palvin welcome first child" [ref=f6e276]'
+              - generic [ref=f6e277]:
+                - heading [level=2] [ref=f6e279]:
+                  - 'link "''Hi principessa'': Dylan Sprouse, Barbara Palvin welcome first child" [ref=f6e280] [cursor=pointer]':
+                    - /url: https://www.philstar.com/entertainment/2026/09/29/2559770/hi-principessa-dylan-sprouse-barbara-palvin-welcome-first-child
+                - generic [ref=f6e281]:
+                  - text: By
+                  - link "Jan Milo Severo" [ref=f6e282] [cursor=pointer]:
+                    - /url: https://www.philstar.com/authors/1805251/jan-milo-severo
+                  - text: "| 12 hours ago"
+                - generic [ref=f6e283]:
+                  - link "Dylan Sprouse and Barbara Palvin are officially parents.":
+                    - /url: https://www.philstar.com/entertainment/2026/09/29/2559770/hi-principessa-dylan-sprouse-barbara-palvin-welcome-first-child
+              - generic [ref=f6e285]:
+                - link "Entertainment" [ref=f6e287] [cursor=pointer]:
+                  - /url: https://www.philstar.com/entertainment
+                - generic [ref=f6e288]:
+                  - link [ref=f6e289] [cursor=pointer]:
+                    - /url: https://www.facebook.com/dialog/feed?app_id=1492927611003506&display=popup&name=%27Hi+principessa%27%3A+Dylan+Sprouse%2C+Barbara+Palvin+welcome+first+child&link=https://www.philstar.com/entertainment/2026/09/29/2559770/hi-principessa-dylan-sprouse-barbara-palvin-welcome-first-child&redirect_uri=https://www.philstar.com/entertainment/2026/09/29/2559770/hi-principessa-dylan-sprouse-barbara-palvin-welcome-first-child&picture=https://media.philstar.com/photos/2026/09/29/sprouse_2026-09-29_12-01-03720_thumbnail.jpg
+                    - img "fb" [ref=f6e290]
+                  - link [ref=f6e291] [cursor=pointer]:
+                    - /url: https://twitter.com/intent/tweet?original_referrer=https://www.philstar.com/entertainment/2026/09/29/2559770/hi-principessa-dylan-sprouse-barbara-palvin-welcome-first-child&text=%27Hi+principessa%27%3A+Dylan+Sprouse%2C+Barbara+Palvin+welcome+first+child%20https://www.philstar.com/entertainment/2026/09/29/2559770/hi-principessa-dylan-sprouse-barbara-palvin-welcome-first-child
+                    - img "tw" [ref=f6e292]
+            - generic [ref=f6e293]:
+              - link [ref=f6e296] [cursor=pointer]:
+                - /url: https://www.philstar.com/entertainment/2026/09/29/2559759/david-licauco-ashtine-olviga-star-fight-my-way-adaptation
+                - img "David Licauco, Ashtine Olviga star in &lsquo;Fight for My Way&rsquo; adaptation" [ref=f6e297]
+              - generic [ref=f6e298]:
+                - heading [level=2] [ref=f6e300]:
+                  - link "David Licauco, Ashtine Olviga star in ‘Fight for My Way’ adaptation" [ref=f6e301] [cursor=pointer]:
+                    - /url: https://www.philstar.com/entertainment/2026/09/29/2559759/david-licauco-ashtine-olviga-star-fight-my-way-adaptation
+                - generic [ref=f6e302]:
+                  - text: By
+                  - link "Jan Milo Severo" [ref=f6e303] [cursor=pointer]:
+                    - /url: https://www.philstar.com/authors/1805251/jan-milo-severo
+                  - text: "| 14 hours ago"
+                - generic [ref=f6e304]:
+                  - link "Ashtine Olviga and David Licauco are teaming up for the first time as they headline the Filipino adaptation of hit South Korean...":
+                    - /url: https://www.philstar.com/entertainment/2026/09/29/2559759/david-licauco-ashtine-olviga-star-fight-my-way-adaptation
+              - generic [ref=f6e306]:
+                - link "Entertainment" [ref=f6e308] [cursor=pointer]:
+                  - /url: https://www.philstar.com/entertainment
+                - generic [ref=f6e309]:
+                  - link [ref=f6e310] [cursor=pointer]:
+                    - /url: https://www.facebook.com/dialog/feed?app_id=1492927611003506&display=popup&name=David+Licauco%2C+Ashtine+Olviga+star+in+%26lsquo%3BFight+for+My+Way%26rsquo%3B+adaptation&link=https://www.philstar.com/entertainment/2026/09/29/2559759/david-licauco-ashtine-olviga-star-fight-my-way-adaptation&redirect_uri=https://www.philstar.com/entertainment/2026/09/29/2559759/david-licauco-ashtine-olviga-star-fight-my-way-adaptation&picture=https://media.philstar.com/photos/2026/09/29/david-ashtine_2026-09-29_10-07-24115_thumbnail.jpg
+                    - img "fb" [ref=f6e311]
+                  - link [ref=f6e312] [cursor=pointer]:
+                    - /url: https://twitter.com/intent/tweet?original_referrer=https://www.philstar.com/entertainment/2026/09/29/2559759/david-licauco-ashtine-olviga-star-fight-my-way-adaptation&text=David+Licauco%2C+Ashtine+Olviga+star+in+%26lsquo%3BFight+for+My+Way%26rsquo%3B+adaptation%20https://www.philstar.com/entertainment/2026/09/29/2559759/david-licauco-ashtine-olviga-star-fight-my-way-adaptation
+                    - img "tw" [ref=f6e313]
+            - generic [ref=f6e314]:
+              - link [ref=f6e317] [cursor=pointer]:
+                - /url: https://www.philstar.com/entertainment/2026/09/29/2559574/gerald-anderson-business-first-love-life-later
+                - 'img "Gerald Anderson: Business first, love life later" [ref=f6e318]'
+              - generic [ref=f6e319]:
+                - heading [level=2] [ref=f6e321]:
+                  - 'link "Gerald Anderson: Business first, love life later" [ref=f6e322] [cursor=pointer]':
+                    - /url: https://www.philstar.com/entertainment/2026/09/29/2559574/gerald-anderson-business-first-love-life-later
+                - generic [ref=f6e323]:
+                  - text: By
+                  - link "Nathalie Tomada" [ref=f6e324] [cursor=pointer]:
+                    - /url: https://www.philstar.com/authors/1536606/nathalie-tomada
+                  - text: "| 1 day ago"
+                - generic [ref=f6e325]:
+                  - link "Gerald Anderson considers camping an “ideal” date, but finding a special someone to share the outdoors with isn’t...":
+                    - /url: https://www.philstar.com/entertainment/2026/09/29/2559574/gerald-anderson-business-first-love-life-later
+              - generic [ref=f6e327]:
+                - link "Entertainment" [ref=f6e329] [cursor=pointer]:
+                  - /url: https://www.philstar.com/entertainment
+                - generic [ref=f6e330]:
+                  - link [ref=f6e331] [cursor=pointer]:
+                    - /url: https://www.facebook.com/dialog/feed?app_id=1492927611003506&display=popup&name=Gerald+Anderson%3A+Business+first%2C+love+life+later&link=https://www.philstar.com/entertainment/2026/09/29/2559574/gerald-anderson-business-first-love-life-later&redirect_uri=https://www.philstar.com/entertainment/2026/09/29/2559574/gerald-anderson-business-first-love-life-later&picture=https://media.philstar.com/photos/2026/09/28/2-1_2026-09-28_19-42-59533_thumbnail.jpg
+                    - img "fb" [ref=f6e332]
+                  - link [ref=f6e333] [cursor=pointer]:
+                    - /url: https://twitter.com/intent/tweet?original_referrer=https://www.philstar.com/entertainment/2026/09/29/2559574/gerald-anderson-business-first-love-life-later&text=Gerald+Anderson%3A+Business+first%2C+love+life+later%20https://www.philstar.com/entertainment/2026/09/29/2559574/gerald-anderson-business-first-love-life-later
+                    - img "tw" [ref=f6e334]
+      - generic [ref=f6e336]:
+        - generic [ref=f6e337]: Recommended
+        - generic [ref=f6e338]:
+          - generic [ref=f6e339]:
+            - link [ref=f6e341] [cursor=pointer]:
+              - /url: https://www.philstar.com/headlines/2026/09/29/2559722/11-contracts-won-gencorp-had-no-public-bidding
+              - img "â��11 contracts won by GenCorp had no public biddingâ��" [ref=f6e342]
+            - generic [ref=f6e343]:
+              - heading [level=2] [ref=f6e345]:
+                - link "‘11 contracts won by GenCorp had no public bidding’" [ref=f6e346] [cursor=pointer]:
+                  - /url: https://www.philstar.com/headlines/2026/09/29/2559722/11-contracts-won-gencorp-had-no-public-bidding
+              - generic [ref=f6e347]: The Davao City government awarded 11 of its 15 contracts to private firm GenCorp without public bidding, a procurement official revealed yesterday at the resumption of the impeachment trial of Vice President Sara Duterte.
+              - generic [ref=f6e348]: 1 day ago
+              - link [ref=f6e350] [cursor=pointer]:
+                - /url: https://www.philstar.com/tags/rendell-sopea
+                - heading "RENDELL SOPEñA" [level=4] [ref=f6e351]
+              - generic [ref=f6e352]:
+                - link [ref=f6e353] [cursor=pointer]:
+                  - /url: https://www.facebook.com/dialog/feed?app_id=1492927611003506&display=popup&link=https://www.philstar.com/headlines/2026/09/29/2559722/11-contracts-won-gencorp-had-no-public-bidding&redirect_uri=https://www.philstar.com/headlines/2026/09/29/2559722/11-contracts-won-gencorp-had-no-public-bidding
+                  - img "fb" [ref=f6e354]
+                - link [ref=f6e355] [cursor=pointer]:
+                  - /url: https://twitter.com/intent/tweet?original_referrer=https://www.philstar.com/headlines/2026/09/29/2559722/11-contracts-won-gencorp-had-no-public-bidding&text=%26lsquo%3B11+contracts+won+by+GenCorp+had+no+public+bidding%26rsquo%3B%20https://www.philstar.com/headlines/2026/09/29/2559722/11-contracts-won-gencorp-had-no-public-bidding
+                  - img "tw" [ref=f6e356]
+          - generic [ref=f6e357]:
+            - link [ref=f6e359] [cursor=pointer]:
+              - /url: https://www.philstar.com/headlines/2026/09/29/2559686/impeach-court-gives-ridon-stern-warning-comments
+              - img "Impeach court gives Ridon â��stern warningâ�� on comments" [ref=f6e360]
+            - generic [ref=f6e361]:
+              - heading [level=2] [ref=f6e363]:
+                - link "Impeach court gives Ridon ‘stern warning’ on comments" [ref=f6e364] [cursor=pointer]:
+                  - /url: https://www.philstar.com/headlines/2026/09/29/2559686/impeach-court-gives-ridon-stern-warning-comments
+              - generic [ref=f6e365]: The Senate impeachment court has issued a stern warning to House prosecutor Bicol Saro party-list Rep. Terry Ridon over comments he made in media interviews that have been flagged for possible violation of the gag order.
+              - generic [ref=f6e366]: 1 day ago
+              - link [ref=f6e368] [cursor=pointer]:
+                - /url: https://www.philstar.com/tags/terry-ridon
+                - heading "TERRY RIDON" [level=4] [ref=f6e369]
+              - generic [ref=f6e370]:
+                - link [ref=f6e371] [cursor=pointer]:
+                  - /url: https://www.facebook.com/dialog/feed?app_id=1492927611003506&display=popup&link=https://www.philstar.com/headlines/2026/09/29/2559686/impeach-court-gives-ridon-stern-warning-comments&redirect_uri=https://www.philstar.com/headlines/2026/09/29/2559686/impeach-court-gives-ridon-stern-warning-comments
+                  - img "fb" [ref=f6e372]
+                - link [ref=f6e373] [cursor=pointer]:
+                  - /url: https://twitter.com/intent/tweet?original_referrer=https://www.philstar.com/headlines/2026/09/29/2559686/impeach-court-gives-ridon-stern-warning-comments&text=Impeach+court+gives+Ridon+%26lsquo%3Bstern+warning%26rsquo%3B+on+comments%20https://www.philstar.com/headlines/2026/09/29/2559686/impeach-court-gives-ridon-stern-warning-comments
+                  - img "tw" [ref=f6e374]
+          - generic [ref=f6e375]:
+            - link [ref=f6e377] [cursor=pointer]:
+              - /url: https://www.philstar.com/headlines/2026/09/29/2559680/defense-no-decision-yet-questioning-vote-convict
+              - 'img "Defense: No decision yet on questioning vote to convict" [ref=f6e378]'
+            - generic [ref=f6e379]:
+              - heading [level=2] [ref=f6e381]:
+                - 'link "Defense: No decision yet on questioning vote to convict" [ref=f6e382] [cursor=pointer]':
+                  - /url: https://www.philstar.com/headlines/2026/09/29/2559680/defense-no-decision-yet-questioning-vote-convict
+              - generic [ref=f6e383]: There is no final decision yet on whether the defense will file a petition before the Supreme Court questioning the Senate impeachment court’s ruling to lower the number of votes needed to convict Vice President Sara Duterte.
+              - generic [ref=f6e384]: 1 day ago
+              - link [ref=f6e386] [cursor=pointer]:
+                - /url: https://www.philstar.com/tags/michael-poa
+                - heading "MICHAEL POA" [level=4] [ref=f6e387]
+              - generic [ref=f6e388]:
+                - link [ref=f6e389] [cursor=pointer]:
+                  - /url: https://www.facebook.com/dialog/feed?app_id=1492927611003506&display=popup&link=https://www.philstar.com/headlines/2026/09/29/2559680/defense-no-decision-yet-questioning-vote-convict&redirect_uri=https://www.philstar.com/headlines/2026/09/29/2559680/defense-no-decision-yet-questioning-vote-convict
+                  - img "fb" [ref=f6e390]
+                - link [ref=f6e391] [cursor=pointer]:
+                  - /url: https://twitter.com/intent/tweet?original_referrer=https://www.philstar.com/headlines/2026/09/29/2559680/defense-no-decision-yet-questioning-vote-convict&text=Defense%3A+No+decision+yet+on+questioning+vote+to+convict%20https://www.philstar.com/headlines/2026/09/29/2559680/defense-no-decision-yet-questioning-vote-convict
+                  - img "tw" [ref=f6e392]
+          - generic [ref=f6e394]:
+            - heading [level=2] [ref=f6e396]:
+              - link "Political stability" [ref=f6e397] [cursor=pointer]:
+                - /url: https://www.philstar.com/opinion/2026/09/29/2559644/political-stability
+            - generic [ref=f6e398]: On Friday night, Sept. 25, 2026, I was a moderator at the MOPC Senate Night with Senate President Sherwin “Win” Gatchalian as guest of honor and speaker.
+            - generic [ref=f6e399]: 1 day ago
+            - link [ref=f6e401] [cursor=pointer]:
+              - /url: https://www.philstar.com/tags/senate
+              - heading "SENATE" [level=4] [ref=f6e402]
+            - generic [ref=f6e403]:
+              - link [ref=f6e404] [cursor=pointer]:
+                - /url: https://www.facebook.com/dialog/feed?app_id=1492927611003506&display=popup&link=https://www.philstar.com/opinion/2026/09/29/2559644/political-stability&redirect_uri=https://www.philstar.com/opinion/2026/09/29/2559644/political-stability
+                - img "fb" [ref=f6e405]
+              - link [ref=f6e406] [cursor=pointer]:
+                - /url: https://twitter.com/intent/tweet?original_referrer=https://www.philstar.com/opinion/2026/09/29/2559644/political-stability&text=Political+stability%20https://www.philstar.com/opinion/2026/09/29/2559644/political-stability
+                - img "tw" [ref=f6e407]
+          - generic [ref=f6e408]:
+            - link [ref=f6e410] [cursor=pointer]:
+              - /url: https://www.philstar.com/headlines/2026/09/28/2559546/gracioso-dismissal-no-reason-disregard-statements-says-nbi-chief
+              - img "Gracioso dismissal no reason to disregard statements, says NBI chief" [ref=f6e411]
+            - generic [ref=f6e412]:
+              - heading [level=2] [ref=f6e414]:
+                - link "Gracioso dismissal no reason to disregard statements, says NBI chief" [ref=f6e415] [cursor=pointer]:
+                  - /url: https://www.philstar.com/headlines/2026/09/28/2559546/gracioso-dismissal-no-reason-disregard-statements-says-nbi-chief
+              - generic [ref=f6e416]: Photos and documents submitted by the former policeman will be examined.
+              - generic [ref=f6e417]: 1 day ago
+              - generic [ref=f6e418]:
+                - link [ref=f6e419] [cursor=pointer]:
+                  - /url: https://www.philstar.com/tags/lord-allan-velasco
+                  - heading "LORD ALLAN VELASCO" [level=4] [ref=f6e420]
+                - link [ref=f6e421] [cursor=pointer]:
+                  - /url: https://www.philstar.com/tags/melvin-matibag
+                  - heading "MELVIN MATIBAG" [level=4] [ref=f6e422]
+                - link [ref=f6e423] [cursor=pointer]:
+                  - /url: https://www.philstar.com/tags/national-bureau-investigation
+                  - heading "NATIONAL BUREAU OF INVESTIGATION" [level=4] [ref=f6e424]
+              - generic [ref=f6e425]:
+                - link [ref=f6e426] [cursor=pointer]:
+                  - /url: https://www.facebook.com/dialog/feed?app_id=1492927611003506&display=popup&link=https://www.philstar.com/headlines/2026/09/28/2559546/gracioso-dismissal-no-reason-disregard-statements-says-nbi-chief&redirect_uri=https://www.philstar.com/headlines/2026/09/28/2559546/gracioso-dismissal-no-reason-disregard-statements-says-nbi-chief
+                  - img "fb" [ref=f6e427]
+                - link [ref=f6e428] [cursor=pointer]:
+                  - /url: https://twitter.com/intent/tweet?original_referrer=https://www.philstar.com/headlines/2026/09/28/2559546/gracioso-dismissal-no-reason-disregard-statements-says-nbi-chief&text=Gracioso+dismissal+no+reason+to+disregard+statements%2C+says+NBI+chief%20https://www.philstar.com/headlines/2026/09/28/2559546/gracioso-dismissal-no-reason-disregard-statements-says-nbi-chief
+                  - img "tw" [ref=f6e429]
+  - generic [ref=f6e431]:
+    - text: This site uses cookies. By continuing to browse the site, you are agreeing to our use of cookies.
+    - button "Close" [ref=f6e433]
