@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { permanentRedirect } from "next/navigation";
 import { HeartDoodle } from "@/components/BrandHearts";
 import Footer from "@/components/Footer";
@@ -21,18 +22,26 @@ const giftRows = [
   {
     title: "Housing Accommodation",
     body: "A safe place to stay close to treatment.",
+    image: "/images/hearts/housing/housing-bedroom.png",
+    imageAlt: "Prepared beds inside Little Ark housing",
   },
   {
     title: "Transportation Support",
     body: "Rides that help families continue care.",
+    image: "/images/hearts/transportation/transportation-home-arrival.jpeg",
+    imageAlt: "Families arriving in the Little Ark shuttle",
   },
   {
     title: "Meals Support",
     body: "Warm meals during long treatment days.",
+    image: "/images/hearts/everyday-meals/everyday-meals-serving.jpeg",
+    imageAlt: "A warm meal being served to Little Ark families",
   },
   {
     title: "Care Cart",
     body: "Comfort and support when families need it most.",
+    image: "/images/our-voyage/carecart1.jpg",
+    imageAlt: "Little Ark Care Cart support for families",
   },
 ];
 
@@ -123,20 +132,26 @@ export async function GiveHopeContent() {
           </Inner>
         </section>
 
-        <section className="py-[clamp(86px,11vw,145px)]">
+        <section className="py-[clamp(76px,9vw,120px)]">
           <Inner>
-            <Reveal className="mx-auto mb-14 max-w-[920px] text-center">
-              <h2 className="m-0 text-[clamp(44px,7vw,98px)] font-black leading-[0.94] text-[#1fa8f4]">Your Gift Helps Provide</h2>
+            <Reveal className="mb-12 max-w-[840px]">
+              <h2 className="m-0 text-[clamp(42px,5.8vw,76px)] font-black leading-[0.98] text-[#082f59]">Your Gift Helps Provide</h2>
             </Reveal>
-            <div className="grid gap-5">
-              {giftRows.map((row) => (
+            <div className="border-t border-[#a8c6d8]">
+              {giftRows.map((row, index) => (
                 <Reveal
                   as="article"
                   key={row.title}
-                  className="grid grid-cols-[0.78fr_1fr] items-center gap-8 rounded-[28px] border border-[rgba(31,168,244,0.14)] bg-[linear-gradient(135deg,#effaff,#fff)] p-[clamp(24px,4vw,44px)] shadow-[0_18px_46px_rgba(31,168,244,0.11)] max-[760px]:grid-cols-1"
+                  delay={index * 80}
+                  className="grid grid-cols-[minmax(0,0.75fr)_minmax(0,1.7fr)] items-center gap-[clamp(24px,4vw,56px)] border-b border-[#c4dbe7] py-7 max-[620px]:grid-cols-1 max-[620px]:gap-4 max-[620px]:py-6"
                 >
-                  <h3 className="m-0 text-[clamp(30px,5vw,62px)] font-black leading-[0.94] text-[#1fa8f4]">{row.title}</h3>
-                  <p className="m-0 text-[clamp(20px,2.3vw,31px)] font-extrabold leading-[1.3] text-[#557086]">{row.body}</p>
+                  <div className="relative aspect-[4/3] overflow-hidden bg-[#e5f3f9] max-[620px]:aspect-[16/10]">
+                    <Image src={row.image} alt={row.imageAlt} fill sizes="(max-width: 620px) 100vw, (max-width: 850px) 40vw, 380px" className="object-cover" />
+                  </div>
+                  <div className="grid grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] items-center gap-8 max-[850px]:grid-cols-1 max-[850px]:gap-4">
+                    <h3 className="m-0 text-[clamp(27px,3.2vw,42px)] font-black leading-[1.04] text-[#082f59]">{row.title}</h3>
+                    <p className="m-0 text-[clamp(17px,1.65vw,21px)] font-medium leading-[1.45] text-[#436077]">{row.body}</p>
+                  </div>
                 </Reveal>
               ))}
             </div>
