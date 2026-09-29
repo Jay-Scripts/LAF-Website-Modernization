@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { permanentRedirect } from "next/navigation";
-import { HeartDoodle, HeartPhotoAccent } from "@/components/BrandHearts";
+import { HeartDoodle } from "@/components/BrandHearts";
 import Footer from "@/components/Footer";
 import ImpactStatsGrid from "@/components/ImpactStatsGrid";
 import Navbar from "@/components/Navbar";
@@ -60,7 +60,7 @@ function Inner({ children, className = "" }: { children: React.ReactNode; classN
 
 function DonateButtons({ centered = false }: { centered?: boolean }) {
   return (
-    <div className={`mt-[34px] flex flex-wrap gap-4 ${centered ? "justify-center" : ""}`}>
+    <div className={`mt-[34px] flex gap-4 ${centered ? "flex-wrap justify-center" : "flex-col items-start"}`}>
       <Link
         href={siteContent.links.donations.philippinesUrl}
         className="inline-flex min-h-[52px] items-center justify-center rounded-full bg-[#ffc83d] px-7 text-[15px] font-black uppercase text-[#061d34] shadow-[0_16px_38px_rgba(255,200,61,0.36)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_46px_rgba(255,200,61,0.46)] focus-visible:-translate-y-0.5 focus-visible:outline-none"
@@ -100,12 +100,15 @@ export async function GiveHopeContent() {
       <main>
         <PageHero
           imageSrc="/images/give-hope/hero-gh.jpeg"
+          imageLayerClassName="opacity-100"
+          imageWrapperClassName="!left-auto !right-0 !w-1/2 bg-[#eef1f2] max-[767px]:!left-0 max-[767px]:!w-full"
           title="Give Hope"
           description="Your kindness helps children and families continue their journey with care, dignity, and hope."
-          backgroundClassName="bg-[linear-gradient(90deg,rgba(0,143,228,0.94)_0%,rgba(31,168,244,0.74)_48%,rgba(102,211,247,0.18)_100%),linear-gradient(135deg,#008fe4,#1fa8f4)]"
-          overlayClassName="after:bg-[linear-gradient(90deg,rgba(0,143,228,0.9)_0%,rgba(31,168,244,0.68)_50%,rgba(255,255,255,0.12)_100%),radial-gradient(circle_at_76%_22%,rgba(255,255,255,0.32),transparent_18rem)] max-[767px]:after:bg-[linear-gradient(90deg,rgba(0,76,161,0.96)_0%,rgba(0,112,201,0.84)_44%,rgba(31,168,244,0.28)_76%,rgba(31,168,244,0.08)_100%)]"
-          imageClassName="object-[center_30%] max-[900px]:object-[62%_24%] max-[767px]:object-[62%_center]"
-          decoration={<HeartPhotoAccent className="bottom-[clamp(42px,8vw,96px)] right-[clamp(12px,6vw,82px)] top-auto rotate-[10deg] max-[620px]:bottom-8 max-[620px]:right-0" opacity={0.94} />}
+          contentClassName="!w-[min(530px,100%)]"
+          descriptionClassName="!max-w-[520px]"
+          backgroundClassName="bg-[#07518a]"
+          overlayClassName="max-[767px]:after:bg-[linear-gradient(180deg,transparent_20%,rgba(3,45,92,0.12)_45%,rgba(3,45,92,0.9)_100%)]"
+          imageClassName="!object-contain !object-right max-[767px]:!object-cover max-[767px]:object-[62%_center]"
         >
           <DonateButtons />
         </PageHero>
