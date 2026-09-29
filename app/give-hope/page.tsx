@@ -8,12 +8,13 @@ import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import { siteContent } from "@/data/siteContent";
 import { getPublicImpactMetrics } from "@/lib/google-sheets";
+import ImpactPhotoCarousel from "./_components/ImpactPhotoCarousel";
 
 const impactItems = [
-  "Housing",
-  "Transportation",
-  "Meals",
-  "Activities",
+  { label: "Housing", images: ["housing-reception.jpg", "housing-bedroom.png", "housing-arrival.png", "housing-activity-room.png", "housing-hero.png", "little-ark-house.png"].map((name) => `/images/hearts/housing/${name}`) },
+  { label: "Transportation", images: ["transportation-shuttle-family.jpg", "transportation-partner-handoff.jpg", "transportation-hope-in-transit.jpg", "transportation-home-arrival.jpeg"].map((name) => `/images/hearts/transportation/${name}`) },
+  { label: "Meals", images: ["everyday-meals-serving.jpeg", "everyday-meals-prep.jpeg", "everyday-meals-hero.png", "everyday-meals-family-table.png", "everyday-meals-child.jpeg", "everyday-meals-caregiver.jpeg"].map((name) => `/images/hearts/everyday-meals/${name}`) },
+  { label: "Activities", images: ["activities-group-play.png", "activities-table-game.png", "activities-coloring.png", "activities-clay-smiles.png", "activities-board-game.png", "laf-activities.png"].map((name) => `/images/hearts/activities/${name}`) },
 ];
 
 const giftRows = [
@@ -77,19 +78,6 @@ function DonateButtons({ centered = false }: { centered?: boolean }) {
   );
 }
 
-function ImpactIcon({ label }: { label: string }) {
-  return (
-    <div className="grid h-full min-h-40 place-items-center gap-3.5 rounded-3xl border border-[rgba(31,168,244,0.14)] bg-white p-6 text-center text-lg font-black uppercase text-[#1fa8f4] shadow-[0_18px_46px_rgba(31,168,244,0.11)] max-[620px]:min-h-[126px] max-[620px]:gap-2.5 max-[620px]:rounded-[20px] max-[620px]:p-3 max-[620px]:text-[clamp(12px,3.4vw,15px)] max-[620px]:leading-tight">
-      <span className="grid h-16 w-16 place-items-center rounded-[18px] bg-[linear-gradient(135deg,#1fa8f4,#1fa8f4)] text-white">
-        <svg className="h-9 w-9" viewBox="0 0 48 48" aria-hidden="true">
-          <path d="M8 24 24 10l16 14M14 22v17h20V22M21 39V28h7v11" fill="none" stroke="currentColor" strokeWidth="3.5" />
-        </svg>
-      </span>
-      {label}
-    </div>
-  );
-}
-
 export async function GiveHopeContent() {
   const impactMetrics = await getPublicImpactMetrics();
 
@@ -113,21 +101,24 @@ export async function GiveHopeContent() {
           <DonateButtons />
         </PageHero>
 
-        <section className="relative overflow-hidden bg-[radial-gradient(circle_at_12%_8%,rgba(31,168,244,0.1),transparent_24rem),linear-gradient(180deg,#fff,#eaf9ff)] py-[clamp(86px,11vw,145px)]">
-          <HeartDoodle className="absolute -right-24 top-8 z-0 max-[620px]:hidden" size={360} rotate={16} opacity={0.28} variant={1} />
+        <section className="bg-[#f2f9fd] py-[clamp(72px,9vw,120px)]">
           <Inner>
-            <Reveal className="mx-auto mb-14 max-w-[880px] text-center">
-              <h2 className="m-0 text-[clamp(44px,7vw,98px)] font-black leading-[0.94] text-[#1fa8f4]">Why Give?</h2>
-              <p className="mx-auto mt-5 text-[clamp(20px,2.3vw,30px)] font-extrabold leading-[1.34] text-[#557086]">
-                Every gift helps provide practical support for children and families facing critical illness.
-              </p>
-            </Reveal>
-            <div className="grid auto-rows-fr grid-cols-4 gap-5 max-[900px]:grid-cols-2 max-[620px]:gap-3">
-              {impactItems.map((item) => (
-                <Reveal key={item} className="h-full">
-                  <ImpactIcon label={item} />
-                </Reveal>
-              ))}
+            <div>
+              <Reveal className="mb-14 max-w-[720px]">
+                <h2 className="m-0 text-[clamp(48px,6vw,84px)] font-black leading-[0.94] text-[#082f59]">Why Give?</h2>
+                <p className="mb-0 mt-7 max-w-[24ch] text-[clamp(19px,2vw,26px)] font-semibold leading-[1.38] text-[#436077]">
+                  Every gift helps provide practical support for children and families facing critical illness.
+                </p>
+              </Reveal>
+              <div className="space-y-16">
+                {impactItems.map((item, index) => (
+                  <Reveal key={item.label} delay={index * 120} className="border-t border-[#abcbdc] pt-6">
+                    <span className="text-xs font-black tracking-[0.16em] text-[#008fe4]">0{index + 1}</span>
+                    <h3 className="mb-0 mt-3 text-[clamp(28px,3vw,42px)] font-black leading-tight text-[#082f59]">{item.label}</h3>
+                    <ImpactPhotoCarousel images={item.images} label={item.label} direction={index % 2 === 0 ? "left" : "right"} />
+                  </Reveal>
+                ))}
+              </div>
             </div>
           </Inner>
         </section>
