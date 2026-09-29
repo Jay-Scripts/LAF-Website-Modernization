@@ -2,7 +2,7 @@ import Link from "next/link";
 import { permanentRedirect } from "next/navigation";
 import { HeartDoodle } from "@/components/BrandHearts";
 import Footer from "@/components/Footer";
-import ImpactStatsGrid from "@/components/ImpactStatsGrid";
+import VoyageImpactSection from "@/app/our-voyage/_components/VoyageImpactSection";
 import Navbar from "@/components/Navbar";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
@@ -152,14 +152,7 @@ export async function GiveHopeContent() {
           </Inner>
         </section>
 
-        <section className="scroll-mt-24 bg-[radial-gradient(circle_at_20%_28%,rgba(255,255,255,0.24),transparent_19rem),radial-gradient(circle_at_80%_68%,rgba(200,244,255,0.22),transparent_20rem),linear-gradient(135deg,#008fe4,#1fa8f4)] py-[clamp(68px,8vw,104px)] text-white max-[767px]:py-14">
-          <Inner>
-            <Reveal className="mx-auto mb-10 max-w-[920px] text-center max-[767px]:mb-7">
-              <h2 className="m-0 scroll-mt-24 text-[clamp(44px,7vw,98px)] font-black leading-[0.94] max-[767px]:text-[clamp(36px,10vw,46px)] max-[767px]:leading-none">Because of You</h2>
-            </Reveal>
-            <ImpactStatsGrid metrics={impactMetrics} centerMobileRemainder />
-          </Inner>
-        </section>
+        <VoyageImpactSection metrics={impactMetrics} title="Because of You" />
 
         <section className="relative grid min-h-[70svh] place-items-center overflow-hidden bg-[radial-gradient(circle_at_20%_32%,rgba(200,244,255,0.28),transparent_18rem),linear-gradient(135deg,#008fe4,#1fa8f4)] px-5 py-[100px] text-center text-white">
           <HeartDoodle className="absolute -left-24 top-8 z-0 max-[620px]:hidden" size={390} rotate={-20} opacity={0.28} variant={2} />
