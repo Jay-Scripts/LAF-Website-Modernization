@@ -39,7 +39,7 @@ export default function VoyageHeroSection({
         />
       </div>
       <div
-        className="absolute inset-0 bg-[linear-gradient(90deg,#032d5c_0%,rgba(3,45,92,0.9)_36%,rgba(3,45,92,0.35)_62%,transparent_84%),linear-gradient(0deg,rgba(0,34,79,0.42)_0%,transparent_55%)] max-[767px]:bg-[linear-gradient(180deg,rgba(0,44,101,0.04)_10%,rgba(0,44,101,0.1)_34%,rgba(0,34,79,0.96)_72%,#00224f_100%)]"
+        className="absolute inset-0 bg-[linear-gradient(90deg,#032d5c_0%,#032d5c_30%,rgba(3,45,92,0.18)_40%,transparent_52%),linear-gradient(0deg,rgba(0,34,79,0.08)_0%,transparent_30%)] max-[767px]:bg-[linear-gradient(180deg,rgba(0,44,101,0.04)_10%,rgba(0,44,101,0.1)_34%,rgba(0,34,79,0.96)_72%,#00224f_100%)]"
         aria-hidden="true"
       />
 
