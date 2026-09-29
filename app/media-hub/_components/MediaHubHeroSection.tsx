@@ -5,8 +5,8 @@ export default function MediaHubHeroSection() {
     <>
     <style>{`
       @keyframes stories-photo-enter {
-        from { clip-path: inset(0 0 0 100%); }
-        to { clip-path: inset(0); }
+        from { opacity: 0; clip-path: inset(0 100% 0 0); }
+        to { opacity: 1; clip-path: inset(0); }
       }
       @keyframes stories-copy-enter {
         from { opacity: 0; transform: translateY(18px); }
