@@ -27,7 +27,7 @@ export default function CountUp({ value, className = "" }: CountUpProps) {
         if (!entry?.isIntersecting) return;
 
         const start = performance.now();
-        const duration = 1150;
+        const duration = 2000;
         setDisplayValue(0);
 
         function tick(now: number) {

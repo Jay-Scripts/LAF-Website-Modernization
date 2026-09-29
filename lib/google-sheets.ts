@@ -15,11 +15,11 @@ export type PublicImpactMetric = {
 export type PublicImpactMetrics = Record<ImpactMetricKey, PublicImpactMetric>;
 
 export const fallbackImpactMetrics: PublicImpactMetrics = {
-  housing: { program: "Housing", current: 2953, historical2024: 974, historical2025: null, total: null },
-  transport: { program: "Transportation", current: 803, historical2024: 520, historical2025: null, total: null },
-  meals: { program: "Meals", current: 8654, historical2024: 570, historical2025: null, total: null },
-  activities: { program: "LAF Activity Center", current: 241, historical2024: 47, historical2025: null, total: null },
-  "care-cart": { program: "Care Cart", current: 2846, historical2024: 1132, historical2025: null, total: null },
+  housing: { program: "Housing", current: 4675, historical2024: 974, historical2025: 2920, total: 8569 },
+  transport: { program: "Transportation", current: 1367, historical2024: 520, historical2025: 1766, total: 3653 },
+  meals: { program: "Meals", current: 13826, historical2024: 570, historical2025: 2916, total: 17312 },
+  activities: { program: "LAF Activity Center", current: 436, historical2024: 47, historical2025: 726, total: 1209 },
+  "care-cart": { program: "Care Cart", current: 8839, historical2024: 1132, historical2025: 6741, total: 16712 },
 };
 
 type SheetsValuesResponse = {
@@ -73,8 +73,8 @@ function parseSheetValues(values: unknown): PublicImpactMetrics {
       program: program || fallbackImpactMetrics[key].program,
       current: current ?? fallbackImpactMetrics[key].current,
       historical2024: historical2024 ?? fallbackImpactMetrics[key].historical2024,
-      historical2025,
-      total,
+      historical2025: historical2025 ?? fallbackImpactMetrics[key].historical2025,
+      total: total ?? fallbackImpactMetrics[key].total,
     };
   }
 
