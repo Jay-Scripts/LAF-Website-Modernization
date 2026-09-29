@@ -1,6 +1,7 @@
 import Reveal from "./Reveal";
 import { Card } from "@/components/ui/card";
 import { siteContent } from "@/data/siteContent";
+import { socialBrandLogos } from "@/data/socialBrandLogos";
 
 const socialPlatforms = [
   {
@@ -68,6 +69,17 @@ const socialPlatforms = [
   },
 ].filter((platform) => platform.href && !platform.href.startsWith("TODO_"));
 
+function SocialBrandIcon({ name }: { name: string }) {
+  const logo = socialBrandLogos.find((item) => item.label === name);
+  if (!logo) return null;
+
+  return (
+    <span className={`grid h-12 w-12 shrink-0 place-items-center rounded-full border border-white/80 text-white shadow-[0_0_0_1px_rgba(8,47,89,0.12)] transition-transform duration-300 ease-in-out group-hover:-translate-y-1 motion-reduce:transform-none ${logo.className}`}>
+      <svg viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true">{logo.icon}</svg>
+    </span>
+  );
+}
+
 function ExternalIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
@@ -86,7 +98,7 @@ export default function SocialPlatformsGrid({ layout = "cards" }: { layout?: "ca
               aria-label={`${platform.label}, opens in a new tab`}
               className="group flex h-full min-h-[200px] flex-col rounded-lg border border-[#cbdfe9] bg-white p-4 text-[#082f59] transition-colors hover:border-[#0068c9] hover:bg-[#f5fbff] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068c9] motion-reduce:transition-none sm:p-5">
               <span className="flex w-full items-start justify-between gap-3">
-                <span className="h-8 w-8 shrink-0 text-[#0068c9]">{platform.icon}</span>
+                <SocialBrandIcon name={platform.name} />
                 <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0 text-[#557086] group-hover:text-[#0068c9]" aria-hidden="true">
                   <path d="M6 18 18 6M6 6h12v12" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -107,7 +119,7 @@ export default function SocialPlatformsGrid({ layout = "cards" }: { layout?: "ca
             <a href={platform.href} target="_blank" rel="noopener noreferrer"
               aria-label={`${platform.label}, opens in a new tab`}
               className="group flex h-full min-h-[140px] flex-col items-center px-2 py-4 text-center text-[#082f59] transition-colors hover:text-[#0068c9] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0068c9] motion-reduce:transition-none">
-              <span className="mb-4 h-9 w-9 text-[#0068c9]">{platform.icon}</span>
+              <span className="mb-4"><SocialBrandIcon name={platform.name} /></span>
               <span className="text-xl font-black leading-tight group-hover:underline group-hover:underline-offset-4">{platform.name}</span>
               <span className="mt-2 max-w-full break-words text-sm leading-relaxed text-[#557086]">{platform.account}</span>
             </a>
